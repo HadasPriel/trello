@@ -8,11 +8,24 @@ export function loadBoards() {
       dispatch({ type: 'SET_BOARDS', boards })
 
     } catch (err) {
-      console.log('ReviewActions: err in loadReviews', err)
+      console.log('ReviewActions: err in loadBoards', err)
     }
   }
 }
 
+
+
+export function loadBoard(id) {
+  return async dispatch => {
+    try {
+      const board = await boardService.getById(id)
+      dispatch({ type: 'SET_BOARD', board })
+
+    } catch (err) {
+      console.log('ReviewActions: err in loadBoard', err)
+    }
+  }
+}
 // export function addReview(review) {
 //   return async dispatch => {
 //     try {
