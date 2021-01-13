@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { GroupList } from '../cmps/group/GroupList'
 // import { socketService } from '../services/socketService'
 import { loadBoard } from '../store/actions/boardActions.js'
 
@@ -26,6 +27,8 @@ class _Board extends Component {
         return (
             <section>
                 <div> {selectedBoard.title}</div>
+
+               {selectedBoard.groups && <GroupList groups ={selectedBoard.groups}/>}
             
             </section>
 
