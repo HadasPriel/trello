@@ -8,7 +8,8 @@ import { httpService } from './httpService'
 export const boardService = {
   add,
   query,
-  remove
+  remove, 
+  getById
 }
 
 
@@ -19,6 +20,10 @@ export const boardService = {
 function query() {
   return httpService.get(`board`)
   // return storageService.query('board')
+}
+
+function getById(boardId){
+  return httpService.get(`board/${boardId}`)
 }
 
 function remove(boardId) {
