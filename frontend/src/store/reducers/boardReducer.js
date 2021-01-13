@@ -7,6 +7,9 @@ export function boardReducer(state = initialState, action = {}) {
   switch (action.type) {
     case 'SET_BOARDS':
       return { ...state, boards: action.boards }
+      case 'SET_BOARD':
+        return { ...state, selectedBoard: action.board }
+
     case 'ADD_REVIEW':
       return { ...state, reviews: [...state.reviews, action.review] }
     case 'REMOVE_REVIEW':
