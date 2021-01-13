@@ -15,13 +15,14 @@ class _CardEdit extends Component {
 
     render() {
         return (
-            <div>Board</div>
+            <div>cardEdit</div>
         )
     }
 }
 
 const mapStateToProps = state => {
     return {
+
     }
 }
 const mapDispatchToProps = {
