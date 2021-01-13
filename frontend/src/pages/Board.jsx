@@ -28,7 +28,7 @@ class _Board extends Component {
             <section>
                 <div> {selectedBoard.title}</div>
 
-               {selectedBoard.groups && <GroupList groups ={selectedBoard.groups}/>}
+               {selectedBoard.groups && <GroupList groups ={selectedBoard.groups} boardId={this.props.match.params.id}/>}
             
             </section>
 

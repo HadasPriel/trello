@@ -21,7 +21,7 @@ export class _AddNewGroup extends Component {
     onSubmit = (ev) => {
         ev.preventDefault()
         if (!this.state.title) return
-        console.log(this.state.title)
+        this.props.addGroup(this.state.title, this.props.selectedBoard)
 
     }
 

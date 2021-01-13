@@ -11,7 +11,7 @@ export function GroupList(props) {
                     <GroupPreview group={group} />
                 </li>)}
         </ul>
-        <AddNewGroup/>
+        <AddNewGroup boardId = {props.boardId}/>
         </section>
     )
 }

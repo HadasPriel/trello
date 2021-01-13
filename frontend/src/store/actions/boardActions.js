@@ -29,11 +29,14 @@ export function loadBoard(id) {
 }
 
 
-export function addGroup (title, board){
+export function addGroup(title, board){
   return async dispatch =>{
     try {
+      console.log(board)
       let groupToAdd = boardService.makeGroup(title)
-      let boardToUpdate = JSON.parse(JSON.stringify(board))
+      console.log(groupToAdd)
+      let boardToUpdate = JSON.parse(JSON.stringify({...board}))
+      console.log( 'the converted board', board)
       boardToUpdate.groups.push(groupToAdd)
       const updatedBoard = await boardService.updateBoard(boardToUpdate)
       console.log('Updated board from addGroup', updatedBoard)

@@ -1,193 +1,208 @@
 {
-    "board": [
+  "board": [
+    {
+      "_id": "b101",
+      "title": "Initial Board ",
+      "groups": [
         {
-            "_id": "b101",
-            "title": "Initial Board ",
-            "groups": [
-                {
-                    "id": "g101",
-                    "title": "Group 1",
-                    "cards": [
-                        {
-                            "id": "c101",
-                            "title": "Replace logo"
-                        },
-                        {
-                            "id": "c102",
-                            "title": "Buy milk"
-                        },
-                        {
-                            "id": "c103",
-                            "title": "Drink water"
-                        }
-                    ]
-                },
-                {
-                    "id": "g102",
-                    "title": "Group 2",
-                    "cards": [
-                        {
-                            "id": "c104",
-                            "title": "Do This"
-                        },
-                        {
-                            "id": "c105",
-                            "title": "Do That"
-                        },
-                        {
-                            "id": "c106",
-                            "title": "Just Do"
-                        }
-                    ]
-                },
-                {
-                    "id": "g103",
-                    "title": "Group 3",
-                    "cards": [
-                        {
-                            "id": "c107",
-                            "title": "Run Forest"
-                        },
-                        {
-                            "id": "c108",
-                            "title": "Go There"
-                        },
-                        {
-                            "id": "c109",
-                            "title": "Just Smile"
-                        }
-                    ]
-                }
-            ]
+          "id": "g101",
+          "title": "Group 1",
+          "cards": [
+            {
+              "id": "c101",
+              "title": "Replace logo"
+            },
+            {
+              "id": "c102",
+              "title": "Buy milk"
+            },
+            {
+              "id": "c103",
+              "title": "Drink water"
+            }
+          ]
         },
         {
-            "_id": "b102",
-            "title": "Second Board ",
-            "groups": [
-                {
-                    "id": "g104",
-                    "title": "Group 4",
-                    "cards": [
-                        {
-                            "id": "c110",
-                            "title": "Go South"
-                        },
-                        {
-                            "id": "c111",
-                            "title": "Go North"
-                        },
-                        {
-                            "id": "c112",
-                            "title": "Go West"
-                        }
-                    ]
-                },
-                {
-                    "id": "g105",
-                    "title": "Group 5",
-                    "cards": [
-                        {
-                            "id": "c113",
-                            "title": "Say Yes"
-                        },
-                        {
-                            "id": "c114",
-                            "title": "Say No"
-                        },
-                        {
-                            "id": "c115",
-                            "title": "Say Why"
-                        }
-                    ]
-                },
-                {
-                    "id": "g106",
-                    "title": "Group 6",
-                    "cards": [
-                        {
-                            "id": "c116",
-                            "title": "Hands Up"
-                        },
-                        {
-                            "id": "c117",
-                            "title": "Hands Down"
-                        },
-                        {
-                            "id": "c118",
-                            "title": "Hands Shake"
-                        }
-                    ]
-                }
-            ]
+          "id": "g102",
+          "title": "Group 2",
+          "cards": [
+            {
+              "id": "c104",
+              "title": "Do This"
+            },
+            {
+              "id": "c105",
+              "title": "Do That"
+            },
+            {
+              "id": "c106",
+              "title": "Just Do"
+            }
+          ]
         },
         {
-            "_id": "b103",
-            "title": "Third Board ",
-            "groups": [
-                {
-                    "id": "g107",
-                    "title": "Group 7",
-                    "cards": [
-                        {
-                            "id": "c119",
-                            "title": "Task 119"
-                        },
-                        {
-                            "id": "c120",
-                            "title": "Task 120"
-                        },
-                        {
-                            "id": "c121",
-                            "title": "Task 121"
-                        }
-                    ]
-                },
-                {
-                    "id": "g108",
-                    "title": "Group 8",
-                    "cards": [
-                        {
-                            "id": "c122",
-                            "title": "Task 122"
-                        },
-                        {
-                            "id": "c123",
-                            "title": "Task 123"
-                        },
-                        {
-                            "id": "c124",
-                            "title": "Task 124"
-                        }
-                    ]
-                },
-                {
-                    "id": "g109",
-                    "title": "Group 9",
-                    "cards": [
-                        {
-                            "id": "c125",
-                            "title": "Task 125"
-                        },
-                        {
-                            "id": "c126",
-                            "title": "Task 126"
-                        },
-                        {
-                            "id": "c127",
-                            "title": "Task 127"
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "user": [
+          "id": "g103",
+          "title": "Group 3",
+          "cards": [
+            {
+              "id": "c107",
+              "title": "Run Forest"
+            },
+            {
+              "id": "c108",
+              "title": "Go There"
+            },
+            {
+              "id": "c109",
+              "title": "Just Smile"
+            }
+          ]
+        },
         {
-            "_id": "u101",
-            "fullname": "Avi Paz",
-            "username": "pazavi",
-            "password": "123",
-            "imgUrl": "http://avi.jpg"
+          "id": "gEVySD",
+          "title": "New List",
+          "cards": []
+        },
+        {
+          "id": "gD6GGk",
+          "title": "New List",
+          "cards": []
+        },
+        {
+          "id": "gVN29c",
+          "title": "New Group",
+          "cards": []
         }
-    ]
+      ]
+    },
+    {
+      "_id": "b102",
+      "title": "Second Board ",
+      "groups": [
+        {
+          "id": "g104",
+          "title": "Group 4",
+          "cards": [
+            {
+              "id": "c110",
+              "title": "Go South"
+            },
+            {
+              "id": "c111",
+              "title": "Go North"
+            },
+            {
+              "id": "c112",
+              "title": "Go West"
+            }
+          ]
+        },
+        {
+          "id": "g105",
+          "title": "Group 5",
+          "cards": [
+            {
+              "id": "c113",
+              "title": "Say Yes"
+            },
+            {
+              "id": "c114",
+              "title": "Say No"
+            },
+            {
+              "id": "c115",
+              "title": "Say Why"
+            }
+          ]
+        },
+        {
+          "id": "g106",
+          "title": "Group 6",
+          "cards": [
+            {
+              "id": "c116",
+              "title": "Hands Up"
+            },
+            {
+              "id": "c117",
+              "title": "Hands Down"
+            },
+            {
+              "id": "c118",
+              "title": "Hands Shake"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "b103",
+      "title": "Third Board ",
+      "groups": [
+        {
+          "id": "g107",
+          "title": "Group 7",
+          "cards": [
+            {
+              "id": "c119",
+              "title": "Task 119"
+            },
+            {
+              "id": "c120",
+              "title": "Task 120"
+            },
+            {
+              "id": "c121",
+              "title": "Task 121"
+            }
+          ]
+        },
+        {
+          "id": "g108",
+          "title": "Group 8",
+          "cards": [
+            {
+              "id": "c122",
+              "title": "Task 122"
+            },
+            {
+              "id": "c123",
+              "title": "Task 123"
+            },
+            {
+              "id": "c124",
+              "title": "Task 124"
+            }
+          ]
+        },
+        {
+          "id": "g109",
+          "title": "Group 9",
+          "cards": [
+            {
+              "id": "c125",
+              "title": "Task 125"
+            },
+            {
+              "id": "c126",
+              "title": "Task 126"
+            },
+            {
+              "id": "c127",
+              "title": "Task 127"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "user": [
+    {
+      "_id": "u101",
+      "fullname": "Avi Paz",
+      "username": "pazavi",
+      "password": "123",
+      "imgUrl": "http://avi.jpg"
+    }
+  ]
 }
