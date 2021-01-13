@@ -8,7 +8,7 @@ export function loadBoards() {
       dispatch({ type: 'SET_BOARDS', boards })
 
     } catch (err) {
-      console.log('ReviewActions: err in loadBoards', err)
+      console.log('BoardActions: err in loadBoards', err)
     }
   }
 }
@@ -23,7 +23,25 @@ export function loadBoard(id) {
       dispatch({ type: 'SET_BOARD', board })
 
     } catch (err) {
-      console.log('ReviewActions: err in loadBoard', err)
+      console.log('BoardActions: err in loadBoard', err)
+    }
+  }
+}
+
+
+export function addGroup (title, board){
+  return async dispatch =>{
+    try {
+      let groupToAdd = boardService.makeGroup(title)
+      let boardToUpdate = JSON.parse(JSON.stringify(board))
+      boardToUpdate.groups.push(groupToAdd)
+      const updatedBoard = await boardService.updateBoard(boardToUpdate)
+      console.log('Updated board from addGroup', updatedBoard)
+      dispatch({ type: 'SET_BOARD', updatedBoard })
+
+
+    }catch (err) {
+      console.log('BoardActions: err in loadBoard', err)
     }
   }
 }

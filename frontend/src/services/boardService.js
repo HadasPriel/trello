@@ -3,13 +3,15 @@
 import { httpService } from './httpService'
 // import { storageService } from './asyncStorageService'
 // import userService from './userService'
-// import { utilService } from './utilService'
+import { utilService } from './utilService'
 
 export const boardService = {
   add,
   query,
-  remove, 
-  getById
+  remove,
+  getById,
+  makeGroup,
+  updateBoard
 }
 
 
@@ -22,7 +24,7 @@ function query() {
   // return storageService.query('board')
 }
 
-function getById(boardId){
+function getById(boardId) {
   return httpService.get(`board/${boardId}`)
 }
 
@@ -30,6 +32,11 @@ function remove(boardId) {
   return httpService.delete(`board/${boardId}`)
   // return storageService.delete('board', boardId)
 
+}
+
+async function updateBoard(board) {
+  const updatedBoard =  await httpService.put(`board/${board._id}`, board)
+  return updatedBoard
 }
 async function add(board) {
   const addedBoard = await httpService.post(`board`, board)
@@ -39,4 +46,17 @@ async function add(board) {
   // const addedBoard = storageService.post('board', board)
 
   return addedBoard
+}
+
+
+function makeGroup(groupTitle) {
+  let group = {
+    id: 'g' + utilService.makeId(),
+    title: groupTitle,
+    cards: []
+
+  }
+
+  return group
+
 }
