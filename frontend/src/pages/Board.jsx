@@ -5,21 +5,30 @@ import { loadBoard } from '../store/actions/boardActions.js'
 
 class _Board extends Component {
     state = {
-
+        board: {}
     }
 
     componentDidMount() {
-      const boardId =this.props.match.params.id
-      this.props.loadBoard(boardId)
- 
+        const boardId = this.props.match.params.id
+        console.log('boardId', boardId)
+        this.props.loadBoard(boardId)
+
 
     }
+
+ 
 
 
 
     render() {
+        const {selectedBoard} = this.props
+
         return (
-            <div>Board</div>
+            <section>
+                <div> {selectedBoard.title}</div>
+            
+            </section>
+
         )
     }
 }

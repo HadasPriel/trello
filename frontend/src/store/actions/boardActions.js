@@ -19,6 +19,7 @@ export function loadBoard(id) {
   return async dispatch => {
     try {
       const board = await boardService.getById(id)
+      console.log('What got form server', board)
       dispatch({ type: 'SET_BOARD', board })
 
     } catch (err) {
