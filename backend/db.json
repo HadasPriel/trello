@@ -1,0 +1,73 @@
+{
+    "board": [
+        {
+            "_id": "b101",
+            "title": "Initial Board ",
+            "groups": [
+                {
+                    "id": "g101",
+                    "title": "Group 1",
+                    "cards": [
+                        {
+                            "id": "c101",
+                            "title": "Replace logo"
+                        },
+                        {
+                            "id": "c102",
+                            "title": "Buy milk"
+                        },
+                        {
+                            "id": "c103",
+                            "title": "Drink water"
+                        }
+                    ]
+                },
+                {
+                    "id": "g102",
+                    "title": "Group 2",
+                    "cards": [
+                        {
+                            "id": "c104",
+                            "title": "Do This"
+                        },
+                        {
+                            "id": "c105",
+                            "title": "Do That"
+                        },
+                        {
+                            "id": "c106",
+                            "title": "Just Do"
+                        }
+                    ]
+                },
+                {
+                    "id": "g103",
+                    "title": "Group 3",
+                    "cards": [
+                        {
+                            "id": "c107",
+                            "title": "Run Forest"
+                        },
+                        {
+                            "id": "c108",
+                            "title": "Go There"
+                        },
+                        {
+                            "id": "c109",
+                            "title": "Just Smile"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "user": [
+        {
+            "_id": "u101",
+            "fullname": "Avi Paz",
+            "username": "pazavi",
+            "password": "123",
+            "imgUrl": "http://avi.jpg"
+        }
+    ]
+}
