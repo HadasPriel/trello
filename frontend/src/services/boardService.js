@@ -11,7 +11,8 @@ export const boardService = {
   remove,
   getById,
   makeGroup,
-  updateBoard
+  updateBoard,
+  makeCard
 }
 
 
@@ -35,7 +36,7 @@ function remove(boardId) {
 }
 
 async function updateBoard(board) {
-  const updatedBoard =  await httpService.put(`board/${board._id}`, board)
+  const updatedBoard = await httpService.put(`board/${board._id}`, board)
   return updatedBoard
 }
 async function add(board) {
@@ -58,5 +59,25 @@ function makeGroup(groupTitle) {
   }
 
   return group
+
+}
+
+
+function makeCard(cardTitle) {
+  let card = {
+    id: 'c' + utilService.makeId(),
+    title: cardTitle,
+    description:'',
+    comments:[],
+    checklists:[],
+    members:[],
+    labels:[],
+    createdAt:'',
+    dueDate:'',
+    byMember:{},
+    style:{}
+
+  }
+  return card
 
 }
