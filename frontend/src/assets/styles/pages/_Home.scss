@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.home-img-container {
+width: 100vw;
+height:100vh;
+background-size: cover;
+background-position-x: center;
+background-repeat:no-repeat;
+background-color: #9A9A9A;
+
+
+
+
+padding: 10px;
+background-position: 47% -1400%;
+background-size: 1190px 1236px;
+
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("/assets/styles/imgs/homebg.jpg");
+    // display: flex;
+
+    .home-container{
+
+    }
+    .home-header{
+        font-family: 'Share Tech Mono', monospace;
+        width: 100vw;
+        height: 50px;
+        padding: 10px;
+        color: $clr6;
+   
+        background: rgba(0, 0, 0, 0.566);
+    }
+    .get-started-container{
+        display:flex;
+        flex-direction: column;
+        position: relative;
+        top:4%;
+    h1 {
+        font-family: 'Share Tech Mono', monospace;
+        font-size:60px;
+        color: $clr6;
+        // padding: 20px; 
+        text-align: center; 
+        // text-shadow: 2px 1px 2px rgb(117, 117, 117); 
+        
+    }
+
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        // background-color: $clr2;
+        color: $clr6;
+        font-size:28px;
+        font-weight: 200;
+        padding: 20px;
+        text-align: center;
+        // text-shadow: 2px 1px 2px rgb(137, 136, 137);  
+        margin-top:-50px;  
+        
+    }
+
+    .get-started{
+        width: 330px;
+        height: 35px;
+        margin: auto;
+    }
+}
+
+}
+
