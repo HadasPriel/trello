@@ -33,11 +33,11 @@ export class _AddCard extends Component {
 
     render() {
         return (
-            <div className="add-new-group">
+            <div className="add-new-card">
                 <form onSubmit={this.onSubmit} >
-                    <input placeholder="Add Card Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
+                    <input placeholder="Enter a title for this card..." type="text" onChange={this.handleChange} value={this.state.title} name="title" />
                     <button className="save-btn">Add Card</button>
-                    <button className="cancel - btn" onClick={this.onCancelAdd}>Cancel</button>
+                    <button className="cancel-btn" onClick={this.onCancelAdd}>Cancel</button>
                 </form>
             </div>
         )

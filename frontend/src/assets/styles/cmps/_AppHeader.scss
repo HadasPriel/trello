@@ -6,13 +6,33 @@
     background-color: rgba(5, 5, 5, 0.71);
     display: flex;
     justify-content: space-between;
+    user-select: none;
+    white-space: nowrap;
+    margin-bottom: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     .logo-header{
         width: 50%;
         font-family: 'Share Tech Mono', monospace;
         font-size: 2rem;
         color: $clr6;
         padding: 8px;
+        margin-left: 8px;
+
+
     }
+    // h3 span{
+    //     font-family: 'Share Tech Mono', monospace;
+    //     font-size: 2rem;
+    //     font-weight: 600;
+    //     color:#CE2E6C;
+    // }
     .navbar-links{
         width: 25%;
         font-family: 'Roboto', sans-serif;

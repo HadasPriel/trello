@@ -29,8 +29,8 @@ class _Board extends Component {
         if (!selectedBoard) return <div>Loading...</div>
 
         return (
-            <section>
-                <div> {selectedBoard.title}</div>
+            <section className="board-wraper">
+                <div className="board-title"> {selectedBoard.title}</div>
 
                 {selectedBoard.groups && <GroupList groups={selectedBoard.groups} />}
 

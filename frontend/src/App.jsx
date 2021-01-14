@@ -24,7 +24,7 @@ export function App() {
           </Switch>
         </main>
         <footer>
-          Starter
+    
         </footer>
       </Router>
     </div>

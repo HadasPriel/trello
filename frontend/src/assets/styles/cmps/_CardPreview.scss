@@ -1,6 +1,6 @@
 .card-preview{
     width: 250px;
-    height: 40px;
+    min-height: 40px;
     background-color: #fff;
     margin: auto;
     margin-top: 5px;
@@ -12,5 +12,16 @@
     outline: none;
     &:hover{
         background-color: #F4F5F7;
+    }
+
+    .remove-card{
+        background-color: rgb(93, 93, 93);
+        border-radius: 3px;
+    // }    &:hover{
+    //     background-color: rgb(93, 93, 93);
+    }
+
+    p{
+        max-width: 230px;
     }
 }
