@@ -1,0 +1,28 @@
+.group-preview{
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    width: 290px;
+    // flex-direction: column;
+    .group-wraper{
+        background-color: #ebecf0;
+        border-radius: 3px;
+        box-sizing: border-box;
+        max-height: 100%;
+        position: relative;
+        white-space: normal;
+        width: 272px;
+        padding: 5px;
+
+    }
+
+    li {
+        list-style: none;
+        display: inline-block;
+        padding: 5px;
+    }
+   
+
+
+
+    
+}

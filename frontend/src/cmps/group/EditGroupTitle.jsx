@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { addGroup } from '../../store/actions/boardActions.js'
+import { updateGroup } from '../../store/actions/boardActions.js'
 
-export class _AddNewGroup extends Component {
+export class _EditGroupTitle extends Component {
 
     state = {
         title: ''
     }
 
     componentDidMount() {
-
+        const { title } = this.props.group
+        this.setState({ title })
     }
 
     handleChange = (ev) => {
@@ -21,17 +22,17 @@ export class _AddNewGroup extends Component {
     onSubmit = async (ev) => {
         ev.preventDefault()
         if (!this.state.title) return
-        await this.props.addGroup(this.state.title, this.props.selectedBoard)
-
+        await this.props.updateGroup(this.state.title, this.props.group.id, this.props.selectedBoard)
+        this.props.toggleEditMode()
 
     }
 
     render() {
         return (
             <div className="add-new-group">
-                <form className="add-new-wraper" onSubmit={this.onSubmit} >
-                    <input className="add-another-group" placeholder="Add another list" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
-                    <button className="save-btn">+ Add List</button>
+                <form onSubmit={this.onSubmit} >
+                    <input placeholder="Group Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
+                    <button className="save-btn">Save</button>
                 </form>
             </div>
         )
@@ -45,8 +46,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-    addGroup,
+    updateGroup,
 
 };
 
-export const AddNewGroup = connect(mapStateToProps, mapDispatchToProps)(_AddNewGroup);
+export const EditGroupTitle = connect(mapStateToProps, mapDispatchToProps)(_EditGroupTitle);
