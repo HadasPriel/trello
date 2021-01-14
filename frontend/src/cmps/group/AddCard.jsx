@@ -35,7 +35,7 @@ export class _AddCard extends Component {
         return (
             <div className="add-new-group">
                 <form onSubmit={this.onSubmit} >
-                    <input placeholder="Add Card Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
+                    <input placeholder="Add Card Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" />
                     <button className="save-btn">Add Card</button>
                     <button className="cancel - btn" onClick={this.onCancelAdd}>Cancel</button>
                 </form>

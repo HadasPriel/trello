@@ -31,7 +31,7 @@ export class _EditGroupTitle extends Component {
         return (
             <div className="edit-group-title">
                 <form onSubmit={this.onSubmit} >
-                    <input className="new-title-input" placeholder="Group Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
+                    <input className="new-title-input" placeholder="Group Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off"/>
                     <button className="save-btn">Save</button>
                 </form>
             </div>
