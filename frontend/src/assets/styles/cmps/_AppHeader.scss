@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.app-header{
+    width: 100vw;
+    height: 55px;
+    background-color: rgba(5, 5, 5, 0.71);
+    display: flex;
+    justify-content: space-between;
+    .logo-header{
+        width: 50%;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 2rem;
+        color: $clr6;
+        padding: 8px;
+    }
+    .navbar-links{
+        width: 25%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        color: $clr6;
+        padding: 12px;
+        display:inline-block;
+
+    }
+
+    a{
+        color: $clr6;
+
+    }
+
+    .user-avatar{
+        width: 32px;
+        height: 32px;
+        margin-right:20px;
+        border-radius: 50%;
+        padding: 5px;
+    }
+}
+

@@ -29,9 +29,9 @@ export class _EditGroupTitle extends Component {
 
     render() {
         return (
-            <div className="add-new-group">
+            <div className="edit-group-title">
                 <form onSubmit={this.onSubmit} >
-                    <input placeholder="Group Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
+                    <input className="new-title-input" placeholder="Group Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
                     <button className="save-btn">Save</button>
                 </form>
             </div>

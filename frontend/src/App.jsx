@@ -4,6 +4,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Board } from './pages/Board'
 import { CardEdit } from './pages/CardEdit'
+import { AppHeader } from './cmps/AppHeader'
 
 
 
@@ -13,6 +14,7 @@ export function App() {
     <div className="app">
       <Router>
         <main>
+        <AppHeader />
           <Switch>
             {/* <Route path="/user/:id" component={UserDetails} /> */}
             {/* <Route path="/login" component={LoginSignup} /> */}
