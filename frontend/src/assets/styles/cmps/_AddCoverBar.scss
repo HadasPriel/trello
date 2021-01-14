@@ -1,0 +1,36 @@
+.add-cover-bar {
+    .colors {
+        width: unset;
+        width: 150px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+
+        label {
+            cursor: pointer;
+            height: 20px;
+            width: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+            &.\#61BD4F {
+                background-color: #61bd4f;
+            }
+            &.\#F2D600 {
+                background-color: #f2d600;
+            }
+            &.\#FF9F1A {
+                background-color: #ff9f1a;
+            }
+            &.\#EB5A46 {
+                background-color: #eb5a46;
+            }
+            &.\#C377E0 {
+                background-color: #c377e0;
+            }
+            &.\#0079BF {
+                background-color: #0079bf;
+            }
+        }
+    }
+}

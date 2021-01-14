@@ -11,11 +11,11 @@ class _AddCoverBar extends Component {
     }
 
 
-    addCover = (bgColor) => {
+    handleStyle = (ev) => {
         const cardToSave = { ...this.props.card }
-        cardToSave.style = (cardToSave.style) ? { ...cardToSave.style, bgColor } : { bgColor }
+        cardToSave.style = (cardToSave.style) ? { ...cardToSave.style, [ev.target.name]: ev.target.value } : { [ev.target.name]: ev.target.value }
         console.log('cardToSave', cardToSave);
-        // this.props.updateCard(cardToSave)
+        this.props.updateCard(cardToSave)
     }
 
 
@@ -23,21 +23,36 @@ class _AddCoverBar extends Component {
     render() {
 
         return (
-            <form>
+            <form className="add-cover-bar">
+                <h4>size</h4>
                 <label>Full
-                <input type="radio" name="coverType" value="full"></input>
+                <input type="radio" name="coverType" value="full" onClick={this.handleStyle} hidden ></input>
                 </label>
                 <label>Top
-                <input type="radio" name="coverType" value="top"></input>
+                <input type="radio" name="coverType" value="top" onClick={this.handleStyle} hidden></input>
                 </label>
-                <ul>
-                    <li key="#61BD4F" onClick={() => { this.addCover("#61BD4F") }} className="#61BD4F">61BD4F</li>
-                    <li key="#F2D600" onClick={() => { this.addCover("#F2D600") }} className="#F2D600">F2D600</li>
-                    <li key="#FF9F1A" onClick={() => { this.addCover("#FF9F1A") }} className="#FF9F1A">FF9F1A</li>
-                    <li key="#EB5A46" onClick={() => { this.addCover("#EB5A46") }} className="#EB5A46">EB5A46</li>
-                    <li key="#C377E0" onClick={() => { this.addCover("#C377E0") }} className="#C377E0">C377E0</li>
-                    <li key="#0079BF" onClick={() => { this.addCover("#0079BF") }} className="#0079BF">0079BF</li>
-                </ul>
+
+                <h4>colors</h4>
+                <nav className="colors">
+                    <label className="color #61BD4F">
+                        <input type="radio" name="bgColor" value="#61BD4F" onClick={this.handleStyle} hidden></input>
+                    </label>
+                    <label className="color #F2D600">
+                        <input type="radio" name="bgColor" value="#F2D600" onClick={this.handleStyle} hidden></input>
+                    </label>
+                    <label className="color #FF9F1A">
+                        <input type="radio" name="bgColor" value="#FF9F1A" onClick={this.handleStyle} hidden></input>
+                    </label>
+                    <label className="color #EB5A46">
+                        <input type="radio" name="bgColor" value="#EB5A46" onClick={this.handleStyle} hidden></input>
+                    </label>
+                    <label className="color #C377E0">
+                        <input type="radio" name="bgColor" value="#C377E0" onClick={this.handleStyle} hidden></input>
+                    </label>
+                    <label className="color #0079BF">
+                        <input type="radio" name="bgColor" value="#0079BF" onClick={this.handleStyle} hidden></input>
+                    </label>
+                </nav>
             </form>
 
         )

@@ -17,22 +17,56 @@
                   "title": "today",
                   "todos": [
                     {
-                      "txt": "1",
-                      "isDone": false,
-                      "id": "6fKkT"
-                    },
-                    {
                       "txt": "2",
                       "isDone": false,
                       "id": "S2hGI"
+                    },
+                    {
+                      "txt": "fgf",
+                      "isDone": false,
+                      "id": "UwQ4v"
                     }
                   ]
+                }
+              ],
+              "style": {
+                "bgColor": "#61BD4F",
+                "coverType": "top"
+              },
+              "labels": [
+                {
+                  "id": "u0qhn",
+                  "title": "",
+                  "color": "#0079BF"
                 }
               ]
             },
             {
               "id": "c102",
-              "title": "Buy milk"
+              "title": "Buy milk",
+              "checklists": [
+                {
+                  "id": "rLkSv",
+                  "title": "luli",
+                  "todos": [
+                    {
+                      "txt": "1",
+                      "isDone": false,
+                      "id": "hpFm8"
+                    },
+                    {
+                      "txt": "2",
+                      "isDone": false,
+                      "id": "FYcVE"
+                    },
+                    {
+                      "txt": "3",
+                      "isDone": false,
+                      "id": "2Wl9A"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "id": "c103",

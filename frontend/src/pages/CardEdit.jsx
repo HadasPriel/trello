@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+
 // import { socketService } from '../services/socketService'
 import { loadBoard, updateBoard } from '../store/actions/boardActions.js'
 import { CardEditNav } from '../cmps/cardEdit/CardEditNav'
@@ -23,9 +25,16 @@ class _CardEdit extends Component {
         this.loadCard()
     }
 
+    componentDidUpdate(prevprops) {
+        if (this.props.match !== prevprops.match) this.loadCard()
+    }
+
+
+
+
     loadCard = async () => {
         const boardId = this.props.match.params.id
-        const groupId = 'g101' // todo: change to props
+        const groupId = this.props.match.params.groupId
         const cardId = this.props.match.params.cardId
         try {
             await this.props.loadBoard(boardId)
@@ -80,14 +89,17 @@ class _CardEdit extends Component {
         if (!card) return <div>Loading...</div>
         return (
             <section className="card-edit">
-                <main>
-                    <h1>{card.title}</h1>
-                    <div>{isLabels && <div> <h3>Labels: </h3><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
-                    <h3>Description: </h3>
-                    <p>{card.description && ''}</p>
-                    <div>{isChecklists && <div> <h3>Checklists: </h3><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
-                </main>
-                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} />
+                <Link to={`/board/${this.props.selectedBoard}`}>X</Link>
+                <div className="permanent">
+                    <main>
+                        <h1>{card.title}</h1>
+                        <div>{isLabels && <div> <h3>Labels: </h3><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
+                        <h3>Description: </h3>
+                        <p>{card.description && ''}</p>
+                        <div>{isChecklists && <div> <h3>Checklists: </h3><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
+                    </main>
+                    <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} />
+                </div>
                 {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} />}
                 {this.state.isAddChecklistShowing && <AddChecklistBar card={card} updateCard={this.updateCard} />}
                 {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} />}
@@ -108,21 +120,3 @@ const mapDispatchToProps = {
 }
 
 export const CardEdit = connect(mapStateToProps, mapDispatchToProps)(_CardEdit)
-
-
-
-
-
-{/* <aside className="card-details-sidebar" ref={this.ref}>
-<CardSidebar anchorRef={this.ref} 
-addActivity={this.createActivity} 
-isUploading={this.state.isUploading} 
-toggleCoverSelector={this.toggleCoverSelector} 
-toggleUploadDropzone={this.toggleUploadDropzone} 
-toggleDisplayMembers={this.toggleDisplayMembers} 
-dueDate={card.dueDate} 
-toggleLabelPallete={this.toggleLabelPalette} 
-onUpdateDueDate={this.onUpdateDueDate} 
-onArchiveCard={this.onArchiveCard} 
-onUpdateChecklists={this.onUpdateChecklists} />
-</aside> */}
