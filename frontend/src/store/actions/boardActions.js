@@ -102,3 +102,54 @@ export function updateGroup(groupTitleToUpdate, groupId, boardToChange) {
   }
 }
 
+
+
+export function addCard(title, groupId, boardToChange) {
+  return async dispatch => {
+    try {
+
+
+      let newCard = boardService.makeCard(title)
+
+      let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
+
+      const groupToUpdateIdx = boardToUpdate.groups.findIndex(group => group.id === groupId)
+
+      boardToUpdate.groups[groupToUpdateIdx].cards.push(newCard)
+
+      const board = await boardService.updateBoard(boardToUpdate)
+
+      dispatch({ type: 'SET_BOARD', board })
+
+
+    } catch (err) {
+      console.log('BoardActions: err in addCard', err)
+    }
+  }
+}
+
+
+
+export function removeCard(cardId, groupId, boardToChange) {
+  return async dispatch => {
+    try {
+
+      let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
+
+      const groupToUpdateIdx = boardToUpdate.groups.findIndex(group => group.id === groupId)
+
+      const updatedCardList = boardToUpdate.groups[groupToUpdateIdx].cards.filter(card => card.id !== cardId)
+
+      boardToUpdate.groups[groupToUpdateIdx].cards = updatedCardList
+
+      const board = await boardService.updateBoard(boardToUpdate)
+
+      dispatch({ type: 'SET_BOARD', board })
+
+
+    } catch (err) {
+      console.log('BoardActions: err in removeGroup', err)
+    }
+  }
+}
+
