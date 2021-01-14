@@ -22,7 +22,7 @@ class _Home extends Component {
       <div className="home-container">
 
         <div className="home-img-container">
-          <div className="home-header">HEADER</div>
+          {/* <div className="home-header">HEADER</div> */}
           <div className="get-started-container">
             <img src="./imgs/homebg.jpg" alt="" />
             <h1>TASKX</h1>

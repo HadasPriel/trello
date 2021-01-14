@@ -20,7 +20,7 @@ export class _CardPreview extends Component {
         return (
             <article className="card-preview">
                 <p>{card.title}</p>
-                <button onClick={() => this.onRemoveCard(card.id)}>Remove Card</button>
+                <button className="remove-card" onClick={() => this.onRemoveCard(card.id)}>Remove Card</button>
 
             </article>
         )

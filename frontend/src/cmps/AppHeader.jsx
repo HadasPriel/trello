@@ -6,7 +6,7 @@ export function AppHeader() {
 
 
     return <nav className="app-header">
-        <h3 className="logo-header">TASKX</h3>
+        <h3 className="logo-header">TASK<span>X</span></h3>
         
         <ul className="navbar-links">
             {/* <li><NavLink activeClassName="my-active" exact to="/">Home</NavLink> | </li> */}
