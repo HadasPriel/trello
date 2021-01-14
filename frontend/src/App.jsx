@@ -17,7 +17,7 @@ export function App() {
             {/* <Route path="/user/:id" component={UserDetails} /> */}
             {/* <Route path="/login" component={LoginSignup} /> */}
             {/* <Route path="/chat" component={Chat} /> */}
-            <Route path="/board/:id/card/:id" component={CardEdit} />
+            <Route path="/board/:id/card/:cardId" component={CardEdit} />
             <Route path="/board/:id" component={Board} />
             <Route path="/" component={Home} />
           </Switch>
