@@ -29,9 +29,9 @@ export class _AddNewGroup extends Component {
     render() {
         return (
             <div className="add-new-group">
-                <form onSubmit={this.onSubmit} >
-                    <input placeholder="Add another list" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
-                    <button className="save-btn">Add List</button>
+                <form className="add-new-wraper" onSubmit={this.onSubmit} >
+                    <input className="add-another-group" placeholder="Add another list" type="text" onChange={this.handleChange} value={this.state.title} name="title" />
+                    <button className="save-btn">+ Add List</button>
                 </form>
             </div>
         )

@@ -34,11 +34,12 @@ export class _GroupPreview extends Component {
         const { group } = this.props
         return (
             <article className="group-preview">
-                {(isEditMode) ? <p onClick={this.toggleEditMode}>{group.title} </p> : <EditGroupTitle group={group} toggleEditMode={this.toggleEditMode} />}
-                <button onClick={() => this.onRemoveGroup(group.id)}>X</button>
-                {group.cards && <CardList groupId={group.id} cards={group.cards} />}
-                <p>Add new Card</p>
-
+                <div className="group-wraper">
+                    {(isEditMode) ? <p onClick={this.toggleEditMode}>{group.title} </p> : <EditGroupTitle group={group} toggleEditMode={this.toggleEditMode} />}
+                    <button onClick={() => this.onRemoveGroup(group.id)}>X</button>
+                    {group.cards && <CardList groupId={group.id} cards={group.cards} />}
+                    <p>Add new Card</p>
+                </div>
             </article>
         )
     }
