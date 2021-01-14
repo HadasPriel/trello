@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import { socketService } from '../services/socketService'
-import { loadBoard } from '../store/actions/boardActions.js'
+import { loadBoard, updateBoard } from '../store/actions/boardActions.js'
 import { CardEditNav } from '../cmps/cardEdit/CardEditNav'
 import { LabelPalette } from '../cmps/cardEdit/LabelPalette'
 import { AddChecklistBar } from '../cmps/cardEdit/AddChecklistBar'
@@ -18,6 +18,10 @@ class _CardEdit extends Component {
     }
 
     async componentDidMount() {
+        this.loadCard()
+    }
+
+    loadCard = async () => {
         const boardId = this.props.match.params.id
         const groupId = 'g101' //todo: change to props
         const cardId = this.props.match.params.cardId
@@ -34,15 +38,26 @@ class _CardEdit extends Component {
 
     updateCard = async (cardToSave) => {
         const boardToSave = { ...this.state.board }
-        const group = boardToSave.groups.find(group => group.id === this.state.groupId)
-        const groupsToSave = group.cards.map(card => {
+        const groupToSave = boardToSave.groups.find(group => group.id === this.state.groupId)
+        const cardsToSave = groupToSave.cards.map(card => {
             if (card.id === cardToSave.id) return cardToSave
             else return card
         })
+        groupToSave.cards = cardsToSave
+        const groupsToSave = boardToSave.groups.map(group => {
+            if (group.id === groupToSave.id) return groupToSave
+            else return group
+        })
         boardToSave.groups = groupsToSave
-        console.log('boardToSave', boardToSave)
+        // console.log('boardToSave', boardToSave)
 
+        try {
+            await updateBoard(boardToSave)
+            this.loadCard()
 
+        } catch (err) {
+            console.log('BoardActions: err in loadBoard', err)
+        }
     }
 
     toggleLabelPalette = () => {
@@ -59,15 +74,17 @@ class _CardEdit extends Component {
 
     render() {
         const { card } = this.state
+        const isLabels = (card && card.labels && card.labels.length > 0)
+        const isChecklists = (card && card.checklists && card.checklists.length > 0)
         if (!card) return <div>Loading...</div>
         return (
             <section className="card-edit">
                 <main>
                     <h1>{card.title}</h1>
-                    <div>{card.labels && <div> <h3>Labels: </h3><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
+                    <div>{isLabels && <div> <h3>Labels: </h3><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
                     <h3>Description: </h3>
                     <p>{card.description && ''}</p>
-                    {/* <div>{card.checklists && <div> <h3>Checklists: </h3><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div> */}
+                    <div>{isChecklists && <div> <h3>Checklists: </h3><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
                 </main>
                 <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} />
                 {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} />}
@@ -85,6 +102,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = {
     loadBoard
+    // updateBoard
 }
 
 export const CardEdit = connect(mapStateToProps, mapDispatchToProps)(_CardEdit)

@@ -6,10 +6,9 @@ import { connect } from 'react-redux'
 class _CardLabelShow extends Component {
 
     removeLable = (labelId) => {
-        // const labelsToSave = this.props.labels.filter(label => label.id !== labelId)
         const cardToSave = { ...this.props.card }
-        cardToSave.labels.filter(label => label.id !== labelId)
-        console.log('cardToSave', cardToSave);
+        const labelsToSave = cardToSave.labels.filter(label => label.id !== labelId)
+        cardToSave.labels = labelsToSave
         this.props.updateCard(cardToSave)
     }
 

@@ -15,10 +15,10 @@ class _LabelPalette extends Component {
 
 
     addLable = (color) => {
-        const lable = { id: utilService.makeId(), title: '', color }
+        const label = { id: utilService.makeId(), title: '', color }
         const cardToSave = { ...this.state.card }
-        cardToSave.lables = (cardToSave.lables) ? [...cardToSave.lables, lable] : [lable]
-        console.log('cardToSave', cardToSave);
+        cardToSave.labels = (cardToSave.labels) ? [...cardToSave.labels, label] : [label]
+        // console.log('cardToSave', cardToSave);
         this.props.updateCard(cardToSave)
     }
 

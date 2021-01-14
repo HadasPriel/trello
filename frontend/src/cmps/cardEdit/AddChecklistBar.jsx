@@ -16,7 +16,7 @@ class _AddChecklistBar extends Component {
         this.setState({ checklist })
     }
 
-    addChecklist = (ev) => {
+    onAddChecklist = (ev) => {
         ev.preventDefault()
         const checklist = { id: utilService.makeId(), title: this.state.checklist.title }
         const cardToSave = { ...this.props.card }
@@ -30,10 +30,10 @@ class _AddChecklistBar extends Component {
     render() {
 
         return (
-            <form onSubmit={this.addChecklist}>
+            <form onSubmit={this.onAddChecklist}>
                 <h3>Add Checklist</h3>
                 <label>Title
-                    <input type="text" name="fullname" value={this.state.checklist.title}
+                    <input type="text" name="title" value={this.state.checklist.title}
                         onChange={this.handleChange} autoComplete="off"></input>
                     <button>Add</button>
                 </label>

@@ -19,12 +19,21 @@ export function loadBoard(id) {
   return async dispatch => {
     try {
       const board = await boardService.getById(id)
-      console.log('What got form server', board)
+      // console.log('What got form server', board)
       dispatch({ type: 'SET_BOARD', board })
 
     } catch (err) {
       console.log('BoardActions: err in loadBoard', err)
     }
+  }
+}
+
+export async function updateBoard(board) {
+  try {
+
+    await boardService.updateBoard(board)
+  } catch (err) {
+    console.log('BoardActions: err in update board', err)
   }
 }
 
