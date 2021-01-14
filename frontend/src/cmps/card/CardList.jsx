@@ -5,7 +5,7 @@ export function CardList(props) {
         <ul className="card-list clean-list">
             { props.cards.map(card =>
                 <li key={card.id} className="card">
-                    <CardPreview card={card} />
+                    <CardPreview card={card} groupId = {props.groupId} />
                 </li>)}
         </ul>
     )

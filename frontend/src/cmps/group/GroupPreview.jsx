@@ -6,7 +6,7 @@ export function GroupPreview(props) {
     return (
         <article className="group-preview">
             <p>{group.title}</p>
-            {group.cards && <CardList cards ={group.cards}/>}
+            {group.cards && <CardList groupId={group.id} cards={group.cards} />}
             <p>Add new Card</p>
         </article>
     )

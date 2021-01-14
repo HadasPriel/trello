@@ -18,10 +18,11 @@ export class _AddNewGroup extends Component {
         this.setState({ [field]: value })
     }
 
-    onSubmit = (ev) => {
+    onSubmit = async (ev) => {
         ev.preventDefault()
         if (!this.state.title) return
-        this.props.addGroup(this.state.title, this.props.selectedBoard)
+        await this.props.addGroup(this.state.title, this.props.selectedBoard)
+
 
     }
 
@@ -44,7 +45,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-    addGroup
+    addGroup,
+
 };
 
 export const AddNewGroup = connect(mapStateToProps, mapDispatchToProps)(_AddNewGroup);
