@@ -5,42 +5,6 @@
       "title": "Initial Board ",
       "groups": [
         {
-          "id": "g101",
-          "title": "Group 1",
-          "cards": [
-            {
-              "id": "c101",
-              "title": "Replace logo"
-            },
-            {
-              "id": "c102",
-              "title": "Buy milk"
-            },
-            {
-              "id": "c103",
-              "title": "Drink water"
-            }
-          ]
-        },
-        {
-          "id": "g102",
-          "title": "Group 2",
-          "cards": [
-            {
-              "id": "c104",
-              "title": "Do This"
-            },
-            {
-              "id": "c105",
-              "title": "Do That"
-            },
-            {
-              "id": "c106",
-              "title": "Just Do"
-            }
-          ]
-        },
-        {
           "id": "g103",
           "title": "Group 3",
           "cards": [
@@ -59,83 +23,8 @@
           ]
         },
         {
-          "id": "gEVySD",
-          "title": "New List",
-          "cards": []
-        },
-        {
-          "id": "gD6GGk",
-          "title": "New List",
-          "cards": []
-        },
-        {
-          "id": "gVN29c",
-          "title": "New Group",
-          "cards": []
-        },
-        {
-          "id": "ghAGD1",
-          "title": "Another Card",
-          "cards": []
-        },
-        {
-          "id": "gC2gcT",
-          "title": "LKHJ",
-          "cards": []
-        },
-        {
-          "id": "gImEBY",
-          "title": "Other List",
-          "cards": []
-        },
-        {
-          "id": "gMTjUa",
-          "title": "new new list",
-          "cards": []
-        },
-        {
-          "id": "grCAwv",
-          "title": "new new list",
-          "cards": []
-        },
-        {
-          "id": "grPPN0",
-          "title": "Other List",
-          "cards": []
-        },
-        {
-          "id": "gXSxVM",
-          "title": "LKHJ",
-          "cards": []
-        },
-        {
-          "id": "gjPJ4L",
-          "title": "Other List",
-          "cards": []
-        },
-        {
-          "id": "guamRq",
-          "title": "new new list",
-          "cards": []
-        },
-        {
-          "id": "gBbsfz",
-          "title": "Another Card",
-          "cards": []
-        },
-        {
-          "id": "geS4yA",
-          "title": "cute board",
-          "cards": []
-        },
-        {
-          "id": "g8U6OB",
-          "title": "another try",
-          "cards": []
-        },
-        {
-          "id": "g8Vn95",
-          "title": "new new list",
+          "id": "gu8FG8",
+          "title": "New List works",
           "cards": []
         }
       ]
