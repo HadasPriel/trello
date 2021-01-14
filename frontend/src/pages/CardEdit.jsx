@@ -5,6 +5,7 @@ import { loadBoard, updateBoard } from '../store/actions/boardActions.js'
 import { CardEditNav } from '../cmps/cardEdit/CardEditNav'
 import { LabelPalette } from '../cmps/cardEdit/LabelPalette'
 import { AddChecklistBar } from '../cmps/cardEdit/AddChecklistBar'
+import { AddCoverBar } from '../cmps/cardEdit/AddCoverBar'
 import { CardLabelShow } from '../cmps/cardEdit/CardLabelShow'
 import { CardChecklistShow } from '../cmps/cardEdit/CardChecklistShow'
 
@@ -14,7 +15,8 @@ class _CardEdit extends Component {
         groupId: null,
         card: null,
         isLabelPaletteShowing: false,
-        isAddChecklistShowing: false
+        isAddChecklistShowing: false,
+        isCoverShowing: false
     }
 
     async componentDidMount() {
@@ -23,7 +25,7 @@ class _CardEdit extends Component {
 
     loadCard = async () => {
         const boardId = this.props.match.params.id
-        const groupId = 'g101' //todo: change to props
+        const groupId = 'g101' // todo: change to props
         const cardId = this.props.match.params.cardId
         try {
             await this.props.loadBoard(boardId)
@@ -66,9 +68,8 @@ class _CardEdit extends Component {
     toggleChecklistBar = () => {
         this.setState({ isAddChecklistShowing: !this.state.isAddChecklistShowing })
     }
-
-    addChecklist = () => {
-
+    toggleCoverBar = () => {
+        this.setState({ isCoverShowing: !this.state.isCoverShowing })
     }
 
 
@@ -86,9 +87,10 @@ class _CardEdit extends Component {
                     <p>{card.description && ''}</p>
                     <div>{isChecklists && <div> <h3>Checklists: </h3><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
                 </main>
-                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} />
+                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} />
                 {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} />}
                 {this.state.isAddChecklistShowing && <AddChecklistBar card={card} updateCard={this.updateCard} />}
+                {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} />}
             </section>
         )
     }
