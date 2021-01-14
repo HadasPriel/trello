@@ -1,0 +1,42 @@
+.add-new-group{
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    width: 290px;
+    .add-new-wraper{
+        background-color: #ebecf0;
+        border-radius: 3px;
+        box-sizing: border-box;
+        max-height: 100%;
+        position: relative;
+        white-space: normal;
+        width: 272px;
+        padding: 5px;
+    }
+
+    .add-another-group{
+        width: 250px;
+        height: 25px;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 3px;
+
+
+    }
+
+    .save-btn{
+        width: 250px;
+        height: 25px;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border:0px;
+        border-radius: 3px;
+        outline: none;
+        &:hover{
+            background-color: rgb(108, 107, 107);
+        }
+        // padding: 5px;
+    }
+}
