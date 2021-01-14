@@ -4,7 +4,7 @@ export function CardEditNav(props) {
 
 
     return (
-        <nav>
+        <nav className="card-edit-nav flex column">
             <h3>Add to card</h3>
             <button onClick={props.toggleLabelPalette}>Labels</button>
             <button onClick={props.toggleChecklistBar}>Checklist</button>

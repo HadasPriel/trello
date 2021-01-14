@@ -11,9 +11,6 @@
 @import "basics/links";
 @import "basics/forms";
 
-
-
-
 // Components
 @import "cmps/Header";
 @import "cmps/ReviewList";
@@ -26,7 +23,11 @@
 @import "cmps/CardList";
 @import "cmps/EditGroupTitle";
 @import "cmps/AppHeader";
+@import "cmps/AddCoverBar";
+@import "cmps/CardEditNav";
+@import "cmps/AddCard";
 
 // pages
 
 @import "pages/Home";
+@import "pages/CardEdit";

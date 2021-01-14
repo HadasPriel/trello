@@ -1,4 +1,27 @@
-.board-preview {
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.board-wraper{
+
+    user-select: none;
+    white-space: nowrap;
+    margin-top: 60px;
+    margin-bottom: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .board-title {
+        font-family: 'Share Tech Mono', monospace;
+        margin-left: 8px;
+
+    }
+
+    .board-preview {
     font-family: 'Roboto', sans-serif;
     padding: 10px;
     min-width: 350px;
@@ -35,5 +58,5 @@
     }    
 }
 
-
+} 
 
