@@ -6,7 +6,7 @@ import { utilService } from '../../services/utilService.js'
 
 class _AddChecklistBar extends Component {
     state = {
-        checklist: { title: '' }
+        checklist: { title: '', todos: [] }
     }
 
     handleChange = (ev) => {
@@ -18,7 +18,7 @@ class _AddChecklistBar extends Component {
 
     onAddChecklist = (ev) => {
         ev.preventDefault()
-        const checklist = { id: utilService.makeId(), title: this.state.checklist.title }
+        const checklist = { id: utilService.makeId(), ...this.state.checklist }
         const cardToSave = { ...this.props.card }
         cardToSave.checklists = (cardToSave.checklists) ? [...cardToSave.checklists, checklist] : [checklist]
         // console.log('cardToSave', cardToSave);
@@ -34,7 +34,7 @@ class _AddChecklistBar extends Component {
                 <h3>Add Checklist</h3>
                 <label>Title
                     <input type="text" name="title" value={this.state.checklist.title}
-                        onChange={this.handleChange} autoComplete="off"></input>
+                        onChange={this.handleChange} autoComplete="off" required></input>
                     <button>Add</button>
                 </label>
             </form>

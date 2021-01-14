@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { TodoListShow } from './TodoListShow'
 
 // import { socketService } from '../services/socketService'
 import { utilService } from '../../services/utilService.js'
 
 class _CardChecklistShow extends Component {
     state = {
-        task: { txt: '', isDone: false }
+        todo: { txt: '', isDone: false }
     }
 
     removeChecklist = (checklistId) => {
@@ -20,20 +21,20 @@ class _CardChecklistShow extends Component {
     }
 
     handleTaskChange = (ev) => {
-        const task = { ...this.state.task }
-        if (ev.target.name === 'isDone') task.isDone = ev.target.checked
-        else task[ev.target.name] = ev.target.value
+        const todo = { ...this.state.todo }
+        if (ev.target.name === 'isDone') todo.isDone = ev.target.checked
+        else todo[ev.target.name] = ev.target.value
 
-        this.setState({ task })
+        this.setState({ todo })
     }
 
     addTask = (ev, checklistId) => {
         ev.preventDefault()
 
-        const task = { ...this.state.task, id: utilService.makeId() }
+        const todo = { ...this.state.todo, id: utilService.makeId() }
         const cardToSave = { ...this.props.card }
         const checklistToSave = cardToSave.checklists.find(checklist => checklist.id === checklistId)
-        checklistToSave.todos = (checklistToSave.todos) ? [...checklistToSave.todos, task] : [task]
+        checklistToSave.todos = (checklistToSave.todos) ? [...checklistToSave.todos, todo] : [todo]
         const checklistsToSave = cardToSave.checklists.map(checklist => {
             if (checklist.id === checklistId) return checklistToSave
             else return checklist
@@ -42,38 +43,34 @@ class _CardChecklistShow extends Component {
 
         console.log('cardToSave', cardToSave);
         this.props.updateCard(cardToSave)
-            .then(this.setState({ task: { txt: '', isDone: false } }))
+            .then(this.setState({ todo: { txt: '', isDone: false } }))
     }
 
-    updateIsDone = (checklistId, todoId) => {
-        console.log('here');
-    }
 
+    removeTodo = (todoId, checklistId) => {
+        const cardToSave = { ...this.props.card }
+        const checklistIndex = cardToSave.checklists.findIndex(checklist => checklist.id === checklistId)
+        const todoToSave = cardToSave.checklists[checklistIndex].todos.filter(todo => todo.id !== todoId)
+        cardToSave.checklists[checklistIndex].todos = todoToSave
+        this.props.updateCard(cardToSave)
+    }
 
 
     render() {
-        const { task } = this.state
+        const { todo } = this.state
         return (
             <ul>
                 {this.props.checklists.map(checklist => {
                     return (
                         <li key={checklist.id} >
                             <h4>{checklist.title}</h4>
-                            <button onClick={() => { this.removeChecklist(checklist.id) }}>X</button>
-                            <ul>
-                                {checklist.todos.map(todo => {
-                                    return (
-                                        <li key={todo.id}>
-                                            <p>{todo.txt}</p>
-                                            <input type="checkbox" name="isDone" checked={todo.isDone}
-                                                onChange={(event) => { this.updateIsDone(event, checklist.id, todo) }} ></input>
-                                        </li>)
-                                })}
-                            </ul>
+                            <button onClick={() => { this.removeChecklist(checklist.id) }}>delete checklist</button>
+                            <TodoListShow checklist={checklist} card={this.props.card} updateCard={this.props.updateCard}
+                                removeTodo={this.removeTodo} />
                             <form onSubmit={(event) => { this.addTask(event, checklist.id) }}>
-                                <input type="text" name="txt" value={task.txt}
-                                    onChange={this.handleTaskChange} placeholder="Add an item" autoComplete="off"></input>
-                                <input type="checkbox" name="isDone" checked={task.isDone} onChange={this.handleTaskChange} ></input>
+                                <input type="text" name="txt" value={todo.txt} onChange={this.handleTaskChange}
+                                    placeholder="Add an item" autoComplete="off" required></input>
+                                <input type="checkbox" name="isDone" checked={todo.isDone} onChange={this.handleTaskChange} ></input>
                                 <button>Add</button>
                             </form>
                         </li>
