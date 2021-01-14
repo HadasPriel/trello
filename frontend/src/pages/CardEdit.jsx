@@ -67,7 +67,7 @@ class _CardEdit extends Component {
                     <div>{card.labels && <div> <h3>Labels: </h3><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
                     <h3>Description: </h3>
                     <p>{card.description && ''}</p>
-                    <div>{card.checklists && <div> <h3>Checklists: </h3><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
+                    {/* <div>{card.checklists && <div> <h3>Checklists: </h3><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div> */}
                 </main>
                 <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} />
                 {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} />}

@@ -8,7 +8,7 @@ export function loadBoards() {
       dispatch({ type: 'SET_BOARDS', boards })
 
     } catch (err) {
-      console.log('ReviewActions: err in loadBoards', err)
+      console.log('BoardActions: err in loadBoards', err)
     }
   }
 }
@@ -23,35 +23,30 @@ export function loadBoard(id) {
       dispatch({ type: 'SET_BOARD', board })
 
     } catch (err) {
-      console.log('ReviewActions: err in loadBoard', err)
+      console.log('BoardActions: err in loadBoard', err)
     }
   }
 }
 
 
+export function addGroup(title, boardToChange) {
+  return async dispatch => {
+    try {
 
-// export function addReview(review) {
-//   return async dispatch => {
-//     try {
-//       const addedReview = await reviewService.add(review)
-//       dispatch({ type: 'ADD_REVIEW', review: addedReview })
+      let groupToAdd = boardService.makeGroup(title)
 
-//       const score = await userService.increaseScore()
-//       dispatch({ type: 'SET_SCORE', score })
+      let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
 
-//     } catch (err) {
-//       console.log('ReviewActions: err in addReview', err)
-//     }
-//   }
-// }
+      boardToUpdate.groups.push(groupToAdd)
 
-// export function removeReview(reviewId) {
-//   return async dispatch => {
-//     try {
-//       await reviewService.remove(reviewId)
-//       dispatch({ type: 'REMOVE_REVIEW', reviewId })
-//     } catch (err) {
-//       console.log('ReviewActions: err in removeReview', err)
-//     }
-//   }
-// }
+      const board = await boardService.updateBoard(boardToUpdate)
+
+      dispatch({ type: 'SET_BOARD', board })
+
+
+    } catch (err) {
+      console.log('BoardActions: err in addGroup', err)
+    }
+  }
+}
+

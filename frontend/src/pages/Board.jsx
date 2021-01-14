@@ -9,27 +9,28 @@ class _Board extends Component {
         board: {}
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         const boardId = this.props.match.params.id
         console.log('boardId', boardId)
-        this.props.loadBoard(boardId)
+        await this.props.loadBoard(boardId)
 
 
     }
 
- 
+
 
 
 
     render() {
-        const {selectedBoard} = this.props
+        const { selectedBoard } = this.props
+        if (!selectedBoard) return <div>Loading...</div>
 
         return (
             <section>
                 <div> {selectedBoard.title}</div>
 
-               {selectedBoard.groups && <GroupList groups ={selectedBoard.groups}/>}
-            
+                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} />}
+
             </section>
 
         )
