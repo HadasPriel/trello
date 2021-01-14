@@ -27,6 +27,9 @@ export function loadBoard(id) {
     }
   }
 }
+
+
+
 // export function addReview(review) {
 //   return async dispatch => {
 //     try {
