@@ -3,13 +3,12 @@ import { connect } from 'react-redux'
 import { GroupList } from '../cmps/group/GroupList'
 // import { socketService } from '../services/socketService'
 import { loadBoard } from '../store/actions/boardActions.js'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
-import { CardEdit } from './CardEdit'
 
 
 class _Board extends Component {
     state = {
-        board: {}
+        board: {},
+
     }
 
     async componentDidMount() {
@@ -22,8 +21,6 @@ class _Board extends Component {
 
 
 
-
-
     render() {
         const { selectedBoard } = this.props
         if (!selectedBoard) return <div>Loading...</div>
@@ -31,18 +28,9 @@ class _Board extends Component {
         return (
             <section className="board-wraper">
                 <div className="board-title"> {selectedBoard.title}</div>
-
                 {selectedBoard.groups && <GroupList groups={selectedBoard.groups} />}
 
-
-
-                <Router>
-                    <Switch>
-                        <Route exact path="/board/:id/:groupId/card/:cardId" component={CardEdit} />
-                    </Switch>
-                </Router>
             </section>
-
         )
     }
 }

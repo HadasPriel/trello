@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 
 // import { socketService } from '../services/socketService'
 import { loadBoard, updateBoard } from '../store/actions/boardActions.js'
@@ -33,9 +32,9 @@ class _CardEdit extends Component {
 
 
     loadCard = async () => {
-        const boardId = this.props.match.params.id
-        const groupId = this.props.match.params.groupId
-        const cardId = this.props.match.params.cardId
+        const boardId = this.props.selectedBoard._id
+        const groupId = this.props.groupId
+        const cardId = this.props.card.id
         try {
             await this.props.loadBoard(boardId)
             const groups = this.props.selectedBoard.groups
@@ -89,7 +88,7 @@ class _CardEdit extends Component {
         if (!card) return <div>Loading...</div>
         return (
             <section className="card-edit">
-                <Link to={`/board/${this.props.selectedBoard}`}>X</Link>
+                {/* <Link to={`/board/${this.props.selectedBoard.id}`}>X</Link> */}
                 <div className="permanent">
                     <main>
                         <h1>{card.title}</h1>
