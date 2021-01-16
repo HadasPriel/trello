@@ -25,10 +25,6 @@
               "style": {}
             },
             {
-              "id": "c104",
-              "title": "Do This"
-            },
-            {
               "id": "cWnpGf",
               "title": "lala",
               "description": "",
@@ -86,6 +82,26 @@
               }
             },
             {
+              "id": "c104",
+              "title": "Do This"
+            },
+            {
+              "id": "c6Ujwr",
+              "title": "Other Card Added",
+              "labels": [
+                {
+                  "id": "4cYJl",
+                  "title": "",
+                  "color": "#61BD4F"
+                },
+                {
+                  "id": "YFpt2",
+                  "title": "",
+                  "color": "#C377E0"
+                }
+              ]
+            },
+            {
               "id": "cF3r1F",
               "title": "New Card",
               "description": "",
@@ -104,11 +120,6 @@
                       "txt": "2",
                       "isDone": true,
                       "id": "pL3PZ"
-                    },
-                    {
-                      "txt": "3",
-                      "isDone": false,
-                      "id": "TORqc"
                     }
                   ]
                 }
@@ -133,22 +144,6 @@
                 "coverType": "top",
                 "bgColor": "#29cce5"
               }
-            },
-            {
-              "id": "c6Ujwr",
-              "title": "Other Card Added",
-              "labels": [
-                {
-                  "id": "4cYJl",
-                  "title": "",
-                  "color": "#61BD4F"
-                },
-                {
-                  "id": "YFpt2",
-                  "title": "",
-                  "color": "#C377E0"
-                }
-              ]
             },
             {
               "id": "coA9SH",
