@@ -152,67 +152,9 @@
           ]
         },
         {
-          "id": "gCWjEU",
-          "title": "Timeline 1",
-          "cards": [
-            {
-              "id": "c97v0F",
-              "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "ceOffr",
-              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cUQsC3",
-              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
           "id": "gYI644",
           "title": "Action Items - Medium Priority",
           "cards": [
-            {
-              "id": "cHsts5",
-              "title": "Develop a set of first-year learning goals and disseminate them widely, especially to faculty who will be teaching the first-year students.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
             {
               "id": "c5ZWZa",
               "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
@@ -240,8 +182,72 @@
               "style": {}
             },
             {
+              "id": "cuo2u4",
+              "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
               "id": "cmKQjr",
               "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "gCWjEU",
+          "title": "Timeline 1",
+          "cards": [
+            {
+              "id": "c97v0F",
+              "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "ceOffr",
+              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
+              "description": "",
+              "comments": [],
+              "checklists": [
+                {
+                  "id": "lg7Ap",
+                  "title": "Add",
+                  "todos": []
+                }
+              ],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cUQsC3",
+              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -259,19 +265,6 @@
           "title": "Timeline 3",
           "cards": [
             {
-              "id": "cuo2u4",
-              "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
               "id": "clzzCD",
               "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
               "description": "",
@@ -287,6 +280,19 @@
             {
               "id": "ck1VD7",
               "title": "By the early March: Program Review Chair collates and presents data to faculty members",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cofVPO",
+              "title": "Add first-year issues to the current New Faculty Institute. Alternatively, create a first-year presentation on MediaSite that could be shared with all faculty as they receive an assignment to teach a first-year class.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -330,8 +336,8 @@
               "style": {}
             },
             {
-              "id": "cofVPO",
-              "title": "Add first-year issues to the current New Faculty Institute. Alternatively, create a first-year presentation on MediaSite that could be shared with all faculty as they receive an assignment to teach a first-year class.",
+              "id": "cHsts5",
+              "title": "Develop a set of first-year learning goals and disseminate them widely, especially to faculty who will be teaching the first-year students.",
               "description": "",
               "comments": [],
               "checklists": [],

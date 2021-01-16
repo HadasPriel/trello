@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { GroupList } from '../cmps/group/GroupList'
 // import { socketService } from '../services/socketService'
-import { loadBoard, updateBoard } from '../store/actions/boardActions.js'
+import { loadBoard, updateBoardAfterDrag } from '../store/actions/boardActions.js'
 
 
 class _Board extends Component {
@@ -40,7 +40,7 @@ class _Board extends Component {
         let boardToUpdate = this.props.selectedBoard
         const groupToMove = boardToUpdate.groups.splice(startIndex, 1)
         boardToUpdate.groups.splice(endIndex, 0, groupToMove[0])
-        await this.props.updateBoard(this.props.selectedBoard)
+        await this.props.updateBoardAfterDrag(this.props.selectedBoard)
 
     }
 
@@ -51,7 +51,7 @@ class _Board extends Component {
         const cardToMove = boardToUpdate.groups[groupToMoveFromIdx].cards.splice(source.index, 1)
         boardToUpdate.groups[groupToMoveToIdx].cards.splice(destination.index, 0, cardToMove[0])
         // console.log('i am in this on drag cards')
-        await this.props.updateBoard(this.props.selectedBoard)
+        await this.props.updateBoardAfterDrag(this.props.selectedBoard)
 
     }
 
@@ -88,7 +88,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = {
     loadBoard,
-    updateBoard
+    updateBoardAfterDrag
 }
 
 export const Board = connect(mapStateToProps, mapDispatchToProps)(_Board)
