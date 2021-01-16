@@ -76,7 +76,7 @@ function makeCard(cardTitle) {
     createdAt: '',
     dueDate: '',
     byMember: {},
-    style: {}
+    style: { coverType: 'top' }
 
   }
   return card

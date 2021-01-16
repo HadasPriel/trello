@@ -6,11 +6,13 @@ html {
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
     color: $clr2;
+    margin: 0;
 }
 
 body {
     font-size: rem(18px);
     margin: 0;
+    left:0;
 }
 
 h1,

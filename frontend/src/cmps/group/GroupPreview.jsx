@@ -12,6 +12,7 @@ export class _GroupPreview extends Component {
     state = {
         isOnAddCardMode: false,
         isEditMode: false,
+        // isOnAddGroupMode: false,
         title: ''
     }
 
@@ -33,6 +34,11 @@ export class _GroupPreview extends Component {
         this.setState({ isOnAddCardMode: !this.state.isOnAddCardMode })
     }
 
+    // toggleAddGroupMode = () => {
+
+    //     this.setState({ isOnAddGroupMode: !this.state.isOnAddGroupMode })
+    // }
+
 
 
     render() {
@@ -46,9 +52,9 @@ export class _GroupPreview extends Component {
                             <article className="group-preview">
                                 <div className="group-wraper" >
                                     {(!isEditMode) ? <p onClick={this.toggleEditMode}>{group.title} </p> : <EditGroupTitle group={group} toggleEditMode={this.toggleEditMode} />}
-                                    <button className="delete-group" onClick={() => this.onRemoveGroup(group.id)}>X</button>
+                                    <button className="delete-group" onClick={() => this.onRemoveGroup(group.id)}></button>
                                     {group.cards && <CardList groupId={group.id} cards={group.cards} />}
-                                    {(!isOnAddCardMode) ? <p onClick={this.toggleAddCardMode}>Add new Card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
+                                    {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}> Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
                                 </div>
                             </article>
                         </li>

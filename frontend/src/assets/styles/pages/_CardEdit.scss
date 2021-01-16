@@ -11,20 +11,6 @@
     z-index: 2;
     border-radius: 5px;
 
-    .cover {
-        top: -45px;
-        right: 0;
-        width: 100%;
-        height: 50px;
-        position: absolute;
-        z-index: 3;
-        border-radius: 3px 3px 0 0;
-
-        &.7bc86c {
-            background-color: #7bc86c;
-        }
-    }
-
     header.edit-header {
         margin: 12px 40px 8px 56px;
         button {

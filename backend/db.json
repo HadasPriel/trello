@@ -8,26 +8,9 @@
       },
       "groups": [
         {
-          "id": "gOGaD3",
-          "title": "New List",
+          "id": "g4vVW8",
+          "title": "Please",
           "cards": [
-            {
-              "id": "cEbmbs",
-              "title": "Add new card"
-            },
-            {
-              "id": "ctENGI",
-              "title": "Nק' Cשרג",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
             {
               "id": "c8UgxS",
               "title": "New card",
@@ -40,6 +23,53 @@
               "dueDate": "",
               "byMember": {},
               "style": {}
+            },
+            {
+              "id": "c104",
+              "title": "Do This"
+            },
+            {
+              "id": "cWnpGf",
+              "title": "lala",
+              "description": "",
+              "comments": [],
+              "checklists": [
+                {
+                  "id": "dwRiF",
+                  "title": "ךוךו",
+                  "todos": [
+                    {
+                      "txt": "1",
+                      "isDone": true,
+                      "id": "kPcLT"
+                    }
+                  ]
+                }
+              ],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "bgColor": "#f5dd29",
+                "coverType": "full"
+              }
+            },
+            {
+              "id": "cRyryP",
+              "title": "yeeeee",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
             }
           ]
         },
@@ -48,25 +78,81 @@
           "title": "Group 2",
           "cards": [
             {
+              "id": "cEbmbs",
+              "title": "Add new card",
+              "style": {
+                "bgColor": "#172b4d",
+                "coverType": "full"
+              }
+            },
+            {
               "id": "cF3r1F",
               "title": "New Card",
               "description": "",
               "comments": [],
-              "checklists": [],
+              "checklists": [
+                {
+                  "id": "jh19I",
+                  "title": "123",
+                  "todos": [
+                    {
+                      "txt": "1",
+                      "isDone": false,
+                      "id": "zakwC"
+                    },
+                    {
+                      "txt": "2",
+                      "isDone": true,
+                      "id": "pL3PZ"
+                    },
+                    {
+                      "txt": "3",
+                      "isDone": false,
+                      "id": "TORqc"
+                    }
+                  ]
+                }
+              ],
               "members": [],
-              "labels": [],
+              "labels": [
+                {
+                  "id": "6VQZs",
+                  "title": "",
+                  "color": "#61BD4F"
+                },
+                {
+                  "id": "WMH9p",
+                  "title": "",
+                  "color": "#F2D600"
+                }
+              ],
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
-              "style": {}
+              "style": {
+                "coverType": "top",
+                "bgColor": "#29cce5"
+              }
             },
             {
-              "id": "c106",
-              "title": "Just Do"
+              "id": "c6Ujwr",
+              "title": "Other Card Added",
+              "labels": [
+                {
+                  "id": "4cYJl",
+                  "title": "",
+                  "color": "#61BD4F"
+                },
+                {
+                  "id": "YFpt2",
+                  "title": "",
+                  "color": "#C377E0"
+                }
+              ]
             },
             {
-              "id": "cWnpGf",
-              "title": "lala",
+              "id": "coA9SH",
+              "title": "lulu",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -75,25 +161,13 @@
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "g4vVW8",
-          "title": "Please",
-          "cards": [
+              "style": {
+                "coverType": "top"
+              }
+            },
             {
               "id": "c105",
               "title": "Do That"
-            },
-            {
-              "id": "c6Ujwr",
-              "title": "Other Card Added"
-            },
-            {
-              "id": "c104",
-              "title": "Do This"
             }
           ]
         }

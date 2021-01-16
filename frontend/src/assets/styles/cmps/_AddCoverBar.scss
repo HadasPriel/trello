@@ -1,20 +1,28 @@
 .add-cover-bar {
+    .edit-btn.remove {
+        display: inline-block;
+        margin: 10px 20px;
+        width: 80%;
+    }
+
     input {
         visibility: hidden;
     }
     .colors {
-        width: unset;
-        width: 150px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 8px;
 
+        .color {
+            width: 50px;
+            height: 30px;
+        }
+
         label {
             cursor: pointer;
             height: 20px;
             width: 30px;
-            border: 1px solid black;
             border-radius: 5px;
             &.\#7bc86c {
                 background-color: #7bc86c;

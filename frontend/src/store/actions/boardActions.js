@@ -81,7 +81,7 @@ export function removeGroup(groupId, boardToChange) {
 
       const updatedGroups = boardToUpdate.groups.filter(group => group.id !== groupId)
 
-      
+
 
       boardToUpdate.groups = updatedGroups
 
@@ -172,7 +172,7 @@ export function removeCard(cardId, groupId, boardToChange) {
 }
 
 
-export function updateBoardAfterDrag( boardToChange) {
+export function updateBoardAfterDrag(boardToChange) {
   return async dispatch => {
     try {
 
