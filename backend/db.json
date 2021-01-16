@@ -3,73 +3,84 @@
     {
       "_id": "b101",
       "title": "Initial Board ",
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
+      },
       "groups": [
         {
-          "id": "g102",
-          "title": "Group 2",
+          "id": "g4vVW8",
+          "title": "Please",
           "cards": [
             {
               "id": "c105",
               "title": "Do That"
             },
             {
-              "id": "c106",
-              "title": "Just Do"
+              "id": "cF3r1F",
+              "title": "New Card",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "c6Ujwr",
+              "title": "Other Card Added"
+            },
+            {
+              "id": "c104",
+              "title": "Do This"
             }
           ]
         },
         {
-          "id": "g103",
-          "title": "Group 3",
+          "id": "gOGaD3",
+          "title": "New List",
           "cards": [
             {
-              "id": "c108",
-              "title": "Go There",
-              "labels": [
-                {
-                  "id": "LICZr",
-                  "title": "",
-                  "color": "#FF9F1A"
-                },
-                {
-                  "id": "EjRKk",
-                  "title": "",
-                  "color": "#EB5A46"
-                },
-                {
-                  "id": "yPKps",
-                  "title": "",
-                  "color": "#61BD4F"
-                }
-              ],
-              "checklists": [
-                {
-                  "id": "Sas1B",
-                  "title": "one more",
-                  "todos": [
-                    {
-                      "txt": "to eat",
-                      "isDone": false,
-                      "id": "MoRKy"
-                    },
-                    {
-                      "txt": "to drink",
-                      "isDone": false,
-                      "id": "xC1LA"
-                    }
-                  ]
-                },
-                {
-                  "id": "y7U1d",
-                  "title": "another",
-                  "todos": []
-                }
-              ],
+              "id": "cEbmbs",
+              "title": "Add new card"
+            },
+            {
+              "id": "c8UgxS",
+              "title": "New card",
               "description": "",
-              "style": {
-                "bgColor": "#7bc86c",
-                "coverType": "top"
-              }
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "g102",
+          "title": "Group 2",
+          "cards": [
+            {
+              "id": "ctENGI",
+              "title": "Nק' Cשרג",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "c106",
+              "title": "Just Do"
             },
             {
               "id": "cWnpGf",
@@ -85,117 +96,16 @@
               "style": {}
             }
           ]
-        },
-        {
-          "id": "gu8FG8",
-          "title": "New List works too",
-          "cards": [
-            {
-              "id": "cuhQtT",
-              "title": "New Card Added",
-              "labels": [
-                {
-                  "id": "fdNkX",
-                  "title": "",
-                  "color": "#61BD4F"
-                },
-                {
-                  "id": "yBfER",
-                  "title": "",
-                  "color": "#F2D600"
-                }
-              ]
-            },
-            {
-              "id": "c01Tr0",
-              "title": "To check Card adding",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "g4vVW8",
-          "title": "Please",
-          "cards": [
-            {
-              "id": "c6Ujwr",
-              "title": "Other Card Added"
-            }
-          ]
-        },
-        {
-          "id": "gZtcYh",
-          "title": "Yes I can",
-          "cards": [
-            {
-              "id": "cEbmbs",
-              "title": "Add new card"
-            },
-            {
-              "id": "c7Tijn",
-              "title": "Another Card"
-            }
-          ]
         }
       ]
     },
     {
       "_id": "b102",
       "title": "Second Board ",
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
+      },
       "groups": [
-        {
-          "id": "gCWjEU",
-          "title": "Timeline 1",
-          "cards": [
-            {
-              "id": "cMqZo1",
-              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "clzzCD",
-              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "c97v0F",
-              "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
         {
           "id": "gYc4wz",
           "title": "Timeline 2",
@@ -242,51 +152,38 @@
           ]
         },
         {
-          "id": "gxf3ks",
-          "title": "Timeline 3",
+          "id": "gCWjEU",
+          "title": "Timeline 1",
           "cards": [
+            {
+              "id": "clzzCD",
+              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "c97v0F",
+              "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
             {
               "id": "cUQsC3",
               "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "ck1VD7",
-              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cz2rxm",
-              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cU5pvD",
-              "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -317,8 +214,8 @@
               "style": {}
             },
             {
-              "id": "cmKQjr",
-              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
+              "id": "cMqZo1",
+              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -358,9 +255,22 @@
           ]
         },
         {
-          "id": "gYI644",
-          "title": "Action Items - Medium Priority",
+          "id": "gxf3ks",
+          "title": "Timeline 3",
           "cards": [
+            {
+              "id": "ck1VD7",
+              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
             {
               "id": "c5ZWZa",
               "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
@@ -374,6 +284,38 @@
               "byMember": {},
               "style": {}
             },
+            {
+              "id": "cz2rxm",
+              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cU5pvD",
+              "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "gYI644",
+          "title": "Action Items - Medium Priority",
+          "cards": [
             {
               "id": "cuo2u4",
               "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
@@ -399,6 +341,19 @@
               "dueDate": "",
               "byMember": {},
               "style": {}
+            },
+            {
+              "id": "cmKQjr",
+              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
             }
           ]
         }
@@ -407,15 +362,14 @@
     {
       "_id": "b103",
       "title": "Third Board ",
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2019/03/23/20/54/bamboo-4076262_1280.jpg"
+      },
       "groups": [
         {
           "id": "g107",
           "title": "Group 7",
           "cards": [
-            {
-              "id": "c119",
-              "title": "Task 119"
-            },
             {
               "id": "c120",
               "title": "Task 120"
@@ -423,6 +377,50 @@
             {
               "id": "c121",
               "title": "Task 121"
+            },
+            {
+              "id": "c123",
+              "title": "Task 123"
+            }
+          ]
+        },
+        {
+          "id": "gM0AgA",
+          "title": "Gorup 10",
+          "cards": [
+            {
+              "id": "c126",
+              "title": "Task 126"
+            },
+            {
+              "id": "c122",
+              "title": "Task 122"
+            },
+            {
+              "id": "c8NHdI",
+              "title": "Task 125",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cJZhoM",
+              "title": "New Card",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
             }
           ]
         },
@@ -431,16 +429,16 @@
           "title": "Group 8",
           "cards": [
             {
-              "id": "c122",
-              "title": "Task 122"
+              "id": "c119",
+              "title": "Task 119"
             },
             {
-              "id": "c123",
-              "title": "Task 123"
+              "id": "c125",
+              "title": "Task 125"
             },
             {
-              "id": "c124",
-              "title": "Task 124"
+              "id": "c127",
+              "title": "Task 127"
             }
           ]
         },
@@ -449,16 +447,79 @@
           "title": "Group 9",
           "cards": [
             {
-              "id": "c125",
-              "title": "Task 125"
+              "id": "clwVaX",
+              "title": "Task 126",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
             },
             {
-              "id": "c126",
-              "title": "Task 126"
+              "id": "cLwW8E",
+              "title": "Task 128",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
             },
             {
-              "id": "c127",
-              "title": "Task 127"
+              "id": "csHxXU",
+              "title": "Task 125",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "gjxrvL",
+          "title": "Group 11",
+          "cards": [
+            {
+              "id": "c124",
+              "title": "Task 124"
+            },
+            {
+              "id": "cJtDKk",
+              "title": "Task 172",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cuOUVZ",
+              "title": "Task 126",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
             }
           ]
         }

@@ -1,17 +1,26 @@
 
 import { GroupPreview } from './GroupPreview.jsx'
 import { AddNewGroup } from './AddNewGroup.jsx'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 
 export function GroupList(props) {
     return (
-        <section className="group-list-container">
-            <ul className="group-list clean-list">
-                {props.groups.map(group =>
-                    <li key={group.id} className="group">
-                        <GroupPreview group={group} />
-                    </li>)}
-            </ul>
-            <AddNewGroup boardId={props.boardId} />
-        </section>
+        <DragDropContext onDragEnd={props.onDragEnd}>
+            <section className="group-list-container">
+                <Droppable droppableId={'moveGroups'}  direction="horizontal" type="group">
+                    {(provided) => (
+                        <ul className="group-list clean-list" {...provided.droppableProps} ref={provided.innerRef}>
+                            {props.groups.map((group, index) =>
+                                <GroupPreview key={group.id} group={group} index={index} />
+                            )}
+                            {provided.placeholder}
+                        </ul>
+
+                    )}
+
+                </Droppable>
+                <AddNewGroup boardId={props.boardId} />
+            </section>
+        </DragDropContext>
     )
 }
