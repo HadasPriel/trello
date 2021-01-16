@@ -104,11 +104,6 @@
                       "txt": "2",
                       "isDone": true,
                       "id": "pL3PZ"
-                    },
-                    {
-                      "txt": "3",
-                      "isDone": false,
-                      "id": "TORqc"
                     }
                   ]
                 }
@@ -650,19 +645,13 @@
           "title": "New list in  new Board",
           "cards": [
             {
-              "id": "cFbJVv",
-              "title": "Other Card",
+              "id": "cmia31",
+              "title": "New Card",
               "description": "",
               "comments": [],
               "checklists": [],
               "members": [],
-              "labels": [
-                {
-                  "id": "ofYIa",
-                  "title": "",
-                  "color": "#FF9F1A"
-                }
-              ],
+              "labels": [],
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
@@ -688,13 +677,19 @@
               "style": {}
             },
             {
-              "id": "cmia31",
-              "title": "New Card",
+              "id": "cFbJVv",
+              "title": "Other Card",
               "description": "",
               "comments": [],
               "checklists": [],
               "members": [],
-              "labels": [],
+              "labels": [
+                {
+                  "id": "ofYIa",
+                  "title": "",
+                  "color": "#FF9F1A"
+                }
+              ],
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
@@ -973,6 +968,33 @@
       ],
       "activities": [],
       "_id": "J41ClC9"
+    },
+    {
+      "title": "New Board",
+      "createdBy": {
+        "_id": "u101",
+        "username": "pazavi",
+        "imgUrl": "http://some-img"
+      },
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
+      },
+      "members": [
+        {
+          "_id": "u101",
+          "username": "pazavi",
+          "imgUrl": "http://some-img"
+        }
+      ],
+      "groups": [
+        {
+          "id": "gnDPrG",
+          "title": "New List",
+          "cards": []
+        }
+      ],
+      "activities": [],
+      "_id": "jc__85r"
     }
   ],
   "user": [
