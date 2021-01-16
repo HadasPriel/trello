@@ -1,62 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
-.board-wraper{
+.board-wraper {
     height: 100vh;
 
     user-select: none;
     white-space: nowrap;
     margin-top: 50px;
-    margin-left:0px;
+    margin-left: 0px;
     margin-bottom: 8px;
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 18px;
     position: static;
 
-
     .board-title {
-        font-family: 'Share Tech Mono', monospace;
+        font-family: "Share Tech Mono", monospace;
         margin-left: 8px;
-
     }
 
     .board-preview {
-    font-family: 'Roboto', sans-serif;
-    padding: 10px;
-    min-width: 300px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    li {
-        width: 300px;
-        background-color: $clr2;
-        color: $clr6;
+        font-family: "Roboto", sans-serif;
         padding: 10px;
-        list-style: none;
-   
-    }
+        min-width: 300px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        li {
+            width: 300px;
+            background-color: $clr2;
+            color: $clr6;
+            padding: 10px;
+            list-style: none;
+        }
 
-    article {
-        width: 300px;
-        margin: auto;
-       
-
+        article {
+            width: 300px;
+            margin: auto;
+        }
+        a {
+            color: $clr6;
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+        }
+        // h3 {
+        //     background-color: #ddd;
+        //     padding: 10px 5px;
+        //     margin: 5px;
+        //     list-style: none;
+        // }
     }
-    a {
-        color: $clr6;
-        padding: 10px;
-        text-align: center;
-        margin: auto;
-        
-        
-    }    
-    // h3 {
-    //     background-color: #ddd;
-    //     padding: 10px 5px;
-    //     margin: 5px;
-    //     list-style: none;
-    // }    
 }
-
-} 
-

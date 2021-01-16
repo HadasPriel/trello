@@ -67,15 +67,15 @@ function makeCard(cardTitle) {
   let card = {
     id: 'c' + utilService.makeId(),
     title: cardTitle,
-    description:'',
-    comments:[],
-    checklists:[],
-    members:[],
-    labels:[],
-    createdAt:'',
-    dueDate:'',
-    byMember:{},
-    style:{}
+    description: '',
+    comments: [],
+    checklists: [],
+    members: [],
+    labels: [],
+    createdAt: '',
+    dueDate: '',
+    byMember: {},
+    style: { coverType: 'top' }
 
   }
   return card

@@ -10,6 +10,7 @@ import { AddChecklistBar } from '../cmps/cardEdit/AddChecklistBar'
 import { AddCoverBar } from '../cmps/cardEdit/AddCoverBar'
 import { CardLabelShow } from '../cmps/cardEdit/CardLabelShow'
 import { CardChecklistShow } from '../cmps/cardEdit/CardChecklistShow'
+import { CardCoverShow } from '../cmps/cardEdit/CardCoverShow'
 
 class _CardEdit extends Component {
     state = {
@@ -96,7 +97,7 @@ class _CardEdit extends Component {
             <React.Fragment>
                 <div className="screen" onClick={this.props.toggleCardEdit}></div>
                 <section className="card-edit">
-                    {(card.style && card.style.coverType) ? <div className={`cover ${card.style.bgColor}`}></div> : ''}
+                    {(card.style && card.style.coverType) ? <CardCoverShow card={card} /> : ''}
                     <header className="edit-header">
                         <button className="close" onClick={this.props.toggleCardEdit}></button>
                         <button className="title-sign"></button>

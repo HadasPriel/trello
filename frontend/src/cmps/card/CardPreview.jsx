@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { removeCard } from '../../store/actions/boardActions.js'
-// import { CardLabelShow } from '../cardEdit/CardLabelShow'
+import { CardLabelShowMin } from '../cardEdit/CardLabelShowMin'
 import { CardEdit } from '../../pages/CardEdit'
 import { Draggable } from 'react-beautiful-dnd'
+import { ChecklistSign } from './ChecklistSign'
+import { CardCoverShowMin } from './CardCoverShowMin'
 
 export class _CardPreview extends Component {
 
@@ -24,23 +26,29 @@ export class _CardPreview extends Component {
     render() {
         const { card } = this.props
         const { isCardEtidShow } = this.state
+        const cardBgc = (card.style && card.style.coverType && card.style.coverType === 'full') ? `full ${card.style.bgColor}` : ''
+
         return (
+
 
             <Draggable draggableId={String(card.id)} index={this.props.index} direction="horizontal" type="card">
                 {(provided) => {
                     return (
-                        <li key={card.id} className="card" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
-                            <article className="card-preview">
+
+                        <li key={card.id}  {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+                            <article className={`card-preview ${cardBgc}`}>
+                                {(card.style && card.style.coverType && card.style.coverType === 'top') ? <CardCoverShowMin card={card} /> : ''}
+                                <button className="delete" onClick={() => this.onRemoveCard(card.id)}></button>
+                                {card.labels && <CardLabelShowMin labels={card.labels} />}
                                 <p onClick={this.toggleCardEdit} >{card.title}</p>
-                                {/* {card.labels && <CardLabelShow />} */}
-                                <button onClick={() => this.onRemoveCard(card.id)}>Remove Card</button>
+                                <nav>
+                                    {(card.checklists && card.checklists.length > 0) ? <ChecklistSign checklists={card.checklists} /> : ''}
+                                </nav>
                                 {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} />}
                             </article>
                         </li>
                     )
-
                 }}
-
             </Draggable>
         )
     }

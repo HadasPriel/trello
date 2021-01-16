@@ -18,7 +18,7 @@ class _CardLabelShow extends Component {
                 {this.props.labels.map(label => {
                     return (
                         <li
-                            key={label.id} className={label.color} > {label.title}
+                            key={label.id} className={` ${label.color}`} > {label.title}
                             <button className="hover-nav" onClick={() => { this.removeLable(label.id) }}>X</button>
                         </li>
 

@@ -1,4 +1,5 @@
-.card-preview{
+.card-preview {
+    position: relative;
     width: 250px;
     min-height: 40px;
     background-color: #fff;
@@ -6,22 +7,116 @@
     margin-top: 5px;
     margin-bottom: 3px;
     padding: 5px;
-    border:0px;
+    border: 0px;
     border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
     outline: none;
-    &:hover{
-        background-color: #F4F5F7;
+
+    .delete {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 11px;
+        color: #5e6c84;
     }
 
-    .remove-card{
-        background-color: rgb(93, 93, 93);
-        border-radius: 3px;
-    // }    &:hover{
-    //     background-color: rgb(93, 93, 93);
-    }
-
-    p{
+    p {
         max-width: 230px;
+        margin: 0 0 4px;
+        overflow: hidden;
+        color: #172b4d;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+
+    .label {
+        height: 8px;
+        width: 40px;
+    }
+
+    nav {
+        font-size: 10px;
+        color: #5e6c84;
+        .checklistSign::before {
+            font-family: fa;
+            content: "\f00c";
+        }
+    }
+
+    &:hover {
+        background-color: #f4f5f7;
+
+        &.\#7bc86c {
+            background-color: #7bc86c;
+        }
+        &.\#f5dd29 {
+            background-color: #f5dd29;
+        }
+
+        &.\#ffaf3f {
+            background-color: #ffaf3f;
+        }
+        &.\#ef7564 {
+            background-color: #ef7564;
+        }
+        &.\#cd8de5 {
+            background-color: #cd8de5;
+        }
+        &.\#5ba4cf {
+            background-color: #5ba4cf;
+            color: #ffff;
+        }
+        &.\#29cce5 {
+            background-color: #29cce5;
+        }
+        &.\#6deca9 {
+            background-color: #6deca9;
+        }
+        &.\#ff8ed4 {
+            background-color: #ff8ed4;
+        }
+        &.\#172b4d {
+            background-color: #172b4d;
+        }
+    }
+
+    &:hover .delete {
+        visibility: visible;
+    }
+
+    .\#7bc86c {
+        background-color: #7bc86c;
+    }
+    .\#f5dd29 {
+        background-color: #f5dd29;
+    }
+
+    .\#ffaf3f {
+        background-color: #ffaf3f;
+    }
+    .\#ef7564 {
+        background-color: #ef7564;
+    }
+    .\#cd8de5 {
+        background-color: #cd8de5;
+    }
+    .\#5ba4cf {
+        background-color: #5ba4cf;
+        color: #ffff;
+    }
+    .\#29cce5 {
+        background-color: #29cce5;
+    }
+    .\#6deca9 {
+        background-color: #6deca9;
+    }
+    .\#ff8ed4 {
+        background-color: #ff8ed4;
+    }
+    .\#172b4d {
+        background-color: #172b4d;
     }
 }

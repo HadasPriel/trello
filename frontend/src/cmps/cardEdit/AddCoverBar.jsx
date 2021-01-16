@@ -14,9 +14,13 @@ class _AddCoverBar extends Component {
     handleStyle = async (ev) => {
         const cardToSave = { ...this.props.card }
         cardToSave.style = (cardToSave.style) ? { ...cardToSave.style, [ev.target.name]: ev.target.value } : { [ev.target.name]: ev.target.value }
-        console.log('cardToSave', cardToSave);
         await this.props.updateCard(cardToSave)
+    }
 
+    removeCover = async () => {
+        const cardToSave = { ...this.props.card }
+        cardToSave.style = { coverType: 'top' }
+        await this.props.updateCard(cardToSave)
     }
 
 
@@ -29,6 +33,7 @@ class _AddCoverBar extends Component {
                     <h3>cover</h3>
                     <button onClick={this.props.toggleCoverBar}>x</button>
                 </header>
+                <button onClick={this.removeCover} className="edit-btn remove">Remove Cover </button>
                 <h5>size</h5>
                 <main>
                     <label className="inline-block">
