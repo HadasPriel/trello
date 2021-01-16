@@ -40,14 +40,14 @@ export function loadBoard(id) {
 // }
 
 
-// export async function updateBoard(board) {
-//   try {
+export async function updateBoard(board) {
+  try {
 
-//     await boardService.updateBoard(board)
-//   } catch (err) {
-//     console.log('BoardActions: err in update board', err)
-//   }
-// }
+    await boardService.updateBoard(board)
+  } catch (err) {
+    console.log('BoardActions: err in update board', err)
+  }
+}
 
 
 export function addGroup(title, boardToChange) {
@@ -170,7 +170,7 @@ export function removeCard(cardId, groupId, boardToChange) {
 }
 
 
-export function updateBoard(boardToChange) {
+export function updateBoardAfterDrag(boardToChange) {
   return async dispatch => {
     try {
 

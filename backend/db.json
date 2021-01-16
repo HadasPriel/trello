@@ -158,12 +158,12 @@
           ]
         },
         {
-          "id": "gCWjEU",
-          "title": "Timeline 1",
+          "id": "gYI644",
+          "title": "Action Items - Medium Priority",
           "cards": [
             {
-              "id": "clzzCD",
-              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
+              "id": "c5ZWZa",
+              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -175,11 +175,75 @@
               "style": {}
             },
             {
+              "id": "cJLSew",
+              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cuo2u4",
+              "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cmKQjr",
+              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "gCWjEU",
+          "title": "Timeline 1",
+          "cards": [
+            {
               "id": "c97v0F",
               "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
               "description": "",
               "comments": [],
               "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "ceOffr",
+              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
+              "description": "",
+              "comments": [],
+              "checklists": [
+                {
+                  "id": "lg7Ap",
+                  "title": "Add",
+                  "todos": []
+                }
+              ],
               "members": [],
               "labels": [],
               "createdAt": "",
@@ -203,67 +267,22 @@
           ]
         },
         {
-          "id": "g52MQn",
-          "title": "Action Items - High Priority",
-          "cards": [
-            {
-              "id": "ceOffr",
-              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cMqZo1",
-              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cofVPO",
-              "title": "Add first-year issues to the current New Faculty Institute. Alternatively, create a first-year presentation on MediaSite that could be shared with all faculty as they receive an assignment to teach a first-year class.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cJLSew",
-              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
           "id": "gxf3ks",
           "title": "Timeline 3",
           "cards": [
+            {
+              "id": "clzzCD",
+              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
             {
               "id": "ck1VD7",
               "title": "By the early March: Program Review Chair collates and presents data to faculty members",
@@ -278,21 +297,8 @@
               "style": {}
             },
             {
-              "id": "c5ZWZa",
-              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cz2rxm",
-              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
+              "id": "cofVPO",
+              "title": "Add first-year issues to the current New Faculty Institute. Alternatively, create a first-year presentation on MediaSite that could be shared with all faculty as they receive an assignment to teach a first-year class.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -319,12 +325,12 @@
           ]
         },
         {
-          "id": "gYI644",
-          "title": "Action Items - Medium Priority",
+          "id": "g52MQn",
+          "title": "Action Items - High Priority",
           "cards": [
             {
-              "id": "cuo2u4",
-              "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
+              "id": "cz2rxm",
+              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -349,8 +355,8 @@
               "style": {}
             },
             {
-              "id": "cmKQjr",
-              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
+              "id": "cMqZo1",
+              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
               "description": "",
               "comments": [],
               "checklists": [],
