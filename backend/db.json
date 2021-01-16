@@ -39,13 +39,32 @@
           ]
         },
         {
-          "id": "g102",
-          "title": "Group 2",
+          "id": "gOGaD3",
+          "title": "New List",
           "cards": [
             {
               "id": "cEbmbs",
               "title": "Add new card"
             },
+            {
+              "id": "c8UgxS",
+              "title": "New card",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "g102",
+          "title": "Group 2",
+          "cards": [
             {
               "id": "ctENGI",
               "title": "Nק' Cשרג",
@@ -60,17 +79,8 @@
               "style": {}
             },
             {
-              "id": "c8UgxS",
-              "title": "New card",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
+              "id": "c106",
+              "title": "Just Do"
             },
             {
               "id": "cWnpGf",
@@ -84,16 +94,6 @@
               "dueDate": "",
               "byMember": {},
               "style": {}
-            }
-          ]
-        },
-        {
-          "id": "gOGaD3",
-          "title": "New List",
-          "cards": [
-            {
-              "id": "c106",
-              "title": "Just Do"
             }
           ]
         }
