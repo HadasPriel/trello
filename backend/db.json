@@ -3,7 +3,9 @@
     {
       "_id": "b101",
       "title": "Initial Board ",
-      "style": {"bgurl":"https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"},
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
+      },
       "groups": [
         {
           "id": "g4vVW8",
@@ -100,7 +102,9 @@
     {
       "_id": "b102",
       "title": "Second Board ",
-      "style": {"bgurl":"https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"},
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
+      },
       "groups": [
         {
           "id": "gYc4wz",
@@ -223,19 +227,6 @@
               "style": {}
             },
             {
-              "id": "cofVPO",
-              "title": "Add first-year issues to the current New Faculty Institute. Alternatively, create a first-year presentation on MediaSite that could be shared with all faculty as they receive an assignment to teach a first-year class.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
               "id": "cJLSew",
               "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
               "description": "",
@@ -251,12 +242,12 @@
           ]
         },
         {
-          "id": "gxf3ks",
-          "title": "Timeline 3",
+          "id": "gYI644",
+          "title": "Action Items - Medium Priority",
           "cards": [
             {
-              "id": "ck1VD7",
-              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
+              "id": "cHsts5",
+              "title": "Develop a set of first-year learning goals and disseminate them widely, especially to faculty who will be teaching the first-year students.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -268,8 +259,8 @@
               "style": {}
             },
             {
-              "id": "c5ZWZa",
-              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
+              "id": "ck1VD7",
+              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -294,8 +285,8 @@
               "style": {}
             },
             {
-              "id": "cU5pvD",
-              "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
+              "id": "cmKQjr",
+              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -309,8 +300,8 @@
           ]
         },
         {
-          "id": "gYI644",
-          "title": "Action Items - Medium Priority",
+          "id": "gxf3ks",
+          "title": "Timeline 3",
           "cards": [
             {
               "id": "cuo2u4",
@@ -326,8 +317,8 @@
               "style": {}
             },
             {
-              "id": "cHsts5",
-              "title": "Develop a set of first-year learning goals and disseminate them widely, especially to faculty who will be teaching the first-year students.",
+              "id": "c5ZWZa",
+              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -339,8 +330,21 @@
               "style": {}
             },
             {
-              "id": "cmKQjr",
-              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
+              "id": "cofVPO",
+              "title": "Add first-year issues to the current New Faculty Institute. Alternatively, create a first-year presentation on MediaSite that could be shared with all faculty as they receive an assignment to teach a first-year class.",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cU5pvD",
+              "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -358,7 +362,9 @@
     {
       "_id": "b103",
       "title": "Third Board ",
-      "style": {"bgurl":"https://cdn.pixabay.com/photo/2019/03/23/20/54/bamboo-4076262_1280.jpg"},
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2019/03/23/20/54/bamboo-4076262_1280.jpg"
+      },
       "groups": [
         {
           "id": "g107",
