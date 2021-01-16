@@ -12,25 +12,8 @@
           "title": "New List",
           "cards": [
             {
-              "id": "cEbmbs",
-              "title": "Add new card"
-            },
-            {
               "id": "ctENGI",
               "title": "Nק' Cשרג",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "c8UgxS",
-              "title": "New card",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -54,6 +37,25 @@
               "comments": [],
               "checklists": [],
               "members": [],
+              "labels": [
+                {
+                  "id": "6VQZs",
+                  "title": "",
+                  "color": "#61BD4F"
+                }
+              ],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cWnpGf",
+              "title": "lala",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
               "labels": [],
               "createdAt": "",
               "dueDate": "",
@@ -61,12 +63,16 @@
               "style": {}
             },
             {
-              "id": "c106",
-              "title": "Just Do"
+              "id": "cEbmbs",
+              "title": "Add new card"
             },
             {
-              "id": "cWnpGf",
-              "title": "lala",
+              "id": "c105",
+              "title": "Do That"
+            },
+            {
+              "id": "c8UgxS",
+              "title": "New card",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -84,12 +90,12 @@
           "title": "Please",
           "cards": [
             {
-              "id": "c105",
-              "title": "Do That"
-            },
-            {
               "id": "c6Ujwr",
               "title": "Other Card Added"
+            },
+            {
+              "id": "c106",
+              "title": "Just Do"
             },
             {
               "id": "c104",

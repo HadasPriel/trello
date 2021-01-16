@@ -134,7 +134,6 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = {
     loadBoard
-    // updateBoard
 }
 
 export const CardEdit = connect(mapStateToProps, mapDispatchToProps)(_CardEdit)
