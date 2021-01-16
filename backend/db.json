@@ -156,19 +156,6 @@
           "title": "Timeline 1",
           "cards": [
             {
-              "id": "clzzCD",
-              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
               "id": "c97v0F",
               "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
               "description": "",
@@ -181,25 +168,6 @@
               "byMember": {},
               "style": {}
             },
-            {
-              "id": "cUQsC3",
-              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "g52MQn",
-          "title": "Action Items - High Priority",
-          "cards": [
             {
               "id": "ceOffr",
               "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
@@ -214,21 +182,8 @@
               "style": {}
             },
             {
-              "id": "cMqZo1",
-              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cJLSew",
-              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
+              "id": "cUQsC3",
+              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -259,8 +214,8 @@
               "style": {}
             },
             {
-              "id": "ck1VD7",
-              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
+              "id": "c5ZWZa",
+              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -272,8 +227,8 @@
               "style": {}
             },
             {
-              "id": "cz2rxm",
-              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
+              "id": "cJLSew",
+              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -317,8 +272,53 @@
               "style": {}
             },
             {
-              "id": "c5ZWZa",
-              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
+              "id": "clzzCD",
+              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "ck1VD7",
+              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cU5pvD",
+              "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "g52MQn",
+          "title": "Action Items - High Priority",
+          "cards": [
+            {
+              "id": "cz2rxm",
+              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -343,8 +343,8 @@
               "style": {}
             },
             {
-              "id": "cU5pvD",
-              "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
+              "id": "cMqZo1",
+              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
               "description": "",
               "comments": [],
               "checklists": [],
