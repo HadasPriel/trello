@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { removeCard } from '../../store/actions/boardActions.js'
 // import { CardLabelShow } from '../cardEdit/CardLabelShow'
 import { CardEdit } from '../../pages/CardEdit'
+import { Draggable } from 'react-beautiful-dnd'
 
 export class _CardPreview extends Component {
 
@@ -25,14 +26,22 @@ export class _CardPreview extends Component {
         const { isCardEtidShow } = this.state
         return (
 
-            <article className="card-preview">
-                <p onClick={this.toggleCardEdit} >{card.title}</p>
-                {/* {card.labels && <CardLabelShow />} */}
-                <button onClick={() => this.onRemoveCard(card.id)}>Remove Card</button>
-                {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} />}
+            <Draggable draggableId={String(card.id)} index={this.props.index} direction="horizontal" type="card">
+                {(provided) => {
+                    return (
+                        <li key={card.id} className="card" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+                            <article className="card-preview">
+                                <p onClick={this.toggleCardEdit} >{card.title}</p>
+                                {/* {card.labels && <CardLabelShow />} */}
+                                <button onClick={() => this.onRemoveCard(card.id)}>Remove Card</button>
+                                {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} />}
+                            </article>
+                        </li>
+                    )
 
+                }}
 
-            </article>
+            </Draggable>
         )
     }
 }

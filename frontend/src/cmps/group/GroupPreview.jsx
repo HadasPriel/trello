@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import { removeGroup } from '../../store/actions/boardActions.js'
 import { EditGroupTitle } from './EditGroupTitle'
 import { CardList } from '../card/CardList'
-import { AddCard } from './AddCard.jsx';
+import { AddCard } from './AddCard.jsx'
+import { Draggable } from 'react-beautiful-dnd'
 
 
 export class _GroupPreview extends Component {
@@ -38,14 +39,25 @@ export class _GroupPreview extends Component {
         const { isEditMode, isOnAddCardMode } = this.state
         const { group } = this.props
         return (
-            <article className="group-preview">
-                <div className="group-wraper">
-                    {(!isEditMode) ? <p onClick={this.toggleEditMode}>{group.title} </p> : <EditGroupTitle group={group} toggleEditMode={this.toggleEditMode} />}
-                    <button className="delete-group" onClick={() => this.onRemoveGroup(group.id)}>X</button>
-                    {group.cards && <CardList groupId={group.id} cards={group.cards} />}
-                    {(!isOnAddCardMode) ? <p onClick={this.toggleAddCardMode}>+ Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
-                </div>
-            </article>
+            <Draggable draggableId={group.id} index={this.props.index}>
+                {(provided) => {
+                    return (
+                        <li className="group" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+                            <article className="group-preview">
+                                <div className="group-wraper" >
+                                    {(!isEditMode) ? <p onClick={this.toggleEditMode}>{group.title} </p> : <EditGroupTitle group={group} toggleEditMode={this.toggleEditMode} />}
+                                    <button className="delete-group" onClick={() => this.onRemoveGroup(group.id)}>X</button>
+                                    {group.cards && <CardList groupId={group.id} cards={group.cards} />}
+                                    {(!isOnAddCardMode) ? <p onClick={this.toggleAddCardMode}>Add new Card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
+                                </div>
+                            </article>
+                        </li>
+
+                    )
+
+                }}
+
+            </Draggable>
         )
     }
 }

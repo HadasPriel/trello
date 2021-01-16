@@ -28,14 +28,14 @@ export function loadBoard(id) {
   }
 }
 
-export async function updateBoard(board) {
-  try {
+// export async function updateBoard(board) {
+//   try {
 
-    await boardService.updateBoard(board)
-  } catch (err) {
-    console.log('BoardActions: err in update board', err)
-  }
-}
+//     await boardService.updateBoard(board)
+//   } catch (err) {
+//     console.log('BoardActions: err in update board', err)
+//   }
+// }
 
 
 export function addGroup(title, boardToChange) {
@@ -67,7 +67,11 @@ export function removeGroup(groupId, boardToChange) {
 
       const updatedGroups = boardToUpdate.groups.filter(group => group.id !== groupId)
 
+      
+
       boardToUpdate.groups = updatedGroups
+
+      console.log(boardToUpdate)
 
       const board = await boardService.updateBoard(boardToUpdate)
 
@@ -151,5 +155,24 @@ export function removeCard(cardId, groupId, boardToChange) {
       console.log('BoardActions: err in removeGroup', err)
     }
   }
+}
+
+
+export function updateBoard( boardToChange) {
+  return async dispatch => {
+    try {
+
+      let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
+
+      const board = await boardService.updateBoard(boardToUpdate)
+
+      dispatch({ type: 'SET_BOARD', board })
+
+
+    } catch (err) {
+      console.log('BoardActions: err in updateGroupOrder', err)
+    }
+  }
+
 }
 
