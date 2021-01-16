@@ -14,12 +14,22 @@
         background-color: #F4F5F7;
     }
 
-    .remove-card{
-        background-color: rgb(93, 93, 93);
-        border-radius: 3px;
-    // }    &:hover{
-    //     background-color: rgb(93, 93, 93);
+
+    button.delete-card{
+        border-radius: 50%;
+        padding: 5px 9px;
+        background-color: #fff;
+        color:  rgb(101, 101, 101);
+        &:hover{
+            background-color: #F4F5F7;
+        }
     }
+
+    button.delete-card::after{
+      font-family: "fa";
+      content: "\f2ed";
+    }
+
 
     p{
         max-width: 230px;

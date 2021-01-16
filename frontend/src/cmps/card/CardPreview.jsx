@@ -33,7 +33,7 @@ export class _CardPreview extends Component {
                             <article className="card-preview">
                                 <p onClick={this.toggleCardEdit} >{card.title}</p>
                                 {/* {card.labels && <CardLabelShow />} */}
-                                <button onClick={() => this.onRemoveCard(card.id)}>Remove Card</button>
+                                <button className="delete-card" onClick={() => this.onRemoveCard(card.id)}></button>
                                 {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} />}
                             </article>
                         </li>

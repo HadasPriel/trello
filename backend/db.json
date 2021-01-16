@@ -8,16 +8,16 @@
       },
       "groups": [
         {
-          "id": "gOGaD3",
-          "title": "New List",
+          "id": "g4vVW8",
+          "title": "Please",
           "cards": [
             {
-              "id": "cEbmbs",
-              "title": "Add new card"
+              "id": "c105",
+              "title": "Do That"
             },
             {
-              "id": "ctENGI",
-              "title": "Nק' Cשרג",
+              "id": "cF3r1F",
+              "title": "New Card",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -27,6 +27,24 @@
               "dueDate": "",
               "byMember": {},
               "style": {}
+            },
+            {
+              "id": "c6Ujwr",
+              "title": "Other Card Added"
+            },
+            {
+              "id": "c104",
+              "title": "Do This"
+            }
+          ]
+        },
+        {
+          "id": "gOGaD3",
+          "title": "New List",
+          "cards": [
+            {
+              "id": "cEbmbs",
+              "title": "Add new card"
             },
             {
               "id": "c8UgxS",
@@ -48,8 +66,8 @@
           "title": "Group 2",
           "cards": [
             {
-              "id": "cF3r1F",
-              "title": "New Card",
+              "id": "ctENGI",
+              "title": "Nק' Cשרג",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -76,24 +94,6 @@
               "dueDate": "",
               "byMember": {},
               "style": {}
-            }
-          ]
-        },
-        {
-          "id": "g4vVW8",
-          "title": "Please",
-          "cards": [
-            {
-              "id": "c105",
-              "title": "Do That"
-            },
-            {
-              "id": "c6Ujwr",
-              "title": "Other Card Added"
-            },
-            {
-              "id": "c104",
-              "title": "Do This"
             }
           ]
         }
@@ -139,17 +139,12 @@
           ]
         },
         {
-          "id": "gYI644",
-          "title": "Action Items - Medium Priority",
+          "id": "gCWjEU",
+          "title": "Timeline 1",
           "cards": [
             {
-<<<<<<< HEAD
               "id": "caGrdA",
               "title": "Program Review Chair and Department in a scheduled department  meeting outlining suggestions for completion (optional: approximately 2 hours)",
-=======
-              "id": "c5ZWZa",
-              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
->>>>>>> 94fdf0503565656bfc7579947bb71cfe18751ece
               "description": "",
               "comments": [],
               "checklists": [],
@@ -161,8 +156,8 @@
               "style": {}
             },
             {
-              "id": "cJLSew",
-              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
+              "id": "c97v0F",
+              "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -174,21 +169,8 @@
               "style": {}
             },
             {
-              "id": "cuo2u4",
-              "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cmKQjr",
-              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
+              "id": "cUQsC3",
+              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -202,11 +184,23 @@
           ]
         },
         {
-          "id": "gCWjEU",
-          "title": "Timeline 1",
+          "id": "g52MQn",
+          "title": "Action Items - High Priority",
           "cards": [
             {
-<<<<<<< HEAD
+              "id": "ceOffr",
+              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
               "id": "c5ZWZa",
               "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
               "description": "",
@@ -235,10 +229,6 @@
             {
               "id": "cMqZo1",
               "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
-=======
-              "id": "c97v0F",
-              "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
->>>>>>> 94fdf0503565656bfc7579947bb71cfe18751ece
               "description": "",
               "comments": [],
               "checklists": [],
@@ -250,17 +240,11 @@
               "style": {}
             },
             {
-              "id": "ceOffr",
-              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
+              "id": "cofVPO",
+              "title": "Add first-year issues to the current New Faculty Institute. Alternatively, create a first-year presentation on MediaSite that could be shared with all faculty as they receive an assignment to teach a first-year class.",
               "description": "",
               "comments": [],
-              "checklists": [
-                {
-                  "id": "lg7Ap",
-                  "title": "Add",
-                  "todos": []
-                }
-              ],
+              "checklists": [],
               "members": [],
               "labels": [],
               "createdAt": "",
@@ -269,8 +253,8 @@
               "style": {}
             },
             {
-              "id": "cUQsC3",
-              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
+              "id": "cJLSew",
+              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -288,23 +272,6 @@
           "title": "Timeline 3",
           "cards": [
             {
-              "id": "clzzCD",
-              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-<<<<<<< HEAD
-              "id": "cz2rxm",
-              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
-=======
               "id": "ck1VD7",
               "title": "By the early March: Program Review Chair collates and presents data to faculty members",
               "description": "",
@@ -318,9 +285,8 @@
               "style": {}
             },
             {
-              "id": "cofVPO",
-              "title": "Add first-year issues to the current New Faculty Institute. Alternatively, create a first-year presentation on MediaSite that could be shared with all faculty as they receive an assignment to teach a first-year class.",
->>>>>>> 94fdf0503565656bfc7579947bb71cfe18751ece
+              "id": "cz2rxm",
+              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -347,12 +313,12 @@
           ]
         },
         {
-          "id": "g52MQn",
-          "title": "Action Items - High Priority",
+          "id": "gYI644",
+          "title": "Action Items - Medium Priority",
           "cards": [
             {
-              "id": "cz2rxm",
-              "title": "Mid-March: Program Review Chair meets with representatives of the Centre for Innovation and Excellence in Learning to discuss data",
+              "id": "cuo2u4",
+              "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -377,8 +343,8 @@
               "style": {}
             },
             {
-              "id": "cMqZo1",
-              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
+              "id": "cmKQjr",
+              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -427,10 +393,6 @@
               "title": "Task 126"
             },
             {
-              "id": "c119",
-              "title": "Task 119"
-            },
-            {
               "id": "c8NHdI",
               "title": "Task 125",
               "description": "",
@@ -443,25 +405,6 @@
               "byMember": {},
               "style": {}
             },
-            {
-              "id": "cJZhoM",
-              "title": "New Card",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "g108",
-          "title": "Group 8",
-          "cards": [
             {
               "id": "cLwW8E",
               "title": "Task 128",
@@ -476,12 +419,68 @@
               "style": {}
             },
             {
-              "id": "c122",
-              "title": "Task 122"
+              "id": "cJtDKk",
+              "title": "Task 172",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [
+                {
+                  "id": "AK3j6",
+                  "title": "",
+                  "color": "#61BD4F"
+                },
+                {
+                  "id": "vSbyI",
+                  "title": "",
+                  "color": "#F2D600"
+                }
+              ],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "g108",
+          "title": "Group 8",
+          "cards": [
+            {
+              "id": "c119",
+              "title": "Task 119"
             },
             {
               "id": "c127",
               "title": "Task 127"
+            },
+            {
+              "id": "cuOUVZ",
+              "title": "Task 126",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cjjqSV",
+              "title": "sff",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
             }
           ]
         },
@@ -507,60 +506,25 @@
               "style": {}
             },
             {
+              "id": "c122",
+              "title": "Task 122"
+            },
+            {
               "id": "c125",
               "title": "Task 125"
             },
             {
               "id": "csHxXU",
               "title": "Task 125",
-              "description": "",
+              "description": "SDSGSDGSDGS",
               "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "g3dHN2",
-          "title": "safasfasf",
-          "cards": [
-            {
-              "id": "cjjqSV",
-              "title": "sff",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cuOUVZ",
-              "title": "Task 126",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cJtDKk",
-              "title": "Task 172",
-              "description": "",
-              "comments": [],
-              "checklists": [],
+              "checklists": [
+                {
+                  "id": "ol9Wa",
+                  "title": "SDFGGG",
+                  "todos": []
+                }
+              ],
               "members": [],
               "labels": [],
               "createdAt": "",
