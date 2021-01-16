@@ -36,10 +36,14 @@ class _TodoShow extends Component {
         const { todo } = this.state
         if (!todo) return <div>Loading...</div>
         return (
-            <li>
-                <p>{todo.txt}</p>
-                <input type="checkbox" name="isDone" value={todo.isDone} checked={todo.isDone} onChange={this.handleChange} ></input>
-                <button onClick={() => { this.props.removeTodo(todo.id, this.props.checklistId) }} >delete todo</button>
+            <li className="todo-show flex space-between align-center">
+                <span className="content">
+                    <input type="checkbox" name="isDone" value={todo.isDone} checked={todo.isDone} onChange={this.handleChange} ></input>
+                    <h3 className={`${todo.isDone}`} >{todo.txt}</h3>
+                </span>
+                <span className="nav">
+                    <button className=" delete" onClick={() => { this.props.removeTodo(todo.id, this.props.checklistId) }} ></button>
+                </span>
             </li>)
 
 

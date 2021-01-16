@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 // import { socketService } from '../services/socketService'
 import { loadBoard, updateBoard } from '../store/actions/boardActions.js'
 import { CardEditNav } from '../cmps/cardEdit/CardEditNav'
+import { AddDescription } from '../cmps/cardEdit/AddDescription'
 import { LabelPalette } from '../cmps/cardEdit/LabelPalette'
 import { AddChecklistBar } from '../cmps/cardEdit/AddChecklistBar'
 import { AddCoverBar } from '../cmps/cardEdit/AddCoverBar'
@@ -15,6 +16,7 @@ class _CardEdit extends Component {
         board: null,
         groupId: null,
         card: null,
+        isDescriptionShowing: false,
         isLabelPaletteShowing: false,
         isAddChecklistShowing: false,
         isCoverShowing: false
@@ -79,30 +81,47 @@ class _CardEdit extends Component {
     toggleCoverBar = () => {
         this.setState({ isCoverShowing: !this.state.isCoverShowing })
     }
+    toggleAddDescription = () => {
+        this.setState({ isDescriptionShowing: !this.state.isDescriptionShowing })
+
+    }
 
 
     render() {
-        const { card } = this.state
+        const { card, isDescriptionShowing } = this.state
         const isLabels = (card && card.labels && card.labels.length > 0)
         const isChecklists = (card && card.checklists && card.checklists.length > 0)
         if (!card) return <div>Loading...</div>
         return (
-            <section className="card-edit">
-                {/* <Link to={`/board/${this.props.selectedBoard.id}`}>X</Link> */}
-                <div className="permanent">
-                    <main>
+            <React.Fragment>
+                <div className="screen" onClick={this.props.toggleCardEdit}></div>
+                <section className="card-edit">
+                    {(card.style.coverType) ? <div className={`cover ${card.style.bgColor}`}></div> : ''}
+                    <header className="edit-header">
+                        <button className="close" onClick={this.props.toggleCardEdit}></button>
+                        <button className="title-sign"></button>
                         <h1>{card.title}</h1>
-                        <div>{isLabels && <div> <h3>Labels: </h3><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
-                        <h3>Description: </h3>
-                        <p>{card.description && ''}</p>
-                        <div>{isChecklists && <div> <h3>Checklists: </h3><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
-                    </main>
-                    <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} />
-                </div>
-                {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} />}
-                {this.state.isAddChecklistShowing && <AddChecklistBar card={card} updateCard={this.updateCard} />}
-                {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} />}
-            </section>
+                    </header>
+
+                    <div className="permanent">
+                        <main>
+                            <div className="show">{isLabels && <div> <h5>Labels </h5><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
+                            <h4>Description </h4>
+                            {(isDescriptionShowing) ? <AddDescription card={card} toggleAddDescription={this.toggleAddDescription} updateCard={this.updateCard} /> : ((card.description) ?
+                                <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>edit</button></div> :
+                                <div className="show description" onClick={this.toggleAddDescription}>add a more detailed description...</div>)}
+                            <p>{card.description && ''}</p>
+                            <div>{isChecklists && <div><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
+                        </main>
+                        <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} />
+                    </div>
+
+
+                    {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} toggleLabelPalette={this.toggleLabelPalette} />}
+                    {this.state.isAddChecklistShowing && <AddChecklistBar card={card} updateCard={this.updateCard} toggleChecklistBar={this.toggleChecklistBar} />}
+                    {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} toggleCoverBar={this.toggleCoverBar} />}
+                </section>
+            </React.Fragment>
         )
     }
 }

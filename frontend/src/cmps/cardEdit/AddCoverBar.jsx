@@ -11,11 +11,12 @@ class _AddCoverBar extends Component {
     }
 
 
-    handleStyle = (ev) => {
+    handleStyle = async (ev) => {
         const cardToSave = { ...this.props.card }
         cardToSave.style = (cardToSave.style) ? { ...cardToSave.style, [ev.target.name]: ev.target.value } : { [ev.target.name]: ev.target.value }
         console.log('cardToSave', cardToSave);
-        this.props.updateCard(cardToSave)
+        await this.props.updateCard(cardToSave)
+
     }
 
 
@@ -23,36 +24,69 @@ class _AddCoverBar extends Component {
     render() {
 
         return (
-            <form className="add-cover-bar">
-                <h4>size</h4>
-                <label>Full
-                <input type="radio" name="coverType" value="full" onClick={this.handleStyle} hidden ></input>
-                </label>
-                <label>Top
-                <input type="radio" name="coverType" value="top" onClick={this.handleStyle} hidden></input>
-                </label>
-
-                <h4>colors</h4>
-                <nav className="colors">
-                    <label className="color #61BD4F">
-                        <input type="radio" name="bgColor" value="#61BD4F" onClick={this.handleStyle} hidden></input>
+            <form className="add-cover-bar edit-bar">
+                <header className="seconde">
+                    <h3>cover</h3>
+                    <button onClick={this.props.toggleCoverBar}>x</button>
+                </header>
+                <h5>size</h5>
+                <main>
+                    <label className="inline-block">
+                        <div className="full demo window">
+                            <div className="demo header"></div>
+                            <div className="demo content">
+                                <div className="demo p1"></div>
+                                <div className="demo p2"></div>
+                            </div>
+                        </div>
+                        <input type="radio" name="coverType" value="full" onClick={this.handleStyle} ></input>
                     </label>
-                    <label className="color #F2D600">
-                        <input type="radio" name="bgColor" value="#F2D600" onClick={this.handleStyle} hidden></input>
+                    <label className="inline-block" >
+                        <div className="top demo window">
+                            <div className="demo header"></div>
+                            <div className="demo content">
+                                <div className="demo p1"></div>
+                                <div className="demo p2"></div>
+                            </div>
+                        </div>
+                        <input type="radio" name="coverType" value="top" onClick={this.handleStyle}></input>
                     </label>
-                    <label className="color #FF9F1A">
-                        <input type="radio" name="bgColor" value="#FF9F1A" onClick={this.handleStyle} hidden></input>
-                    </label>
-                    <label className="color #EB5A46">
-                        <input type="radio" name="bgColor" value="#EB5A46" onClick={this.handleStyle} hidden></input>
-                    </label>
-                    <label className="color #C377E0">
-                        <input type="radio" name="bgColor" value="#C377E0" onClick={this.handleStyle} hidden></input>
-                    </label>
-                    <label className="color #0079BF">
-                        <input type="radio" name="bgColor" value="#0079BF" onClick={this.handleStyle} hidden></input>
-                    </label>
-                </nav>
+                </main>
+                <h5>colors</h5>
+                <main>
+                    <nav className="colors">
+                        <label className="color #7bc86c">
+                            <input type="radio" name="bgColor" value="#7bc86c" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #f5dd29">
+                            <input type="radio" name="bgColor" value="#f5dd29" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #ffaf3f">
+                            <input type="radio" name="bgColor" value="#ffaf3f" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #ef7564">
+                            <input type="radio" name="bgColor" value="#ef7564" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #cd8de5">
+                            <input type="radio" name="bgColor" value="#cd8de5" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #5ba4cf">
+                            <input type="radio" name="bgColor" value="#5ba4cf" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #29cce5">
+                            <input type="radio" name="bgColor" value="#29cce5" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #6deca9">
+                            <input type="radio" name="bgColor" value="#6deca9" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #ff8ed4">
+                            <input type="radio" name="bgColor" value="#ff8ed4" onClick={this.handleStyle}></input>
+                        </label>
+                        <label className="color #172b4d">
+                            <input type="radio" name="bgColor" value="#172b4d" onClick={this.handleStyle}></input>
+                        </label>
+                    </nav>
+                </main>
             </form>
 
         )

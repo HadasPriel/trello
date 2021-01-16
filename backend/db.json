@@ -9,10 +9,6 @@
           "title": "Group 2",
           "cards": [
             {
-              "id": "c104",
-              "title": "Do This"
-            },
-            {
               "id": "c105",
               "title": "Do That"
             },
@@ -28,7 +24,52 @@
           "cards": [
             {
               "id": "c108",
-              "title": "Go There"
+              "title": "Go There",
+              "labels": [
+                {
+                  "id": "LICZr",
+                  "title": "",
+                  "color": "#FF9F1A"
+                },
+                {
+                  "id": "EjRKk",
+                  "title": "",
+                  "color": "#EB5A46"
+                },
+                {
+                  "id": "yPKps",
+                  "title": "",
+                  "color": "#61BD4F"
+                }
+              ],
+              "checklists": [
+                {
+                  "id": "Sas1B",
+                  "title": "one more",
+                  "todos": [
+                    {
+                      "txt": "to eat",
+                      "isDone": false,
+                      "id": "MoRKy"
+                    },
+                    {
+                      "txt": "to drink",
+                      "isDone": false,
+                      "id": "xC1LA"
+                    }
+                  ]
+                },
+                {
+                  "id": "y7U1d",
+                  "title": "another",
+                  "todos": []
+                }
+              ],
+              "description": "",
+              "style": {
+                "bgColor": "#7bc86c",
+                "coverType": "top"
+              }
             },
             {
               "id": "cWnpGf",
@@ -51,7 +92,19 @@
           "cards": [
             {
               "id": "cuhQtT",
-              "title": "New Card Added"
+              "title": "New Card Added",
+              "labels": [
+                {
+                  "id": "fdNkX",
+                  "title": "",
+                  "color": "#61BD4F"
+                },
+                {
+                  "id": "yBfER",
+                  "title": "",
+                  "color": "#F2D600"
+                }
+              ]
             },
             {
               "id": "c01Tr0",
