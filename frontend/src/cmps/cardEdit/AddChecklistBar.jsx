@@ -23,6 +23,8 @@ class _AddChecklistBar extends Component {
         cardToSave.checklists = (cardToSave.checklists) ? [...cardToSave.checklists, checklist] : [checklist]
         // console.log('cardToSave', cardToSave);
         this.props.updateCard(cardToSave)
+        this.setState({ checklist: { title: '', todos: [] } })
+        this.props.toggleChecklistBar()
     }
 
 
@@ -30,13 +32,19 @@ class _AddChecklistBar extends Component {
     render() {
 
         return (
-            <form onSubmit={this.onAddChecklist}>
-                <h3>Add Checklist</h3>
-                <label>Title
+            <form className="edit-bar" onSubmit={this.onAddChecklist}>
+                <header className="seconde">
+                    <h3>Add Checklist</h3>
+                    <button onClick={this.props.toggleChecklistBar}>x</button>
+
+                </header>
+                <main>
+                    <label>Title
                     <input type="text" name="title" value={this.state.checklist.title}
-                        onChange={this.handleChange} autoComplete="off" required></input>
-                    <button>Add</button>
-                </label>
+                            onChange={this.handleChange} autoComplete="off" required autoFocus ></input>
+                    </label>
+                </main>
+                <button className="add-btn">Add</button>
             </form>
 
         )

@@ -59,19 +59,21 @@ class _CardChecklistShow extends Component {
     render() {
         const { todo } = this.state
         return (
-            <ul>
+            <ul className="card-checklist-show card-show ">
                 {this.props.checklists.map(checklist => {
                     return (
                         <li key={checklist.id} >
-                            <h4>{checklist.title}</h4>
-                            <button onClick={() => { this.removeChecklist(checklist.id) }}>delete checklist</button>
+                            <header>
+                                <h4 className="checklist-title" > {checklist.title}</h4>
+                                <button className="edit-btn" onClick={() => { this.removeChecklist(checklist.id) }}>Delete</button>
+                            </header>
                             <TodoListShow checklist={checklist} card={this.props.card} updateCard={this.props.updateCard}
                                 removeTodo={this.removeTodo} />
                             <form onSubmit={(event) => { this.addTask(event, checklist.id) }}>
-                                <input type="text" name="txt" value={todo.txt} onChange={this.handleTaskChange}
+                                <input className="blabla" type="text" name="txt" value={todo.txt} onChange={this.handleTaskChange}
                                     placeholder="Add an item" autoComplete="off" required></input>
-                                <input type="checkbox" name="isDone" checked={todo.isDone} onChange={this.handleTaskChange} ></input>
-                                <button>Add</button>
+                                {/* <input type="checkbox" name="isDone" checked={todo.isDone} onChange={this.handleTaskChange} ></input> */}
+                                <button className="add-btn">Add</button>
                             </form>
                         </li>
 
