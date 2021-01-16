@@ -13,7 +13,8 @@ export const boardService = {
   makeGroup,
   updateBoard,
   makeCard,
-  makeBoard
+  makeBoard,
+  filterByCardTitle
 }
 
 
@@ -83,9 +84,9 @@ function makeCard(cardTitle) {
 
 }
 
-async function makeBoard(boardTitle,  bgUrl, currUser = null) {
+async function makeBoard(boardTitle, bgUrl, currUser = null) {
 
-  let miniUser = (currUser) ? currUser : {_id: 'u101', username: "pazavi", imgUrl: 'http://some-img'}
+  let miniUser = (currUser) ? currUser : { _id: 'u101', username: "pazavi", imgUrl: 'http://some-img' }
 
   const newBoard = {
     title: boardTitle,
@@ -96,12 +97,27 @@ async function makeBoard(boardTitle,  bgUrl, currUser = null) {
     },
     members: [miniUser],
     groups: [makeGroup('New List')],
-    activities:[]
+    activities: []
   }
 
   console.log(newBoard);
 
   const addedBoard = await httpService.post(`board`, newBoard);
   return addedBoard
+
+}
+
+
+async function filterByCardTitle(board, filterBy) {
+  if (filterBy.txt) {
+    const filterRegex = new RegExp(filterBy.txt, 'i')
+    board.groups = board.groups.map(group => {
+      const newGroup = { ...group }
+      newGroup.cards = newGroup.cards.filter(card => filterRegex.test(card.title))
+      return newGroup
+    })
+  }
+
+  return board;
 
 }

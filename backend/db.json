@@ -193,180 +193,8 @@
               "style": {}
             },
             {
-              "id": "cmD8Jk",
-              "title": "By mid-December: Complete Section A (Inventory of Practices) with or without assistance of Centre staff,",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
               "id": "chmiq1",
               "title": "Faculty data collated by Program Review Chair for discussions (approximately 1.5 hours per faculty member, data collation approximately 1.5 hours by Chair, writing Section A approximately 2 hours)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "gYI644",
-          "title": "Action Items - Medium Priority",
-          "cards": [
-            {
-              "id": "c5ZWZa",
-              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cJLSew",
-              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cuo2u4",
-              "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cmKQjr",
-              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "gCWjEU",
-          "title": "Timeline 1",
-          "cards": [
-            {
-              "id": "c97v0F",
-              "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "ceOffr",
-              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
-              "description": "",
-              "comments": [],
-              "checklists": [
-                {
-                  "id": "lg7Ap",
-                  "title": "Add",
-                  "todos": []
-                },
-                {
-                  "id": "8gVyI",
-                  "title": "New List",
-                  "todos": []
-                }
-              ],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cUQsC3",
-              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "gxf3ks",
-          "title": "Timeline 3",
-          "cards": [
-            {
-              "id": "ck1VD7",
-              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "clzzCD",
-              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cU5pvD",
-              "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -442,6 +270,220 @@
             {
               "id": "cMqZo1",
               "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "gxf3ks",
+          "title": "Timeline 3",
+          "cards": [
+            {
+              "id": "ck1VD7",
+              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "c5ZWZa",
+              "title": "Invite all faculty who are teaching first-year students to a short retreat with a focus on the characteristics of the students who they will be teaching and how to reach those students.",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cuo2u4",
+              "title": "Expand the Peer Coaching program to include more adjunct faculty, especially targeting those who are teaching first-year students.",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cU5pvD",
+              "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "gYI644",
+          "title": "Action Items - Medium Priority",
+          "cards": [
+            {
+              "id": "cmD8Jk",
+              "title": "By mid-December: Complete Section A (Inventory of Practices) with or without assistance of Centre staff,",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cUQsC3",
+              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cJLSew",
+              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cmKQjr",
+              "title": "Develop an orientation program for adjunct faculty and teaching assistants. ",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "gCWjEU",
+          "title": "Timeline 1",
+          "cards": [
+            {
+              "id": "ceOffr",
+              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
+              "description": "",
+              "comments": [],
+              "checklists": [
+                {
+                  "id": "lg7Ap",
+                  "title": "Add",
+                  "todos": []
+                },
+                {
+                  "id": "8gVyI",
+                  "title": "New List",
+                  "todos": []
+                }
+              ],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cp3cYB",
+              "title": "New Cardi",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
+            }
+          ]
+        },
+        {
+          "id": "gZr5Gk",
+          "title": "Add New List",
+          "cards": [
+            {
+              "id": "cl2tb2",
+              "title": "New Cardi",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
+            }
+          ]
+        },
+        {
+          "id": "glmDg2",
+          "title": "New Listi",
+          "cards": [
+            {
+              "id": "c97v0F",
+              "title": "October through December: Curriculum, Teaching and Learning Specialist meets and discusses the Teaching and Learning Section of the Self-Study",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "clzzCD",
+              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -988,9 +1030,61 @@
       ],
       "groups": [
         {
+          "id": "gdevdt",
+          "title": "Add new list",
+          "cards": [
+            {
+              "id": "cLfljA",
+              "title": "Add another Card",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
+            }
+          ]
+        },
+        {
           "id": "gnDPrG",
           "title": "New List",
-          "cards": []
+          "cards": [
+            {
+              "id": "clMEwT",
+              "title": "Add another card",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
+            },
+            {
+              "id": "cO7LzI",
+              "title": "Add New Card",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
+            }
+          ]
         }
       ],
       "activities": [],

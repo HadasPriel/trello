@@ -26,9 +26,13 @@ export class _AddNewGroup extends Component {
         if (!this.state.title) return
         await this.props.addGroup(this.state.title, this.props.selectedBoard)
         this.setState({ title: '' })
-
+        this.props.toggleAddGroupMode()
     }
 
+    onCancelAdd = (ev) => {
+        ev.preventDefault()
+        this.props.toggleAddGroupMode()
+    }
     render() {
         return (
             <div className="add-new-group">
@@ -36,7 +40,7 @@ export class _AddNewGroup extends Component {
                     <input className="add-another-group" placeholder="Add another list" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off"/>
                     
                     <button className="save-group-btn">Add List</button>
-                    {/* <button className="cancel-group-btn" onClick={this.onCancelAdd}></button> */}
+                    <button className="cancel-group-btn" onClick={this.onCancelAdd}></button>
                
                 </form>
             </div>

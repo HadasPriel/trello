@@ -32,7 +32,7 @@ export function createBoard(boardTitle, backgroundImageUrl) {
   return async dispatch => {
     try {
       const board = await boardService.makeBoard(boardTitle, backgroundImageUrl)
-   
+
       dispatch({ type: 'SET_BOARD', board })
       return board
     } catch (err) {
@@ -182,6 +182,24 @@ export function updateBoardAfterDrag(boardToChange) {
 
       dispatch({ type: 'SET_BOARD', board })
 
+
+    } catch (err) {
+      console.log('BoardActions: err in updateGroupOrder', err)
+    }
+  }
+
+}
+
+export function filterByCardText(boardToChange, filterBy) {
+  return async dispatch => {
+    try {
+
+      let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
+
+      const board = await boardService.filterByCardTitle(boardToUpdate, filterBy)
+
+      dispatch({ type: 'SET_BOARD', board })
+      dispatch({ type: 'SET_FILTER', filterBy })
 
     } catch (err) {
       console.log('BoardActions: err in updateGroupOrder', err)
