@@ -3,13 +3,12 @@ import { connect } from 'react-redux'
 import { GroupList } from '../cmps/group/GroupList'
 // import { socketService } from '../services/socketService'
 import { loadBoard } from '../store/actions/boardActions.js'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
-import { CardEdit } from './CardEdit'
 
 
 class _Board extends Component {
     state = {
-        board: {}
+        board: {},
+
     }
 
     async componentDidMount() {
@@ -22,25 +21,24 @@ class _Board extends Component {
 
 
 
-
-
     render() {
         const { selectedBoard } = this.props
         if (!selectedBoard) return <div>Loading...</div>
-
+        // console.log('BBB', selectedBoard.style.bgurl)
+        const style = {
+            boardStyle: { ...selectedBoard.style }
+        }
         return (
-            <section className="board-wraper">
+            <section className="board-wraper"
+                style={{
+                    backgroundImage: "url(" + `${style.boardStyle.bgurl}` + ")",
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat'
+                }}>
+
                 <div className="board-title"> {selectedBoard.title}</div>
-
-                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} />}
-
-
-
-                <Router>
-                    <Switch>
-                        <Route exact path="/board/:id/:groupId/card/:cardId" component={CardEdit} />
-                    </Switch>
-                </Router>
+                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
             </section>
 
         )

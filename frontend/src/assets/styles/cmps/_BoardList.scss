@@ -2,14 +2,19 @@
     font-family: 'Roboto', sans-serif;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+
+    ul{
+        margin-top:20px;
+    }
     li {
         background-color: #313EA0;
+        height: 150px;
         color: $clr6;
         padding: 5px;
         margin: 5px;
-       
         border-radius: 8px;
   
     }

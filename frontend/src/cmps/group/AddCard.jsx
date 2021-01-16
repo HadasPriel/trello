@@ -35,7 +35,7 @@ export class _AddCard extends Component {
         return (
             <div className="add-new-card">
                 <form onSubmit={this.onSubmit} >
-                    <input placeholder="Enter a title for this card..." type="text" onChange={this.handleChange} value={this.state.title} name="title" />
+                    <input placeholder="Enter a title for this card..." type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off"/>
                     <button className="save-btn">Add Card</button>
                     <button className="cancel-btn" onClick={this.onCancelAdd}>Cancel</button>
                 </form>

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
 import { removeCard } from '../../store/actions/boardActions.js'
-import { CardLabelShow } from '../cardEdit/CardLabelShow'
+// import { CardLabelShow } from '../cardEdit/CardLabelShow'
+import { CardEdit } from '../../pages/CardEdit'
 
 export class _CardPreview extends Component {
 
     state = {
-
+        isCardEtidShow: false
     }
 
 
@@ -16,17 +16,20 @@ export class _CardPreview extends Component {
         this.props.removeCard(cardId, this.props.groupId, this.props.selectedBoard)
     }
 
+    toggleCardEdit = () => {
+        this.setState({ isCardEtidShow: !this.state.isCardEtidShow })
+    }
 
     render() {
         const { card } = this.props
+        const { isCardEtidShow } = this.state
         return (
 
             <article className="card-preview">
-                <Link to={`/board/${this.props.selectedBoard._id}/${this.props.groupId}/card/${card.id}`}>
-                    <p>{card.title}</p>
-                    {/* {card.labels && <CardLabelShow />} */}
-                </Link>
+                <p onClick={this.toggleCardEdit} >{card.title}</p>
+                {/* {card.labels && <CardLabelShow />} */}
                 <button onClick={() => this.onRemoveCard(card.id)}>Remove Card</button>
+                {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} />}
 
 
             </article>
