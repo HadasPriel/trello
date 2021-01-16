@@ -12,7 +12,8 @@ export const boardService = {
   getById,
   makeGroup,
   updateBoard,
-  makeCard
+  makeCard,
+  makeBoard
 }
 
 
@@ -67,17 +68,40 @@ function makeCard(cardTitle) {
   let card = {
     id: 'c' + utilService.makeId(),
     title: cardTitle,
-    description:'',
-    comments:[],
-    checklists:[],
-    members:[],
-    labels:[],
-    createdAt:'',
-    dueDate:'',
-    byMember:{},
-    style:{}
+    description: '',
+    comments: [],
+    checklists: [],
+    members: [],
+    labels: [],
+    createdAt: '',
+    dueDate: '',
+    byMember: {},
+    style: {}
 
   }
   return card
+
+}
+
+async function makeBoard(boardTitle,  bgUrl, currUser = null) {
+
+  let miniUser = (currUser) ? currUser : {_id: 'u101', username: "pazavi", imgUrl: 'http://some-img'}
+
+  const newBoard = {
+    title: boardTitle,
+    createdAt: Date.now,
+    createdBy: miniUser,
+    style: {
+      bgurl: bgUrl
+    },
+    members: [miniUser],
+    groups: [makeGroup('New List')],
+    activities:[]
+  }
+
+  console.log(newBoard);
+
+  const addedBoard = await httpService.post(`board`, newBoard);
+  return addedBoard
 
 }

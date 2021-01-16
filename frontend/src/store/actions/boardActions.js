@@ -27,17 +27,19 @@ export function loadBoard(id) {
     }
   }
 }
-// export function updateBoard(newBoard) {
-//   return async dispatch => {
-//     try {
-//       const boardToUptade = JSON.parse(JSON.stringify(newBoard))
-//       const board = await boardService.updateBoard(boardToUptade)
-//       dispatch({ type: 'SET_BOARD', board })
-//     } catch (err) {
-//       console.log('BoardActions: err in update board', err)
-//     }
-//   }
-// }
+
+export function createBoard(boardTitle, backgroundImageUrl) {
+  return async dispatch => {
+    try {
+      const board = await boardService.makeBoard(boardTitle, backgroundImageUrl)
+   
+      dispatch({ type: 'SET_BOARD', board })
+      return board
+    } catch (err) {
+      console.log('BoardActions: err in loadBoard', err)
+    }
+  }
+}
 
 
 export async function updateBoard(board) {

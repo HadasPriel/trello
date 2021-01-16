@@ -25,7 +25,7 @@ export class _AddNewGroup extends Component {
         ev.preventDefault()
         if (!this.state.title) return
         await this.props.addGroup(this.state.title, this.props.selectedBoard)
-
+        this.setState({ title: '' })
 
     }
 
@@ -33,10 +33,10 @@ export class _AddNewGroup extends Component {
         return (
             <div className="add-new-group">
                 <form className="add-new-wraper" onSubmit={this.onSubmit} >
-                    <input className="add-another-group" placeholder="Add another list" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off"/>
-                    
+                    <input className="add-another-group" placeholder="Add another list" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" />
+
                     <button className="save-btn">+ Add List</button>
-               
+
                 </form>
             </div>
         )
