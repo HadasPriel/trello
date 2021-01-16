@@ -3,28 +3,21 @@
     {
       "_id": "b101",
       "title": "Initial Board ",
+      "style": {
+        "backgroundColor": "blue"
+      },
       "groups": [
-        {
-          "id": "g102",
-          "title": "Group 2",
-          "cards": [
-            {
-              "id": "c104",
-              "title": "Do This"
-            },
-            {
-              "id": "c106",
-              "title": "Just Do"
-            }
-          ]
-        },
         {
           "id": "g4vVW8",
           "title": "Please",
           "cards": [
             {
-              "id": "cWnpGf",
-              "title": "lala",
+              "id": "c105",
+              "title": "Do That"
+            },
+            {
+              "id": "cF3r1F",
+              "title": "New Card",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -36,19 +29,36 @@
               "style": {}
             },
             {
-              "id": "c105",
-              "title": "Do That"
+              "id": "c6Ujwr",
+              "title": "Other Card Added"
             },
             {
-              "id": "cEbmbs",
-              "title": "Add new card"
+              "id": "c104",
+              "title": "Do This"
             }
           ]
         },
         {
-          "id": "g103",
-          "title": "Group 3",
+          "id": "g102",
+          "title": "Group 2",
           "cards": [
+            {
+              "id": "cEbmbs",
+              "title": "Add new card"
+            },
+            {
+              "id": "ctENGI",
+              "title": "Nק' Cשרג",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
             {
               "id": "c8UgxS",
               "title": "New card",
@@ -63,8 +73,27 @@
               "style": {}
             },
             {
-              "id": "c6Ujwr",
-              "title": "Other Card Added"
+              "id": "cWnpGf",
+              "title": "lala",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "gOGaD3",
+          "title": "New List",
+          "cards": [
+            {
+              "id": "c106",
+              "title": "Just Do"
             }
           ]
         }

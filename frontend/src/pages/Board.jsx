@@ -20,7 +20,7 @@ class _Board extends Component {
     }
 
     onDragEnd = (result) => {
-        console.log('on drag result', result)
+        // console.log('on drag result', result)
         const { destination, source, draggableId, type } = result
         if (!destination) return
         if (destination.droppableId === source.droppableId && destination.index === source.index) {
@@ -36,7 +36,7 @@ class _Board extends Component {
 
     // per react beautiful dnd after performing optimistic update to let server know that a reorder has occurred
     onDragGroups = async (startIndex, endIndex) => {
-        console.log('I am in groups')
+        // console.log('I am in groups')
         let boardToUpdate = this.props.selectedBoard
         const groupToMove = boardToUpdate.groups.splice(startIndex, 1)
         boardToUpdate.groups.splice(endIndex, 0, groupToMove[0])
@@ -50,7 +50,7 @@ class _Board extends Component {
         const groupToMoveToIdx = boardToUpdate.groups.findIndex(group => group.id === destination.droppableId)
         const cardToMove = boardToUpdate.groups[groupToMoveFromIdx].cards.splice(source.index, 1)
         boardToUpdate.groups[groupToMoveToIdx].cards.splice(destination.index, 0, cardToMove[0])
-        console.log('i am in this on drag cards')
+        // console.log('i am in this on drag cards')
         await this.props.updateBoard(this.props.selectedBoard)
 
     }
@@ -58,7 +58,9 @@ class _Board extends Component {
 
     render() {
         const { selectedBoard } = this.props
+        
         if (!selectedBoard) return <div>Loading...</div>
+     
 
         return (
             <section className="board-wraper">
