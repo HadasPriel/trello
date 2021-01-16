@@ -60,14 +60,23 @@ class _Board extends Component {
         const { selectedBoard } = this.props
         
         if (!selectedBoard) return <div>Loading...</div>
-     
-
+        // console.log('BBB', selectedBoard.style.bgurl)
+        const style = {
+            boardStyle: { ...selectedBoard.style }
+        }
         return (
-            <section className="board-wraper">
-                <div className="board-title"> {selectedBoard.title}</div>
-                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd}/>}
+            <section className="board-wraper"
+                style={{
+                    backgroundImage: "url(" + `${style.boardStyle.bgurl}` + ")",
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat'
+                }}>
 
+                <div className="board-title"> {selectedBoard.title}</div>
+                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
             </section>
+
         )
     }
 }

@@ -3,9 +3,7 @@
     {
       "_id": "b101",
       "title": "Initial Board ",
-      "style": {
-        "backgroundColor": "blue"
-      },
+      "style": {"bgurl":"https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"},
       "groups": [
         {
           "id": "g4vVW8",
@@ -102,6 +100,7 @@
     {
       "_id": "b102",
       "title": "Second Board ",
+      "style": {"bgurl":"https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"},
       "groups": [
         {
           "id": "gYc4wz",
@@ -359,6 +358,7 @@
     {
       "_id": "b103",
       "title": "Third Board ",
+      "style": {"bgurl":"https://cdn.pixabay.com/photo/2019/03/23/20/54/bamboo-4076262_1280.jpg"},
       "groups": [
         {
           "id": "g107",
