@@ -8,16 +8,16 @@
       },
       "groups": [
         {
-          "id": "g4vVW8",
-          "title": "Please",
+          "id": "gOGaD3",
+          "title": "New List",
           "cards": [
             {
-              "id": "c105",
-              "title": "Do That"
+              "id": "cEbmbs",
+              "title": "Add new card"
             },
             {
-              "id": "cF3r1F",
-              "title": "New Card",
+              "id": "ctENGI",
+              "title": "Nק' Cשרג",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -27,24 +27,6 @@
               "dueDate": "",
               "byMember": {},
               "style": {}
-            },
-            {
-              "id": "c6Ujwr",
-              "title": "Other Card Added"
-            },
-            {
-              "id": "c104",
-              "title": "Do This"
-            }
-          ]
-        },
-        {
-          "id": "gOGaD3",
-          "title": "New List",
-          "cards": [
-            {
-              "id": "cEbmbs",
-              "title": "Add new card"
             },
             {
               "id": "c8UgxS",
@@ -66,8 +48,8 @@
           "title": "Group 2",
           "cards": [
             {
-              "id": "ctENGI",
-              "title": "Nק' Cשרג",
+              "id": "cF3r1F",
+              "title": "New Card",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -94,6 +76,24 @@
               "dueDate": "",
               "byMember": {},
               "style": {}
+            }
+          ]
+        },
+        {
+          "id": "g4vVW8",
+          "title": "Please",
+          "cards": [
+            {
+              "id": "c105",
+              "title": "Do That"
+            },
+            {
+              "id": "c6Ujwr",
+              "title": "Other Card Added"
+            },
+            {
+              "id": "c104",
+              "title": "Do This"
             }
           ]
         }

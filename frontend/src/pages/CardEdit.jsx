@@ -96,7 +96,7 @@ class _CardEdit extends Component {
             <React.Fragment>
                 <div className="screen" onClick={this.props.toggleCardEdit}></div>
                 <section className="card-edit">
-                    {(card.style.coverType) ? <div className={`cover ${card.style.bgColor}`}></div> : ''}
+                    {(card.style && card.style.coverType) ? <div className={`cover ${card.style.bgColor}`}></div> : ''}
                     <header className="edit-header">
                         <button className="close" onClick={this.props.toggleCardEdit}></button>
                         <button className="title-sign"></button>
