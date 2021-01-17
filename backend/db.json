@@ -153,6 +153,22 @@
               }
             },
             {
+              "id": "coA9SH",
+              "title": "lulu",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "full",
+                "bgColor": "#cd8de5"
+              }
+            },
+            {
               "id": "c8UgxS",
               "title": "New card",
               "description": "",
@@ -184,87 +200,21 @@
           "title": "Group 2",
           "cards": [
             {
-              "id": "cWnpGf",
-              "title": "lala",
-              "description": "",
-              "comments": [],
-              "checklists": [
-                {
-                  "id": "dwRiF",
-                  "title": "ךוךו",
-                  "todos": []
-                }
-              ],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {
-                "bgColor": "#f5dd29",
-                "coverType": "full"
-              }
-            },
-            {
-              "id": "cF3r1F",
-              "title": "New Card",
-              "description": "description",
-              "comments": [],
-              "checklists": [
-                {
-                  "id": "jh19I",
-                  "title": "123",
-                  "todos": [
-                    {
-                      "txt": "1",
-                      "isDone": false,
-                      "id": "zakwC"
-                    },
-                    {
-                      "txt": "2",
-                      "isDone": true,
-                      "id": "pL3PZ"
-                    }
-                  ]
-                }
-              ],
-              "members": [],
+              "id": "c6Ujwr",
+              "title": "Other Card Added",
               "labels": [
                 {
-                  "id": "6VQZs",
+                  "id": "4cYJl",
                   "title": "",
                   "color": "#61BD4F"
                 },
                 {
-                  "id": "WMH9p",
+                  "id": "YFpt2",
                   "title": "",
-                  "color": "#F2D600"
+                  "color": "#C377E0"
                 }
               ],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {
-                "coverType": "top",
-                "bgColor": "#29cce5"
-              },
-              "duedate": "2021-01-17T12:30:44.000Z"
-            },
-            {
-              "id": "coA9SH",
-              "title": "lulu",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {
-                "coverType": "full",
-                "bgColor": "#cd8de5"
-              }
+              "duedate": "2021-01-17T13:02:56.000Z"
             },
             {
               "id": "cdid3U",
@@ -385,7 +335,7 @@
       "_id": "b102",
       "title": "Second Board ",
       "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
+        "bgurl": "https://cdn.pixabay.com/photo/2018/01/11/21/27/laptop-3076957_1280.jpg"
       },
       "groups": [
         {
@@ -444,20 +394,18 @@
               "comments": [],
               "checklists": [],
               "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cJLSew",
-              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
+              "labels": [
+                {
+                  "id": "S2kIy",
+                  "title": "",
+                  "color": "#F2D600"
+                },
+                {
+                  "id": "ZxDX1",
+                  "title": "",
+                  "color": "#61BD4F"
+                }
+              ],
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
@@ -509,22 +457,11 @@
               "style": {}
             },
             {
-              "id": "ceOffr",
-              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
+              "id": "cUQsC3",
+              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
               "description": "",
               "comments": [],
-              "checklists": [
-                {
-                  "id": "lg7Ap",
-                  "title": "Add",
-                  "todos": []
-                },
-                {
-                  "id": "8gVyI",
-                  "title": "New List",
-                  "todos": []
-                }
-              ],
+              "checklists": [],
               "members": [],
               "labels": [],
               "createdAt": "",
@@ -533,8 +470,21 @@
               "style": {}
             },
             {
-              "id": "cUQsC3",
-              "title": "Ffaculty data collated by Program Review Chair during department meetings (approximately 1-2 hours, writing Sections B and C approximately 1-2 hours)",
+              "id": "cJLSew",
+              "title": "Develop ongoing faculty development concerning first-year issues with an incentive system that encourages faculty to continue learning about teaching strategies.",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "ck1VD7",
+              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -552,26 +502,40 @@
           "title": "Timeline 3",
           "cards": [
             {
-              "id": "ck1VD7",
-              "title": "By the early March: Program Review Chair collates and presents data to faculty members",
+              "id": "ceOffr",
+              "title": "Develop an orientation and professional development strategy for all faculty (campus) and teaching assistants (department).",
               "description": "",
               "comments": [],
-              "checklists": [],
+              "checklists": [
+                {
+                  "id": "lg7Ap",
+                  "title": "Add",
+                  "todos": []
+                },
+                {
+                  "id": "8gVyI",
+                  "title": "New List",
+                  "todos": []
+                }
+              ],
               "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "clzzCD",
-              "title": "Teaching and Learning Specialist supporting the department’s Program Review (approximately 1 hour)",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
+              "labels": [
+                {
+                  "id": "Rf5H6",
+                  "title": "",
+                  "color": "#61BD4F"
+                },
+                {
+                  "id": "zEBpV",
+                  "title": "",
+                  "color": "#FF9F1A"
+                },
+                {
+                  "id": "eTY3i",
+                  "title": "",
+                  "color": "#EB5A46"
+                }
+              ],
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
@@ -580,6 +544,19 @@
             {
               "id": "cU5pvD",
               "title": "Possible remaining questions, possible action items, and a plan moving forward (approximately 1 hour)",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cMqZo1",
+              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -651,19 +628,6 @@
               "dueDate": "",
               "byMember": {},
               "style": {}
-            },
-            {
-              "id": "cMqZo1",
-              "title": "eptember/October:  Program Review Chair meets with the Director of the Centre for Innovation and Excellence in Learning and the Curriculum",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
             }
           ]
         }
@@ -681,32 +645,6 @@
           "title": "Group 7",
           "cards": [
             {
-              "id": "c120",
-              "title": "Task 120"
-            },
-            {
-              "id": "c121",
-              "title": "Task 121"
-            },
-            {
-              "id": "c123",
-              "title": "Task 123"
-            }
-          ]
-        },
-        {
-          "id": "gM0AgA",
-          "title": "Gorup 10",
-          "cards": [
-            {
-              "id": "c126",
-              "title": "Task 126"
-            },
-            {
-              "id": "c122",
-              "title": "Task 122"
-            },
-            {
               "id": "c8NHdI",
               "title": "Task 125",
               "description": "",
@@ -720,8 +658,52 @@
               "style": {}
             },
             {
-              "id": "cJZhoM",
-              "title": "New Card",
+              "id": "c121",
+              "title": "Task 121",
+              "checklists": [
+                {
+                  "id": "ysJDm",
+                  "title": "1234",
+                  "todos": [
+                    {
+                      "txt": "bla bla",
+                      "isDone": true,
+                      "id": "onEa0"
+                    }
+                  ]
+                }
+              ],
+              "labels": [
+                {
+                  "id": "elpRn",
+                  "title": "",
+                  "color": "#EB5A46"
+                },
+                {
+                  "id": "BCACo",
+                  "title": "",
+                  "color": "#C377E0"
+                },
+                {
+                  "id": "8aa0V",
+                  "title": "",
+                  "color": "#FF9F1A"
+                }
+              ]
+            },
+            {
+              "id": "c123",
+              "title": "Task 123"
+            }
+          ]
+        },
+        {
+          "id": "g2A0g1",
+          "title": "sfsfdfsf",
+          "cards": [
+            {
+              "id": "cBzA0u",
+              "title": "4345",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -730,7 +712,78 @@
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
-              "style": {}
+              "style": {
+                "coverType": "full",
+                "bgColor": "#ff8ed4"
+              }
+            },
+            {
+              "id": "c120",
+              "title": "Task 120"
+            }
+          ]
+        },
+        {
+          "id": "gM0AgA",
+          "title": "Gorup 10",
+          "cards": [
+            {
+              "id": "cLwW8E",
+              "title": "Task 128",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [
+                {
+                  "id": "zD35A",
+                  "title": "",
+                  "color": "#0079BF"
+                },
+                {
+                  "id": "BHfHX",
+                  "title": "",
+                  "color": "#FF9F1A"
+                }
+              ],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "bgColor": "#29cce5",
+                "coverType": "full"
+              }
+            },
+            {
+              "id": "c126",
+              "title": "Task 126",
+              "labels": [
+                {
+                  "id": "1Yh4I",
+                  "title": "",
+                  "color": "#EB5A46"
+                },
+                {
+                  "id": "Hmfpe",
+                  "title": "",
+                  "color": "#F2D600"
+                }
+              ]
+            },
+            {
+              "id": "c127",
+              "title": "Task 127",
+              "labels": [
+                {
+                  "id": "nhIzM",
+                  "title": "",
+                  "color": "#61BD4F"
+                }
+              ]
+            },
+            {
+              "id": "c124",
+              "title": "Task 124"
             }
           ]
         },
@@ -739,52 +792,8 @@
           "title": "Group 8",
           "cards": [
             {
-              "id": "c119",
-              "title": "Task 119"
-            },
-            {
-              "id": "c125",
-              "title": "Task 125"
-            },
-            {
-              "id": "c127",
-              "title": "Task 127"
-            }
-          ]
-        },
-        {
-          "id": "g109",
-          "title": "Group 9",
-          "cards": [
-            {
-              "id": "clwVaX",
-              "title": "Task 126",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cLwW8E",
-              "title": "Task 128",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "csHxXU",
-              "title": "Task 125",
+              "id": "cJZhoM",
+              "title": "New Card",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -802,21 +811,13 @@
           "title": "Group 11",
           "cards": [
             {
-              "id": "c124",
-              "title": "Task 124"
+              "id": "c122",
+              "title": "Task 122",
+              "description": "la la la"
             },
             {
-              "id": "cJtDKk",
-              "title": "Task 172",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
+              "id": "c119",
+              "title": "Task 119"
             },
             {
               "id": "cuOUVZ",
@@ -836,14 +837,14 @@
       ]
     },
     {
-      "title": "New Board",
+      "title": "4th Board",
       "createdBy": {
         "_id": "u101",
         "username": "pazavi",
         "imgUrl": "http://some-img"
       },
       "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
+        "bgurl": "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
       },
       "members": [
         {
@@ -854,31 +855,12 @@
       ],
       "groups": [
         {
-          "id": "gbXXGj",
-          "title": "New list in  new Board",
-          "cards": [
-            {
-              "id": "cmia31",
-              "title": "New Card",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "gh58Ju",
+          "id": "gRpmYB",
           "title": "New List",
           "cards": [
             {
-              "id": "c76ZBs",
-              "title": "New Card",
+              "id": "c9hbwD",
+              "title": "Do this",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -887,112 +869,13 @@
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
-              "style": {}
+              "style": {
+                "coverType": "top"
+              }
             },
             {
-              "id": "cFbJVv",
-              "title": "Other Card",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [
-                {
-                  "id": "ofYIa",
-                  "title": "",
-                  "color": "#FF9F1A"
-                }
-              ],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        }
-      ],
-      "activities": [],
-      "_id": "itRpq_6"
-    },
-    {
-      "title": "New Board 2",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "gOcIvf",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "ioPJC6F"
-    },
-    {
-      "title": "Other Board",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "g1hHiY",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "18IkAFE"
-    },
-    {
-      "title": "new board",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "gkeyNl",
-          "title": "Adding New List to new Board",
-          "cards": [
-            {
-              "id": "cYgIhr",
-              "title": "Adding New Card",
+              "id": "ccQ6Gu",
+              "title": "Do That",
               "description": "",
               "comments": [],
               "checklists": [],
@@ -1001,294 +884,15 @@
               "createdAt": "",
               "dueDate": "",
               "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cCsoEF",
-              "title": "Other Card",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "gf8X6r",
-          "title": "New List",
-          "cards": [
-            {
-              "id": "cWurYE",
-              "title": "Another List ",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "gRVnkD",
-          "title": "Adding New List Again",
-          "cards": [
-            {
-              "id": "cwsmIl",
-              "title": "Adding New CArd",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
+              "style": {
+                "coverType": "top"
+              }
             }
           ]
         }
       ],
       "activities": [],
-      "_id": "Tl-j4nx"
-    },
-    {
-      "title": "Adding New Board",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "gBHV5H",
-          "title": "New List",
-          "cards": [
-            {
-              "id": "cuNhDo",
-              "title": "New Card in New Board",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        }
-      ],
-      "activities": [],
-      "_id": "hTyqn73"
-    },
-    {
-      "title": "New Board",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "gJu7sG",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "yeF-cyB"
-    },
-    {
-      "title": "New Board",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2019/03/23/20/54/bamboo-4076262_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "gZwyX8",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "QsZaZTr"
-    },
-    {
-      "title": "New Board",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "go9jkC",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "J41ClC9"
-    },
-    {
-      "title": "New Board",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "gnDPrG",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "jc__85r"
-    },
-    {
-      "title": "lululul",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "gc6KRa",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "krvP1Mj"
-    },
-    {
-      "title": "lalala",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "g4Ldqp",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "SJISoom"
-    },
-    {
-      "title": "hadas",
-      "createdBy": {
-        "_id": "u101",
-        "username": "pazavi",
-        "imgUrl": "http://some-img"
-      },
-      "style": {
-        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
-      },
-      "members": [
-        {
-          "_id": "u101",
-          "username": "pazavi",
-          "imgUrl": "http://some-img"
-        }
-      ],
-      "groups": [
-        {
-          "id": "gRM3VC",
-          "title": "New List",
-          "cards": []
-        }
-      ],
-      "activities": [],
-      "_id": "l5LFVQt"
+      "_id": "0p3KU9C"
     }
   ],
   "user": [

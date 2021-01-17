@@ -1,0 +1,74 @@
+.add-board{
+    width: 100%;
+    margin:auto;
+    background-color: rgba(15, 15, 15, 0.683);
+    // background-color: rgb(15, 15, 15);
+    position: relative;
+    top:0;
+    right:0;
+    bottom: 0;
+    .templates-container{
+
+        margin-bottom:20px;
+        margin-top:20px;
+       
+      
+    
+    }
+    .add-board-backgrounds{
+        max-width: 1200px;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin:auto;
+
+    }
+    .backgrounds-tumbs{
+        display:inline-block;
+        cursor: pointer;
+        transition: .5s;
+        &:hover{
+            transform: scale(1.05);
+        }
+
+        
+  
+    }
+    input {
+        width: 329px;
+        height: 35px;
+        border-radius: 3px;  
+    }
+
+    .save-btn {
+        width: 329px;
+        height: 35px;
+        border-radius: 3px;
+        margin-top: 10px;
+        background-color: #62BD50;
+        color:white;
+        &:hover{
+            background-color: #51c13a;
+        }
+
+    }
+    .cancel-btn {
+        width: 329px;
+        height: 35px;
+        border-radius: 3px;
+        margin-top: 10px;
+        background-color: #313EA0;
+
+    }
+
+
+    form > * {
+        display: block;
+        margin: auto;
+    }
+
+ 
+   
+}

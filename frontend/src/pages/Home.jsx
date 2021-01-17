@@ -51,6 +51,7 @@ class _Home extends Component {
         </div >
 
         <div className="welcome-container">
+          {/* {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />} */}
           <h3>Hit your deadlines, follow your your team’s progress and keep work moving across teams  — all from one place.</h3>
 
           {/* <h3>Save time, avoid losing work and information, delegate, prioritize your tasks and keep track to stay on schedule.</h3> */}

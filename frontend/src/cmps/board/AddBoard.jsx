@@ -51,28 +51,55 @@ export class _AddBoard extends Component {
             {
                 id: 'bg103',
                 bgurl: "https://cdn.pixabay.com/photo/2019/03/23/20/54/bamboo-4076262_1280.jpg"
-            }
+            },
+            {
+                id: 'bg104',
+                bgurl: "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+                
+            },
+            {
+                id: 'bg105',
+                bgurl: "https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228_1280.jpg"
+            },
+            {
+                id: 'bg106',
+                bgurl: "https://cdn.pixabay.com/photo/2017/05/11/11/15/workplace-2303851_1280.jpg"
+            },
+            {
+                id: 'bg107',
+                bgurl: "https://cdn.pixabay.com/photo/2013/07/28/12/23/paperclip-168336_1280.jpg"
+            },
+            {
+                id: 'bg108',
+                bgurl: "https://cdn.pixabay.com/photo/2016/03/26/13/12/pencils-1280558_1280.jpg"
+            },
+            {
+                id: 'bg109',
+                bgurl: "https://cdn.pixabay.com/photo/2018/01/11/21/27/laptop-3076957_1280.jpg"
+            },
         ]
         return (
             <div className="add-board">
-                <form onSubmit={this.onSubmit} >
+                <form className="templates-container" onSubmit={this.onSubmit} >
                     <input placeholder="Enter a title for this board..." type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" />
                     <section className="add-board-backgrounds">
                         {backgroundImages.map(background => {
-                            return <div key={background.id}
+                            return <div className="backgrounds-tumbs"key={background.id}
                                 style={{
                                     backgroundImage: "url(" + `${background.bgurl}` + ")",
                                     backgroundPosition: 'center',
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
-                                    width: "100px", 
-                                    height:"100px"
+                                    borderRadius:"3px",
+                                    width: "350px", 
+                                    height:"200px",
+                                    margin: "10px"
                                 }}
                                 onClick={() => this.onChooseBackground( background.bgurl)}></div>
                         })}
                     </section>
-                    <button className="save-btn">Add Board</button>
-                    <button className="cancel-btn" onClick={this.onCancelAdd}>Cancel</button>
+                    <button className="save-btn">+ Add Board</button>
+                    <button className="cancel-btn" onClick={this.onCancelAdd}>X Cancel</button>
                 </form>
             </div>
         )
