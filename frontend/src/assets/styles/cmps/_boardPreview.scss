@@ -5,44 +5,64 @@
 
     user-select: none;
     white-space: nowrap;
-    margin-top: 50px;
-    margin-left: 0px;
-    margin-bottom: 8px;
+    padding-top:55px;
+    padding-left: 20px;
+    // margin-top: 50px;
+    // margin-left: 0px;
+    // margin-bottom: 8px;
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 18px;
     position: static;
+}
 
-    .board-title {
+
+
+.board-title {
         font-family: "Share Tech Mono", monospace;
         margin-left: 8px;
     }
 
-    .board-preview {
-        font-family: "Roboto", sans-serif;
-        padding: 10px;
-        min-width: 300px;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        li {
-            width: 300px;
-            background-color: $clr2;
-            color: $clr6;
-            padding: 10px;
-            list-style: none;
-        }
+.board-wraper-home{
+        user-select: none;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 18px;
+        position: static;
 
-        article {
-            width: 300px;
-            margin: auto;
-        }
-        a {
-            color: $clr6;
-            padding: 10px;
-            text-align: center;
-            margin: auto;
-        }
+        .board-preview-home{
+            font-family: "Roboto", sans-serif;
+            min-width: 300px;
+            min-height: 200px;
+            // margin-bottom: 20px;
+            display: flex;
+            // flex-direction: column;
+    li {
+                width: 350px;
+                height: 200px;
+                background-color: $clr2;
+                color: $clr6;
+                padding: 10px;
+                list-style: none;
+            }
+    
+    article {
+                width: 350px;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+    a {
+                color: $clr6;
+                padding: 10px;
+                text-align: center;
+                margin: auto;
+            }
+
+
+    }
+
+
         // h3 {
         //     background-color: #ddd;
         //     padding: 10px 5px;
@@ -50,4 +70,4 @@
         //     list-style: none;
         // }
     }
-}
+

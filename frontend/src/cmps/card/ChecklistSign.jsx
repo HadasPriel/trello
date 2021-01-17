@@ -15,7 +15,7 @@ export function ChecklistSign(props) {
     })
 
     return (
-        <span className="checklistSign" > {progress} </span>
+        <span className="checklistSign sign" > {progress} </span>
     )
 
 }

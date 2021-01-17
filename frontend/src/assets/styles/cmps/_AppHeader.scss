@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 .app-header{
-    width: 100vw;
     height: 55px;
     background-color: rgb(5, 5, 5);
     display: flex;
@@ -12,7 +11,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 8px;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;

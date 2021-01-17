@@ -41,7 +41,7 @@
     
     .home-img-container {
         width: 100vw;
-        height:85vh;
+        height:100vh;
         background-size: cover;
         background-position-x: center;
         background-repeat:no-repeat;
@@ -132,7 +132,6 @@
                 width: 330px;
                 height: 35px;
                 margin: auto;
-                transition: .5s;
                 &:hover{
                     transform: scale(1.2);
                 }

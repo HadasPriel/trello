@@ -8,8 +8,11 @@
     right: 50%;
     transform: translate(50%);
     top: 80px;
-    z-index: 2;
+    z-index: 3;
     border-radius: 5px;
+    cursor: auto;
+    // max-height: 800px;
+    // overflow: auto;
 
     header.edit-header {
         margin: 12px 40px 8px 56px;
@@ -60,6 +63,11 @@
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
+        display: inline-block;
+    }
+    button.add-btn {
+        background-color: #5aac44;
+        color: #fff;
     }
 
     nav {
@@ -71,15 +79,73 @@
     }
     .show {
         margin: 0 0 15px 50px;
+        &.description {
+            cursor: pointer;
+        }
     }
+    .duedate {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
     .description {
         padding: 8px 12px;
+        background-color: rgba(9, 30, 66, 0.04);
+        border-radius: 3px;
+        width: 510px;
+        height: 55px;
+    }
+    .description:hover {
+        background-color: rgba(9, 30, 66, 0.08);
+    }
+    &.top {
+        padding-top: 0;
+    }
+
+    &.top::before {
+        padding: 25px 385px;
+        border-radius: 3px 3px 0 0;
+        position: relative;
+        left: -5px;
+        top: -40px;
+        content: "";
+    }
+    &.t\#7bc86c::before {
+        background-color: #7bc86c;
+    }
+    &.t\#f5dd29::before {
+        background-color: #f5dd29;
+    }
+    &.t\#ffaf3f::before {
+        background-color: #ffaf3f;
+    }
+    &.t\#ef7564::before {
+        background-color: #ef7564;
+    }
+    &.t\#cd8de5::before {
+        background-color: #cd8de5;
+    }
+    &.t\#5ba4cf::before {
+        background-color: #5ba4cf;
+        color: #ffff;
+    }
+    &.t\#29cce5::before {
+        background-color: #29cce5;
+    }
+    &.t\#6deca9::before {
+        background-color: #6deca9;
+    }
+    &.t\#ff8ed4::before {
+        background-color: #ff8ed4;
+    }
+    &.t\#172b4d::before {
+        background-color: #172b4d;
     }
 }
 
 .screen {
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     height: 100%;
     width: 100%;

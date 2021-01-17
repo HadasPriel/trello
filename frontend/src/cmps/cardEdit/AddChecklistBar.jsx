@@ -43,8 +43,8 @@ class _AddChecklistBar extends Component {
                     <input type="text" name="title" value={this.state.checklist.title}
                             onChange={this.handleChange} autoComplete="off" required autoFocus ></input>
                     </label>
+                    <button className="add-btn">Add</button>
                 </main>
-                <button className="add-btn">Add</button>
             </form>
 
         )

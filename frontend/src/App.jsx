@@ -13,8 +13,8 @@ export function App() {
   return (
     <div className="app">
       <Router>
+        <AppHeader />
         <main>
-          <AppHeader />
           <Switch>
             {/* <Route path="/user/:id" component={UserDetails} /> */}
             {/* <Route path="/login" component={LoginSignup} /> */}
