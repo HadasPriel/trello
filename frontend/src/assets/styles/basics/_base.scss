@@ -3,6 +3,7 @@
 }
 
 html {
+    height: 100vh;
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
     color: $clr2;
@@ -10,6 +11,7 @@ html {
 }
 
 body {
+    height: 100%;
     font-size: rem(18px);
     margin: 0;
     left:0;
@@ -32,11 +34,11 @@ ul {
     list-style-type: none;
 }
 
-section,
-main,
-footer {
-    padding: 5px;
-}
+// section,
+// main,
+// footer {
+//     padding: 5px;
+// }
 
 img {
     width: 100%;
