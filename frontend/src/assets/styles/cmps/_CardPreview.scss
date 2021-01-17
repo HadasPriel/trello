@@ -12,13 +12,71 @@
     box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
     outline: none;
 
-    .delete {
+    &.top {
+        padding-top: 0;
+    }
+
+    &.top::before {
+        padding: 5px 125px;
+        border-radius: 3px 3px 0 0;
+        position: relative;
+        left: -5px;
+        content: "";
+    }
+
+    &.t\#7bc86c::before {
+        background-color: #7bc86c;
+    }
+    &.t\#f5dd29::before {
+        background-color: #f5dd29;
+    }
+    &.t\#ffaf3f::before {
+        background-color: #ffaf3f;
+    }
+    &.t\#ef7564::before {
+        background-color: #ef7564;
+    }
+    &.t\#cd8de5::before {
+        background-color: #cd8de5;
+    }
+    &.t\#5ba4cf::before {
+        background-color: #5ba4cf;
+        color: #ffff;
+    }
+    &.t\#29cce5::before {
+        background-color: #29cce5;
+    }
+    &.t\#6deca9::before {
+        background-color: #6deca9;
+    }
+    &.t\#ff8ed4::before {
+        background-color: #ff8ed4;
+    }
+    &.t\#172b4d::before {
+        background-color: #172b4d;
+    }
+
+    .delete-s {
         visibility: hidden;
         position: absolute;
         top: 0;
         right: 0;
         font-size: 11px;
         color: #5e6c84;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .delete-s::before {
+        font-family: "fa";
+        content: "\f2ed";
+    }
+
+    &:hover .delete-s {
+        visibility: visible;
+    }
+
+    .edit-s::before {
+        font-family: "fa";
+        content: "\f044";
     }
 
     button.delete-card {
@@ -55,10 +113,27 @@
     nav {
         font-size: 10px;
         color: #5e6c84;
+
         .checklistSign::before {
             font-family: fa;
             content: "\f00c";
         }
+    }
+
+    .duetime-fa-min {
+        display: inline-block;
+        font-size: 10px;
+        color: #5e6c84;
+        margin: 0;
+        // color: red;
+    }
+    .sign {
+        margin-right: 15px;
+    }
+
+    .descriptionSign::before {
+        font-family: "fa";
+        content: "\f036";
     }
 
     &:hover {
@@ -70,7 +145,6 @@
         &.\#f5dd29 {
             background-color: #f5dd29;
         }
-
         &.\#ffaf3f {
             background-color: #ffaf3f;
         }
@@ -96,10 +170,6 @@
         &.\#172b4d {
             background-color: #172b4d;
         }
-    }
-
-    &:hover .delete {
-        visibility: visible;
     }
 
     .\#7bc86c {
@@ -134,4 +204,8 @@
     .\#172b4d {
         background-color: #172b4d;
     }
+}
+
+.cover.min .card-preview {
+    margin-top: 100px;
 }

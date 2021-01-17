@@ -27,3 +27,24 @@
         background-color: rgba(9, 30, 66, 0.08);
     }
 }
+
+.label-fa::before {
+    font-family: "fa";
+    content: "\f02b";
+}
+.checklist-fa::before {
+    font-family: "fa";
+    content: "\f00c";
+}
+.cover-fa::before {
+    font-family: "fa";
+    content: "\f2d0";
+}
+.duetime-fa::before {
+    font-family: "fa";
+    content: "\f017";
+}
+.delete-fa::before {
+    font-family: "fa";
+    content: "\f2ed";
+}

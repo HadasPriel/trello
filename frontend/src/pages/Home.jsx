@@ -25,7 +25,7 @@ class _Home extends Component {
   onLoadNewBoard = (boardId) => {
     this.toggleNewBoard()
     this.props.history.push(`/board/${boardId}`)
-}
+  }
 
 
   render() {
@@ -46,7 +46,7 @@ class _Home extends Component {
             <Button variant="contained" size="large" color="primary" className="get-started" onClick={this.toggleNewBoard}>
               Get Started
             </Button>
-            {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard ={this.onLoadNewBoard} />}
+            {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />}
           </div>
         </div >
 

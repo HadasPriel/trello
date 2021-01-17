@@ -1,5 +1,5 @@
 .edit-bar {
-    width: fit-content;
+    // width: fit-content;
     position: absolute;
     right: -20px;
     top: 44px;
@@ -31,6 +31,7 @@
         }
     }
     main {
+        margin: auto;
         padding: 12px;
         padding-top: 0;
 

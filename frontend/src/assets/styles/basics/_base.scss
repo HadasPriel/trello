@@ -12,7 +12,7 @@ html {
 body {
     font-size: rem(18px);
     margin: 0;
-    left:0;
+    left: 0;
 }
 
 h1,
@@ -61,4 +61,8 @@ input {
 
 button {
     cursor: pointer;
+}
+
+textarea {
+    resize: none;
 }

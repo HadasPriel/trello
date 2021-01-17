@@ -6,6 +6,7 @@ import { CardEdit } from '../../pages/CardEdit'
 import { Draggable } from 'react-beautiful-dnd'
 import { ChecklistSign } from './ChecklistSign'
 import { CardCoverShowMin } from './CardCoverShowMin'
+import { CardDuedateShowMin } from '../cardEdit/CardDuedateShowMin'
 
 export class _CardPreview extends Component {
 
@@ -26,8 +27,9 @@ export class _CardPreview extends Component {
     render() {
         const { card } = this.props
         const { isCardEtidShow } = this.state
-        const cardBgc = (card.style && card.style.coverType && card.style.coverType === 'full') ? `full ${card.style.bgColor}` : ''
-
+        // const cardBgc = (card.style && card.style.coverType && card.style.coverType === 'full') ? `full ${card.style.bgColor}` : ''
+        const cardBgc = (card.style?.coverType === 'full') ? `full ${card.style.bgColor}` : ''
+        const cardCover = (card.style?.coverType === 'top') ? `top t${card.style.bgColor}` : ''
         return (
 
 
@@ -36,13 +38,16 @@ export class _CardPreview extends Component {
                     return (
 
                         <li key={card.id}  {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
-                            <article className={`card-preview ${cardBgc}`}>
-                                {(card.style && card.style.coverType && card.style.coverType === 'top') ? <CardCoverShowMin card={card} /> : ''}
-                                <button className="delete" onClick={() => this.onRemoveCard(card.id)}></button>
+                            <article className={`card-preview ${cardBgc} ${cardCover}`}>
+                                {/* {(card.style?.coverType === 'top') ? <CardCoverShowMin card={card} /> : ''} */}
+                                {/* <button className="edit-fa" onClick={() => this.toggleCardEdit}></button> */}
+                                <button className="delete-s" onClick={() => this.onRemoveCard(card.id)}></button>
                                 {card.labels && <CardLabelShowMin labels={card.labels} />}
                                 <p onClick={this.toggleCardEdit} >{card.title}</p>
                                 <nav>
+                                    {(card.description) ? <span className="descriptionSign sign"></span> : ''}
                                     {(card.checklists && card.checklists.length > 0) ? <ChecklistSign checklists={card.checklists} /> : ''}
+                                    {(card.duedate) ? <CardDuedateShowMin card={card} /> : ''}
                                 </nav>
                                 {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} />}
                             </article>

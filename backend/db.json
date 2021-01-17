@@ -12,47 +12,6 @@
           "title": "Please",
           "cards": [
             {
-              "id": "c8UgxS",
-              "title": "New card",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cWnpGf",
-              "title": "lala",
-              "description": "",
-              "comments": [],
-              "checklists": [
-                {
-                  "id": "dwRiF",
-                  "title": "ךוךו",
-                  "todos": [
-                    {
-                      "txt": "1",
-                      "isDone": true,
-                      "id": "kPcLT"
-                    }
-                  ]
-                }
-              ],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {
-                "bgColor": "#f5dd29",
-                "coverType": "full"
-              }
-            },
-            {
               "id": "cRyryP",
               "title": "yeeeee",
               "description": "",
@@ -64,26 +23,9 @@
               "dueDate": "",
               "byMember": {},
               "style": {
-                "coverType": "top"
+                "coverType": "top",
+                "bgColor": "#ffaf3f"
               }
-            }
-          ]
-        },
-        {
-          "id": "g102",
-          "title": "Group 2",
-          "cards": [
-            {
-              "id": "cEbmbs",
-              "title": "Add new card",
-              "style": {
-                "bgColor": "#172b4d",
-                "coverType": "full"
-              }
-            },
-            {
-              "id": "c104",
-              "title": "Do This"
             },
             {
               "id": "c6Ujwr",
@@ -99,12 +41,174 @@
                   "title": "",
                   "color": "#C377E0"
                 }
-              ]
+              ],
+              "description": "lulululi",
+              "checklists": [
+                {
+                  "id": "xnsQK",
+                  "title": "lulu",
+                  "todos": [
+                    {
+                      "txt": "toooooooooodooooooo",
+                      "isDone": true,
+                      "id": "Tofmj"
+                    },
+                    {
+                      "txt": "lalalalalaaaaa",
+                      "isDone": false,
+                      "id": "nK765"
+                    },
+                    {
+                      "txt": "gfgfgf",
+                      "isDone": false,
+                      "id": "sqDS0"
+                    },
+                    {
+                      "txt": "g",
+                      "isDone": false,
+                      "id": "btXeS"
+                    },
+                    {
+                      "txt": "ff",
+                      "isDone": false,
+                      "id": "gQGot"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "U3zq1"
+                    }
+                  ]
+                },
+                {
+                  "id": "x4Uj4",
+                  "title": "hgfh",
+                  "todos": [
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "xyOlQ"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "sJP6o"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "FxSWY"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "vCluc"
+                    },
+                    {
+                      "txt": "ff",
+                      "isDone": false,
+                      "id": "he7X5"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "JOTW0"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "Erjs7"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "SALZN"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "uW9H0"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "hPh8m"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "Pj1i1"
+                    },
+                    {
+                      "txt": "f",
+                      "isDone": false,
+                      "id": "TPFFo"
+                    }
+                  ]
+                }
+              ],
+              "style": {
+                "bgColor": "#ffaf3f",
+                "coverType": "full"
+              }
+            },
+            {
+              "id": "c8UgxS",
+              "title": "New card",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
+              "id": "cEbmbs",
+              "title": "Add new card",
+              "style": {
+                "bgColor": "#172b4d",
+                "coverType": "full"
+              }
+            },
+            {
+              "id": "c104",
+              "title": "Do This"
+            }
+          ]
+        },
+        {
+          "id": "g102",
+          "title": "Group 2",
+          "cards": [
+            {
+              "id": "cWnpGf",
+              "title": "lala",
+              "description": "",
+              "comments": [],
+              "checklists": [
+                {
+                  "id": "dwRiF",
+                  "title": "ךוךו",
+                  "todos": []
+                }
+              ],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "bgColor": "#f5dd29",
+                "coverType": "full"
+              }
             },
             {
               "id": "cF3r1F",
               "title": "New Card",
-              "description": "",
+              "description": "description",
               "comments": [],
               "checklists": [
                 {
@@ -143,7 +247,8 @@
               "style": {
                 "coverType": "top",
                 "bgColor": "#29cce5"
-              }
+              },
+              "duedate": "2021-01-17T12:30:44.000Z"
             },
             {
               "id": "coA9SH",
@@ -157,14 +262,122 @@
               "dueDate": "",
               "byMember": {},
               "style": {
-                "coverType": "top"
+                "coverType": "full",
+                "bgColor": "#cd8de5"
               }
             },
             {
+              "id": "cdid3U",
+              "title": "fgfg",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [
+                {
+                  "id": "s44Tj",
+                  "title": "",
+                  "color": "#61BD4F"
+                }
+              ],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top",
+                "bgColor": "#ef7564"
+              },
+              "duedate": "2021-01-23T22:00:00.000Z"
+            },
+            {
               "id": "c105",
-              "title": "Do That"
+              "title": "Do That",
+              "checklists": [
+                {
+                  "id": "MINrd",
+                  "title": "hgjghj",
+                  "todos": [
+                    {
+                      "txt": "gfhjgfhj",
+                      "isDone": false,
+                      "id": "iXslO"
+                    },
+                    {
+                      "txt": "ghjghfj",
+                      "isDone": false,
+                      "id": "jmGwG"
+                    },
+                    {
+                      "txt": "fgjh",
+                      "isDone": false,
+                      "id": "ofARA"
+                    }
+                  ]
+                },
+                {
+                  "id": "A5ORa",
+                  "title": "fghjgfhj",
+                  "todos": []
+                },
+                {
+                  "id": "ZsTtm",
+                  "title": "fghjgfhj",
+                  "todos": [
+                    {
+                      "txt": "gfhjgfhj",
+                      "isDone": false,
+                      "id": "j9tpv"
+                    },
+                    {
+                      "txt": "ghjghjfgh",
+                      "isDone": false,
+                      "id": "ycE33"
+                    },
+                    {
+                      "txt": "fghjfghj",
+                      "isDone": false,
+                      "id": "WWSk2"
+                    },
+                    {
+                      "txt": "jghjghfjgfj",
+                      "isDone": false,
+                      "id": "2W6T2"
+                    },
+                    {
+                      "txt": "gfhjgfhjg",
+                      "isDone": false,
+                      "id": "mAySu"
+                    },
+                    {
+                      "txt": "defasfddasf",
+                      "isDone": false,
+                      "id": "ZXdGG"
+                    },
+                    {
+                      "txt": "asdfasdf",
+                      "isDone": false,
+                      "id": "NT6aJ"
+                    },
+                    {
+                      "txt": "adsfasdfasd",
+                      "isDone": false,
+                      "id": "VblPg"
+                    },
+                    {
+                      "txt": "asdfasdf",
+                      "isDone": false,
+                      "id": "5cSb5"
+                    }
+                  ]
+                }
+              ]
             }
           ]
+        },
+        {
+          "id": "g63D6E",
+          "title": "lululu",
+          "cards": []
         }
       ]
     },
@@ -995,6 +1208,87 @@
       ],
       "activities": [],
       "_id": "jc__85r"
+    },
+    {
+      "title": "lululul",
+      "createdBy": {
+        "_id": "u101",
+        "username": "pazavi",
+        "imgUrl": "http://some-img"
+      },
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
+      },
+      "members": [
+        {
+          "_id": "u101",
+          "username": "pazavi",
+          "imgUrl": "http://some-img"
+        }
+      ],
+      "groups": [
+        {
+          "id": "gc6KRa",
+          "title": "New List",
+          "cards": []
+        }
+      ],
+      "activities": [],
+      "_id": "krvP1Mj"
+    },
+    {
+      "title": "lalala",
+      "createdBy": {
+        "_id": "u101",
+        "username": "pazavi",
+        "imgUrl": "http://some-img"
+      },
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2016/11/29/08/00/abstract-1868269_1280.jpg"
+      },
+      "members": [
+        {
+          "_id": "u101",
+          "username": "pazavi",
+          "imgUrl": "http://some-img"
+        }
+      ],
+      "groups": [
+        {
+          "id": "g4Ldqp",
+          "title": "New List",
+          "cards": []
+        }
+      ],
+      "activities": [],
+      "_id": "SJISoom"
+    },
+    {
+      "title": "hadas",
+      "createdBy": {
+        "_id": "u101",
+        "username": "pazavi",
+        "imgUrl": "http://some-img"
+      },
+      "style": {
+        "bgurl": "https://cdn.pixabay.com/photo/2020/04/11/18/24/star-5031540_1280.jpg"
+      },
+      "members": [
+        {
+          "_id": "u101",
+          "username": "pazavi",
+          "imgUrl": "http://some-img"
+        }
+      ],
+      "groups": [
+        {
+          "id": "gRM3VC",
+          "title": "New List",
+          "cards": []
+        }
+      ],
+      "activities": [],
+      "_id": "l5LFVQt"
     }
   ],
   "user": [
