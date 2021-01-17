@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { BoardFilter } from '../cmps/board/BoardFilter'
 import { GroupList } from '../cmps/group/GroupList'
+import {BoardSideMenu} from '../cmps/board/BoardSideMenu'
 // import { socketService } from '../services/socketService'
 import { loadBoard, updateBoardAfterDrag } from '../store/actions/boardActions.js'
 
@@ -8,7 +10,7 @@ import { loadBoard, updateBoardAfterDrag } from '../store/actions/boardActions.j
 class _Board extends Component {
     state = {
         board: {},
-
+        isBoardMenuShown: false
     }
 
     async componentDidMount() {
@@ -55,9 +57,14 @@ class _Board extends Component {
 
     }
 
+    toggleSideMenu = () => {
+        this.setState({ isBoardMenuShown: !this.state.isBoardMenuShown })
+    }
+
 
     render() {
         const { selectedBoard } = this.props
+        const {isBoardMenuShown} = this.state
         
         if (!selectedBoard) return <div>Loading...</div>
         // console.log('BBB', selectedBoard.style.bgurl)
@@ -68,12 +75,17 @@ class _Board extends Component {
             <section className="board-wraper"
                 style={{
                     backgroundImage: "url(" + `${style.boardStyle.bgurl}` + ")",
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat"
                 }}>
 
                 <div className="board-title"> {selectedBoard.title}</div>
+                <nav>
+                <BoardFilter/>
+                <button onClick={this.toggleSideMenu}>Side Menu In Development</button>
+                </nav>
+                {isBoardMenuShown && <BoardSideMenu toggleSideMenu={this.toggleSideMenu}/> }
                 {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
             </section>
 

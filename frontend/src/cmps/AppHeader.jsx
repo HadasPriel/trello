@@ -9,7 +9,7 @@ export function AppHeader() {
         <h3 className="logo-header">TASK<span>X</span></h3>
         
         <ul className="navbar-links">
-            {/* <li><NavLink activeClassName="my-active" exact to="/">Home</NavLink> | </li> */}
+            {/* <li><NavLink exact to="/">Home</NavLink> </li> */}
             {/* <li><NavLink to="/">Login</NavLink></li> */}
             {/* <li><NavLink to="/">Boards</NavLink> | </li> */}
 

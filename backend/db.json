@@ -8,83 +8,9 @@
       },
       "groups": [
         {
-          "id": "g4vVW8",
-          "title": "Please",
+          "id": "gdHTvh",
+          "title": "New  list ",
           "cards": [
-            {
-              "id": "c8UgxS",
-              "title": "New card",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "c104",
-              "title": "Do This"
-            },
-            {
-              "id": "cWnpGf",
-              "title": "lala",
-              "description": "",
-              "comments": [],
-              "checklists": [
-                {
-                  "id": "dwRiF",
-                  "title": "ךוךו",
-                  "todos": [
-                    {
-                      "txt": "1",
-                      "isDone": true,
-                      "id": "kPcLT"
-                    }
-                  ]
-                }
-              ],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {
-                "bgColor": "#f5dd29",
-                "coverType": "full"
-              }
-            },
-            {
-              "id": "cRyryP",
-              "title": "yeeeee",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {
-                "coverType": "top"
-              }
-            }
-          ]
-        },
-        {
-          "id": "g102",
-          "title": "Group 2",
-          "cards": [
-            {
-              "id": "cEbmbs",
-              "title": "Add new card",
-              "style": {
-                "bgColor": "#172b4d",
-                "coverType": "full"
-              }
-            },
             {
               "id": "cF3r1F",
               "title": "New Card",
@@ -146,6 +72,80 @@
               ]
             },
             {
+              "id": "c0LP9H",
+              "title": "Adding Task",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
+            }
+          ]
+        },
+        {
+          "id": "g102",
+          "title": "Group 2",
+          "cards": [
+            {
+              "id": "cEbmbs",
+              "title": "Add new card",
+              "style": {
+                "bgColor": "#172b4d",
+                "coverType": "full"
+              }
+            },
+            {
+              "id": "cWnpGf",
+              "title": "lala",
+              "description": "",
+              "comments": [],
+              "checklists": [
+                {
+                  "id": "dwRiF",
+                  "title": "ךוךו",
+                  "todos": [
+                    {
+                      "txt": "1",
+                      "isDone": true,
+                      "id": "kPcLT"
+                    }
+                  ]
+                }
+              ],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "bgColor": "#f5dd29",
+                "coverType": "full"
+              }
+            },
+            {
+              "id": "c105",
+              "title": "Do That"
+            },
+            {
+              "id": "c8UgxS",
+              "title": "New card",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {}
+            },
+            {
               "id": "coA9SH",
               "title": "lulu",
               "description": "",
@@ -159,10 +159,31 @@
               "style": {
                 "coverType": "top"
               }
+            }
+          ]
+        },
+        {
+          "id": "g4vVW8",
+          "title": "Please",
+          "cards": [
+            {
+              "id": "cRyryP",
+              "title": "yeeeee",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
             },
             {
-              "id": "c105",
-              "title": "Do That"
+              "id": "c104",
+              "title": "Do This"
             }
           ]
         }
@@ -506,161 +527,61 @@
       },
       "groups": [
         {
+          "id": "g108",
+          "title": "Group 8",
+          "cards": [
+            {
+              "id": "cnsHyY",
+              "title": "Task 121",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
+            }
+          ]
+        },
+        {
           "id": "g107",
           "title": "Group 7",
           "cards": [
             {
-              "id": "c120",
-              "title": "Task 120"
-            },
-            {
-              "id": "c121",
-              "title": "Task 121"
-            },
-            {
-              "id": "c123",
-              "title": "Task 123"
+              "id": "cJtj8H",
+              "title": "Task 121",
+              "description": "",
+              "comments": [],
+              "checklists": [],
+              "members": [],
+              "labels": [],
+              "createdAt": "",
+              "dueDate": "",
+              "byMember": {},
+              "style": {
+                "coverType": "top"
+              }
             }
           ]
         },
         {
           "id": "gM0AgA",
           "title": "Gorup 10",
-          "cards": [
-            {
-              "id": "c126",
-              "title": "Task 126"
-            },
-            {
-              "id": "c122",
-              "title": "Task 122"
-            },
-            {
-              "id": "c8NHdI",
-              "title": "Task 125",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cJZhoM",
-              "title": "New Card",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
-        },
-        {
-          "id": "g108",
-          "title": "Group 8",
-          "cards": [
-            {
-              "id": "c119",
-              "title": "Task 119"
-            },
-            {
-              "id": "c125",
-              "title": "Task 125"
-            },
-            {
-              "id": "c127",
-              "title": "Task 127"
-            }
-          ]
+          "cards": []
         },
         {
           "id": "g109",
           "title": "Group 9",
-          "cards": [
-            {
-              "id": "clwVaX",
-              "title": "Task 126",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cLwW8E",
-              "title": "Task 128",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "csHxXU",
-              "title": "Task 125",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
+          "cards": []
         },
         {
           "id": "gjxrvL",
           "title": "Group 11",
-          "cards": [
-            {
-              "id": "c124",
-              "title": "Task 124"
-            },
-            {
-              "id": "cJtDKk",
-              "title": "Task 172",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            },
-            {
-              "id": "cuOUVZ",
-              "title": "Task 126",
-              "description": "",
-              "comments": [],
-              "checklists": [],
-              "members": [],
-              "labels": [],
-              "createdAt": "",
-              "dueDate": "",
-              "byMember": {},
-              "style": {}
-            }
-          ]
+          "cards": []
         }
       ]
     },

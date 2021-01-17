@@ -109,8 +109,8 @@ async function makeBoard(boardTitle, bgUrl, currUser = null) {
 
 
 async function filterByCardTitle(board, filterBy) {
-  if (filterBy.txt) {
-    const filterRegex = new RegExp(filterBy.txt, 'i')
+  if (filterBy.title) {
+    const filterRegex = new RegExp(filterBy.title, 'i')
     board.groups = board.groups.map(group => {
       const newGroup = { ...group }
       newGroup.cards = newGroup.cards.filter(card => filterRegex.test(card.title))
