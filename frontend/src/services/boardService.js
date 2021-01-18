@@ -56,7 +56,19 @@ function makeGroup(groupTitle) {
   let group = {
     id: 'g' + utilService.makeId(),
     title: groupTitle,
-    cards: []
+    cards: [{
+      id: 'c' + utilService.makeId(),
+      title: 'default-empty',
+      description: '',
+      comments: [],
+      checklists: [],
+      members: [],
+      labels: [],
+      createdAt: '',
+      dueDate: '',
+      byMember: {},
+      style: { coverType: 'top' }
+    }]
 
   }
 
@@ -86,11 +98,11 @@ function makeCard(cardTitle) {
 
 async function makeBoard(boardTitle, bgUrl, currUser = null) {
 
-  let miniUser = (currUser) ? currUser : { _id: 'u101', username: "pazavi", imgUrl: 'http://some-img' }
+  let miniUser = (currUser) ? currUser : { _id: "6004748cf9fd65ff47dc81e4", username: "Avi", imgUrl: 'http://some-img' }
 
   const newBoard = {
     title: boardTitle,
-    createdAt: Date.now,
+    createdAt: Date.now(),
     createdBy: miniUser,
     style: {
       bgurl: bgUrl
