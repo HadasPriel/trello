@@ -6,6 +6,7 @@ import { Board } from './pages/Board'
 import { AppHeader } from './cmps/AppHeader'
 import { AddBoard } from './cmps/board/AddBoard'
 import {Boards} from './pages/Boards'
+// import { AppHeader } from './cmps/AppHeader'
 // import { CardEdit } from './pages/CardEdit'
 
 
@@ -15,8 +16,8 @@ export function App() {
   return (
     <div className="app">
       <Router>
-        <AppHeader />
-        <main>
+        {/* <AppHeader /> */}
+        <main className="main-app">
           <Switch>
             {/* <Route path="/user/:id" component={UserDetails} /> */}
             {/* <Route path="/login" component={LoginSignup} /> */}

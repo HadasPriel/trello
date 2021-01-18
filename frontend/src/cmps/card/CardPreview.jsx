@@ -5,7 +5,7 @@ import { CardLabelShowMin } from '../cardEdit/CardLabelShowMin'
 import { CardEdit } from '../../pages/CardEdit'
 import { Draggable } from 'react-beautiful-dnd'
 import { ChecklistSign } from './ChecklistSign'
-import { CardCoverShowMin } from './CardCoverShowMin'
+// import { CardCoverShowMin } from './CardCoverShowMin'
 import { CardDuedateShowMin } from '../cardEdit/CardDuedateShowMin'
 
 export class _CardPreview extends Component {
@@ -21,6 +21,7 @@ export class _CardPreview extends Component {
     }
 
     toggleCardEdit = () => {
+        console.log('here');
         this.setState({ isCardEtidShow: !this.state.isCardEtidShow })
     }
 
@@ -29,7 +30,7 @@ export class _CardPreview extends Component {
         const { isCardEtidShow } = this.state
         // const cardBgc = (card.style && card.style.coverType && card.style.coverType === 'full') ? `full ${card.style.bgColor}` : ''
         const cardBgc = (card.style?.coverType === 'full') ? `full ${card.style.bgColor}` : ''
-        const cardCover = (card.style?.coverType === 'top') ? `top t${card.style.bgColor}` : ''
+        const cardCover = (card.style?.coverType === 'top' && card.style.bgColor) ? `top t${card.style.bgColor}` : ''
         return (
 
 
@@ -38,7 +39,7 @@ export class _CardPreview extends Component {
                     return (
 
                         <li key={card.id}  {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
-                            <article className={`card-preview ${cardBgc} ${cardCover}`}>
+                            <article className={(card.title!=='default-empty')?`card-preview ${cardBgc} ${cardCover}`:`card-preview-empty`}>
                                 {/* {(card.style?.coverType === 'top') ? <CardCoverShowMin card={card} /> : ''} */}
                                 {/* <button className="edit-fa" onClick={() => this.toggleCardEdit}></button> */}
                                 <button className="delete-s" onClick={() => this.onRemoveCard(card.id)}></button>

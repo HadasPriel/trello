@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 import { BoardList } from '../cmps/board/BoardList'
 import { AddBoard } from '../cmps/board/AddBoard'
 import { loadBoards } from '../store/actions/boardActions.js'
+import { HomeHeader } from '../cmps/HomeHeader'
 import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
-import Uploader from '../cmps/Uploader';
+// import Icon from '@material-ui/core/Icon';
+// import Uploader from '../cmps/Uploader';
 
 // import { socketService } from '../services/socketService'
 
@@ -44,12 +45,13 @@ class _Home extends Component {
 
     return (
       <div className="home-wraper">
-        <div className="homepage-header">
+        <HomeHeader />
+        {/* <div className="homepage-header">
           <div className="login-icon"><Icon >login</Icon></div>
 
 
 
-        </div>
+        </div> */}
 
         <div className="home-img-container">
           <div className="get-started-container">

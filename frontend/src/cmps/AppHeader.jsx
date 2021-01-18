@@ -1,21 +1,34 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
 export function AppHeader() {
 
 
-    return <nav className="app-header">
-        <h3 className="logo-header">TASK<span>X</span></h3>
-        
-        <ul className="navbar-links">
-            {/* <li><NavLink exact to="/">Home</NavLink> </li> */}
-            {/* <li><NavLink to="/">Login</NavLink></li> */}
-            {/* <li><NavLink to="/">Boards</NavLink> | </li> */}
+    return (
 
-        </ul>
-        <button className="user-avatar">HS</button>
 
-    </nav>;
+        <header className="app-header flex space-between align-center">
+            <nav>
+                <Link to="/" ><button className="header-home">  </button></Link>
+                <button className="header-board"> Boards </button>
+                <span>
+                    <label>
+                        <input className="header-filter"></input>
+                    </label>
+                </span>
+            </nav>
+            <h3 className="header-logo">TASKX</h3>
+
+            <nav className="navbar-links">
+                <button className="header-about-us"> About Us</button>
+                <button className="header-user"></button>
+
+            </nav>
+            {/* <button className="user-avatar">HS</button> */}
+
+        </header>
+
+    )
 }
 

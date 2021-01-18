@@ -34,12 +34,6 @@ ul {
     list-style-type: none;
 }
 
-// section,
-// main,
-// footer {
-//     padding: 5px;
-// }
-
 img {
     width: 100%;
 }
@@ -67,4 +61,12 @@ button {
 
 textarea {
     resize: none;
+}
+
+.main-app {
+    // padding-top: 60px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
 }

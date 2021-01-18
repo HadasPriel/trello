@@ -30,12 +30,9 @@ export function CardDuedateShowMin(props) {
         case 12: month = 'Dec'; break;
         default: break;
     }
-    console.log(month);
     const day = card.duedate.substring(8, 10)
-    console.log(day);
     const remainingTime = (new Date(card.duedate) - Date.now())
     const urgent = (remainingTime < 1000 * 60 * 60 * 24) ? 'urgent' : ''
-    console.log(urgent);
 
 
     return (
