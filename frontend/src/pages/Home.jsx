@@ -6,6 +6,7 @@ import { loadBoards } from '../store/actions/boardActions.js'
 import { HomeHeader } from '../cmps/HomeHeader'
 import Button from '@material-ui/core/Button';
 // import Icon from '@material-ui/core/Icon';
+// import Uploader from '../cmps/Uploader';
 
 // import { socketService } from '../services/socketService'
 
@@ -17,6 +18,15 @@ class _Home extends Component {
   componentDidMount() {
     this.props.loadBoards()
   }
+  // onUploadImage = (url) =>{
+  //   console.log('URL:', url)
+  //   //   const toy = {
+  //   //     imgUrl: url
+  //   //   }
+  //   //   this.props.updateToy(toy)
+  // }
+
+
 
   toggleNewBoard = () => {
     console.log('I am in new board')
@@ -27,6 +37,8 @@ class _Home extends Component {
     this.toggleNewBoard()
     this.props.history.push(`/board/${boardId}`)
   }
+
+
 
 
   render() {
@@ -53,14 +65,16 @@ class _Home extends Component {
         </div >
 
         <div className="welcome-container">
-          {/* {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />} */}
+        <article className="welcome1">
+          <img  className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1610907748/homebg_tfe2ha.jpg" alt=""/>
           <h3>Hit your deadlines, follow your your team’s progress and keep work moving across teams  — all from one place.</h3>
-
+          </article>
           {/* <h3>Save time, avoid losing work and information, delegate, prioritize your tasks and keep track to stay on schedule.</h3> */}
 
         </div>
         <div className="boards-container">
-          <BoardList boards={this.props.boards} />
+          {/* <BoardList boards={this.props.boards} />
+          <Uploader /> */}
         </div>
       </div>
     )
