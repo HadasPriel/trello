@@ -1,13 +1,13 @@
 .board-list {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 
-    ul{
-        margin-top:10px;
+    ul {
+        margin-top: 10px;
     }
     li {
         // background-color: #313EA0;
@@ -16,6 +16,5 @@
         padding: 5px;
         margin: 5px;
         border-radius: 8px;
-  
     }
 }

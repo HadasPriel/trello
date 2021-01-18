@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { BoardFilter } from '../cmps/board/BoardFilter'
 import { GroupList } from '../cmps/group/GroupList'
-import {BoardSideMenu} from '../cmps/board/BoardSideMenu'
+import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
+import { BoardHeader } from '../cmps/board/BoardHeader'
 // import { socketService } from '../services/socketService'
 import { loadBoard, updateBoardAfterDrag } from '../store/actions/boardActions.js'
+import { AppHeader } from '../cmps/AppHeader'
 
 
 class _Board extends Component {
@@ -64,8 +66,8 @@ class _Board extends Component {
 
     render() {
         const { selectedBoard } = this.props
-        const {isBoardMenuShown} = this.state
-        
+        const { isBoardMenuShown } = this.state
+
         if (!selectedBoard) return <div>Loading...</div>
         // console.log('BBB', selectedBoard.style.bgurl)
         const style = {
@@ -79,13 +81,14 @@ class _Board extends Component {
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat"
                 }}>
-
-                <div className="board-title"> {selectedBoard.title}</div>
+                <AppHeader />
+                <BoardHeader board={selectedBoard} />
+                {/* <div className="board-title"> {selectedBoard.title}</div> */}
                 <nav>
-                <BoardFilter/>
-                <button onClick={this.toggleSideMenu}>Side Menu In Development</button>
+                    <BoardFilter />
+                    <button onClick={this.toggleSideMenu}>Side Menu In Development</button>
                 </nav>
-                {isBoardMenuShown && <BoardSideMenu toggleSideMenu={this.toggleSideMenu}/> }
+                {isBoardMenuShown && <BoardSideMenu toggleSideMenu={this.toggleSideMenu} />}
                 {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
             </section>
 
