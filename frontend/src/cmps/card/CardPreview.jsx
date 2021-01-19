@@ -7,6 +7,7 @@ import { Draggable } from 'react-beautiful-dnd'
 import { ChecklistSign } from './ChecklistSign'
 // import { CardCoverShowMin } from './CardCoverShowMin'
 import { CardDuedateShowMin } from '../cardEdit/CardDuedateShowMin'
+import { CardMembersShow } from '../cardEdit/CardMembersShow'
 
 export class _CardPreview extends Component {
 
@@ -48,6 +49,7 @@ export class _CardPreview extends Component {
                                     {(card.description) ? <span className="descriptionSign sign"></span> : ''}
                                     {(card.checklists && card.checklists.length > 0) ? <ChecklistSign checklists={card.checklists} /> : ''}
                                     {(card.duedate) ? <CardDuedateShowMin card={card} /> : ''}
+                                    {(card.members) ? <CardMembersShow members={card.members} /> : ''}
                                 </nav>
                                 {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} />}
                             </article>

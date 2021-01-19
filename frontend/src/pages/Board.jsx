@@ -5,7 +5,7 @@ import { GroupList } from '../cmps/group/GroupList'
 import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
 import { BoardHeader } from '../cmps/board/BoardHeader'
 import { socketService } from '../services/socketService'
-import { loadBoard, updateBoardAfterDrag, updateBoardAfterSocket } from '../store/actions/boardActions.js'
+import { loadBoard, updateBoard, updateBoardAfterSocket } from '../store/actions/boardActions.js'
 import { AppHeader } from '../cmps/AppHeader'
 
 
@@ -41,7 +41,7 @@ class _Board extends Component {
     }
 
     onChangeBoard = async (board) => {
-        console.log('on change board', board)
+        // console.log('on change board', board)
         await this.props.updateBoardAfterSocket(board)
     }
 
@@ -51,7 +51,7 @@ class _Board extends Component {
         let boardToUpdate = this.props.selectedBoard
         const groupToMove = boardToUpdate.groups.splice(startIndex, 1)
         boardToUpdate.groups.splice(endIndex, 0, groupToMove[0])
-        await this.props.updateBoardAfterDrag(this.props.selectedBoard)
+        await this.props.updateBoard(this.props.selectedBoard)
 
     }
 
@@ -62,7 +62,7 @@ class _Board extends Component {
         const cardToMove = boardToUpdate.groups[groupToMoveFromIdx].cards.splice(source.index, 1)
         boardToUpdate.groups[groupToMoveToIdx].cards.splice(destination.index, 0, cardToMove[0])
         // console.log('i am in this on drag cards')
-        await this.props.updateBoardAfterDrag(this.props.selectedBoard)
+        await this.props.updateBoard(this.props.selectedBoard)
 
     }
 
@@ -112,7 +112,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = {
     loadBoard,
-    updateBoardAfterDrag,
+    updateBoard,
     updateBoardAfterSocket
 }
 
