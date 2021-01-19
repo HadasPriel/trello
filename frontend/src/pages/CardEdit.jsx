@@ -12,6 +12,7 @@ import { CardLabelShow } from '../cmps/cardEdit/CardLabelShow'
 import { CardChecklistShow } from '../cmps/cardEdit/CardChecklistShow'
 import { AddDeutimeBar } from '../cmps/cardEdit/AddDeutimeBar'
 import { CardDuedateShow } from '../cmps/cardEdit/CardDuedateShow'
+import { CardImgShow } from '../cmps/cardEdit/CardImgShow'
 
 class _CardEdit extends Component {
     state = {
@@ -22,7 +23,8 @@ class _CardEdit extends Component {
         isLabelPaletteShowing: false,
         isAddChecklistShowing: false,
         isCoverShowing: false,
-        isAddDeutimeShowing: false
+        isAddDeutimeShowing: false,
+        isAddImgShowing: false
     }
 
     async componentDidMount() {
@@ -93,6 +95,11 @@ class _CardEdit extends Component {
 
     }
 
+    toggleAddImg = () => {
+        this.setState({ isAddImgShowing: !this.state.isAddImgShowing })
+
+    }
+
     addDeuDate = (date) => {
         console.log(date);
         const cardToSave = { ...this.state.card }
@@ -113,6 +120,7 @@ class _CardEdit extends Component {
         const isChecklists = (card && card.checklists && card.checklists.length > 0)
         const isDuedate = (card && card.duedate)
         const coverShow = (card && card.style?.coverType) ? `top t${card.style.bgColor}` : ''
+        const isImg = (card && card.img)
 
         if (!card) return <div></div>
         return (
@@ -132,6 +140,7 @@ class _CardEdit extends Component {
                                 <main>
                                     <div className="show inline-block">{isLabels && <div> <h5>Labels </h5><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
                                     <div className="inline-block">{isDuedate && <div className="duedate"> <h5>Due Date </h5> <CardDuedateShow duedate={card.duedate} card={card} updateCard={this.updateCard} /></div>}</div>
+                                    <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div>
                                     <h4>Description </h4>
                                     {(isDescriptionShowing) ? <AddDescription card={card} toggleAddDescription={this.toggleAddDescription} updateCard={this.updateCard} /> : ((card.description) ?
                                         <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>edit</button></div> :

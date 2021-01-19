@@ -21,16 +21,16 @@ export class _AddBoard extends Component {
     }
 
     onChooseBackground = ( bgUrl) => {
-       
-        this.setState({ bgurl: bgUrl })
+        const callback = () => {
+            this.onSubmit();
+        };
+        this.setState({ bgurl: bgUrl }, callback)
     }
-
-    onSubmit = async (ev) => {
-        ev.preventDefault()
+    onSubmit = async () => {
+        // ev.preventDefault()
         if (!this.state.title) return
         const board = await this.props.createBoard(this.state.title, this.state.bgurl)
         this.props.onLoadNewBoard(board._id)
-
     }
 
     onCancelAdd = (ev) => {
@@ -67,21 +67,34 @@ export class _AddBoard extends Component {
             },
             {
                 id: 'bg107',
-                bgurl: "https://cdn.pixabay.com/photo/2013/07/28/12/23/paperclip-168336_1280.jpg"
+                bgurl: "https://cdn.pixabay.com/photo/2016/02/19/11/33/backround-1209772_1280.jpg"
             },
             {
                 id: 'bg108',
-                bgurl: "https://cdn.pixabay.com/photo/2016/03/26/13/12/pencils-1280558_1280.jpg"
+                bgurl: "https://cdn.pixabay.com/photo/2017/08/15/15/37/pen-2644392_1280.jpg"
             },
             {
                 id: 'bg109',
                 bgurl: "https://cdn.pixabay.com/photo/2018/01/11/21/27/laptop-3076957_1280.jpg"
             },
+            {
+                id: 'bg110',
+                bgurl: "https://cdn.pixabay.com/photo/2018/05/31/13/13/rain-3443977_1280.jpg"
+            },
+            {
+                id: 'bg111',
+                bgurl: "https://cdn.pixabay.com/photo/2014/04/05/11/38/bokeh-316425_1280.jpg"
+            },
+            {
+                id: 'bg111',
+                bgurl: "https://cdn.pixabay.com/photo/2013/07/25/13/01/stones-167089_1280.jpg"
+            }
+            
         ]
         return (
-            <div className="add-board">
+            <div className="add-board"> 
                 <form className="templates-container" onSubmit={this.onSubmit} >
-                    <input placeholder="Enter a title for this board..." type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" />
+                    <input placeholder="Enter a title for your new board..." type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" required/>
                     <section className="add-board-backgrounds">
                         {backgroundImages.map(background => {
                             return <div className="backgrounds-tumbs"key={background.id}
@@ -93,13 +106,17 @@ export class _AddBoard extends Component {
                                     borderRadius:"3px",
                                     width: "350px", 
                                     height:"200px",
-                                    margin: "10px"
+                                    margin: "10px",
+                                    boxShadow: "0 1px 0 rgba(56, 65, 80, 0.25)",
+                                    
                                 }}
-                                onClick={() => this.onChooseBackground( background.bgurl)}></div>
+                                onClick={() => this.onChooseBackground( background.bgurl)}>
+                                    <div className="plus">+</div>
+                                </div>
                         })}
                     </section>
-                    <button className="save-btn">+ Add Board</button>
-                    <button className="cancel-btn" onClick={this.onCancelAdd}>X Cancel</button>
+                    {/* <button className="save-btn">+ Add Board</button>
+                    <button className="cancel-btn" onClick={this.onCancelAdd}>X Cancel</button> */}
                 </form>
             </div>
         )

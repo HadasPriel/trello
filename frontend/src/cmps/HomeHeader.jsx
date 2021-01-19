@@ -1,4 +1,4 @@
-// import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -10,7 +10,8 @@ export function HomeHeader() {
 
         <header className="app-header flex space-between align-center">
             <nav>
-                <button className="header-board"> Boards </button>
+                {/* <button className="header-board"> Boards </button> */}
+                <Link to="/board" ><button className="header-board"> Boards </button></Link>
             </nav>
 
             <nav className="navbar-links">

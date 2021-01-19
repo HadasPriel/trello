@@ -1,8 +1,6 @@
 .add-board{
     width: 100%;
     margin:auto;
-    background-color: rgba(15, 15, 15, 0.683);
-    // background-color: rgb(15, 15, 15);
     position: relative;
     top:0;
     right:0;
@@ -10,13 +8,13 @@
     .templates-container{
 
         margin-bottom:20px;
-        margin-top:20px;
+        // margin-top:20px;
        
       
     
     }
     .add-board-backgrounds{
-        max-width: 1200px;
+        // max-width: 1200px;
         width: 90%;
         display: flex;
         flex-wrap: wrap;
@@ -25,25 +23,61 @@
         margin:auto;
 
     }
+    hr {
+        max-width: 1200px;
+        width: 90%;
+
+    }
+
+
+    .plus {
+        width: 100px;
+        font-size:60px;
+        color:white;
+        opacity: 0%;
+        margin:auto;
+        margin-top: 15%;
+        border-radius: 50%;
+        transition: .5s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.484);
+      
+    }
+
+
     .backgrounds-tumbs{
         display:inline-block;
         cursor: pointer;
-        transition: .5s;
+        transition: .5s ease-in-out;
+
+        text-align: center;
+        
         &:hover{
             transform: scale(1.05);
+            // opacity: 90%;
+
+        }
+        &:hover .plus{
+            display: block;
+            opacity: 100%;
         }
 
-        
+    .backgrounds-tumbs::after{
+
+            font-family: "fa";
+            content: "\f00d";
+        }
   
     }
     input {
-        width: 329px;
+        width: 348px;
         height: 35px;
-        border-radius: 3px;  
+        border-radius: 3px;
+        padding: 5px;
+        margin-bottom: 20px;  
     }
 
     .save-btn {
-        width: 329px;
+        width: 348px;
         height: 35px;
         border-radius: 3px;
         margin-top: 10px;
@@ -55,7 +89,7 @@
 
     }
     .cancel-btn {
-        width: 329px;
+        width: 348px;
         height: 35px;
         border-radius: 3px;
         margin-top: 10px;
