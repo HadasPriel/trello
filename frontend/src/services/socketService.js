@@ -1,6 +1,6 @@
 import io from 'socket.io-client'
 
-const baseUrl = (process.env.NODE_ENV === 'production')? '' : '//localhost:3030'
+const baseUrl = (process.env.NODE_ENV === 'production') ? '' : '//localhost:3030'
 export const socketService = createSocketService()
 // export const socketService = createDummySocketService()
 
@@ -9,9 +9,12 @@ window.socketService = socketService
 
 function createSocketService() {
   var socket
+  
   const socketService = {
     setup() {
-      socket = io(baseUrl)
+      socket = io(baseUrl, {
+        withCredentials: true,
+      });
     },
     on(eventName, cb) {
       socket.on(eventName, cb)
@@ -53,7 +56,7 @@ function createDummySocketService() {
       })
     },
     debugMsg() {
-      this.emit('chat addMsg', {from: 'Someone', txt: 'Aha it worked!'})
+      this.emit('chat addMsg', { from: 'Someone', txt: 'Aha it worked!' })
     },
   }
   return socketService

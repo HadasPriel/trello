@@ -21,12 +21,14 @@ export class _AddBoard extends Component {
     }
 
     onChooseBackground = ( bgUrl) => {
-       
-        this.setState({ bgurl: bgUrl })
+        const callback = () => {
+            this.onSubmit();
+        };
+        this.setState({ bgurl: bgUrl }, callback)
     }
 
-    onSubmit = async (ev) => {
-        ev.preventDefault()
+    onSubmit = async () => {
+        // ev.preventDefault()
         if (!this.state.title) return
         const board = await this.props.createBoard(this.state.title, this.state.bgurl)
         this.props.onLoadNewBoard(board._id)

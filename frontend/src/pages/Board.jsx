@@ -4,8 +4,8 @@ import { BoardFilter } from '../cmps/board/BoardFilter'
 import { GroupList } from '../cmps/group/GroupList'
 import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
 import { BoardHeader } from '../cmps/board/BoardHeader'
-// import { socketService } from '../services/socketService'
-import { loadBoard, updateBoardAfterDrag } from '../store/actions/boardActions.js'
+import { socketService } from '../services/socketService'
+import { loadBoard, updateBoardAfterDrag, updateBoardAfterSocket } from '../store/actions/boardActions.js'
 import { AppHeader } from '../cmps/AppHeader'
 
 
@@ -17,8 +17,10 @@ class _Board extends Component {
 
     async componentDidMount() {
         const boardId = this.props.match.params.id
-        console.log('boardId', boardId)
+        socketService.setup()
         await this.props.loadBoard(boardId)
+        socketService.emit('join board', boardId)
+        socketService.on('update board', this.onChangeBoard)
 
 
     }
@@ -36,6 +38,11 @@ class _Board extends Component {
         if (type === 'card') {
             this.onDragCards(destination, source, draggableId)
         }
+    }
+
+    onChangeBoard = async (board) => {
+        console.log('on change board',board)
+       await this.props.updateBoardAfterSocket(board)
     }
 
     // per react beautiful dnd after performing optimistic update to let server know that a reorder has occurred
@@ -103,7 +110,8 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = {
     loadBoard,
-    updateBoardAfterDrag
+    updateBoardAfterDrag,
+    updateBoardAfterSocket
 }
 
 export const Board = connect(mapStateToProps, mapDispatchToProps)(_Board)
