@@ -52,15 +52,15 @@ export function createBoard(boardTitle, backgroundImageUrl) {
 //   }
 // }
 
-export function updateBoard(newBoard) {
-  return async dispatch => {
-    try {
-      const board = await boardService.updateBoard(newBoard)
-      dispatch({ type: 'SET_BOARD', board })
-    } catch (err) {
-    }
-  }
-}
+// export function updateBoard(newBoard) {
+//   return async dispatch => {
+//     try {
+//       const board = await boardService.updateBoard(newBoard)
+//       dispatch({ type: 'SET_BOARD', board })
+//     } catch (err) {
+//     }
+//   }
+// }
 
 export function addGroup(title, boardToChange) {
   return async dispatch => {
@@ -184,7 +184,7 @@ export function removeCard(cardId, groupId, boardToChange) {
 }
 
 
-export function updateBoardAfterDrag(boardToChange) {
+export function updateBoard(boardToChange) {
   return async dispatch => {
     try {
 
@@ -228,7 +228,7 @@ export function updateBoardAfterSocket(changedBoard) {
 
       let board = JSON.parse(JSON.stringify(changedBoard))
 
-      dispatch({ type: 'SET_BOARD', board})
+      dispatch({ type: 'SET_BOARD', board })
 
 
     } catch (err) {

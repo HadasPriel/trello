@@ -13,8 +13,10 @@ import { CardLabelShow } from '../cmps/cardEdit/CardLabelShow'
 import { CardChecklistShow } from '../cmps/cardEdit/CardChecklistShow'
 import { AddDeutimeBar } from '../cmps/cardEdit/AddDeutimeBar'
 import { CardDuedateShow } from '../cmps/cardEdit/CardDuedateShow'
+import { AddImgBar } from '../cmps/cardEdit/AddImgBar'
 import { CardImgShow } from '../cmps/cardEdit/CardImgShow'
 import { AddMembersBar } from '../cmps/cardEdit/AddMembersBar'
+import { CardMembersShow } from '../cmps/cardEdit/CardMembersShow'
 
 class _CardEdit extends Component {
     state = {
@@ -116,6 +118,14 @@ class _CardEdit extends Component {
 
     }
 
+    addImg = (img) => {
+        const cardToSave = { ...this.state.card }
+        cardToSave.img = img
+        this.updateCard(cardToSave)
+        console.log('card to save:', cardToSave)
+
+    }
+
     stopProg = (ev) => {
         ev.stopPropagation();
     }
@@ -127,6 +137,7 @@ class _CardEdit extends Component {
         const isLabels = (card && card.labels && card.labels.length > 0)
         const isChecklists = (card && card.checklists && card.checklists.length > 0)
         const isDuedate = (card && card.duedate)
+        const isMember = (card && card.members && card.members.length > 0)
         const coverShow = (card && card.style?.coverType) ? `top t${card.style.bgColor}` : ''
         const isImg = (card && card.img)
 
@@ -149,17 +160,18 @@ class _CardEdit extends Component {
                                     <div className="show flex ">
                                         <div className=" inline-block">{isLabels && <div> <h5>Labels </h5><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
                                         <div className="inline-block">{isDuedate && <div className="duedate"> <h5>Due Date </h5> <CardDuedateShow duedate={card.duedate} card={card} updateCard={this.updateCard} /></div>}</div>
-                                        <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div>
-
+                                        <div className="inline-block">{isMember && <div className="members"> <h5>Members </h5> <CardMembersShow members={card.members} card={card} updateCard={this.updateCard} /></div>}</div>
+                                        {/* <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div> */}
                                     </div>
                                     <h4>Description </h4>
                                     {(isDescriptionShowing) ? <AddDescription card={card} toggleAddDescription={this.toggleAddDescription} updateCard={this.updateCard} /> : ((card.description) ?
                                         <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>edit</button></div> :
                                         <div className="show description" onClick={this.toggleAddDescription}>add a more detailed description...</div>)}
                                     <p>{card.description && ''}</p>
+                                    <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div>
                                     <div>{isChecklists && <div><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
                                 </main>
-                                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} toggleAddDeutime={this.toggleAddDeutime} toggleAddMembers={this.toggleAddMembers} />
+                                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} toggleAddDeutime={this.toggleAddDeutime} toggleAddImg={this.toggleAddImg} toggleAddMembers={this.toggleAddMembers} />
                             </div>
 
 
@@ -168,6 +180,7 @@ class _CardEdit extends Component {
                             {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} toggleCoverBar={this.toggleCoverBar} />}
                             {this.state.isAddDeutimeShowing && <AddDeutimeBar card={card} updateCard={this.updateCard} toggleAddDeutime={this.toggleAddDeutime} addDeuDate={this.addDeuDate} />}
                             {this.state.isAddMembersShowing && <AddMembersBar card={card} updateCard={this.updateCard} toggleAddMembers={this.toggleAddMembers} users={users} />}
+                            {this.state.isAddImgShowing && <AddImgBar card={card} updateCard={this.updateCard} toggleAddImg={this.toggleAddImg} addImg={this.addImg} />}
                         </section>
                     </div>
                 </div>
