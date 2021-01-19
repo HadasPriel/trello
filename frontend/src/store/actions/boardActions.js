@@ -93,8 +93,6 @@ export function removeGroup(groupId, boardToChange) {
 
       const updatedGroups = boardToUpdate.groups.filter(group => group.id !== groupId)
 
-
-
       boardToUpdate.groups = updatedGroups
 
       console.log(boardToUpdate)
@@ -224,17 +222,17 @@ export function filterByCardText(boardToChange, filterBy) {
 
 }
 
-export function updateBoardAfterSocket(boardToChange) {
+export function updateBoardAfterSocket(changedBoard) {
   return async dispatch => {
     try {
 
-      let board = JSON.parse(JSON.stringify(boardToChange))
+      let board = JSON.parse(JSON.stringify(changedBoard))
 
       dispatch({ type: 'SET_BOARD', board})
 
 
     } catch (err) {
-      console.log('BoardActions: err in updateGroupOrder', err)
+      console.log('BoardActions: err in updateBoardAfterSocket', err)
     }
   }
 
