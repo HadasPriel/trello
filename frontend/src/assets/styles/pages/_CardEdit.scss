@@ -2,7 +2,7 @@
     cursor: pointer;
     background: rgba(0, 0, 0, 0.64);
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     top: 0;
     right: 0;
     width: 100%;
@@ -98,7 +98,7 @@
     }
     .duedate {
         margin-left: 20px;
-        margin-top: 10px;
+        // margin-top: 10px;
     }
 
     .description {

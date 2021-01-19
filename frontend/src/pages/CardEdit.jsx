@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 // import { socketService } from '../services/socketService'
 import { loadBoard, updateBoard } from '../store/actions/boardActions.js'
+import { loadUsers } from '../store/actions/userActions.js'
 import { CardEditNav } from '../cmps/cardEdit/CardEditNav'
 import { AddDescription } from '../cmps/cardEdit/AddDescription'
 import { LabelPalette } from '../cmps/cardEdit/LabelPalette'
@@ -12,6 +13,7 @@ import { CardLabelShow } from '../cmps/cardEdit/CardLabelShow'
 import { CardChecklistShow } from '../cmps/cardEdit/CardChecklistShow'
 import { AddDeutimeBar } from '../cmps/cardEdit/AddDeutimeBar'
 import { CardDuedateShow } from '../cmps/cardEdit/CardDuedateShow'
+import { AddMembersBar } from '../cmps/cardEdit/AddMembersBar'
 
 class _CardEdit extends Component {
     state = {
@@ -22,11 +24,17 @@ class _CardEdit extends Component {
         isLabelPaletteShowing: false,
         isAddChecklistShowing: false,
         isCoverShowing: false,
-        isAddDeutimeShowing: false
+        isAddDeutimeShowing: false,
+        isAddMembersShowing: false
     }
 
     async componentDidMount() {
-        this.loadCard()
+        try {
+            this.loadCard()
+            this.props.loadUsers()
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     componentDidUpdate(prevprops) {
@@ -64,10 +72,10 @@ class _CardEdit extends Component {
             else return group
         })
         boardToSave.groups = groupsToSave
-        // console.log('boardToSave', boardToSave)
 
         try {
-            await updateBoard(boardToSave)
+            // await updateBoard(boardToSave)
+            await this.props.updateBoard(boardToSave)
             this.loadCard()
 
         } catch (err) {
@@ -86,18 +94,17 @@ class _CardEdit extends Component {
     }
     toggleAddDescription = () => {
         this.setState({ isDescriptionShowing: !this.state.isDescriptionShowing })
-
     }
     toggleAddDeutime = () => {
         this.setState({ isAddDeutimeShowing: !this.state.isAddDeutimeShowing })
-
+    }
+    toggleAddMembers = () => {
+        this.setState({ isAddMembersShowing: !this.state.isAddMembersShowing })
     }
 
     addDeuDate = (date) => {
-        console.log(date);
         const cardToSave = { ...this.state.card }
         cardToSave.duedate = date
-        console.log('cardToSave', cardToSave);
         this.updateCard(cardToSave)
 
     }
@@ -109,6 +116,7 @@ class _CardEdit extends Component {
 
     render() {
         const { card, isDescriptionShowing } = this.state
+        const { users, toggleCardEdit } = this.props
         const isLabels = (card && card.labels && card.labels.length > 0)
         const isChecklists = (card && card.checklists && card.checklists.length > 0)
         const isDuedate = (card && card.duedate)
@@ -117,21 +125,23 @@ class _CardEdit extends Component {
         if (!card) return <div></div>
         return (
             <React.Fragment>
-                <div className="screen" onClick={this.props.toggleCardEdit}>
+                <div className="screen" onClick={toggleCardEdit}>
                     <div onClick={(ev) => { this.stopProg(ev) }} >
                         {/* <section className="card-edit"> */}
                         <section className={`card-edit ${coverShow}`}>
                             {/* {(card.style && card.style.coverType && card.style.bgColor) ? <CardCoverShow card={card} /> : ''} */}
                             <header className="edit-header">
-                                <button className="close" onClick={this.props.toggleCardEdit}></button>
+                                <button className="close" onClick={toggleCardEdit}></button>
                                 <button className="title-sign"></button>
                                 <h1>{card.title}</h1>
                             </header>
 
                             <div className="permanent">
                                 <main>
-                                    <div className="show inline-block">{isLabels && <div> <h5>Labels </h5><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
-                                    <div className="inline-block">{isDuedate && <div className="duedate"> <h5>Due Date </h5> <CardDuedateShow duedate={card.duedate} card={card} updateCard={this.updateCard} /></div>}</div>
+                                    <div className="show flex ">
+                                        <div className=" inline-block">{isLabels && <div> <h5>Labels </h5><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
+                                        <div className="inline-block">{isDuedate && <div className="duedate"> <h5>Due Date </h5> <CardDuedateShow duedate={card.duedate} card={card} updateCard={this.updateCard} /></div>}</div>
+                                    </div>
                                     <h4>Description </h4>
                                     {(isDescriptionShowing) ? <AddDescription card={card} toggleAddDescription={this.toggleAddDescription} updateCard={this.updateCard} /> : ((card.description) ?
                                         <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>edit</button></div> :
@@ -139,7 +149,7 @@ class _CardEdit extends Component {
                                     <p>{card.description && ''}</p>
                                     <div>{isChecklists && <div><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
                                 </main>
-                                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} toggleAddDeutime={this.toggleAddDeutime} />
+                                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} toggleAddDeutime={this.toggleAddDeutime} toggleAddMembers={this.toggleAddMembers} />
                             </div>
 
 
@@ -147,6 +157,7 @@ class _CardEdit extends Component {
                             {this.state.isAddChecklistShowing && <AddChecklistBar card={card} updateCard={this.updateCard} toggleChecklistBar={this.toggleChecklistBar} />}
                             {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} toggleCoverBar={this.toggleCoverBar} />}
                             {this.state.isAddDeutimeShowing && <AddDeutimeBar card={card} updateCard={this.updateCard} toggleAddDeutime={this.toggleAddDeutime} addDeuDate={this.addDeuDate} />}
+                            {this.state.isAddMembersShowing && <AddMembersBar card={card} updateCard={this.updateCard} toggleAddMembers={this.toggleAddMembers} users={users} />}
                         </section>
                     </div>
                 </div>
@@ -157,12 +168,15 @@ class _CardEdit extends Component {
 
 const mapStateToProps = state => {
     return {
-        selectedBoard: state.boardModule.selectedBoard
+        selectedBoard: state.boardModule.selectedBoard,
+        users: state.userModule.users
 
     }
 }
 const mapDispatchToProps = {
-    loadBoard
+    loadBoard,
+    updateBoard,
+    loadUsers
 }
 
 export const CardEdit = connect(mapStateToProps, mapDispatchToProps)(_CardEdit)

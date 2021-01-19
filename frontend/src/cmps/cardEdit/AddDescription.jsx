@@ -9,7 +9,6 @@ class _AddDescription extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.card);
         const description = (this.props.card.description) ? this.props.card.description : ''
         this.setState({ description: { txt: description } })
     }
@@ -27,7 +26,6 @@ class _AddDescription extends Component {
         const newDescription = { ...this.state.description }
         const cardToSave = { ...this.props.card }
         cardToSave.description = newDescription.txt
-        console.log('cardToSave', cardToSave);
         try {
             await this.props.updateCard(cardToSave)
             this.props.toggleAddDescription()

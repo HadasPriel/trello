@@ -3,9 +3,10 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Home } from './pages/Home'
 import { Board } from './pages/Board'
-import { AppHeader } from './cmps/AppHeader'
-import { AddBoard } from './cmps/board/AddBoard'
-import {Boards} from './pages/Boards'
+// import { AppHeader } from './cmps/AppHeader'
+// import { AddBoard } from './cmps/board/AddBoard'
+import { Boards } from './pages/Boards'
+import { LoginSignup } from './pages/LoginSignup'
 // import { AppHeader } from './cmps/AppHeader'
 // import { CardEdit } from './pages/CardEdit'
 
@@ -25,6 +26,7 @@ export function App() {
             {/* <Route path="/board/:id/card/:cardId" component={CardEdit} /> */}
             <Route path="/board/:id" component={Board} />
             <Route path="/board" component={Boards} />
+            <Route path="/login" component={LoginSignup} />
             <Route path="/" component={Home} />
           </Switch>
         </main>

@@ -35,21 +35,21 @@ class _BoardSideMenu extends Component {
         const { isAboutBoardShown } = this.state
         const { isChangeBackgroundShown } = this.state
         const { isBoardAnalysisShown } = this.state
-        const { isDeleteBoardShown} = this.state
+        const { isDeleteBoardShown } = this.state
         const { selectedBoard } = this.props
         return (
             <section className="board-side-menu">
                 <header className="menu-header">
                     <h1>Menu</h1>
-                    <button className="close-menu" onClick={this.props.toggleSideMenu}>Close Menu</button>
-
+                    <button className="close-menu" onClick={this.props.toggleSideMenu}>X</button>
                 </header>
+                {/* <div className="hr"></div> */}
 
                 <div className="menu-container">
-                    {(!isAboutBoardShown) ? <p className="about-board" onClick={this.toggleAboutBoard}> About this board</p> : <AboutBoard toggleAboutBoard={this.toggleAboutBoard} board={selectedBoard} />}
+                    {(!isAboutBoardShown) ? <div className="menu-item about-board" onClick={this.toggleAboutBoard}> <span className="" ></span><h5> About this board</h5></div> : <AboutBoard toggleAboutBoard={this.toggleAboutBoard} board={selectedBoard} />}
                     {(!isChangeBackgroundShown) ? <p className="change-board-background" onClick={this.toggleChangeBackground}> Change Background</p> : <ChangeBoardBackground toggleChangeBackground={this.toggleChangeBackground} />}
                     {(isBoardAnalysisShown) && <p className="board-analysis" onClick={this.isBoardAnalysisShown}>Board Analysis</p>}
-                    {(!isDeleteBoardShown) ? <p className="delete-board" onClick={this.toggleDeleteBoard}> Delete Board</p> : <RemoveBoard toggleDeleteBoard={this.toggleDeleteBoard} board={selectedBoard}/>}
+                    {(!isDeleteBoardShown) ? <p className="delete-board" onClick={this.toggleDeleteBoard}> Delete Board</p> : <RemoveBoard toggleDeleteBoard={this.toggleDeleteBoard} board={selectedBoard} />}
                 </div>
 
 

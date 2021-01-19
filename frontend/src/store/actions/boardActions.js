@@ -42,15 +42,25 @@ export function createBoard(boardTitle, backgroundImageUrl) {
 }
 
 
-export async function updateBoard(board) {
-  try {
+// export async function updateBoard(board) {
+//   try {
 
-    await boardService.updateBoard(board)
-  } catch (err) {
-    console.log('BoardActions: err in update board', err)
+//     await boardService.updateBoard(board)
+
+//   } catch (err) {
+//     console.log('BoardActions: err in update board', err)
+//   }
+// }
+
+export function updateBoard(newBoard) {
+  return async dispatch => {
+    try {
+      const board = await boardService.updateBoard(newBoard)
+      dispatch({ type: 'SET_BOARD', board })
+    } catch (err) {
+    }
   }
 }
-
 
 export function addGroup(title, boardToChange) {
   return async dispatch => {

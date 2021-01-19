@@ -4,7 +4,11 @@
     background-color: rgba(0, 0, 0, 0.32);
     position: relative;
     padding: 4px;
-
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     h5 {
         font-family: "TechMono", monospace;
         font-size: 18px;
@@ -39,10 +43,10 @@
         border-radius: 3px;
     }
 
-    span {
-        top: 1.5px;
-        position: relative;
-    }
+    // span {
+    //     top: 1.5px;
+    //     position: relative;
+    // }
 
     input {
         color: #ffff;
@@ -80,14 +84,23 @@
         content: "\f141";
     }
 
+    .user-img {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        border-radius: 2em;
+        background-size: cover;
+        background-position: center;
+    }
+
     &.board-header {
         padding: 8px 4px 4px 8px;
         background: rgba(0, 0, 0, 0.24);
     }
-    h3,
-    nav {
+    h3 {
         display: inline-block;
     }
+
     // display: flex;
     // justify-content: space-between;
     // user-select: none;
