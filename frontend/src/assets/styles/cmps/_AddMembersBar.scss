@@ -1,10 +1,22 @@
-// .add-members-bar {
-//     .alreadyMember::before {
-//         font-family: "fa";
-//         content: "\f00c";
-//         font-size: 12px;
-//     }
-//     .alreadyMember {
-//         background-color: red;
-//     }
-// }
+.add-members-bar {
+    .alreadyMember::before {
+        font-family: "fa";
+        content: "\f00c";
+        font-size: 12px;
+    }
+    .alreadyMember {
+        background-color: red;
+    }
+}
+
+.card-member-show {
+    .user-img {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        border-radius: 2em;
+        background-size: cover;
+        background-position: center;
+        margin: 0 5px;
+    }
+}

@@ -16,6 +16,7 @@ import { CardDuedateShow } from '../cmps/cardEdit/CardDuedateShow'
 import { AddImgBar } from '../cmps/cardEdit/AddImgBar'
 import { CardImgShow } from '../cmps/cardEdit/CardImgShow'
 import { AddMembersBar } from '../cmps/cardEdit/AddMembersBar'
+import { CardMembersShow } from '../cmps/cardEdit/CardMembersShow'
 
 class _CardEdit extends Component {
     state = {
@@ -136,6 +137,7 @@ class _CardEdit extends Component {
         const isLabels = (card && card.labels && card.labels.length > 0)
         const isChecklists = (card && card.checklists && card.checklists.length > 0)
         const isDuedate = (card && card.duedate)
+        const isMember = (card && card.members && card.members.length > 0)
         const coverShow = (card && card.style?.coverType) ? `top t${card.style.bgColor}` : ''
         const isImg = (card && card.img)
 
@@ -158,8 +160,8 @@ class _CardEdit extends Component {
                                     <div className="show flex ">
                                         <div className=" inline-block">{isLabels && <div> <h5>Labels </h5><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
                                         <div className="inline-block">{isDuedate && <div className="duedate"> <h5>Due Date </h5> <CardDuedateShow duedate={card.duedate} card={card} updateCard={this.updateCard} /></div>}</div>
-
-
+                                        <div className="inline-block">{isMember && <div className="members"> <h5>Members </h5> <CardMembersShow members={card.members} card={card} updateCard={this.updateCard} /></div>}</div>
+                                        {/* <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div> */}
                                     </div>
                                     <h4>Description </h4>
                                     {(isDescriptionShowing) ? <AddDescription card={card} toggleAddDescription={this.toggleAddDescription} updateCard={this.updateCard} /> : ((card.description) ?
