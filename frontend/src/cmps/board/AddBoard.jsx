@@ -26,6 +26,7 @@ export class _AddBoard extends Component {
         };
         this.setState({ bgurl: bgUrl }, callback)
     }
+
     onSubmit = async () => {
         // ev.preventDefault()
         if (!this.state.title) return

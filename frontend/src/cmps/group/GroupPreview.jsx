@@ -52,7 +52,7 @@ export class _GroupPreview extends Component {
                             <article className="group-preview">
                                 <div className="group-wraper" >
                                     {(!isEditMode) ? <p onClick={this.toggleEditMode}>{group.title} </p> : <EditGroupTitle group={group} toggleEditMode={this.toggleEditMode} />}
-                                    <button className="delete-group" onClick={() => this.onRemoveGroup(group.id)}></button>
+                                    {/* <button className="delete-group" onClick={() => this.onRemoveGroup(group.id)}></button> */}
                                     {group.cards && <CardList groupId={group.id} cards={group.cards} />}
                                     {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}> Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
                                 </div>

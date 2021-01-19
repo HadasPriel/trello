@@ -15,7 +15,7 @@ export function BoardHeader(props) {
 
             <nav className="navbar-links">
                 <button className="header-invite"> Invite</button>
-                <button className="header-show-menu"> Show Menu</button>
+                <button className="header-show-menu" onClick={props.toggleSideMenu}> Show Menu</button>
 
             </nav>
             {/* <button className="user-avatar">HS</button> */}

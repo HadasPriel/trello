@@ -4,8 +4,8 @@ import { cloudinaryService } from '../services/cloudinaryService'
 export default class Uploader extends Component {
   state = {
     imgUrl: null,
-    height: 500,
-    width: 500,
+    height: 300,
+    width: 300,
     isUploading: false
   }
   onUploadImg = async ev => {

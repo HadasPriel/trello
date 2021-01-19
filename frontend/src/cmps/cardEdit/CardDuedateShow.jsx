@@ -36,9 +36,7 @@ export function CardDuedateShow(props) {
 
 
     return (
-        <span className="card-duedate-show">
-            <p className={`duetime-fa ${urgent} `}>{` ${month} ${day}`}</p>
-        </span>
+        <p className={`duetime-fa ${urgent} `}>{` ${month} ${day}`}</p>
     )
 }
 

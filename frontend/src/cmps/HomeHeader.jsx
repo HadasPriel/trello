@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 
 
+
 export function HomeHeader() {
 
 
@@ -16,6 +17,7 @@ export function HomeHeader() {
 
             <nav className="navbar-links">
                 <button className="header-user"> Login</button>
+                <Link to="/login"> Login</Link>
             </nav>
             {/* <button className="user-avatar">HS</button> */}
 

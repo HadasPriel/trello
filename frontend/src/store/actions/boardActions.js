@@ -1,5 +1,5 @@
 import { boardService } from '../../services/boardService'
-
+import { socketService } from '../../services/socketService'
 
 export function loadBoards() {
   return async dispatch => {
@@ -42,15 +42,25 @@ export function createBoard(boardTitle, backgroundImageUrl) {
 }
 
 
-export async function updateBoard(board) {
-  try {
+// export async function updateBoard(board) {
+//   try {
 
-    await boardService.updateBoard(board)
-  } catch (err) {
-    console.log('BoardActions: err in update board', err)
+//     await boardService.updateBoard(board)
+
+//   } catch (err) {
+//     console.log('BoardActions: err in update board', err)
+//   }
+// }
+
+export function updateBoard(newBoard) {
+  return async dispatch => {
+    try {
+      const board = await boardService.updateBoard(newBoard)
+      dispatch({ type: 'SET_BOARD', board })
+    } catch (err) {
+    }
   }
 }
-
 
 export function addGroup(title, boardToChange) {
   return async dispatch => {
@@ -64,7 +74,9 @@ export function addGroup(title, boardToChange) {
 
       const board = await boardService.updateBoard(boardToUpdate)
 
-      dispatch({ type: 'SET_BOARD', board })
+      socketService.emit('update board', board)
+
+      // dispatch({ type: 'SET_BOARD', board })
 
 
     } catch (err) {
@@ -137,7 +149,9 @@ export function addCard(title, groupId, boardToChange) {
 
       const board = await boardService.updateBoard(boardToUpdate)
 
-      dispatch({ type: 'SET_BOARD', board })
+      socketService.emit('update board', board)
+
+      // dispatch({ type: 'SET_BOARD', board })
 
 
     } catch (err) {
@@ -180,7 +194,9 @@ export function updateBoardAfterDrag(boardToChange) {
 
       const board = await boardService.updateBoard(boardToUpdate)
 
-      dispatch({ type: 'SET_BOARD', board })
+      socketService.emit('update board', board)
+
+      // dispatch({ type: 'SET_BOARD', board })
 
 
     } catch (err) {
@@ -200,6 +216,22 @@ export function filterByCardText(boardToChange, filterBy) {
 
       dispatch({ type: 'SET_BOARD', board })
       dispatch({ type: 'SET_FILTER', filterBy })
+
+    } catch (err) {
+      console.log('BoardActions: err in updateGroupOrder', err)
+    }
+  }
+
+}
+
+export function updateBoardAfterSocket(boardToChange) {
+  return async dispatch => {
+    try {
+
+      let board = JSON.parse(JSON.stringify(boardToChange))
+
+      dispatch({ type: 'SET_BOARD', board})
+
 
     } catch (err) {
       console.log('BoardActions: err in updateGroupOrder', err)

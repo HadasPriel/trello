@@ -10,6 +10,7 @@ export function CardEditNav(props) {
             <button className="checklist-fa" onClick={props.toggleChecklistBar}> Checklist</button>
             <button className="cover-fa" onClick={props.toggleCoverBar}> Cover</button>
             <button className="duetime-fa" onClick={props.toggleAddDeutime}> Due Date</button>
+            <button className="duetime-fa" onClick={props.toggleAddMembers}> Members</button>
             <button className="delete-fa"> Delete</button>
 
         </nav>
