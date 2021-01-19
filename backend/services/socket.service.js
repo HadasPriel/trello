@@ -12,9 +12,16 @@ function emit({ type, data }) {
 
 
 function connectSockets(http, session) {
-    gIo = require('socket.io')(http);
+    gIo = require("socket.io")(http, {
+        cors: {
+            origin: 'http://localhost:3000',
+            methods: ["GET", "POST"],
+            allowedHeaders: ["my-custom-header"],
+            credentials: true
+        }
+    })
 
-    const sharedSession = require('express-socket.io-session');
+    const sharedSession = require('express-socket.io-session')
 
     gIo.use(sharedSession(session, {
         autoSave: true
@@ -28,19 +35,17 @@ function connectSockets(http, session) {
                 gSocketBySessionIdMap[socket.handshake.sessionID] = null
             }
         })
-        socket.on('chat topic', topic => {
-            if (socket.myTopic) {
-                socket.leave(socket.myTopic)
+        socket.on('join board', boardId => {
+            if (socket.myBoardId) {
+                socket.leave(socket.myBoardId)
             }
-            socket.join(topic)
-            // logger.debug('Session ID is', socket.handshake.sessionID)
-            socket.myTopic = topic
-        })
-        socket.on('chat newMsg', msg => {
-            // emits to all sockets:
-            // gIo.emit('chat addMsg', msg)
-            // emits only to sockets in the same room
-            gIo.to(socket.myTopic).emit('chat addMsg', msg)
+            socket.join(boardId)
+            logger.debug('Session ID is', socket.handshake.sessionID)
+            socket.myBoardId = boardId
+        }),
+        socket.on('update board', board => {
+            gIo.to(socket.myBoardId).emit('update board', board)
+            console.log(board)
         })
 
     })

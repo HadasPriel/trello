@@ -37,7 +37,7 @@ export class _CardPreview extends Component {
                 {(provided) => {
                     return (
 
-                        <li key={card.id}  {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+                        <li key={card.id}  {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef} className={(card.title !== 'default-empty') ? `` : `list-preview-empty`}>
                             <article className={(card.title !== 'default-empty') ? `card-preview ${cardBgc} ${cardCover}` : `card-preview-empty`}>
                                 {/* {(card.style?.coverType === 'top') ? <CardCoverShowMin card={card} /> : ''} */}
                                 {/* <button className="edit-fa" onClick={() => this.toggleCardEdit}></button> */}
