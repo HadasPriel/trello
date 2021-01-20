@@ -183,7 +183,7 @@ class _CardEdit extends Component {
                                     </div>
                                     <h4>Description </h4>
                                     {(isDescriptionShowing) ? <AddDescription card={card} toggleAddDescription={this.toggleAddDescription} updateCard={this.updateCard} /> : ((card.description) ?
-                                        <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>edit</button></div> :
+                                        <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>Edit</button></div> :
                                         <div className="show description" onClick={this.toggleAddDescription}>add a more detailed description...</div>)}
                                     <p>{card.description && ''}</p>
                                     <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div>

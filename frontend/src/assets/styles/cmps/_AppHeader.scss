@@ -25,6 +25,14 @@
         margin: 0;
         display: inline-block;
     }
+    // h1::before{
+
+    //     font-size:52px;
+    //     padding-right:5px;
+        
+    //     font-family: "fa";
+    //     content: "\f14a";
+    // }
 
     h3 {
         font-family: "TechMono", monospace;
@@ -36,6 +44,14 @@
         transition: translate(50%);
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
     }
+    // h3::before{
+
+    //     font-size:19px;
+    //     padding-right:3px;
+        
+    //     font-family: "fa";
+    //     content: "\f14a";
+    // }
 
     button,
     span {
