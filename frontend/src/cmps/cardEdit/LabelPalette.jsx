@@ -19,7 +19,7 @@ class _LabelPalette extends Component {
         const cardToSave = { ...this.state.card }
         cardToSave.labels = (cardToSave.labels) ? [...cardToSave.labels, label] : [label]
         // console.log('cardToSave', cardToSave);
-        this.props.updateCard(cardToSave)
+        this.props.updateCard(cardToSave, 'added label')
     }
 
 

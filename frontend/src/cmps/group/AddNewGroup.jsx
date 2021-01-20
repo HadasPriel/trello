@@ -28,7 +28,7 @@ export class _AddNewGroup extends Component {
         return (
             <div className="add-new-group">
                 <form className="add-new-wraper" onSubmit={this.onSubmit} >
-                    <input className="add-another-group" placeholder="Add another list" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off"/>
+                    <input className="add-another-group" placeholder="Add another list" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" />
                     <button className="save-group-btn">Add List</button>
                     <button className="cancel-group-btn" onClick={this.onCancelAdd}></button>
                 </form>

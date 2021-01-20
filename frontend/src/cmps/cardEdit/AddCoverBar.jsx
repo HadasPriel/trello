@@ -14,7 +14,7 @@ class _AddCoverBar extends Component {
     handleStyle = async (ev) => {
         const cardToSave = { ...this.props.card }
         cardToSave.style = (cardToSave.style) ? { ...cardToSave.style, [ev.target.name]: ev.target.value } : { [ev.target.name]: ev.target.value }
-        await this.props.updateCard(cardToSave)
+        await this.props.updateCard(cardToSave,)
     }
 
     removeCover = async () => {

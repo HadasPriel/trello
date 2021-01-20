@@ -26,38 +26,40 @@ class _AppHeader extends Component {
         const { selectedBoard, toggleSideMenu } = this.props
         return (
             <React.Fragment>
-                <header className="app-header flex space-between align-center">
-                    <nav>
-                        <Link to="/" ><button className="header-home">  </button></Link>
-                        <button className="header-board"> Boards </button>
-                        <span>
-                            <label>
-                                <input className="header-filter"></input>
-                            </label>
-                        </span>
-                    </nav>
-                    <h3 className="header-logo">TASKX</h3>
+                <div className="main-header">
+                    <header className="app-header flex space-between align-center">
+                        <nav>
+                            <Link to="/" ><button className="header-home">  </button></Link>
+                            <button className="header-board"> Boards </button>
+                            <span>
+                                <label>
+                                    <input className="header-filter"></input>
+                                </label>
+                            </span>
+                        </nav>
+                        <h3 className="header-logo">TASKX</h3>
 
-                    <nav className="navbar-links flex space-between align-center">
-                        <button className="header-about-us"> About Us</button>
-                        <button className="header-user"></button>
-                        <span className="user-img" style={this.state.userImgStyle}></span>
-                    </nav>
-                    {/* <button className="user-avatar">HS</button> */}
-                </header>
-                <header className="app-header board-header flex space-between align-center">
-                    <nav>
-                        <h5>{selectedBoard.title}</h5>
-                    </nav>
+                        <nav className="navbar-links flex space-between align-center">
+                            <button className="header-about-us"> About Us</button>
+                            <button className="header-user"></button>
+                            <span className="user-img" style={this.state.userImgStyle}></span>
+                        </nav>
+                        {/* <button className="user-avatar">HS</button> */}
+                    </header>
+                    <header className="app-header board-header flex space-between align-center">
+                        <nav>
+                            <h5>{selectedBoard.title}</h5>
+                        </nav>
 
-                    <nav className="navbar-links">
-                        <button className="header-invite"> Invite</button>
-                        <button className="header-show-menu" onClick={toggleSideMenu}> Show Menu</button>
+                        <nav className="navbar-links">
+                            <button className="header-invite"> Invite</button>
+                            <button className="header-show-menu" onClick={toggleSideMenu}> Show Menu</button>
 
-                    </nav>
-                    {/* <button className="user-avatar">HS</button> */}
+                        </nav>
+                        {/* <button className="user-avatar">HS</button> */}
 
-                </header>
+                    </header>
+                </div>
             </React.Fragment>
         )
 
