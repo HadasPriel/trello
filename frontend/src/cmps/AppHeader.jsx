@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { BoardFilter } from './board/BoardFilter'
 
 
 class _AppHeader extends Component {
@@ -32,7 +33,8 @@ class _AppHeader extends Component {
                         <button className="header-board"> Boards </button>
                         <span>
                             <label>
-                                <input className="header-filter"></input>
+                                {/* <input className="header-filter"></input> */}
+                                <BoardFilter/>
                             </label>
                         </span>
                     </nav>

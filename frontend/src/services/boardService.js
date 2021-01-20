@@ -121,6 +121,8 @@ async function makeBoard(boardTitle, bgUrl, currUser = null) {
 
 
 async function filterByCardTitle(board, filterBy) {
+  console.log('Board got to board service', board)
+  console.log('filter got to board service', filterBy)
   if (filterBy.title) {
     const filterRegex = new RegExp(filterBy.title, 'i')
     board.groups = board.groups.map(group => {

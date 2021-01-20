@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { BoardFilter } from '../cmps/board/BoardFilter'
 import { GroupList } from '../cmps/group/GroupList'
 import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
 import { BoardHeader } from '../cmps/board/BoardHeader'
 import { socketService } from '../services/socketService'
-import { loadBoard, updateBoard, updateBoardAfterSocket } from '../store/actions/boardActions.js'
+import { loadBoard, updateBoard, updateBoardAfterSocket} from '../store/actions/boardActions.js'
 import { AppHeader } from '../cmps/AppHeader'
 
 
 class _Board extends Component {
     state = {
         board: {},
-        isBoardMenuShown: false
+        isBoardMenuShown: false,
+        filterBy: {
+            title: ''
+        }
+        
+        
     }
 
     async componentDidMount() {
@@ -24,6 +28,15 @@ class _Board extends Component {
 
 
     }
+
+  
+    componentWillUnmount() {
+        socketService.off('update board', this.onChangeBoard)
+        socketService.terminate()
+        
+    }
+
+   
 
     onDragEnd = (result) => {
         // console.log('on drag result', result)
@@ -92,7 +105,7 @@ class _Board extends Component {
                 {/* <BoardHeader board={selectedBoard} toggleSideMenu={this.toggleSideMenu} /> */}
                 {/* <div className="board-title"> {selectedBoard.title}</div> */}
                 <nav>
-                    <BoardFilter />
+                    {/* <BoardFilter /> */}
                     {/* <button onClick={this.toggleSideMenu}>Side Menu In Development</button> */}
                 </nav>
                 {isBoardMenuShown && <BoardSideMenu toggleSideMenu={this.toggleSideMenu} />}
@@ -106,14 +119,16 @@ class _Board extends Component {
 const mapStateToProps = state => {
     return {
         selectedBoard: state.boardModule.selectedBoard,
+        filterBy:state.boardModule.filterBy,
         users: state.userModule.users,
-
+        
     }
 }
 const mapDispatchToProps = {
     loadBoard,
     updateBoard,
-    updateBoardAfterSocket
+    updateBoardAfterSocket,
+
 }
 
 export const Board = connect(mapStateToProps, mapDispatchToProps)(_Board)

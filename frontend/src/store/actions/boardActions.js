@@ -204,13 +204,12 @@ export function updateBoard(boardToChange) {
 
 }
 
-export function filterByCardText(boardToChange, filterBy) {
+export function filterByCardText(boardId, filterBy) {
   return async dispatch => {
     try {
+      const boardToFilter = await boardService.getById(boardId)
 
-      let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
-
-      const board = await boardService.filterByCardTitle(boardToUpdate, filterBy)
+      const board = await boardService.filterByCardTitle(boardToFilter, filterBy)
 
       dispatch({ type: 'SET_BOARD', board })
       dispatch({ type: 'SET_FILTER', filterBy })
@@ -221,6 +220,7 @@ export function filterByCardText(boardToChange, filterBy) {
   }
 
 }
+
 
 export function updateBoardAfterSocket(changedBoard) {
   return async dispatch => {

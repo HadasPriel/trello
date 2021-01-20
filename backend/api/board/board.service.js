@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
 
 async function query() {
-  
+
     try {
         const collection = await dbService.getCollection('board')
         var boards = await collection.find().toArray()

@@ -87,7 +87,7 @@ export class _AddBoard extends Component {
                 bgurl: "https://cdn.pixabay.com/photo/2014/04/05/11/38/bokeh-316425_1280.jpg"
             },
             {
-                id: 'bg111',
+                id: 'bg112',
                 bgurl: "https://cdn.pixabay.com/photo/2013/07/25/13/01/stones-167089_1280.jpg"
             }
             

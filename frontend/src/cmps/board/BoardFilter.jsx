@@ -19,7 +19,7 @@ class _BoardFilter extends Component {
 
     handleChange = (ev) => {
         const callback = () => {
-            this.props.filterByCardText(this.props.selectedBoard, this.state.filterBy);
+            this.props.filterByCardText(this.props.selectedBoard._id, this.state.filterBy);
         };
 
         const filterBy = { ...this.state.filterBy }
@@ -31,19 +31,13 @@ class _BoardFilter extends Component {
 
 
     render() {
-        const { selectedBoard } = this.props
-
-        if (!selectedBoard) return <div>Loading...</div>
-
+    
         return (
-            <section className="board-filter">
-                <input type="text" name="title"
-                    value={this.state.filterBy.title}
-                    placeholder="Search in development"
-                    autoComplete="off"
-                    onChange={this.handleChange} />
-
-            </section>
+            <input type="text" name="title"
+                value={this.state.filterBy.title}
+                // placeholder="Search in development"
+                autoComplete="off"
+                onChange={this.handleChange} className="header-filter" />
 
         )
     }
@@ -52,7 +46,7 @@ class _BoardFilter extends Component {
 const mapStateToProps = state => {
     return {
         selectedBoard: state.boardModule.selectedBoard,
-        filterBy: state.boardModule.filterBy
+       
     }
 }
 const mapDispatchToProps = {
