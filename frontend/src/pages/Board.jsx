@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { GroupList } from '../cmps/group/GroupList'
 import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
-import { BoardHeader } from '../cmps/board/BoardHeader'
 import { socketService } from '../services/socketService'
 import { loadBoard, updateBoard, updateBoardAfterSocket} from '../store/actions/boardActions.js'
 import { AppHeader } from '../cmps/AppHeader'
@@ -79,6 +78,8 @@ class _Board extends Component {
 
     }
 
+
+
     toggleSideMenu = () => {
         this.setState({ isBoardMenuShown: !this.state.isBoardMenuShown })
     }
@@ -108,10 +109,9 @@ class _Board extends Component {
                     {/* <BoardFilter /> */}
                     {/* <button onClick={this.toggleSideMenu}>Side Menu In Development</button> */}
                 </nav>
-                {isBoardMenuShown && <BoardSideMenu toggleSideMenu={this.toggleSideMenu} />}
+                <BoardSideMenu classname={isBoardMenuShown} toggleSideMenu={this.toggleSideMenu} />
                 {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
             </section>
-
         )
     }
 }
@@ -121,7 +121,7 @@ const mapStateToProps = state => {
         selectedBoard: state.boardModule.selectedBoard,
         filterBy:state.boardModule.filterBy,
         users: state.userModule.users,
-        
+        loggedInUser: state.userModule.loggedInUser
     }
 }
 const mapDispatchToProps = {

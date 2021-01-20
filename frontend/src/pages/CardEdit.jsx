@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 // import { socketService } from '../services/socketService'
+import { utilService } from '../services/utilService.js'
 import { loadBoard, updateBoard } from '../store/actions/boardActions.js'
 import { loadUsers } from '../store/actions/userActions.js'
 import { CardEditNav } from '../cmps/cardEdit/CardEditNav'
@@ -17,6 +18,8 @@ import { AddImgBar } from '../cmps/cardEdit/AddImgBar'
 import { CardImgShow } from '../cmps/cardEdit/CardImgShow'
 import { AddMembersBar } from '../cmps/cardEdit/AddMembersBar'
 import { CardMembersShow } from '../cmps/cardEdit/CardMembersShow'
+import { CardActivitiesShow } from '../cmps/cardEdit/CardActivitiesShow'
+import { DeleteCardBar } from '../cmps/cardEdit/DeleteCardBar'
 
 class _CardEdit extends Component {
     state = {
@@ -29,7 +32,9 @@ class _CardEdit extends Component {
         isCoverShowing: false,
         isAddDeutimeShowing: false,
         isAddImgShowing: false,
-        isAddMembersShowing: false
+        isAddMembersShowing: false,
+        isDeleteCardShowing: false,
+        isActivitiesShowing: true
     }
 
     async componentDidMount() {
@@ -44,9 +49,6 @@ class _CardEdit extends Component {
     componentDidUpdate(prevprops) {
         if (this.props.match !== prevprops.match) this.loadCard()
     }
-
-
-
 
     loadCard = async () => {
         const boardId = this.props.selectedBoard._id
@@ -63,7 +65,7 @@ class _CardEdit extends Component {
         }
     }
 
-    updateCard = async (cardToSave) => {
+    updateCard = async (cardToSave, txt = '') => {
         const boardToSave = { ...this.state.board }
         const groupToSave = boardToSave.groups.find(group => group.id === this.state.groupId)
         const cardsToSave = groupToSave.cards.map(card => {
@@ -76,7 +78,11 @@ class _CardEdit extends Component {
             else return group
         })
         boardToSave.groups = groupsToSave
-
+        if (txt) {
+            const activity = this.createActivity(txt)
+            boardToSave.activities.unshift(activity)
+        }
+        console.log('boardToSave', boardToSave);
         try {
             // await updateBoard(boardToSave)
             await this.props.updateBoard(boardToSave)
@@ -85,6 +91,15 @@ class _CardEdit extends Component {
         } catch (err) {
             console.log('BoardActions: err in loadBoard', err)
         }
+    }
+
+    createActivity = (txt) => {
+        const { loggedInUser, card } = this.props
+        const miniUser = (loggedInUser) ? { _id: loggedInUser._id, fullname: loggedInUser.fullname, imgUrl: loggedInUser.imgUrl } : { _id: '123', fullname: 'guest', imgUrl: 'https://res.cloudinary.com/ddgevj2yp/image/upload/v1610989052/avatar-1_kbr5un.jpg' }
+        const miniCard = { id: card.id, title: card.title }
+        const activity = { id: 'a' + utilService.makeId(), createdAt: Date.now(), txt, byMember: miniUser, card: miniCard }
+        console.log(activity);
+        return activity
     }
 
     toggleLabelPalette = () => {
@@ -108,22 +123,24 @@ class _CardEdit extends Component {
 
     toggleAddImg = () => {
         this.setState({ isAddImgShowing: !this.state.isAddImgShowing })
+    }
 
+    toggleDeleteCard = () => {
+        this.setState({ isDeleteCardShowing: !this.state.isDeleteCardShowing })
     }
 
     addDeuDate = (date) => {
         const cardToSave = { ...this.state.card }
         cardToSave.duedate = date
-        this.updateCard(cardToSave)
-
+        this.updateCard(cardToSave, `added due date`)
+        // this.updateCard(cardToSave, `set card to be due at ${date}`)
     }
 
     addImg = (img) => {
         const cardToSave = { ...this.state.card }
         cardToSave.img = img
-        this.updateCard(cardToSave)
-        console.log('card to save:', cardToSave)
-
+        this.updateCard(cardToSave, 'added img')
+        // console.log('card to save:', cardToSave)
     }
 
     stopProg = (ev) => {
@@ -132,14 +149,15 @@ class _CardEdit extends Component {
 
 
     render() {
-        const { card, isDescriptionShowing } = this.state
-        const { users, toggleCardEdit } = this.props
+        const { card, isDescriptionShowing, isActivitiesShowing } = this.state
+        const { users, toggleCardEdit, onRemoveCard, selectedBoard } = this.props
         const isLabels = (card && card.labels && card.labels.length > 0)
         const isChecklists = (card && card.checklists && card.checklists.length > 0)
         const isDuedate = (card && card.duedate)
         const isMember = (card && card.members && card.members.length > 0)
         const coverShow = (card && card.style?.coverType) ? `top t${card.style.bgColor}` : ''
         const isImg = (card && card.img)
+
 
         if (!card) return <div></div>
         return (
@@ -165,13 +183,14 @@ class _CardEdit extends Component {
                                     </div>
                                     <h4>Description </h4>
                                     {(isDescriptionShowing) ? <AddDescription card={card} toggleAddDescription={this.toggleAddDescription} updateCard={this.updateCard} /> : ((card.description) ?
-                                        <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>edit</button></div> :
+                                        <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>Edit</button></div> :
                                         <div className="show description" onClick={this.toggleAddDescription}>add a more detailed description...</div>)}
                                     <p>{card.description && ''}</p>
                                     <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div>
                                     <div>{isChecklists && <div><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
+                                    <div>{isActivitiesShowing && <div><CardActivitiesShow activities={selectedBoard.activities} card={card} updateCard={this.updateCard} /></div>}</div>
                                 </main>
-                                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} toggleAddDeutime={this.toggleAddDeutime} toggleAddImg={this.toggleAddImg} toggleAddMembers={this.toggleAddMembers} />
+                                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} toggleAddDeutime={this.toggleAddDeutime} toggleAddImg={this.toggleAddImg} toggleAddMembers={this.toggleAddMembers} toggleDeleteCard={this.toggleDeleteCard} />
                             </div>
 
 
@@ -181,6 +200,7 @@ class _CardEdit extends Component {
                             {this.state.isAddDeutimeShowing && <AddDeutimeBar card={card} updateCard={this.updateCard} toggleAddDeutime={this.toggleAddDeutime} addDeuDate={this.addDeuDate} />}
                             {this.state.isAddMembersShowing && <AddMembersBar card={card} updateCard={this.updateCard} toggleAddMembers={this.toggleAddMembers} users={users} />}
                             {this.state.isAddImgShowing && <AddImgBar card={card} updateCard={this.updateCard} toggleAddImg={this.toggleAddImg} addImg={this.addImg} />}
+                            {this.state.isDeleteCardShowing && <DeleteCardBar cardId={card.id} boardId={selectedBoard._id} toggleDeleteCard={this.toggleDeleteCard} onRemoveCard={onRemoveCard} />}
                         </section>
                     </div>
                 </div>
@@ -192,7 +212,8 @@ class _CardEdit extends Component {
 const mapStateToProps = state => {
     return {
         selectedBoard: state.boardModule.selectedBoard,
-        users: state.userModule.users
+        users: state.userModule.users,
+        loggedInUser: state.userModule.loggedInUser
 
     }
 }

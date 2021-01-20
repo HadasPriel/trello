@@ -5,6 +5,7 @@ import { EditGroupTitle } from './EditGroupTitle'
 import { CardList } from '../card/CardList'
 import { AddCard } from './AddCard.jsx'
 import { Draggable } from 'react-beautiful-dnd'
+import { EditGroupNav } from './EditGroupNav'
 
 
 export class _GroupPreview extends Component {
@@ -12,6 +13,7 @@ export class _GroupPreview extends Component {
     state = {
         isOnAddCardMode: false,
         isEditMode: false,
+        isEditGroupNavShow: false,
         // isOnAddGroupMode: false,
         title: ''
     }
@@ -33,6 +35,9 @@ export class _GroupPreview extends Component {
 
         this.setState({ isOnAddCardMode: !this.state.isOnAddCardMode })
     }
+    toggleEditGroupNav = () => {
+        this.setState({ isEditGroupNavShow: !this.state.isEditGroupNavShow })
+    }
 
     // toggleAddGroupMode = () => {
 
@@ -42,7 +47,7 @@ export class _GroupPreview extends Component {
 
 
     render() {
-        const { isEditMode, isOnAddCardMode } = this.state
+        const { isEditMode, isOnAddCardMode, isEditGroupNavShow } = this.state
         const { group } = this.props
         return (
             <Draggable draggableId={group.id} index={this.props.index}>
@@ -51,10 +56,15 @@ export class _GroupPreview extends Component {
                         <li className="group" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
                             <article className="group-preview">
                                 <div className="group-wraper" >
-                                    {(!isEditMode) ? <p onClick={this.toggleEditMode}>{group.title} </p> : <EditGroupTitle group={group} toggleEditMode={this.toggleEditMode} />}
-                                    {/* <button className="delete-group" onClick={() => this.onRemoveGroup(group.id)}></button> */}
-                                    {group.cards && <CardList groupId={group.id} cards={group.cards} />}
-                                    {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}> Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
+                                    <header>
+                                        {(!isEditMode) ? <p onClick={this.toggleEditMode}>{group.title} </p> : <EditGroupTitle group={group} toggleEditMode={this.toggleEditMode} />}
+                                        <button className="menu-group" onClick={() => this.toggleEditGroupNav(group.id)}></button>
+                                        {isEditGroupNavShow && <EditGroupNav group={group} onRemoveGroup={this.onRemoveGroup} />}
+                                    </header>
+                                    <main>
+                                        {group.cards && <CardList groupId={group.id} cards={group.cards} />}
+                                        {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}> Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
+                                    </main>
                                 </div>
                             </article>
                         </li>

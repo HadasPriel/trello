@@ -1,3 +1,9 @@
+.main-header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
 .app-header {
     z-index: 2;
     height: 40px;
@@ -19,17 +25,33 @@
         margin: 0;
         display: inline-block;
     }
+    // h1::before{
+
+    //     font-size:52px;
+    //     padding-right:5px;
+        
+    //     font-family: "fa";
+    //     content: "\f14a";
+    // }
 
     h3 {
         font-family: "TechMono", monospace;
         color: rgba(255, 255, 255, 0.8);
         line-height: 32px;
         margin: 0;
-        position: absolute;
+        position: fixed;
         right: 50%;
         transition: translate(50%);
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
     }
+    // h3::before{
+
+    //     font-size:19px;
+    //     padding-right:3px;
+        
+    //     font-family: "fa";
+    //     content: "\f14a";
+    // }
 
     button,
     span {

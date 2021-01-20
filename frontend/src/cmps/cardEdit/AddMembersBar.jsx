@@ -35,7 +35,7 @@ class _AddMembersBar extends Component {
             cardToSave.members = (cardToSave.members) ? [...cardToSave.members, miniUser] : [miniUser]
         }
         // console.log('cardToSave', cardToSave);
-        this.props.updateCard(cardToSave)
+        this.props.updateCard(cardToSave, `added ${this.state.member.fullname}`)
         this.setState({ member: { fullname: '' } })
         // this.props.toggleAddMembers()
     }

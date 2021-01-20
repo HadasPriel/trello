@@ -36,9 +36,11 @@ class _BoardSideMenu extends Component {
         const { isChangeBackgroundShown } = this.state
         const { isBoardAnalysisShown } = this.state
         const { isDeleteBoardShown } = this.state
-        const { selectedBoard } = this.props
+        const { selectedBoard, classname } = this.props
+        const open = (classname) ? 'open' : ''
+
         return (
-            <section className="board-side-menu">
+            <section className={`board-side-menu ${open}`}>
                 <header className="menu-header">
                     <h1>Menu</h1>
                     <button className="close-menu" onClick={this.props.toggleSideMenu}>X</button>

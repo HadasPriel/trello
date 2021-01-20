@@ -22,7 +22,7 @@ class _AddChecklistBar extends Component {
         const cardToSave = { ...this.props.card }
         cardToSave.checklists = (cardToSave.checklists) ? [...cardToSave.checklists, checklist] : [checklist]
         // console.log('cardToSave', cardToSave);
-        this.props.updateCard(cardToSave)
+        this.props.updateCard(cardToSave, 'added checklist')
         this.setState({ checklist: { title: '', todos: [] } })
         this.props.toggleChecklistBar()
     }

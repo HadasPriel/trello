@@ -6,7 +6,7 @@ import { CardEdit } from '../../pages/CardEdit'
 import { Draggable } from 'react-beautiful-dnd'
 import { ChecklistSign } from './ChecklistSign'
 // import { CardCoverShowMin } from './CardCoverShowMin'
-import {CardImgShow} from '../cardEdit/CardImgShow'
+import { CardImgShow } from '../cardEdit/CardImgShow'
 import { CardDuedateShowMin } from '../cardEdit/CardDuedateShowMin'
 import { CardMembersShow } from '../cardEdit/CardMembersShow'
 
@@ -43,17 +43,32 @@ export class _CardPreview extends Component {
                             <article className={(card.title !== 'default-empty') ? `card-preview ${cardBgc} ${cardCover}` : `card-preview-empty`}>
                                 {/* {(card.style?.coverType === 'top') ? <CardCoverShowMin card={card} /> : ''} */}
                                 {/* <button className="edit-fa" onClick={() => this.toggleCardEdit}></button> */}
-                                <button className="delete-s" onClick={() => this.onRemoveCard(card.id)}></button>
+                                <button className="edit-s" onClick={this.toggleCardEdit}></button>
+
+                                {/* <button className="delete-s" onClick={() => this.onRemoveCard(card.id)}></button> */}
                                 {card.labels && <CardLabelShowMin labels={card.labels} />}
-                                <p onClick={this.toggleCardEdit} >{card.title}</p>
-                                {card.img&&<CardImgShow card={card}/>}
-                                <nav>
-                                    {(card.description) ? <span className="descriptionSign sign"></span> : ''}
-                                    {(card.checklists && card.checklists.length > 0) ? <ChecklistSign checklists={card.checklists} /> : ''}
-                                    {(card.duedate) ? <CardDuedateShowMin card={card} /> : ''}
-                                    {(card.members) ? <CardMembersShow members={card.members} /> : ''}
+                                <p contentEditable="true" suppressContentEditableWarning={true}
+                                    // onBlur={(ev) => {
+                                    //     // console.log(note.id, 'txt:', ev.currentTarget.textContent)
+                                    //     ev.preventDefault();
+                                    //     // onEdit(card.id, ev.currentTarget.textContent);
+                                        
+
+                                    // }}
+
+                                >{card.title}</p>
+                                {card.img && <CardImgShow card={card} />}
+                                <nav className="flex space-between align-center">
+                                    <span>
+                                        {(card.description) ? <span className="descriptionSign sign"></span> : ''}
+                                        {(card.checklists && card.checklists.length > 0) ? <ChecklistSign checklists={card.checklists} /> : ''}
+                                        {(card.duedate) ? <CardDuedateShowMin card={card} /> : ''}
+                                    </span>
+                                    <span>
+                                        {(card.members) ? <CardMembersShow members={card.members} /> : ''}
+                                    </span>
                                 </nav>
-                                {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} />}
+                                {isCardEtidShow && <CardEdit card={card} groupId={this.props.groupId} toggleCardEdit={this.toggleCardEdit} onRemoveCard={this.onRemoveCard} />}
                             </article>
                         </li>
                     )
