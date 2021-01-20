@@ -36,7 +36,7 @@
 
     .home-img-container {
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
         background-size: cover;
         background-position-x: center;
         background-repeat: no-repeat;
@@ -95,8 +95,22 @@
                 text-align: center;
                 @media (max-width: $mobile-breakpoint) {
                     font-size: 50px;
+                    vertical-align: baseline;
                 }
+
+                
             }
+            // h1::before{
+
+            //     font-size:52px;
+            //     padding-right:5px;
+            //     vertical-align: baseline;
+                
+            //     font-family: "fa";
+            //     content: "\f14a";
+            // }
+      
+        
 
             h3 {
                 font-family: "Roboto", sans-serif;

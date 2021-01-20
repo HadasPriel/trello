@@ -13,6 +13,10 @@
     font-weight: 400;
     padding: 0 6px 0 12px;
     width: 340px;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    
 
     h1 {
         line-height: 20px;
@@ -21,6 +25,7 @@
         text-align: center;
     }
     .close-menu {
+       
         position: absolute;
         top: 0;
         right: 0;

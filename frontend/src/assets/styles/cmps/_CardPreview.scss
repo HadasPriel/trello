@@ -74,10 +74,28 @@
         visibility: visible;
     }
 
+    .edit-s {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 11px;
+        color: #5e6c84;
+        background-color: rgba(255, 255, 255, 0);
+    }
     .edit-s::before {
         font-family: "fa";
-        content: "\f044";
+        content: "\f304";
     }
+
+    &:hover .edit-s {
+        visibility: visible;
+    }
+
+    // .edit-s::before {
+    //     font-family: "fa";
+    //     content: "\f044";
+    // }
 
     button.delete-card {
         border-radius: 50%;
@@ -103,6 +121,10 @@
         font-size: 14px;
         line-height: 20px;
         font-weight: 400;
+    }
+
+    img {
+        border-radius: 3px;
     }
 
     .label {

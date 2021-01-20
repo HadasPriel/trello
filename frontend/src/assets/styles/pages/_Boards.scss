@@ -2,6 +2,7 @@
 
 .boards-wraper{
     width: 100vw;
+
     position: absolute;
     top: 0;
     right: 0;
@@ -30,19 +31,27 @@
                 flex-direction: column;
                 position: relative;
                 top:4%;
-            h1 {
-                font-family: 'Share Tech Mono', monospace;
-                font-size:60px;
-                color: $clr6;
-                text-shadow:  0 1px 0 rgba(9, 30, 66, 0.25);;
-                text-align: center;
-                margin-top:20px; 
-                @media (max-width: $mobile-breakpoint) {
-                    font-size:50px;
+                h1 {
+                    font-family: "Share Tech Mono", monospace;
+                    font-size: 60px;
+                    color: $clr6;
+                    margin-top:20px;
+                    text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+                    text-align: center;
+                    @media (max-width: $mobile-breakpoint) {
+                        font-size: 50px;
+                    }
+    
                     
-                } 
-                
-            }
+                }
+                h1::before{
+    
+                    font-size:52px;
+                    padding-right:5px;
+                    
+                    font-family: "fa";
+                    content: "\f14a";
+                }
         
             h3 {
                 font-family: 'Roboto', sans-serif;

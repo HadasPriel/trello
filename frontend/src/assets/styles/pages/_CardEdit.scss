@@ -106,7 +106,7 @@
         background-color: rgba(9, 30, 66, 0.04);
         border-radius: 3px;
         width: 510px;
-        height: 55px;
+        min-height: 55px;
     }
     .description:hover {
         background-color: rgba(9, 30, 66, 0.08);

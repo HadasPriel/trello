@@ -43,7 +43,9 @@ export class _CardPreview extends Component {
                             <article className={(card.title !== 'default-empty') ? `card-preview ${cardBgc} ${cardCover}` : `card-preview-empty`}>
                                 {/* {(card.style?.coverType === 'top') ? <CardCoverShowMin card={card} /> : ''} */}
                                 {/* <button className="edit-fa" onClick={() => this.toggleCardEdit}></button> */}
-                                <button className="delete-s" onClick={() => this.onRemoveCard(card.id)}></button>
+                                <button className="edit-s" onClick={this.toggleCardEdit}></button>
+
+                                {/* <button className="delete-s" onClick={() => this.onRemoveCard(card.id)}></button> */}
                                 {card.labels && <CardLabelShowMin labels={card.labels} />}
                                 <p onClick={this.toggleCardEdit} >{card.title}</p>
                                 {card.img&&<CardImgShow card={card}/>}
