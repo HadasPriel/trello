@@ -47,7 +47,16 @@ export class _CardPreview extends Component {
 
                                 {/* <button className="delete-s" onClick={() => this.onRemoveCard(card.id)}></button> */}
                                 {card.labels && <CardLabelShowMin labels={card.labels} />}
-                                <p onClick={this.toggleCardEdit} >{card.title}</p>
+                                <p contentEditable="true" suppressContentEditableWarning={true}
+                                    // onBlur={(ev) => {
+                                    //     // console.log(note.id, 'txt:', ev.currentTarget.textContent)
+                                    //     ev.preventDefault();
+                                    //     // onEdit(card.id, ev.currentTarget.textContent);
+                                        
+
+                                    // }}
+
+                                >{card.title}</p>
                                 {card.img && <CardImgShow card={card} />}
                                 <nav className="flex space-between align-center">
                                     <span>

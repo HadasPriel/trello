@@ -21,7 +21,7 @@ export class _EditGroupNav extends Component {
         const { isDeleteBarShow } = this.state
         return (
             <React.Fragment>
-                < nav >
+                < nav className="edit-group-container">
                     <button onClick={this.toggleDeleteBar}>Delete group</button>
                 </nav >
                 <nav>
