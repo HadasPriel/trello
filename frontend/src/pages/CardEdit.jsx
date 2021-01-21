@@ -169,8 +169,7 @@ class _CardEdit extends Component {
                             {/* {(card.style && card.style.coverType && card.style.bgColor) ? <CardCoverShow card={card} /> : ''} */}
                             <header className="edit-header">
                                 <button className="close" onClick={toggleCardEdit}></button>
-                                <button className="title-sign"></button>
-                                <h1>{card.title}</h1>
+                                <h1 className="title-sign">{card.title}</h1>
                             </header>
 
                             <div className="permanent">
@@ -190,7 +189,8 @@ class _CardEdit extends Component {
                                     <div>{isChecklists && <div><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
                                     <div>{isActivitiesShowing && <div><CardActivitiesShow activities={selectedBoard.activities} card={card} updateCard={this.updateCard} /></div>}</div>
                                 </main>
-                                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar} toggleAddDeutime={this.toggleAddDeutime} toggleAddImg={this.toggleAddImg} toggleAddMembers={this.toggleAddMembers} toggleDeleteCard={this.toggleDeleteCard} />
+                                <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar}
+                                    toggleAddDeutime={this.toggleAddDeutime} toggleAddImg={this.toggleAddImg} toggleAddMembers={this.toggleAddMembers} toggleDeleteCard={this.toggleDeleteCard} />
                             </div>
 
 

@@ -15,11 +15,12 @@ export class _GroupPreview extends Component {
         isEditMode: false,
         isEditGroupNavShow: false,
         // isOnAddGroupMode: false,
-        title: ''
+        title: '',
+        groupHeight: 0
     }
 
     componentDidMount() {
-
+        this.setState({ groupHeight: document.body.clientHeight })
     }
 
     onRemoveGroup = (groupId) => {
@@ -61,10 +62,10 @@ export class _GroupPreview extends Component {
                                         <button className="menu-group" onClick={() => this.toggleEditGroupNav(group.id)}></button>
                                         {isEditGroupNavShow && <EditGroupNav group={group} onRemoveGroup={this.onRemoveGroup} />}
                                     </header>
-                                    <main>
+                                    <main style={{ maxHeight: `${this.state.groupHeight - 250}px` }}>
                                         {group.cards && <CardList groupId={group.id} cards={group.cards} />}
-                                        {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}> Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
                                     </main>
+                                    {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}> Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
                                 </div>
                             </article>
                         </li>

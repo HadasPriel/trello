@@ -95,7 +95,7 @@ class _Board extends Component {
                 {/* <BoardHeader board={selectedBoard} toggleSideMenu={this.toggleSideMenu} /> */}
                 {/* <div className="board-title"> {selectedBoard.title}</div> */}
                 <nav>
-                    <BoardFilter />
+                    {/* <BoardFilter /> */}
                     {/* <button onClick={this.toggleSideMenu}>Side Menu In Development</button> */}
                 </nav>
                 <BoardSideMenu classname={isBoardMenuShown} toggleSideMenu={this.toggleSideMenu} />

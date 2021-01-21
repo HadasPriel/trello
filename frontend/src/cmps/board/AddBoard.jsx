@@ -6,8 +6,7 @@ export class _AddBoard extends Component {
 
     state = {
         title: '',
-        bgurl: ''
-
+        bgurl: '',
     }
 
     componentDidMount() {
@@ -20,7 +19,7 @@ export class _AddBoard extends Component {
         this.setState({ [field]: value })
     }
 
-    onChooseBackground = ( bgUrl) => {
+    onChooseBackground = (bgUrl) => {
         const callback = () => {
             this.onSubmit();
         };
@@ -37,6 +36,10 @@ export class _AddBoard extends Component {
     onCancelAdd = (ev) => {
         ev.preventDefault()
         this.props.toggleNewBoard()
+    }
+
+    stopPropagation = (ev) => {
+        ev.stopPropagation()
     }
 
     render() {
@@ -56,7 +59,7 @@ export class _AddBoard extends Component {
             {
                 id: 'bg104',
                 bgurl: "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
-                
+
             },
             {
                 id: 'bg105',
@@ -87,38 +90,30 @@ export class _AddBoard extends Component {
                 bgurl: "https://cdn.pixabay.com/photo/2014/04/05/11/38/bokeh-316425_1280.jpg"
             },
             {
-                id: 'bg111',
+                id: 'bg112',
                 bgurl: "https://cdn.pixabay.com/photo/2013/07/25/13/01/stones-167089_1280.jpg"
             }
-            
+
         ]
         return (
-            <div className="add-board"> 
-                <form className="templates-container" onSubmit={this.onSubmit} >
-                    <input placeholder="Enter a title for your new board..." type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" required/>
+            <div className="screen" onClick={this.onCancelAdd}>
+                <div className="add-board" onSubmit={this.onSubmit} onClick={this.stopPropagation}>
+                    <input placeholder="Enter a title for your new board..." type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" required />
                     <section className="add-board-backgrounds">
+                        <h3>Choose background and get started!</h3>
                         {backgroundImages.map(background => {
-                            return <div className="backgrounds-tumbs"key={background.id}
-                                style={{
-                                    backgroundImage: "url(" + `${background.bgurl}` + ")",
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    backgroundRepeat: 'no-repeat',
-                                    borderRadius:"3px",
-                                    width: "350px", 
-                                    height:"200px",
-                                    margin: "10px",
-                                    boxShadow: "0 1px 0 rgba(56, 65, 80, 0.25)",
-                                    
-                                }}
-                                onClick={() => this.onChooseBackground( background.bgurl)}>
+                            return (
+                                <div className="backgrounds-tumbs" key={background.id}
+                                    style={{ backgroundImage: `url(${background.bgurl})` }}
+                                    onClick={() => this.onChooseBackground(background.bgurl)}>
                                     <div className="plus">+</div>
                                 </div>
+                            )
                         })}
                     </section>
                     {/* <button className="save-btn">+ Add Board</button>
                     <button className="cancel-btn" onClick={this.onCancelAdd}>X Cancel</button> */}
-                </form>
+                </div>
             </div>
         )
     }

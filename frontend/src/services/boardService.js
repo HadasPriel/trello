@@ -22,8 +22,10 @@ export const boardService = {
 // return axios.get('api/toy/?id=1223&balance=13')
 // return axios.get('api/toy/?', {params: {id: 1223, balanse:13}})
 
-function query() {
-  return httpService.get(`board`)
+function query(filterBy) {
+  let queryParams = new URLSearchParams()
+  queryParams.set('userId', filterBy.userId)
+  return httpService.get(`board?${queryParams}`)
   // return storageService.query('board')
 }
 

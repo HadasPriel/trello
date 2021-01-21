@@ -16,13 +16,13 @@ class _Boards extends Component {
     }
 
     componentDidMount() {
-        this.props.loadBoards()
+        this.props.loadBoards({ userId: '6004748cf9fd65ff47dc81e4' })
     }
 
     toggleNewBoard = () => {
-        console.log('I am in new board')
+        // console.log('I am in new board')
         this.setState({ isNewBoard: !this.state.isNewBoard })
-      }
+    }
 
 
 
@@ -37,35 +37,39 @@ class _Boards extends Component {
     render() {
 
         return (
-            
-            <div className="boards-wraper">
-                <HomeHeader />
 
-                <div className="boards-container">
-                    <div className="board-get-started-container">
-                        <h1>TASKX</h1>
-                        <h3>Get on Board</h3>
-                        {/* <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} /> */}
+            <React.Fragment>
+                <HomeHeader loggedInUser={this.props.loggedInUser} />
 
+                <div className="boards">
+                    {/* <div className="board-get-started-container"> */}
+                    <h1>TASKX <span> Get on Board </span></h1>
 
-                        <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />
-                    </div>
-                    {/* <hr/> */}
+                    <section>
+                        <h2>templates boards</h2>
+                    </section>
+                    <section>
+                        <h2>Yours boards</h2>
+                        <BoardList boards={this.props.boards} toggleNewBoard={this.toggleNewBoard} />
+                        <button onClick={this.toggleNewBoard}>Add board</button>
+                    </section>
+                    {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />}
+                    {/* </div> */}
                 </div >
-
 
                 {/* <div className="user-boards-container">
           <BoardList boards={this.props.boards} />
-       
+          
         </div> */}
-            </div>
+            </React.Fragment>
         )
     }
 }
 
 const mapStateToProps = state => {
     return {
-        boards: state.boardModule.boards
+        boards: state.boardModule.boards,
+        loggedInUser: state.userModule.loggedInUser
     }
 }
 const mapDispatchToProps = {

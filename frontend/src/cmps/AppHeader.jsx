@@ -29,7 +29,7 @@ class _AppHeader extends Component {
                 <div className="main-header">
                     <header className="app-header flex space-between align-center">
                         <nav>
-                            <Link to="/" ><button className="header-home">  </button></Link>
+                            <Link to="/" className="header-home"></Link>
                             <button className="header-board"> Boards </button>
                             <span>
                                 <label>
