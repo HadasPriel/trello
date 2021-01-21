@@ -47,7 +47,7 @@ export class _CardPreview extends Component {
 
                                 {/* <button className="delete-s" onClick={() => this.onRemoveCard(card.id)}></button> */}
                                 {card.labels && <CardLabelShowMin labels={card.labels} />}
-                                <p onClick={this.toggleCardEdit} >{card.title}</p>
+                                <p onClick={this.toggleCardEdit}>{card.title}</p>
                                 {card.img && <CardImgShow card={card} />}
                                 <nav className="flex space-between align-center">
                                     <span>

@@ -55,6 +55,11 @@
         content: "\f141";
     }
 
+    // .menu-group nav {
+    //     width: 300px;
+    //     background-color: rgb(177, 122, 122);
+    // }
+
     .add-another-card {
         width: 250px;
         margin: auto;
@@ -67,6 +72,7 @@
     }
 
     .add-another-card::before {
+        // width: 50%;
         font-family: "fa";
         content: "\f067";
     }
