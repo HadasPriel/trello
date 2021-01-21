@@ -252,3 +252,26 @@ export function updateBoardAfterSocket(changedBoard) {
 //     }
 //   }
 // }
+export function changeBoardBackground(bgUrltoUpdate, boardToChange) {
+  return async dispatch => {
+    try {
+      let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
+
+      boardToUpdate.style.bgurl = bgUrltoUpdate
+
+      let activity = await boardService.makeActivity(`Changed board style`)
+
+      boardToUpdate.activities.unshift(activity)
+
+      const board = await boardService.updateBoard(boardToUpdate)
+
+      socketService.emit('update board', board)
+
+      // dispatch({ type: 'SET_BOARD', board })
+
+
+    } catch (err) {
+      console.log('BoardActions: err in addCard', err)
+    }
+  }
+}
