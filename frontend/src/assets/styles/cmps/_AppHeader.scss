@@ -29,7 +29,7 @@
 
     //     font-size:52px;
     //     padding-right:5px;
-        
+
     //     font-family: "fa";
     //     content: "\f14a";
     // }
@@ -48,13 +48,14 @@
 
     //     font-size:19px;
     //     padding-right:3px;
-        
+
     //     font-family: "fa";
     //     content: "\f14a";
     // }
 
     button,
-    span {
+    span,
+    a {
         display: inline-block;
         background-color: rgba(255, 255, 255, 0.3);
         color: #ffff;
@@ -63,6 +64,7 @@
         margin: 0 4px 0 0;
         padding: 0 4px;
         border-radius: 3px;
+        font-size: 14px;
     }
 
     // span {

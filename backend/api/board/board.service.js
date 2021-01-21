@@ -2,11 +2,10 @@ const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
 
-async function query() {
-
+async function query(filterBy) {
     try {
         const collection = await dbService.getCollection('board')
-        var boards = await collection.find().toArray()
+        var boards = await collection.find({ 'createdBy._id': filterBy.userId }).toArray()
         return boards
     } catch (err) {
         logger.error('cannot find users', err)
@@ -59,6 +58,9 @@ async function add(board) {
         throw err;
     }
 }
+
+
+
 
 module.exports = {
     query,

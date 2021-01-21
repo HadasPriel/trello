@@ -1,21 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
-.board-wraper {
-    height: 100%;
-
-    user-select: none;
-    white-space: nowrap;
-    // padding-top: 55px;
-    // padding-left: 20px;
-    // margin-top: 50px;
-    // margin-left: 0px;
-    // margin-bottom: 8px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 18px;
-    position: static;
-}
-
 .board-title {
     font-family: "Share Tech Mono", monospace;
     margin-left: 8px;

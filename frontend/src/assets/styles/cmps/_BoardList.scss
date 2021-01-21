@@ -1,20 +1,37 @@
 .board-list {
-    font-family: "Roboto", sans-serif;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-
     ul {
         margin-top: 10px;
     }
-    li {
-        // background-color: #313EA0;
-        height: 150px;
-        color: $clr6;
-        padding: 5px;
-        margin: 5px;
-        border-radius: 8px;
+}
+
+.board-preview {
+    position: relative;
+    display: inline-block;
+    height: 95px;
+    width: 170px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+    p {
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+    }
+    a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
     }
 }
