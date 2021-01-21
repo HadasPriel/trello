@@ -94,7 +94,7 @@ export class _AddBoard extends Component {
         ]
         return (
             <div className="add-board"> 
-                <form className="templates-container" onSubmit={this.onSubmit} >
+                {/* <form className="templates-container" onSubmit={this.onSubmit} > */}
                     <input placeholder="Enter a title for your new board..." type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" required/>
                     <section className="add-board-backgrounds">
                         {backgroundImages.map(background => {
@@ -118,7 +118,7 @@ export class _AddBoard extends Component {
                     </section>
                     {/* <button className="save-btn">+ Add Board</button>
                     <button className="cancel-btn" onClick={this.onCancelAdd}>X Cancel</button> */}
-                </form>
+                {/* </form> */}
             </div>
         )
     }

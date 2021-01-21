@@ -110,7 +110,7 @@ class _Board extends Component {
                     {/* <button onClick={this.toggleSideMenu}>Side Menu In Development</button> */}
                 </nav>
                 <BoardSideMenu classname={isBoardMenuShown} toggleSideMenu={this.toggleSideMenu} />
-                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
+                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd}/>}
             </section>
         )
     }

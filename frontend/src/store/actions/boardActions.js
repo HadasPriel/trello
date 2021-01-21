@@ -42,25 +42,6 @@ export function createBoard(boardTitle, backgroundImageUrl) {
 }
 
 
-// export async function updateBoard(board) {
-//   try {
-
-//     await boardService.updateBoard(board)
-
-//   } catch (err) {
-//     console.log('BoardActions: err in update board', err)
-//   }
-// }
-
-// export function updateBoard(newBoard) {
-//   return async dispatch => {
-//     try {
-//       const board = await boardService.updateBoard(newBoard)
-//       dispatch({ type: 'SET_BOARD', board })
-//     } catch (err) {
-//     }
-//   }
-// }
 
 export function addGroup(title, boardToChange) {
   return async dispatch => {
@@ -68,9 +49,15 @@ export function addGroup(title, boardToChange) {
 
       let groupToAdd = boardService.makeGroup(title)
 
+      let activity = await boardService.makeActivity(`created new list ${groupToAdd.title}`)
+
+      console.log('Add group checking activity', activity)
+
       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
 
       boardToUpdate.groups.push(groupToAdd)
+
+      boardToUpdate.activities.unshift(activity)
 
       const board = await boardService.updateBoard(boardToUpdate)
 
@@ -139,11 +126,17 @@ export function addCard(title, groupId, boardToChange) {
 
       let newCard = boardService.makeCard(title)
 
+      let activity = await boardService.makeActivity(`created new card ${newCard.title}`)
+
+      console.log('Add card checking activity', activity)
+
       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
 
       const groupToUpdateIdx = boardToUpdate.groups.findIndex(group => group.id === groupId)
 
       boardToUpdate.groups[groupToUpdateIdx].cards.push(newCard)
+
+      boardToUpdate.activities.unshift(activity)
 
       const board = await boardService.updateBoard(boardToUpdate)
 
@@ -238,3 +231,24 @@ export function updateBoardAfterSocket(changedBoard) {
 
 }
 
+
+
+// export async function updateBoard(board) {
+//   try {
+
+//     await boardService.updateBoard(board)
+
+//   } catch (err) {
+//     console.log('BoardActions: err in update board', err)
+//   }
+// }
+
+// export function updateBoard(newBoard) {
+//   return async dispatch => {
+//     try {
+//       const board = await boardService.updateBoard(newBoard)
+//       dispatch({ type: 'SET_BOARD', board })
+//     } catch (err) {
+//     }
+//   }
+// }

@@ -2,7 +2,7 @@
 
 import { httpService } from './httpService'
 // import { storageService } from './asyncStorageService'
-// import userService from './userService'
+import { userService } from './userService'
 import { utilService } from './utilService'
 
 export const boardService = {
@@ -14,7 +14,8 @@ export const boardService = {
   updateBoard,
   makeCard,
   makeBoard,
-  filterByCardTitle
+  filterByCardTitle,
+  makeActivity
 }
 
 
@@ -42,6 +43,7 @@ async function updateBoard(board) {
   return updatedBoard
 }
 async function add(board) {
+
   const addedBoard = await httpService.post(`board`, board)
 
   // board.byUser = userService.getLoggedinUser()
@@ -96,10 +98,26 @@ function makeCard(cardTitle) {
 
 }
 
-async function makeBoard(boardTitle, bgUrl, currUser = null) {
+async function makeActivity(txt, card = {}) {
+  let activity = {
+    id: 'a' + utilService.makeId(),
+    createdAt: Date.now(),
+    txt: txt,
+    byMember: await getMiniUser(),
+    card: card
+  }
+  return activity
+}
 
-  let miniUser = (currUser) ? currUser : { _id: "6004748cf9fd65ff47dc81e4", username: "Avi", imgUrl: 'http://some-img' }
+async function getMiniUser() {
+  let loggedinUser = userService.getLoggedinUser()
+  let createdBy = (loggedinUser) ? loggedinUser : await userService.login({ username: 'Guest', password: '123' })
+  return createdBy
+}
 
+async function makeBoard(boardTitle, bgUrl) {
+
+  let miniUser = await getMiniUser()
   const newBoard = {
     title: boardTitle,
     createdAt: Date.now(),
@@ -112,7 +130,9 @@ async function makeBoard(boardTitle, bgUrl, currUser = null) {
     activities: []
   }
 
-  console.log(newBoard);
+  const activity = await makeActivity('Created Board')
+
+  newBoard.activities.unshift(activity)
 
   const addedBoard = await httpService.post(`board`, newBoard);
   return addedBoard
