@@ -55,11 +55,11 @@ class _Home extends Component {
             {/* <Link to="/board" ><button className="header-board"> Boards </button></Link> */}
 
             <div className="get-started-btn">
-              <Link to="/board" >
+              {/* <Link to="/board" > */}
                 <Button variant="contained" size="large" color="primary" className="get-started" onClick={this.toggleNewBoard}>
                   Get Started
             </Button>
-              </Link>
+              {/* </Link> */}
             </div>
             {/* {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />} */}
           </div>

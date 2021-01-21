@@ -40,14 +40,17 @@
         background-size: cover;
         background-position-x: center;
         background-repeat: no-repeat;
-        background-color: #9a9a9a;
+        // background-color: #9a9a9a;
+        background-color: #3078A8;
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
         padding: 10px;
         background-position: 49% -49%;
         background-size: 1190px 1236px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/styles/imgs/homebg.jpg");
+        // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/styles/imgs/homebg-removebg.png");
+        background-image: url("/assets/styles/imgs/homebg-removebg.png");
 
-        animation: gradient 20s ease-in-out infinite;
+
+        animation: gradient 14s ease infinite;
 
         @keyframes gradient {
             0% {
@@ -55,7 +58,7 @@
             }
 
             50% {
-                background-position: 47% -50%;
+                background-position: 47% -26%;
             }
 
             100% {
@@ -132,13 +135,20 @@
                 transition: .8s ease-in-out;
             }
 
+            .MuiButton-containedPrimary {
+                color: #fff;
+                background-color: #7F2C3F;
+            }
+
+            
+
             .get-started {
                 width: 330px;
                 height: 35px;
                 margin: auto;
-                &:hover {
-                    transform: scale(1.2);
-                }
+                // &:hover {
+                //     transform: scale(1.2);
+                // }
             }
         }
     }
@@ -169,7 +179,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:#e8e8e8;
+            background-color:#D1F4FF;
             margin-bottom: 20px;
             margin-right: 10px;
             margin-left:10px;
@@ -183,7 +193,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:#e8e8e8;
+            background-color:#A4E9FF;
             margin-bottom: 20px;
             margin-right: 10px;
             margin-left:10px;
@@ -197,7 +207,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:#e8e8e8;
+            background-color:#D1F4FF;
             margin-bottom: 20px;
             margin-right: 10px;
             margin-left:10px;

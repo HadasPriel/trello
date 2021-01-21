@@ -63,7 +63,7 @@ export class _GroupPreview extends Component {
                                     </header>
                                     <main>
                                         {group.cards && <CardList groupId={group.id} cards={group.cards} />}
-                                        {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}> Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
+                                        {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}>Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
                                     </main>
                                 </div>
                             </article>
