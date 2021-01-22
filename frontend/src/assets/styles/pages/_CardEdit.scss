@@ -63,6 +63,11 @@
             font-size: 20px;
         }
     }
+    .description-sign::before {
+        font-family: "fa";
+        content: "\f036";
+        margin-right: 20px;
+    }
 
     main {
         padding: 0 8px 8px 16px;
@@ -109,6 +114,7 @@
         width: 510px;
         min-height: 55px;
     }
+
     .description:hover {
         background-color: rgba(9, 30, 66, 0.08);
     }

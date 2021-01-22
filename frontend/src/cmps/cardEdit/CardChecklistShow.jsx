@@ -7,8 +7,19 @@ import { utilService } from '../../services/utilService.js'
 
 class _CardChecklistShow extends Component {
     state = {
-        todo: { txt: '', isDone: false }
+        todo: { txt: '', isDone: false },
+        progress: 0
     }
+    componentDidMount() {
+        this.getProgress()
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps !== this.props) {
+            this.getProgress()
+        }
+    }
+
 
     removeChecklist = (checklistId) => {
         // const labelsToSave = this.props.labels.filter(label => label.id !== labelId)
@@ -55,25 +66,43 @@ class _CardChecklistShow extends Component {
         this.props.updateCard(cardToSave)
     }
 
+    getProgress = () => {
+        let done = 0
+        let all = 0
+        this.props.checklists.forEach(Checklist => {
+            Checklist.todos.forEach(todo => {
+                if (todo.isDone === true) done++
+                all++
+            })
+        })
+        const progress = Math.round(done / all * 100)
+        this.setState({ progress })
+    }
 
     render() {
-        const { todo } = this.state
+        const { todo, progress } = this.state
+        const done = (progress === 100) ? 'done' : ''
         return (
             <ul className="card-checklist-show card-show ">
+                {/* <progress value={progress.done} max={progress.all}> </progress> */}
+                <div className="show flex align-center">
+                    <span>{`${progress}%`}</span>
+                    <div className="progress-wraper"><div className={`progress-inner ${done}`} style={{ width: `${progress}%` }}></div></div>
+                </div>
                 {this.props.checklists.map(checklist => {
                     return (
-                        <li key={checklist.id} >
-                            <header>
+                        <li key={checklist.id} className="checklist-wraper" >
+                            <header className="flex space-between">
                                 <h4 className="checklist-title" > {checklist.title}</h4>
                                 <button className="edit-btn" onClick={() => { this.removeChecklist(checklist.id) }}>Delete</button>
                             </header>
                             <TodoListShow checklist={checklist} card={this.props.card} updateCard={this.props.updateCard}
                                 removeTodo={this.removeTodo} />
                             <form onSubmit={(event) => { this.addTask(event, checklist.id) }}>
-                                <input className="blabla" type="text" name="txt" value={todo.txt} onChange={this.handleTaskChange}
+                                <input type="text" name="txt" value={todo.txt} onChange={this.handleTaskChange}
                                     placeholder="Add an item" autoComplete="off" required></input>
-                                {/* <input type="checkbox" name="isDone" checked={todo.isDone} onChange={this.handleTaskChange} ></input> */}
                                 <button className="add-btn">Add</button>
+                                {/* <button className="add-btn" onClick>X</button> */}
                             </form>
                         </li>
 

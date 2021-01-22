@@ -11,9 +11,13 @@
         // max-height: 100%;
         position: relative;
         white-space: normal;
-        width: 272px;
-        padding: 5px;
+        // width: 272px;
+        padding: 8px;
     }
+
+    // .main-group-wraper {
+    //     padding-right: 30px;
+    // }
 
     main {
         // max-height: 70vh;
@@ -29,12 +33,18 @@
 
     li.list-preview-empty {
         padding-left: 0;
+        height: 1px;
+        display: none;
     }
 
     p {
-        margin-left: 8px;
-        margin-right: 8px;
         overflow: hidden;
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #5e6c84;
+        margin-bottom: 8px;
     }
 
     .menu-group {

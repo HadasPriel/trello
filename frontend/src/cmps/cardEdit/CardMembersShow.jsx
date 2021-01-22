@@ -17,7 +17,7 @@ class _CardMembersShow extends Component {
 
 
         return (
-            <ul className="card-member-show">
+            <ul className="card-member-show flex flex-end">
 
                 {this.props.members.map(member => {
                     let userImgStyle = {

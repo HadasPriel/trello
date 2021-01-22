@@ -4,6 +4,35 @@
         // content: "\f14a";
         content: "\f00c";
     }
+    .checklist-wraper {
+        margin-bottom: 20px;
+    }
+    span {
+        color: #5e6c84;
+        font-size: 11px;
+        line-height: 10px;
+        margin-right: 10px;
+    }
+
+    .progress-wraper,
+    .progress-inner {
+        height: 8px;
+        margin: 0;
+        border-radius: 2em;
+    }
+
+    .progress-wraper {
+        width: 500px;
+        background: rgba(9, 30, 66, 0.08);
+    }
+    .progress-inner {
+        background: #5ba4cf;
+        transition: 1s;
+    }
+    .progress-inner.done {
+        background: #61bd4f;
+    }
+
     li {
         width: 100%;
         border-radius: 3px;
@@ -21,6 +50,12 @@
     }
     button {
         display: inline-block;
+    }
+    .edit-btn {
+        margin: 0;
+    }
+    h4 {
+        display: inline;
     }
 }
 

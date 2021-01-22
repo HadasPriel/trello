@@ -63,7 +63,9 @@ export class _GroupPreview extends Component {
                                         {isEditGroupNavShow && <EditGroupNav group={group} onRemoveGroup={this.onRemoveGroup} />}
                                     </header>
                                     <main style={{ maxHeight: `${this.state.groupHeight - 250}px` }}>
-                                        {group.cards && <CardList groupId={group.id} cards={group.cards} />}
+                                        <div className="main-group-wraper">
+                                            {group.cards && <CardList groupId={group.id} cards={group.cards} />}
+                                        </div>
                                     </main>
                                     {(!isOnAddCardMode) ? <p className="add-another-card" onClick={this.toggleAddCardMode}> Add another card</p> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
                                 </div>

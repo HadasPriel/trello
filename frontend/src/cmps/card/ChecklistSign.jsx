@@ -3,19 +3,18 @@
 import React from 'react'
 
 export function ChecklistSign(props) {
+    let done = 0
+    let all = 0
 
-    const progress = props.checklists.map(Checklist => {
-        let done = 0
-        let all = 0
+    props.checklists.forEach(Checklist => {
         Checklist.todos.forEach(todo => {
             if (todo.isDone === true) done++
             all++
         })
-        return `${done} / ${all}`
     })
 
     return (
-        <span className="checklistSign sign" > {progress} </span>
+        <span className="checklistSign sign" > {`${done} / ${all}`} </span>
     )
 
 }

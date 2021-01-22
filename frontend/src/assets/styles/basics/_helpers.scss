@@ -41,6 +41,9 @@
     &.space-between {
         justify-content: space-between;
     }
+    &.flex-end {
+        align-items: flex-end;
+    }
 }
 
 // Media helpers
