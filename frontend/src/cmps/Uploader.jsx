@@ -20,7 +20,8 @@ export class Uploader extends Component {
     const uploadStyle = {
       backgroundImage: `url(${imgUrl})`,
       height: height + 'px',
-      width: width + 'px'
+      width: width + 'px',
+      objectFit: 'cover'
     }
     return (
       <div className="uploader flex align-center justify-center"
@@ -30,8 +31,8 @@ export class Uploader extends Component {
           { isUploading ? 'Uploading....' : 'Upload Image' }
         </label>
 
-        <input onChange={ this.onUploadImg } hidden
-          type="file" accept="image/*" id="imageUploader" hidden/>
+        <input onChange={ this.onUploadImg } 
+          type="file" accept="image/*" id="imageUploader" />
       </div>
     )
   }
