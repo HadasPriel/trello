@@ -48,23 +48,15 @@ export function addGroup(title, boardToChange) {
     try {
 
       let groupToAdd = boardService.makeGroup(title)
-
       let activity = await boardService.makeActivity(`created new list ${groupToAdd.title}`)
 
-      console.log('Add group checking activity', activity)
-
       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
-
       boardToUpdate.groups.push(groupToAdd)
 
       boardToUpdate.activities.unshift(activity)
-
       const board = await boardService.updateBoard(boardToUpdate)
 
       socketService.emit('update board', board)
-
-      // dispatch({ type: 'SET_BOARD', board })
-
 
     } catch (err) {
       console.log('BoardActions: err in addGroup', err)
@@ -77,13 +69,8 @@ export function removeGroup(groupId, boardToChange) {
     try {
 
       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
-
       const updatedGroups = boardToUpdate.groups.filter(group => group.id !== groupId)
-
       boardToUpdate.groups = updatedGroups
-
-      console.log(boardToUpdate)
-
       const board = await boardService.updateBoard(boardToUpdate)
 
       dispatch({ type: 'SET_BOARD', board })
@@ -101,15 +88,12 @@ export function updateGroup(groupTitleToUpdate, groupId, boardToChange) {
     try {
 
       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
-
       const groupToUpdateIdx = boardToUpdate.groups.findIndex(group => group.id === groupId)
-
       boardToUpdate.groups[groupToUpdateIdx].title = groupTitleToUpdate
 
       const board = await boardService.updateBoard(boardToUpdate)
 
       dispatch({ type: 'SET_BOARD', board })
-
 
     } catch (err) {
       console.log('BoardActions: err in updateGroup', err)
@@ -125,26 +109,15 @@ export function addCard(title, groupId, boardToChange) {
 
 
       let newCard = boardService.makeCard(title)
-
       let activity = await boardService.makeActivity(`created new card ${newCard.title}`)
-
-      console.log('Add card checking activity', activity)
-
       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
-
       const groupToUpdateIdx = boardToUpdate.groups.findIndex(group => group.id === groupId)
-
       boardToUpdate.groups[groupToUpdateIdx].cards.push(newCard)
-
       boardToUpdate.activities.unshift(activity)
 
       const board = await boardService.updateBoard(boardToUpdate)
 
       socketService.emit('update board', board)
-
-      // dispatch({ type: 'SET_BOARD', board })
-
-
     } catch (err) {
       console.log('BoardActions: err in addCard', err)
     }
@@ -169,7 +142,6 @@ export function removeCard(cardId, groupId, boardToChange) {
 
       dispatch({ type: 'SET_BOARD', board })
 
-
     } catch (err) {
       console.log('BoardActions: err in removeGroup', err)
     }
@@ -186,9 +158,6 @@ export function updateBoard(boardToChange) {
       const board = await boardService.updateBoard(boardToUpdate)
 
       socketService.emit('update board', board)
-
-      // dispatch({ type: 'SET_BOARD', board })
-
 
     } catch (err) {
       console.log('BoardActions: err in updateGroupOrder', err)
@@ -223,7 +192,6 @@ export function updateBoardAfterSocket(changedBoard) {
 
       dispatch({ type: 'SET_BOARD', board })
 
-
     } catch (err) {
       console.log('BoardActions: err in updateBoardAfterSocket', err)
     }
@@ -231,27 +199,6 @@ export function updateBoardAfterSocket(changedBoard) {
 
 }
 
-
-
-// export async function updateBoard(board) {
-//   try {
-
-//     await boardService.updateBoard(board)
-
-//   } catch (err) {
-//     console.log('BoardActions: err in update board', err)
-//   }
-// }
-
-// export function updateBoard(newBoard) {
-//   return async dispatch => {
-//     try {
-//       const board = await boardService.updateBoard(newBoard)
-//       dispatch({ type: 'SET_BOARD', board })
-//     } catch (err) {
-//     }
-//   }
-// }
 export function changeBoardBackground(bgUrltoUpdate, boardToChange) {
   return async dispatch => {
     try {
@@ -266,10 +213,6 @@ export function changeBoardBackground(bgUrltoUpdate, boardToChange) {
       const board = await boardService.updateBoard(boardToUpdate)
 
       socketService.emit('update board', board)
-
-      // dispatch({ type: 'SET_BOARD', board })
-
-
     } catch (err) {
       console.log('BoardActions: err in addCard', err)
     }
