@@ -82,7 +82,6 @@ class _CardEdit extends Component {
             const activity = this.createActivity(txt)
             boardToSave.activities.unshift(activity)
         }
-        console.log('boardToSave', boardToSave);
         try {
             // await updateBoard(boardToSave)
             await this.props.updateBoard(boardToSave)
@@ -98,7 +97,6 @@ class _CardEdit extends Component {
         const miniUser = (loggedInUser) ? { _id: loggedInUser._id, fullname: loggedInUser.fullname, imgUrl: loggedInUser.imgUrl } : { _id: '123', fullname: 'guest', imgUrl: 'https://res.cloudinary.com/ddgevj2yp/image/upload/v1610989052/avatar-1_kbr5un.jpg' }
         const miniCard = { id: card.id, title: card.title }
         const activity = { id: 'a' + utilService.makeId(), createdAt: Date.now(), txt, byMember: miniUser, card: miniCard }
-        console.log(activity);
         return activity
     }
 
@@ -180,7 +178,7 @@ class _CardEdit extends Component {
                                         <div className="inline-block">{isMember && <div className="members"> <h5>Members </h5> <CardMembersShow members={card.members} card={card} updateCard={this.updateCard} /></div>}</div>
                                         {/* <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div> */}
                                     </div>
-                                    <h4>Description </h4>
+                                    <h4 className="description-sign">Description </h4>
                                     {(isDescriptionShowing) ? <AddDescription card={card} toggleAddDescription={this.toggleAddDescription} updateCard={this.updateCard} /> : ((card.description) ?
                                         <div className="description show">{card.description} <button className="edit-btn" onClick={this.toggleAddDescription}>Edit</button></div> :
                                         <div className="show description" onClick={this.toggleAddDescription}>add a more detailed description...</div>)}

@@ -14,7 +14,7 @@ class _CardLabelShow extends Component {
 
     render() {
         return (
-            <ul className="card-label-show">
+            <ul className="card-label-show flex flex-end">
                 {this.props.labels.map(label => {
                     return (
                         <li

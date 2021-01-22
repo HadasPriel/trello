@@ -8,7 +8,6 @@ export function CardList(props) {
             {(provided) => (
                 <ul className="card-list" {...provided.droppableProps} ref={provided.innerRef}>
                     {props.cards.map((card, index) =>
-
                         <CardPreview key={card.id} card={card} groupId={props.groupId} index={index} />
                     )}
                     {provided.placeholder}

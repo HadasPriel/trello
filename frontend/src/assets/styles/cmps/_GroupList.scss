@@ -1,5 +1,5 @@
 .group-list-container {
-    margin-top: 88px;
+    margin-top: 132px;
     padding-left: 8px;
     display: flex;
     // flex-direction: column;
@@ -14,9 +14,17 @@
         padding: 5px;
         background-color: rgba(248, 248, 248, 0.71);
         color: #5e6c84;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        margin: 0;
     }
     .add-another-list::before {
         font-family: "fa";
         content: "\f067";
+    }
+
+    @media (min-width: $narrow-breakpoint) {
+        margin-top: 88px;
     }
 }

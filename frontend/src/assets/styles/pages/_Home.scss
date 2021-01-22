@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
 .home-wraper {
-    width: 100vw;
+    // width: 100vw;
     position: absolute;
     top: 0;
     right: 0;
@@ -35,20 +35,19 @@
     }
 
     .home-img-container {
-        width: 100vw;
+        // width: 100vw;
         height: 80vh;
         background-size: cover;
         background-position-x: center;
         background-repeat: no-repeat;
         // background-color: #9a9a9a;
-        background-color: #3078A8;
+        background-color: #3078a8;
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
         padding: 10px;
         background-position: 49% -49%;
         background-size: 1190px 1236px;
         // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/styles/imgs/homebg-removebg.png");
         background-image: url("/assets/styles/imgs/homebg-removebg.png");
-
 
         animation: gradient 14s ease infinite;
 
@@ -100,20 +99,16 @@
                     font-size: 50px;
                     vertical-align: baseline;
                 }
-
-                
             }
             // h1::before{
 
             //     font-size:52px;
             //     padding-right:5px;
             //     vertical-align: baseline;
-                
+
             //     font-family: "fa";
             //     content: "\f14a";
             // }
-      
-        
 
             h3 {
                 font-family: "Roboto", sans-serif;
@@ -130,17 +125,15 @@
                     font-size: 20px;
                 }
             }
-            .get-started-btn{
+            .get-started-btn {
                 margin: auto;
-                transition: .8s ease-in-out;
+                transition: 0.8s ease-in-out;
             }
 
             .MuiButton-containedPrimary {
                 color: #fff;
-                background-color: #7F2C3F;
+                background-color: #7f2c3f;
             }
-
-            
 
             .get-started {
                 width: 330px;
@@ -154,70 +147,63 @@
     }
 
     .welcome-container {
-       
         max-width: 1200px;
-       
+
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        
 
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
 
         article {
-            border:10px black;
+            border: 10px black;
         }
 
-        .welcome1{
+        .welcome1 {
             font-family: "Share Tech Mono", monospace;
-            min-width: 400px;
             box-shadow: 0 1px 0 rgba(56, 65, 80, 0.25);
             border-radius: 3px;
             padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:#D1F4FF;
+            background-color: #d1f4ff;
             margin-bottom: 20px;
             margin-right: 10px;
-            margin-left:10px;
+            margin-left: 10px;
         }
 
-        .welcome2{
-            min-width: 400px;
+        .welcome2 {
             box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
             border-radius: 3px;
             padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:#A4E9FF;
+            background-color: #a4e9ff;
             margin-bottom: 20px;
             margin-right: 10px;
-            margin-left:10px;
-
+            margin-left: 10px;
         }
-        .welcome3{
-            min-width: 400px;
+        .welcome3 {
             box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
             border-radius: 3px;
             padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:#D1F4FF;
+            background-color: #d1f4ff;
             margin-bottom: 20px;
             margin-right: 10px;
-            margin-left:10px;
+            margin-left: 10px;
         }
 
-        .img1{
+        .img1 {
             width: 150px;
             border-radius: 50%;
-            margin:auto;
-           
+            margin: auto;
         }
 
         h3 {

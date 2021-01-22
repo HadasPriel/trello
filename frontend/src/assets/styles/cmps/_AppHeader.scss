@@ -5,10 +5,12 @@
 }
 
 .app-header {
-    z-index: 2;
+    .normal-media {
+        display: none;
+    }
+
     height: 40px;
     background-color: rgba(0, 0, 0, 0.32);
-    position: relative;
     padding: 4px;
     nav {
         display: flex;
@@ -25,33 +27,18 @@
         margin: 0;
         display: inline-block;
     }
-    // h1::before{
 
-    //     font-size:52px;
-    //     padding-right:5px;
-
-    //     font-family: "fa";
-    //     content: "\f14a";
-    // }
-
-    h3 {
+    .header-logo {
+        position: absolute;
+        right: 150px;
+        transform: translate(50%);
+        display: inline-block;
         font-family: "TechMono", monospace;
         color: rgba(255, 255, 255, 0.8);
         line-height: 32px;
         margin: 0;
-        position: fixed;
-        right: 50%;
-        transition: translate(50%);
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
     }
-    // h3::before{
-
-    //     font-size:19px;
-    //     padding-right:3px;
-
-    //     font-family: "fa";
-    //     content: "\f14a";
-    // }
 
     button,
     span,
@@ -62,15 +49,10 @@
         font-weight: 700;
         line-height: 32px;
         margin: 0 4px 0 0;
-        padding: 0 4px;
+        padding: 0 12px;
         border-radius: 3px;
         font-size: 14px;
     }
-
-    // span {
-    //     top: 1.5px;
-    //     position: relative;
-    // }
 
     input {
         color: #ffff;
@@ -118,58 +100,21 @@
     }
 
     &.board-header {
-        padding: 8px 4px 4px 8px;
         background: rgba(0, 0, 0, 0.24);
     }
-    h3 {
-        display: inline-block;
+
+    @media (min-width: $narrow-breakpoint) {
+        .normal-media {
+            display: inline-block;
+        }
+        &.narrow-media {
+            display: none;
+        }
+        .narrow-media {
+            display: inline-block;
+        }
+        .header-logo {
+            position: unset;
+        }
     }
-
-    // display: flex;
-    // justify-content: space-between;
-    // user-select: none;
-    // white-space: nowrap;
-    // margin-bottom: 8px;
-    // overflow-x: auto;
-    // overflow-y: hidden;
-    // padding-bottom: 8px;
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-    // .logo-header {
-    //     width: 50%;
-    //     font-family: "Share Tech Mono", monospace;
-    //     font-size: 2rem;
-    //     color: $clr6;
-    //     padding: 8px;
-    //     margin-left: 8px;
-    // }
-    // h3 span {
-    //     font-family: "Share Tech Mono", monospace;
-    //     font-size: 2rem;
-    //     font-weight: 600;
-    //     color: #ce2e6c;
-    // }
-    // .navbar-links {
-    //     width: 25%;
-    //     font-family: "Roboto", sans-serif;
-    //     font-size: 1rem;
-    //     color: $clr6;
-    //     padding: 12px;
-    //     display: inline-block;
-    // }
-
-    // a {
-    //     color: $clr6;
-    // }
-
-    // .user-avatar {
-    //     width: 32px;
-    //     height: 32px;
-    //     margin-right: 20px;
-    //     border-radius: 50%;
-    //     padding: 5px;
-    // }
 }

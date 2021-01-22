@@ -49,7 +49,7 @@ export class _CardPreview extends Component {
                                 {card.labels && <CardLabelShowMin labels={card.labels} />}
                                 <p onClick={this.toggleCardEdit}>{card.title}</p>
                                 {card.img && <CardImgShow card={card} />}
-                                <nav className="flex space-between align-center">
+                                <nav className="flex space-between flex-end">
                                     <span>
                                         {(card.description) ? <span className="descriptionSign sign"></span> : ''}
                                         {(card.checklists && card.checklists.length > 0) ? <ChecklistSign checklists={card.checklists} /> : ''}

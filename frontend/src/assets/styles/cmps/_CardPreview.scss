@@ -3,9 +3,7 @@
     width: 250px;
     min-height: 40px;
     background-color: #fff;
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
     padding: 5px;
     border: 0px;
     border-radius: 3px;
@@ -22,6 +20,7 @@
         position: relative;
         left: -5px;
         content: "";
+        padding-bottom: 2px;
     }
 
     &.t\#7bc86c::before {
@@ -230,8 +229,4 @@
 
 .cover.min .card-preview {
     margin-top: 100px;
-}
-
-.card-preview-empty {
-    display: none;
 }
