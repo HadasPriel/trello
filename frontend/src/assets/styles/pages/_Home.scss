@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
 .home-wraper {
+    // width: 100vw;
     position: absolute;
     top: 0;
     right: 0;
@@ -34,6 +35,7 @@
     }
 
     .home-img-container {
+        // width: 100vw;
         height: 80vh;
         background-size: cover;
         background-position-x: center;
@@ -161,7 +163,6 @@
 
         .welcome1 {
             font-family: "Share Tech Mono", monospace;
-            min-width: 400px;
             box-shadow: 0 1px 0 rgba(56, 65, 80, 0.25);
             border-radius: 3px;
             padding: 15px;
@@ -175,7 +176,6 @@
         }
 
         .welcome2 {
-            min-width: 400px;
             box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
             border-radius: 3px;
             padding: 15px;
@@ -188,7 +188,6 @@
             margin-left: 10px;
         }
         .welcome3 {
-            min-width: 400px;
             box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
             border-radius: 3px;
             padding: 15px;
