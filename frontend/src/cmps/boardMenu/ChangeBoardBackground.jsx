@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { changeBoardBackground } from '../../store/actions/boardActions.js'
+import { updateBoard } from '../../store/actions/boardActions.js'
 
 export class _ChangeBoardBackground extends Component {
 
@@ -21,8 +21,9 @@ export class _ChangeBoardBackground extends Component {
     }
 
     onSubmit = async () => {
-        await this.props.changeBoardBackground(this.state.bgurl, this.props.selectedBoard)
-
+        let boardToUpdate = JSON.parse(JSON.stringify(this.props.selectedBoard))
+        boardToUpdate.style.bgurl = this.state.bgurl
+        await  await this.props.updateBoard(boardToUpdate, 'changed background')
     }
 
     onCancelAdd = (ev) => {
@@ -99,7 +100,7 @@ export class _ChangeBoardBackground extends Component {
                         </div>
                     )
                 })}
-                <button className="cancel-btn" onClick={() => { this.props.toggleChangeBackground() }}>X Cancel</button> */
+                <button className="cancel-btn" onClick={() => { this.props.toggleChangeBackground() }}>X Cancel</button> 
             </section>
 
         )
@@ -113,20 +114,9 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-
-    changeBoardBackground
-
+    updateBoard
 };
 
 export const ChangeBoardBackground = connect(mapStateToProps, mapDispatchToProps)(_ChangeBoardBackground);
 
 
-// export function ChangeBoardBackground(props) {
-//     return (
-//         <div className="change-board-background-container">
-//             <p> I am  Change Board BackGround CMP</p>
-
-//           <button onClick={()=>{props.toggleChangeBackground()}}>Back to Menu</button>
-//         </div>
-//     )
-// }

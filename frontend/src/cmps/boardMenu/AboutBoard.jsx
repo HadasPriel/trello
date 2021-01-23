@@ -20,9 +20,11 @@ export class _AboutBoard extends Component {
         const { selectedBoard } = this.props
         return (
             <div className="about-board-container">
-                <p> I am  About Board CMP</p>
+                <p> Created by </p>
+                <div className="user-img inline-block" style={{ backgroundImage: `url(${selectedBoard.createdBy.imgUrl})` }}></div>
+                <span>{selectedBoard.createdBy.username} </span>
                 {(!isEditMode) ? <p onClick={this.toggleEditMode}> {selectedBoard.title} </p> : <EditBoardTitle toggleEditMode={this.toggleEditMode} />}
-                 <button onClick={() => { this.props.toggleAboutBoard() }}>Back to Menu</button>
+                <button onClick={() => { this.props.toggleAboutBoard() }}>Back to Menu</button>
             </div>
         )
     }

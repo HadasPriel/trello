@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { AboutBoard } from '../boardMenu/AboutBoard'
 import { ChangeBoardBackground } from '../boardMenu/ChangeBoardBackground'
 import { RemoveBoard } from '../boardMenu/RemoveBoard'
+import { ActivityBoard } from '../boardMenu/ActivityBoard'
 
 class _BoardSideMenu extends Component {
     state = {
@@ -51,7 +52,8 @@ class _BoardSideMenu extends Component {
                     {(!isAboutBoardShown) ? <div className="menu-item about-board" onClick={this.toggleAboutBoard}> <span className="" ></span><h5> About this board</h5></div> : <AboutBoard toggleAboutBoard={this.toggleAboutBoard} board={selectedBoard} />}
                     {(!isChangeBackgroundShown) ? <p className="change-board-background" onClick={this.toggleChangeBackground}> Change Background</p> : <ChangeBoardBackground toggleChangeBackground={this.toggleChangeBackground} />}
                     {(isBoardAnalysisShown) && <p className="board-analysis" onClick={this.isBoardAnalysisShown}>Board Analysis</p>}
-                    {(!isDeleteBoardShown) ? <p className="delete-board" onClick={this.toggleDeleteBoard}> Delete Board</p> : <RemoveBoard toggleDeleteBoard={this.toggleDeleteBoard} board={selectedBoard} />}
+                    {/* {(!isDeleteBoardShown) ? <p className="delete-board" onClick={this.toggleDeleteBoard}> Delete Board</p> : <RemoveBoard toggleDeleteBoard={this.toggleDeleteBoard} board={selectedBoard} />} */}
+                   { selectedBoard.activities && <ActivityBoard activities={selectedBoard.activities}/>}
                 </div>
 
 

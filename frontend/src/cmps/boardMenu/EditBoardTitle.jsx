@@ -24,8 +24,7 @@ export class _EditBoardTitle extends Component {
         const {title} = this.state
         if (!title) return
         const board = {...this.props.selectedBoard, title}
-        // TODO ADD ACTIVITY
-        await this.props.updateBoard(board)
+        await this.props.updateBoard(board, `changed board title to ${title}`)
         this.props.toggleEditMode()
 
     }
