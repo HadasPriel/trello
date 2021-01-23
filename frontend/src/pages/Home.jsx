@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { BoardList } from '../cmps/board/BoardList'
-import { AddBoard } from '../cmps/board/AddBoard'
+// import { BoardList } from '../cmps/board/BoardList'
+// import { AddBoard } from '../cmps/board/AddBoard'
 import { loadBoards } from '../store/actions/boardActions.js'
 import { HomeHeader } from '../cmps/HomeHeader'
 import Button from '@material-ui/core/Button';
@@ -50,14 +50,14 @@ class _Home extends Component {
 
         <div className="home-img-container">
           <div className="get-started-container">
-            <h1>TASKX</h1>
+            <h1>TASX</h1>
             <h3>Manage your teamwork with the ease of your fingers</h3>
             {/* <Link to="/board" ><button className="header-board"> Boards </button></Link> */}
 
             <div className="get-started-btn">
               {/* <Link to="/board" > */}
-                <Button variant="contained" size="large" color="primary" className="get-started" onClick={this.toggleNewBoard}>
-                  Get Started
+              <Button variant="contained" size="large" color="primary" className="get-started" onClick={this.toggleNewBoard}>
+                Get Started
             </Button>
               {/* </Link> */}
             </div>
@@ -67,21 +67,37 @@ class _Home extends Component {
 
         <div className="welcome-container">
           <article className="welcome1">
-            <h3>Hit your deadlines, follow your your team’s progress and keep work moving across teams  — all from one place.</h3>
-            <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1610985446/pen-2373521_1920_m98lid.jpg" alt="" />
+            <div className="left-side">
+              <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611390965/faces1_tvpwft.png" alt="" />
+            </div>
+            <div className="right-side">
+              <h2>Hit your deadlines</h2>
+              <h3>Follow your your team’s progress and keep work moving across teams  — all from one place.</h3>
+            </div>
+
 
           </article>
 
           <article className="welcome2">
-            <h3>Collaborate and build total alignment on your project by adding comments to any task or document. </h3>
-            <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1610985635/pen-5690144_1920_p5ledt.jpg" alt="" />
+            <div className="right-side">
+            <h2>Collaborate and build</h2>
+              <h3>Share ideas and more so teammates can tap into the same pool of knowledge whenever they need. </h3>
+            </div>
+
+            <div className="left-side">
+              <img className="img2" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611391150/faces2_t7s1ur.png" alt="" />
+            </div>
 
           </article>
 
           <article className="welcome3">
-            <h3>Keep everyone automatically looped in on task and project updates with our all-in-one project and task management App.</h3>
-            <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1610985931/notebook-2723406_1920_kywzpe.jpg" alt="" />
-
+            <div className="right-side">
+            <img className="img3" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611391298/faces3_uzu1d8.png" alt="" />
+            </div>
+            <div className="left-side">
+            <h2>Keep everyone looped in</h2>
+            <h3>Easily assign and prioritize tasks, and see who's doing what anywhere, anytime.</h3>
+            </div>
           </article>
           {/* <h3>Save time, avoid losing work and information, delegate, prioritize your tasks and keep track to stay on schedule.</h3> */}
 

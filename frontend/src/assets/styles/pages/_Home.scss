@@ -148,31 +148,76 @@
 
     .welcome-container {
         max-width: 1200px;
-
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
+        
 
         article {
+            transition: width 2s;
+            
             border: 10px black;
         }
 
         .welcome1 {
-            font-family: "Share Tech Mono", monospace;
-            box-shadow: 0 1px 0 rgba(56, 65, 80, 0.25);
-            border-radius: 3px;
+            box-shadow: 0 1px 0 rgba(56, 65, 80, 0.25), ;
+            border-radius: 10px;
             padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #d1f4ff;
+          
             margin-bottom: 20px;
             margin-right: 10px;
             margin-left: 10px;
+            border-radius: 10px;
+            transition: 00.4s ease;
+            @media (max-width: $mobile-breakpoint) {
+               flex-direction: column;
+            }
+
+            
+
+            h2{
+                font-family: "Share Tech Mono", monospace;
+                letter-spacing: -2px;
+                font-size: 2.2rem;
+            }
+
+            h3{
+                font-size: 1.4rem;
+                
+            }
+
+        }
+
+        .welcome1:hover{
+                
+            background: #000;
+            h2{
+                color:white;
+            }
+            h3{
+                color:white;
+            }
+        }
+        
+
+        .right-side {
+            width: 50%;
+            @media (max-width: $mobile-breakpoint) {
+                width: 100%;
+            }
+        }
+
+        .left-side {
+            width: 50%;
+            @media (max-width: $mobile-breakpoint) {
+                width:100%;
+            }
         }
 
         .welcome2 {
@@ -182,36 +227,105 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #a4e9ff;
             margin-bottom: 20px;
             margin-right: 10px;
             margin-left: 10px;
+            border-radius: 10px;
+            transition: 00.4s ease;
+            @media (max-width: $mobile-breakpoint) {
+                flex-direction: column;
+             }
+
+            h2{
+                font-family: "Share Tech Mono", monospace;
+                letter-spacing: -2px;
+                font-size: 2.2rem;
+            }
+
+            h3{
+                font-size: 1.4rem;
+            }
+
+            &.welcome2:hover{
+                
+                background: #000;
+                h2{
+                    color:white;
+                }
+                h3{
+                    color:white;
+                }
+            }
         }
         .welcome3 {
             box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
-            border-radius: 3px;
             padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #d1f4ff;
             margin-bottom: 20px;
             margin-right: 10px;
             margin-left: 10px;
+            border-radius: 10px;
+            transition: 00.4s ease;
+            @media (max-width: $mobile-breakpoint) {
+                flex-direction: column;
+             }
+
+            h2{
+                font-family: "Share Tech Mono", monospace;
+                letter-spacing: -2px;
+                font-size: 2.2rem;
+            }
+
+            h3{
+                font-size: 1.4rem;
+            }
+
+            &.welcome3:hover{
+                
+                background: #000;
+                h2{
+                    color:white;
+                }
+                h3{
+                    color:white;
+                }
+            }
         }
 
         .img1 {
-            width: 150px;
-            border-radius: 50%;
+            width: 100%px;
+            border-radius: 10px;
             margin: auto;
+        }
+
+        .img2 {
+            width: 100%px;
+            border-radius: 10px;
+            margin: auto;
+        }
+        .img3 {
+            width: 100%px;
+            border-radius: 10px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #3d3d3d;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 2px 0 0em;
+            text-align:center;
+
         }
 
         h3 {
             // width: 50%;
             color: #3d3d3d;
             font-family: "Roboto", sans-serif;
-            text-align: left;
-
+        
+            text-align:center;
             font-size: 1.5rem;
             padding: 10px;
             margin-bottom: 0px;

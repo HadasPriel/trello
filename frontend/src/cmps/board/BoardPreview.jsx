@@ -7,11 +7,10 @@ export function BoardPreview(props) {
 
     return (
         <li className="board-preview"
-            style={{
-                backgroundImage: "url(" + `${style.boardStyle.bgurl}` + ")",
-            }}>
-            <Link to={`/board/${board._id}`}></Link>
-            <p>{board.title}</p>
+            style={{ backgroundImage: `url(${style.boardStyle.bgurl})` }}>
+            <Link to={`/board/${board._id}`}>
+                <p>{board.title}</p>
+            </Link>
         </li>
     )
 }

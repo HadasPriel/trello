@@ -14,12 +14,12 @@ class _CardLabelShow extends Component {
 
     render() {
         return (
-            <ul className="card-label-show flex flex-end">
+            <ul className="card-label-show">
                 {this.props.labels.map(label => {
                     return (
-                        <li
-                            key={label.id} className={` ${label.color}`} > {label.title}
-                            <button className="hover-nav" onClick={() => { this.removeLable(label.id) }}>X</button>
+                        <li key={label.id} className={`label-edit ${label.id} flex align-center justify-center `} >
+                            <p className="label-title">{label.title}</p>
+                            {/* <button className="hover-nav" onClick={() => { this.removeLable(label.id) }}>X</button> */}
                         </li>
 
                     )

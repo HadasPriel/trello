@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Uploader} from '../Uploader'
+import React from 'react'
+import { Uploader } from '../Uploader'
 // import { connect } from 'react-redux'
 
 // import { socketService } from '../services/socketService'
@@ -13,10 +13,10 @@ export function AddImgBar(props) {
             <header className="seconde">
                 <h3>Upload image</h3>
                 <button onClick={props.toggleAddImg}>x</button>
-                
+
             </header>
             <main>
-                <Uploader addImg={props.addImg}/>
+                <Uploader addImg={props.addImg} />
                 {/* <DatePicker
                     selected={startDate}
                     onSelect={date => setStartDate(() => { props.addDeuDate(date) })}

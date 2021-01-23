@@ -17,7 +17,8 @@ class _AddCoverBar extends Component {
         await this.props.updateCard(cardToSave,)
     }
 
-    removeCover = async () => {
+    removeCover = async (ev) => {
+        ev.preventDefault()
         const cardToSave = { ...this.props.card }
         cardToSave.style = { coverType: 'top' }
         await this.props.updateCard(cardToSave)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { addGroup } from '../../store/actions/boardActions.js'
-import Icon from '@material-ui/core/Icon';
+// import Icon from '@material-ui/core/Icon';
 export class _AddNewGroup extends Component {
     state = {
         title: ''

@@ -4,8 +4,8 @@ import { BoardList } from '../cmps/board/BoardList'
 import { AddBoard } from '../cmps/board/AddBoard'
 import { loadBoards } from '../store/actions/boardActions.js'
 import { HomeHeader } from '../cmps/HomeHeader'
-import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
+// import Button from '@material-ui/core/Button';
+// import Icon from '@material-ui/core/Icon';
 
 
 // import { socketService } from '../services/socketService'
