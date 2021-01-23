@@ -66,7 +66,7 @@ class _CardEdit extends Component {
     }
 
     updateCard = async (cardToSave, txt = '') => {
-        const boardToSave = { ...this.state.board }
+        const boardToSave = { ...this.props.selectedBoard }
         const groupToSave = boardToSave.groups.find(group => group.id === this.state.groupId)
         const cardsToSave = groupToSave.cards.map(card => {
             if (card.id === cardToSave.id) return cardToSave
@@ -128,14 +128,14 @@ class _CardEdit extends Component {
     }
 
     addDeuDate = (date) => {
-        const cardToSave = { ...this.state.card }
+        const cardToSave = { ...this.props.card }
         cardToSave.duedate = date
         this.updateCard(cardToSave, `added due date`)
         // this.updateCard(cardToSave, `set card to be due at ${date}`)
     }
 
     addImg = (img) => {
-        const cardToSave = { ...this.state.card }
+        const cardToSave = { ...this.props.card }
         cardToSave.img = img
         this.updateCard(cardToSave, 'added img')
         // console.log('card to save:', cardToSave)
@@ -147,8 +147,8 @@ class _CardEdit extends Component {
 
 
     render() {
-        const { card, isDescriptionShowing, isActivitiesShowing } = this.state
-        const { users, toggleCardEdit, onRemoveCard, selectedBoard } = this.props
+        const { isDescriptionShowing, isActivitiesShowing } = this.state
+        const { card, users, toggleCardEdit, onRemoveCard, selectedBoard } = this.props
         const isLabels = (card && card.labels && card.labels.length > 0)
         const isChecklists = (card && card.checklists && card.checklists.length > 0)
         const isDuedate = (card && card.duedate)
@@ -185,14 +185,14 @@ class _CardEdit extends Component {
                                     <p>{card.description && ''}</p>
                                     <div className="inline-block">{isImg && <div className="card-img"> <CardImgShow img={card.img} card={card} updateCard={this.updateCard} /></div>}</div>
                                     <div>{isChecklists && <div><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
-                                    <div>{isActivitiesShowing && <div><CardActivitiesShow activities={selectedBoard.activities} card={card} updateCard={this.updateCard} /></div>}</div>
+                                    <div>{isActivitiesShowing && <div> <h4 className="activity-sign">Activity </h4> <CardActivitiesShow activities={selectedBoard.activities} card={card} updateCard={this.updateCard} /></div>}</div>
                                 </main>
                                 <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar}
                                     toggleAddDeutime={this.toggleAddDeutime} toggleAddImg={this.toggleAddImg} toggleAddMembers={this.toggleAddMembers} toggleDeleteCard={this.toggleDeleteCard} />
                             </div>
 
 
-                            {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} toggleLabelPalette={this.toggleLabelPalette} />}
+                            {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} toggleLabelPalette={this.toggleLabelPalette} board={selectedBoard} updateBoard={this.props.updateBoard} />}
                             {this.state.isAddChecklistShowing && <AddChecklistBar card={card} updateCard={this.updateCard} toggleChecklistBar={this.toggleChecklistBar} />}
                             {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} toggleCoverBar={this.toggleCoverBar} />}
                             {this.state.isAddDeutimeShowing && <AddDeutimeBar card={card} updateCard={this.updateCard} toggleAddDeutime={this.toggleAddDeutime} addDeuDate={this.addDeuDate} />}

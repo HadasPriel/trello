@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { GroupList } from '../cmps/group/GroupList'
 import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
 import { socketService } from '../services/socketService'
-import { loadBoard, updateBoard, updateBoardAfterSocket} from '../store/actions/boardActions.js'
+import { loadBoard, updateBoard, updateBoardAfterSocket } from '../store/actions/boardActions.js'
 import { AppHeader } from '../cmps/AppHeader'
 
 
@@ -14,8 +14,8 @@ class _Board extends Component {
         filterBy: {
             title: ''
         }
-        
-        
+
+
     }
 
     async componentDidMount() {
@@ -28,14 +28,14 @@ class _Board extends Component {
 
     }
 
-  
+
     componentWillUnmount() {
         socketService.off('update board', this.onChangeBoard)
         socketService.terminate()
-        
+
     }
 
-   
+
 
     onDragEnd = (result) => {
         // console.log('on drag result', result)
@@ -110,7 +110,7 @@ class _Board extends Component {
                     {/* <button onClick={this.toggleSideMenu}>Side Menu In Development</button> */}
                 </nav>
                 <BoardSideMenu classname={isBoardMenuShown} toggleSideMenu={this.toggleSideMenu} />
-                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd}/>}
+                {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
             </section>
         )
     }
@@ -119,7 +119,7 @@ class _Board extends Component {
 const mapStateToProps = state => {
     return {
         selectedBoard: state.boardModule.selectedBoard,
-        filterBy:state.boardModule.filterBy,
+        filterBy: state.boardModule.filterBy,
         users: state.userModule.users,
         loggedInUser: state.userModule.loggedInUser
     }

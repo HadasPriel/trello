@@ -119,6 +119,9 @@ async function getMiniUser() {
 
 async function makeBoard(boardTitle, bgUrl) {
 
+  const colors = ['#61BD4F', '#F2D600', '#FF9F1A', '#EB5A46', '#C377E0', '#0079BF']
+  const labels = colors.map(color => { return { id: color, title: '', accessibility: '' } })
+
   let miniUser = await getMiniUser()
   const newBoard = {
     title: boardTitle,
@@ -129,7 +132,9 @@ async function makeBoard(boardTitle, bgUrl) {
     },
     members: [miniUser],
     groups: [makeGroup('New List')],
-    activities: []
+    activities: [],
+
+    labels
   }
 
   const activity = await makeActivity('Created Board')

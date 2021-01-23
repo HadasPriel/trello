@@ -12,7 +12,7 @@ export function CardImgShow(props) {
 
     return (
         <span className="card-img-show">
-            <img src={img} alt=""/>
+            <img className="show" src={img} alt="" />
             {/* <p className={`duetime-fa ${urgent} `}>{` ${month} ${day}`}</p> */}
         </span>
     )

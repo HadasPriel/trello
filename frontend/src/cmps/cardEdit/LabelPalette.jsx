@@ -1,28 +1,41 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { utilService } from '../../services/utilService.js'
+import { EditLabelBar } from './EditLabelBar'
 
 // import { socketService } from '../services/socketService'
 
 class _LabelPalette extends Component {
     state = {
-        card: null
+        isEditLabelShow: false,
+        labelToEdit: null
     }
 
     componentDidMount() {
-        this.setState({ card: this.props.card })
+        console.log(this.props.board);
     }
 
 
-    addLable = (color) => {
-        const label = { id: utilService.makeId(), title: '', color }
-        const cardToSave = { ...this.state.card }
-        cardToSave.labels = (cardToSave.labels) ? [...cardToSave.labels, label] : [label]
-        // console.log('cardToSave', cardToSave);
+    addLable = (label) => {
+        console.log(label);
+        const cardToSave = { ...this.props.card }
+        if (!cardToSave.labels) cardToSave.labels = [label]
+        else {
+            const alredyOnCard = cardToSave.labels.find(currLabel => currLabel.id === label.id)
+            if (alredyOnCard) cardToSave.labels = cardToSave.labels.filter(currLabel => currLabel.id !== label.id)
+            else cardToSave.labels.push(label)
+        }
+        console.log('cardToSave', cardToSave);
         this.props.updateCard(cardToSave, 'added label')
     }
 
+    toggleEditLabel = () => {
+        this.setState({ isEditLabelShow: !this.state.isEditLabelShow })
+    }
 
+    openEditLabel = async (label) => {
+        await this.setState({ labelToEdit: label })
+        this.toggleEditLabel()
+    }
 
     render() {
 
@@ -34,12 +47,16 @@ class _LabelPalette extends Component {
                 </header>
                 <main>
                     <ul>
-                        <li key="#61BD4F" onClick={() => { this.addLable("#61BD4F") }} className="#61BD4F"></li>
-                        <li key="#F2D600" onClick={() => { this.addLable("#F2D600") }} className="#F2D600"></li>
-                        <li key="#FF9F1A" onClick={() => { this.addLable("#FF9F1A") }} className="#FF9F1A"></li>
-                        <li key="#EB5A46" onClick={() => { this.addLable("#EB5A46") }} className="#EB5A46"></li>
-                        <li key="#C377E0" onClick={() => { this.addLable("#C377E0") }} className="#C377E0"></li>
-                        <li key="#0079BF" onClick={() => { this.addLable("#0079BF") }} className="#0079BF"></li>
+                        {this.props.board.labels.map(label => {
+                            const alredyOnCard = (this.props.card.labels?.find(currLabel => currLabel.id === label.id)) ? 'alredyOnCard' : ''
+                            return (
+                                <li key={label.id} >
+                                    <div className={`${label.id}`} onClick={() => { this.addLable(label) }}>{label.title} <span className={`${alredyOnCard}`}></span></div>
+                                    <button className="open-edit-label" onClick={() => { this.openEditLabel(label) }}></button>
+                                </li>)
+                        })}
+
+                        {this.state.isEditLabelShow && <EditLabelBar toggleEditLabel={this.toggleEditLabel} label={this.state.labelToEdit} board={this.props.board} updateBoard={this.props.updateBoard} />}
                     </ul>
                 </main>
             </section>

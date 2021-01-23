@@ -8,7 +8,7 @@ export function CardLabelShowMin(props) {
             {props.labels.map(label => {
                 return (
                     <li
-                        key={label.id} className={`label ${label.color}`} > {label.title}
+                        key={label.id} className={`label ${label.id}`} >
                     </li>
                 )
             })}

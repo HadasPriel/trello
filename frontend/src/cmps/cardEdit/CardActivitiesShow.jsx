@@ -2,10 +2,8 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { TodoListShow } from './TodoListShow'
 
 // import { socketService } from '../services/socketService'
-import { utilService } from '../../services/utilService.js'
 
 class _CardActivitiesShow extends Component {
 
@@ -16,7 +14,7 @@ class _CardActivitiesShow extends Component {
             if (activity.card.id === this.props.card.id) return <div></div>
         })
         return (
-            <ul className="card-activities-show card-show ">
+            <ul className="card-activities-show card-show show">
                 {this.props.activities.map(activity => {
                     if (activity.card.id === this.props.card.id) return (
                         <li key={activity.id} >

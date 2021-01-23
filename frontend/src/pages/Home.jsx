@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { BoardList } from '../cmps/board/BoardList'
-import { AddBoard } from '../cmps/board/AddBoard'
+// import { BoardList } from '../cmps/board/BoardList'
+// import { AddBoard } from '../cmps/board/AddBoard'
 import { loadBoards } from '../store/actions/boardActions.js'
 import { HomeHeader } from '../cmps/HomeHeader'
 import Button from '@material-ui/core/Button';
@@ -56,8 +56,8 @@ class _Home extends Component {
 
             <div className="get-started-btn">
               {/* <Link to="/board" > */}
-                <Button variant="contained" size="large" color="primary" className="get-started" onClick={this.toggleNewBoard}>
-                  Get Started
+              <Button variant="contained" size="large" color="primary" className="get-started" onClick={this.toggleNewBoard}>
+                Get Started
             </Button>
               {/* </Link> */}
             </div>

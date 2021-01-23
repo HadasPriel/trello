@@ -7,6 +7,7 @@ import { Board } from './pages/Board'
 // import { AddBoard } from './cmps/board/AddBoard'
 import { Boards } from './pages/Boards'
 import { LoginSignup } from './pages/LoginSignup'
+import { Dashboard } from './pages/Dashboard'
 // import { AppHeader } from './cmps/AppHeader'
 // import { CardEdit } from './pages/CardEdit'
 
@@ -24,6 +25,7 @@ export function App() {
             {/* <Route path="/login" component={LoginSignup} /> */}
             {/* <Route path="/chat" component={Chat} /> */}
             {/* <Route path="/board/:id/card/:cardId" component={CardEdit} /> */}
+            {/* <Route path="/dashboard" component={Dashboard} /> */}
             <Route path="/board/:id" component={Board} />
             <Route path="/board" component={Boards} />
             <Route path="/login" component={LoginSignup} />
