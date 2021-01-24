@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { removeGroup } from '../../store/actions/boardActions.js'
+import { updateBoard } from '../../store/actions/boardActions.js'
 import { EditGroupTitle } from './EditGroupTitle'
 import { CardList } from '../card/CardList'
 import { AddCard } from './AddCard.jsx'
@@ -23,9 +23,14 @@ export class _GroupPreview extends Component {
         this.setState({ groupHeight: document.body.clientHeight })
     }
 
-    onRemoveGroup = (groupId) => {
-        // console.log('groupId to remove', groupId)
-        this.props.removeGroup(groupId, this.props.selectedBoard)
+    onRemoveGroup = async (groupId, groupTitle) => {
+        let boardToUpdate = JSON.parse(JSON.stringify(this.props.selectedBoard))
+        let msg = `removed list titled ${groupTitle}`
+        const updatedGroups = boardToUpdate.groups.filter(group => group.id !== groupId)
+        boardToUpdate.groups = updatedGroups
+
+        const board = await this.props.updateBoard(boardToUpdate, msg)
+        // this.props.removeGroup(groupId, this.props.selectedBoard)
     }
 
     toggleEditMode = () => {
@@ -39,12 +44,6 @@ export class _GroupPreview extends Component {
     toggleEditGroupNav = () => {
         this.setState({ isEditGroupNavShow: !this.state.isEditGroupNavShow })
     }
-
-    // toggleAddGroupMode = () => {
-
-    //     this.setState({ isOnAddGroupMode: !this.state.isOnAddGroupMode })
-    // }
-
 
 
     render() {
@@ -88,7 +87,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-    removeGroup,
+    updateBoard,
 
 };
 
