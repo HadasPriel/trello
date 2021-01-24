@@ -49,7 +49,7 @@ class _BoardSideMenu extends Component {
                 {/* <div className="hr"></div> */}
 
                 <div className="menu-container">
-                    {(!isAboutBoardShown) ? <div className="menu-item about-board" onClick={this.toggleAboutBoard}> <span className="" ></span><h5> About this board</h5></div> : <AboutBoard toggleAboutBoard={this.toggleAboutBoard} board={selectedBoard} />}
+                    {(!isAboutBoardShown) ? <div className="menu-item about-board" onClick={this.toggleAboutBoard}> <span className="" ></span><h5>  About this board</h5></div> : <AboutBoard toggleAboutBoard={this.toggleAboutBoard} board={selectedBoard} />}
                     {(!isChangeBackgroundShown) ? <p className="change-board-background" onClick={this.toggleChangeBackground}> Change Background</p> : <ChangeBoardBackground toggleChangeBackground={this.toggleChangeBackground} />}
                     {(isBoardAnalysisShown) && <p className="board-analysis" onClick={this.isBoardAnalysisShown}>Board Analysis</p>}
                     {/* {(!isDeleteBoardShown) ? <p className="delete-board" onClick={this.toggleDeleteBoard}> Delete Board</p> : <RemoveBoard toggleDeleteBoard={this.toggleDeleteBoard} board={selectedBoard} />} */}

@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { AddCard } from './AddCard.jsx'
+import { GroupPreview } from './GroupPreview.jsx'
 
 
 
@@ -37,7 +38,7 @@ export class _EditGroupNav extends Component {
             <React.Fragment>
                 < nav className="edit-group-container">
                     {(!isOnAddCardMode) ? <button onClick={this.toggleAddCardMode}>Add another card...</button> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
-                    <button onClick={this.toggleDeleteBar}>Delete this list...</button>
+                    
                 </nav >
                 <nav>
 

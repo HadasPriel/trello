@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { GroupPreview } from './GroupPreview.jsx'
 import { AddNewGroup } from './AddNewGroup.jsx'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
+
 export class _GroupList extends Component {
     state = {
         isOnAddGroupMode: false,
