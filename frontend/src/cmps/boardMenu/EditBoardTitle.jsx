@@ -21,9 +21,9 @@ export class _EditBoardTitle extends Component {
 
     onSubmit = async (ev) => {
         ev.preventDefault()
-        const {title} = this.state
+        const { title } = this.state
         if (!title) return
-        const board = {...this.props.selectedBoard, title}
+        const board = { ...this.props.selectedBoard, title }
         await this.props.updateBoard(board, `changed board title to ${title}`)
         this.props.toggleEditMode()
 
@@ -33,8 +33,8 @@ export class _EditBoardTitle extends Component {
         return (
             <div className="edit-board-title">
                 <form onSubmit={this.onSubmit} >
-                    <input className="new-title-input" placeholder="Board Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off"/>
-                    <button className="save-btn">Save</button>
+                    <input className="new-title-input" placeholder="Board Title" type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" autoFocus />
+                    <button className="add-btn">Save</button>
                 </form>
             </div>
         )

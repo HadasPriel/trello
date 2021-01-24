@@ -39,7 +39,7 @@ class _AppHeader extends Component {
                                 </label>
                             </span>
                         </nav>
-                        <h3 className="header-logo">TASKX</h3>
+                        <h3 className="header-logo">TASX</h3>
 
                         <nav className="navbar-links flex space-between align-center">
                             <button className="header-about-us normal-media"> About Us</button>

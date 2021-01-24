@@ -172,7 +172,7 @@ class _CardEdit extends Component {
 
                             <div className="permanent">
                                 <main>
-                                    <div className="show flex ">
+                                    <div className="nav-mini-show show flex ">
                                         <div className=" inline-block">{isLabels && <div> <h5>Labels </h5><CardLabelShow labels={card.labels} card={card} updateCard={this.updateCard} /></div>}</div>
                                         <div className="inline-block">{isDuedate && <div className="duedate"> <h5>Due Date </h5> <CardDuedateShow duedate={card.duedate} card={card} updateCard={this.updateCard} /></div>}</div>
                                         <div className="inline-block">{isMember && <div className="members"> <h5>Members </h5> <CardMembersShow members={card.members} card={card} updateCard={this.updateCard} /></div>}</div>

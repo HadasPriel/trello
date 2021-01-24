@@ -8,6 +8,7 @@ import { Draggable } from 'react-beautiful-dnd'
 import { EditGroupNav } from './EditGroupNav'
 
 
+
 export class _GroupPreview extends Component {
 
     state = {

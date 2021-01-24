@@ -64,6 +64,20 @@
                 background-position: 47% -10%;
             }
         }
+        @media (max-height: 969px){
+            background-size: 952px 988px;
+
+        }
+
+        @media (max-height: 923px){
+            background-size: 952px 988px;
+
+        }
+
+        @media (max-height: 577px){
+            background-size: 761px 790px;
+
+        }
 
         @media (max-width: $mobile-breakpoint) {
             background-position: 52% 200%;
@@ -100,15 +114,6 @@
                     vertical-align: baseline;
                 }
             }
-            // h1::before{
-
-            //     font-size:52px;
-            //     padding-right:5px;
-            //     vertical-align: baseline;
-
-            //     font-family: "fa";
-            //     content: "\f14a";
-            // }
 
             h3 {
                 font-family: "Roboto", sans-serif;
@@ -133,6 +138,16 @@
             .MuiButton-containedPrimary {
                 color: #fff;
                 background-color: #7f2c3f;
+            }
+
+
+            a:visited{
+                text-decoration: none;
+            }
+    
+            a:hover{
+                text-decoration: none;
+    
             }
 
             .get-started {
@@ -174,7 +189,7 @@
             margin-right: 10px;
             margin-left: 10px;
             border-radius: 10px;
-            transition: 00.4s ease;
+            transition: 00.4s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
                flex-direction: column;
             }
@@ -199,10 +214,23 @@
             background: #000;
             h2{
                 color:white;
+                text-decoration: none;
             }
             h3{
                 color:white;
+                text-decoration: none;
             }
+
+
+        }
+
+        a:visited{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: none;
+
         }
         
 
@@ -231,7 +259,7 @@
             margin-right: 10px;
             margin-left: 10px;
             border-radius: 10px;
-            transition: 00.4s ease;
+            transition: 00.4s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
                 flex-direction: column;
              }
@@ -256,6 +284,16 @@
                     color:white;
                 }
             }
+
+            a:visited{
+                text-decoration: none;
+            }
+    
+            a:hover{
+                text-decoration: none;
+    
+            }
+            
         }
         .welcome3 {
             box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
@@ -267,7 +305,7 @@
             margin-right: 10px;
             margin-left: 10px;
             border-radius: 10px;
-            transition: 00.4s ease;
+            transition: 00.4s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
                 flex-direction: column;
              }
@@ -292,6 +330,16 @@
                     color:white;
                 }
             }
+
+            a:visited{
+                text-decoration: none;
+            }
+    
+            a:hover{
+                text-decoration: none;
+    
+            }
+            
         }
 
         .img1 {
@@ -340,4 +388,47 @@
         width: 100%;
         margin-top: 5px;
     }
+}
+
+
+.footer {
+    // width: 100vw;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    h4{
+        margin-top: 17px;
+        font-size: 1rem;
+        color:#ADADAD;
+        font-weight: 100;
+        text-align: center;
+        margin-right: 20px;
+        text-transform: uppercase;
+
+        
+       
+    }
+
+
+
+    // h4::after {
+    //     margin-left:10px;
+    //     cursor: pointer;
+    //     font-family: "fa";
+    //     content: "\f0e0";
+   
+    // }
+
+    // h4::after {
+    //     margin-left:10px;
+    //     font-family: "fa";
+    //     content: "\f08c";
+    // }
 }
