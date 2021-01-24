@@ -21,8 +21,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     color: #172b4d;
     margin: 0 0 0.6em;
     line-height: 1;
@@ -71,4 +70,20 @@ textarea {
     top: 0;
     display: flex;
     flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track-piece {
+    background: rgba(9, 30, 66, 0.08);
+    border-radius: 2em;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bfc4ce;
+    cursor: auto;
+    border-radius: 2em;
 }

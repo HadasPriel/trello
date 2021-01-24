@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { HomeHeader } from '../cmps/HomeHeader'
 
 import {
   loadUsers,
@@ -138,17 +139,18 @@ class _LoginSignup extends Component {
         <br /> */}
         <button>Login</button>
       </form>
-      
+
     )
 
     const { loggedInUser } = this.props
     return (
-   
+
       <div className="login">
+        <HomeHeader />
         <h1>
           TASKX
         </h1>
- 
+
         <p>{this.state.msg}</p>
         {loggedInUser && (
           <div>
@@ -161,9 +163,9 @@ class _LoginSignup extends Component {
         {!loggedInUser && loginSection}
         {!loggedInUser && signupSection}
 
-        
 
-   
+
+
 
 
         {/* <hr /> */}
