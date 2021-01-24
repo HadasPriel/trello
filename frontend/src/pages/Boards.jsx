@@ -43,15 +43,22 @@ class _Boards extends Component {
 
                 <div className="boards">
                     {/* <div className="board-get-started-container"> */}
-                    <h1>TASKX <span> Get on Board </span></h1>
+                    <h1>TASX</h1>
+                    <h2>Get on Board</h2>
+                    <hr/>
 
-                    <section>
+                    <img className="boards-image" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611390965/faces1_tvpwft.png" alt="" />
+
+                    {/* <section>
                         <h2>templates boards</h2>
-                    </section>
+                    </section> */}
+                    <hr/>
                     <section>
-                        <h2>Yours boards</h2>
-                        <BoardList boards={this.props.boards} toggleNewBoard={this.toggleNewBoard} />
-                        <button onClick={this.toggleNewBoard}>Add board</button>
+                        <h3>Yours boards</h3>
+                        <div className="your-boards">
+                            <BoardList boards={this.props.boards} toggleNewBoard={this.toggleNewBoard} />
+                            <button onClick={this.toggleNewBoard}> + Add board</button>
+                        </div>
                     </section>
                     {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />}
                     {/* </div> */}

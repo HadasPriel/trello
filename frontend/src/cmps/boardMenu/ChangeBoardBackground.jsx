@@ -91,6 +91,7 @@ export class _ChangeBoardBackground extends Component {
         return (
             <section className="add-board-backgrounds" onClick={this.stopPropagation}>
                 <h3>Choose background</h3>
+            
                 {backgroundImages.map(background => {
                     return (
                         <div className="backgrounds-tumbs" key={background.id}

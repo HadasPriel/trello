@@ -55,56 +55,68 @@ class _Home extends Component {
             {/* <Link to="/board" ><button className="header-board"> Boards </button></Link> */}
 
             <div className="get-started-btn">
-              {/* <Link to="/board" > */}
-              <Button variant="contained" size="large" color="primary" className="get-started" onClick={this.toggleNewBoard}>
-                Get Started
+              <Link to="/board/600c37d2a8c0ad4b8ab661f6" >
+                <Button variant="contained" size="large" color="primary" className="get-started" onClick={this.toggleNewBoard}>
+                  Get Started
             </Button>
-              {/* </Link> */}
+              </Link>
             </div>
             {/* {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />} */}
           </div>
         </div >
 
+
         <div className="welcome-container">
-          <article className="welcome1">
-            <div className="left-side">
-              <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611390965/faces1_tvpwft.png" alt="" />
-            </div>
-            <div className="right-side">
-              <h2>Hit your deadlines</h2>
-              <h3>Follow your your team’s progress and keep work moving across teams  — all from one place.</h3>
-            </div>
+          <Link to="/board" >
+            <article className="welcome1">
+              <div className="left-side">
+                <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611390965/faces1_tvpwft.png" alt="" />
+              </div>
+              <div className="right-side">
+                <h2>Hit your deadlines</h2>
+                <h3>Follow your your team’s progress and keep work moving across teams  — all from one place.</h3>
+              </div>
 
 
-          </article>
 
-          <article className="welcome2">
-            <div className="right-side">
-            <h2>Collaborate and build</h2>
-              <h3>Share ideas and more so teammates can tap into the same pool of knowledge whenever they need. </h3>
-            </div>
+            </article>
+          </Link>
 
-            <div className="left-side">
-              <img className="img2" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611391150/faces2_t7s1ur.png" alt="" />
-            </div>
+          <Link to="/board" >
 
-          </article>
+            <article className="welcome2">
+              <div className="right-side">
+                <h2>Collaborate and build</h2>
+                <h3>Share ideas and more so teammates can tap into the same pool of knowledge whenever they need. </h3>
+              </div>
 
-          <article className="welcome3">
-            <div className="right-side">
-            <img className="img3" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611391298/faces3_uzu1d8.png" alt="" />
-            </div>
-            <div className="left-side">
-            <h2>Keep everyone looped in</h2>
-            <h3>Easily assign and prioritize tasks, and see who's doing what anywhere, anytime.</h3>
-            </div>
-          </article>
-          {/* <h3>Save time, avoid losing work and information, delegate, prioritize your tasks and keep track to stay on schedule.</h3> */}
+              <div className="left-side">
+                <img className="img2" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611391150/faces2_t7s1ur.png" alt="" />
+              </div>
 
+            </article>
+          </Link>
+
+          <Link to="/board" >
+            <article className="welcome3">
+              <div className="right-side">
+                <img className="img3" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611391298/faces3_uzu1d8.png" alt="" />
+              </div>
+              <div className="left-side">
+                <h2>Keep everyone looped in</h2>
+                <h3>Easily assign and prioritize tasks, and see who's doing what anywhere, anytime.</h3>
+              </div>
+            </article>
+          </Link>
         </div>
         <div className="boards-container">
           {/* <BoardList boards={this.props.boards} />
           <Uploader /> */}
+        </div>
+        <div className="footer">
+          <h4>&copy; Cofferights 2021</h4>
+
+
         </div>
       </div>
     )

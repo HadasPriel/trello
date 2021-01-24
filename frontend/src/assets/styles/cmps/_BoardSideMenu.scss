@@ -17,6 +17,13 @@
     font-weight: 400;
     transition: 0.8s ease-in-out;
     box-shadow: 0 12px 24px -6px rgba(9, 30, 66, 0.25), 0 0 0 1px rgba(9, 30, 66, 0.08);
+
+    h1 {
+        line-height: 20px;
+        margin: 14px 32px;
+        font-size: 16px;
+        text-align: center;
+    }
     &.open {
         width: 340px;
         padding: 12px;
@@ -39,6 +46,34 @@
         }
     }
 
+    .add-board-backgrounds {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    h3 {
+        width: 100%;
+    }
+
+    .backgrounds-tumbs {
+        width: 70px;
+        height: 70px;
+        border-radius: 3px;
+        margin: 5px;
+        background-size: cover;
+    }
+    .plus {
+        display: none;
+    }
+
+    .cancel-btn {
+        border-radius: 3px;
+    }
+
+    .close-menu {
+        width: 30px;
+        border-radius: 50%;
+        padding: 8px;
+    }
     .menu-container {
         width: 100%;
         div,
@@ -103,6 +138,17 @@
         .user-name {
             margin-right: 5px;
             font-weight: 600;
+        }
+        // padding: 6px 6px 6px 40px;
+        margin: 0;
+        margin-top: 10px;
+        h5 {
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+        h5::before {
+            font-family: "fa";
+            content: "\f0db";
         }
     }
 }

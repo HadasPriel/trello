@@ -100,7 +100,7 @@ export class _AddBoard extends Component {
                 <div className="add-board" onSubmit={this.onSubmit} onClick={this.stopPropagation}>
                     <input placeholder="Enter a title for your new board..." type="text" onChange={this.handleChange} value={this.state.title} name="title" autoComplete="off" required />
                     <section className="add-board-backgrounds">
-                        <h3>Choose background and get started!</h3>
+                        <h3>Enter a title, Choose a background - and get started!</h3>
                         {backgroundImages.map(background => {
                             return (
                                 <div className="backgrounds-tumbs" key={background.id}
