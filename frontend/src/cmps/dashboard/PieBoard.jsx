@@ -12,6 +12,8 @@ export function PieBoard(props) {
         })
     })
 
+
+
     const data = {
         labels: Object.keys(membersTasks),
         datasets: [{
