@@ -37,3 +37,6 @@ export function LineBoard(props) {
         </section>
     )
 }
+
+
+
