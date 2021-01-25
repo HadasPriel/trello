@@ -39,6 +39,11 @@ class _Home extends Component {
     this.props.history.push(`/board/${boardId}`)
   }
 
+  scrollToBottom = () => {
+    window.scrollTo(0,document.body.scrollHeight)
+
+  }
+
 
 
 
@@ -62,6 +67,7 @@ class _Home extends Component {
               </Link>
             </div>
             {/* {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />} */}
+            <button className="scroll-down" onClick={this.scrollToBottom}></button>
           </div>
         </div >
 
@@ -70,7 +76,7 @@ class _Home extends Component {
           <Link to="/board" >
             <article className="welcome1">
               <div className="left-side">
-                <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611390965/faces1_tvpwft.png" alt="" />
+                <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582111/tasx1_t6jc82.png" alt="" />
               </div>
               <div className="right-side">
                 <h2>Hit your deadlines</h2>
@@ -91,7 +97,7 @@ class _Home extends Component {
               </div>
 
               <div className="left-side">
-                <img className="img2" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611391150/faces2_t7s1ur.png" alt="" />
+                <img className="img2" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582232/tasx2_rjorq4.png" alt="" />
               </div>
 
             </article>
@@ -100,7 +106,7 @@ class _Home extends Component {
           <Link to="/board" >
             <article className="welcome3">
               <div className="right-side">
-                <img className="img3" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611391298/faces3_uzu1d8.png" alt="" />
+                <img className="img3" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582362/tasx3_wrsped.png" alt="" />
               </div>
               <div className="left-side">
                 <h2>Keep everyone looped in</h2>

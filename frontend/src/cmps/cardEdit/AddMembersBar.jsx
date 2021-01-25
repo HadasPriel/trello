@@ -17,27 +17,21 @@ class _AddMembersBar extends Component {
         this.setState({ member })
     }
 
-    onAddMembers = (ev) => {
-        ev.preventDefault()
-        const { card, users } = this.props
+    onAddMembers = (user) => {
+        const { card } = this.props
         const cardToSave = { ...card }
-        const userToRemove = card.members.find((currUser) => {
-            return currUser.fullname === this.state.member.fullname
-        })
+        const userToRemove = card.members.find(currUser => currUser._id === user._id)
         if (userToRemove) {
-            // const newMembers = card.members?.filter(currUser => currUser.fullname !== this.state.member.fullname)
-            // cardToSave.members = newMembers
+            const newMembers = card.members.filter(currUser => currUser._id !== user._id)
+            cardToSave.members = newMembers
             this.setState({ member: { fullname: '' } })
-            return
+
         } else {
-            const user = users.find(currUser => currUser.fullname === this.state.member.fullname)
             const miniUser = { _id: user._id, fullname: user.fullname, imgUrl: user.imgUrl }
             cardToSave.members = (cardToSave.members) ? [...cardToSave.members, miniUser] : [miniUser]
         }
-        // console.log('cardToSave', cardToSave);
         this.props.updateCard(cardToSave, `added ${this.state.member.fullname}`)
         this.setState({ member: { fullname: '' } })
-        // this.props.toggleAddMembers()
     }
 
     render() {
@@ -45,7 +39,7 @@ class _AddMembersBar extends Component {
 
         return (
 
-            <form className="add-members-bar edit-bar" onSubmit={this.onAddMembers}>
+            <div className="add-members-bar edit-bar">
                 <header className="seconde">
                     <h3>Add Members</h3>
                     <button onClick={toggleAddMembers}>x</button>
@@ -56,15 +50,27 @@ class _AddMembersBar extends Component {
                     <input list="members" name="fullname" value={this.state.member.fullname}
                             onChange={this.handleChange} autoFocus autoComplete="off" ></input>
                     </label>
-                    <datalist id="members">
+                    <ul>
+                        {users.map(user => {
+                            const alreadyMember = (card.members?.find(currUser => currUser.fullname === user.fullname)) ? 'alreadyMember' : ''
+                            return (
+                                <li className={alreadyMember} key={user._id} value={user.fullname} onClick={() => { this.onAddMembers(user) }}>
+                                    <div className="member-item">
+                                        <div className="user-img" style={{ backgroundImage: `url(${user.imgUrl})` }}></div>
+                                        {user.fullname}
+                                    </div>
+                                </li>)
+                        })}
+                    </ul>
+                    {/* <datalist id="members">
                         {users.map(user => {
                             const alreadyMember = (card.members?.find(currUser => currUser.fullname === user.fullname)) ? 'alreadyMember' : ''
                             return <option className={alreadyMember} key={user._id} value={user.fullname}> </option>
                         })}
-                    </datalist>
+                    </datalist> */}
                     <button className="add-btn">Add</button>
                 </main>
-            </form>
+            </div>
         )
     }
 }

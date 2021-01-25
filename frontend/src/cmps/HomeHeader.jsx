@@ -14,7 +14,7 @@ export function HomeHeader(props) {
             </nav>
 
             <nav className="navbar-links">
-                <Link to="/login" className="header-user"> Login</Link>
+                {!props.loggedInUser && <Link to="/login" className="header-user"> Login</Link>}
                 {props.loggedInUser && <Link to="/login" className="user-img" style={{ backgroundImage: `url(${props.loggedInUser.imgUrl})` }}> </Link>}
 
             </nav>

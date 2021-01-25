@@ -36,11 +36,12 @@
 
     .home-img-container {
         // width: 100vw;
-        height: 80vh;
+        height: 100vh;
         background-size: cover;
         background-position-x: center;
         background-repeat: no-repeat;
         // background-color: #9a9a9a;
+        //  background-color: white;
         background-color: #3078a8;
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
         padding: 10px;
@@ -50,18 +51,40 @@
         background-image: url("/assets/styles/imgs/homebg-removebg.png");
 
         animation: gradient 14s ease infinite;
+        
+        .scroll-down{
+            position: absolute;
+            top: 80vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background: none;
+            cursor: pointer;
+            outline: none;
+
+            &::after {
+                content: "\f13a";
+                font-family: "fa";            
+                font-size: 5rem;
+                color: white;
+            }
+
+
+        }
+
+
+
 
         @keyframes gradient {
             0% {
-                background-position: 47% -10%;
+                background-position: 47% -30%;
             }
 
             50% {
-                background-position: 47% -26%;
+                background-position: 47% -90%;
             }
 
             100% {
-                background-position: 47% -10%;
+                background-position: 47% -50%;
             }
         }
         @media (max-height: 969px){
@@ -82,19 +105,23 @@
         @media (max-width: $mobile-breakpoint) {
             background-position: 52% 200%;
             background-size: 510px 530px;
-            height: 75vh;
+            height: 100vh;
             @keyframes gradient {
                 0% {
-                    background-position: 49% 230%;
+                    background-position: 49% 70%;
                 }
 
                 50% {
-                    background-position: 49% 120%;
+                    background-position: 49% 100%;
                 }
 
                 100% {
-                    background-position: 49% 230%;
+                    background-position: 49% 70%;
                 }
+            }
+            .scroll-down{
+                position: absolute;
+                top: 75vh;
             }
         }
 
@@ -189,7 +216,7 @@
             margin-right: 10px;
             margin-left: 10px;
             border-radius: 10px;
-            transition: 00.4s ease-in-out;
+            // transition: 00.2s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
                flex-direction: column;
             }
@@ -200,10 +227,16 @@
                 font-family: "Share Tech Mono", monospace;
                 letter-spacing: -2px;
                 font-size: 2.2rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 2rem;
+                 }
             }
 
             h3{
                 font-size: 1.4rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 1.2rem;
+                 }
                 
             }
 
@@ -259,19 +292,26 @@
             margin-right: 10px;
             margin-left: 10px;
             border-radius: 10px;
-            transition: 00.4s ease-in-out;
+            // transition: 00.4s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
                 flex-direction: column;
              }
 
-            h2{
+             h2{
                 font-family: "Share Tech Mono", monospace;
                 letter-spacing: -2px;
                 font-size: 2.2rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 2rem;
+                 }
             }
 
             h3{
                 font-size: 1.4rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 1.2rem;
+                 }
+                
             }
 
             &.welcome2:hover{
@@ -305,19 +345,26 @@
             margin-right: 10px;
             margin-left: 10px;
             border-radius: 10px;
-            transition: 00.4s ease-in-out;
+            // transition: 00.4s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
                 flex-direction: column;
              }
 
-            h2{
+             h2{
                 font-family: "Share Tech Mono", monospace;
                 letter-spacing: -2px;
                 font-size: 2.2rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 2rem;
+                 }
             }
 
             h3{
                 font-size: 1.4rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 1.2rem;
+                 }
+                
             }
 
             &.welcome3:hover{

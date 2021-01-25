@@ -1,17 +1,14 @@
 
-
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { AddCard } from './AddCard.jsx'
-import { GroupPreview } from './GroupPreview.jsx'
-
+import { RemoveList } from './RemoveList'
 
 
 export class _EditGroupNav extends Component {
 
     state = {
         isOnAddCardMode: false,
-        // isEditMode: false,
         isDeleteBarShow: false
     }
 
@@ -20,10 +17,7 @@ export class _EditGroupNav extends Component {
         this.setState({ isDeleteBarShow: !this.state.isDeleteBarShow })
     }
 
-    // toggleEditMode = () => {
-
-    //     this.setState({ isEditMode: !this.state.isEditMode })
-    // }
+   
     toggleAddCardMode = () => {
 
         this.setState({ isOnAddCardMode: !this.state.isOnAddCardMode })
@@ -38,11 +32,9 @@ export class _EditGroupNav extends Component {
             <React.Fragment>
                 < nav className="edit-group-container">
                     {(!isOnAddCardMode) ? <button onClick={this.toggleAddCardMode}>Add another card...</button> : <AddCard group={group} toggleAddCardMode={this.toggleAddCardMode} />}
+                    {(!isDeleteBarShow) ? <button onClick={this.toggleDeleteBar}>Delete this list...</button> : <RemoveList group={group} toggleDeleteBar={this.toggleDeleteBar} onRemoveGroup={onRemoveGroup} />}
                     
                 </nav >
-                <nav>
-
-                </nav>
             </React.Fragment>
         )
     }

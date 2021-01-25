@@ -47,7 +47,7 @@ class _Boards extends Component {
                     <h2>Get on Board</h2>
                     <hr/>
 
-                    <img className="boards-image" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611390965/faces1_tvpwft.png" alt="" />
+                    <img className="boards-image" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582232/tasx2_rjorq4.png" alt="" />
 
                     {/* <section>
                         <h2>templates boards</h2>

@@ -23,7 +23,7 @@ export class _ChangeBoardBackground extends Component {
     onSubmit = async () => {
         let boardToUpdate = JSON.parse(JSON.stringify(this.props.selectedBoard))
         boardToUpdate.style.bgurl = this.state.bgurl
-        await  await this.props.updateBoard(boardToUpdate, 'changed background')
+       await this.props.updateBoard(boardToUpdate, 'changed background')
     }
 
     onCancelAdd = (ev) => {

@@ -24,20 +24,27 @@
         line-height: 32px;
         padding: 0 12px;
         color: #fff;
-        margin: 0;
-        display: inline-block;
+        margin: auto;
+        // display: inline-block;
     }
 
     .header-logo {
         position: absolute;
-        right: 150px;
-        transform: translate(50%);
+        left: 50%;
+        transform: translate-x(50%);
+      
         display: inline-block;
         font-family: "TechMono", monospace;
+        font-size: 23px;
+        
         color: rgba(255, 255, 255, 0.8);
         line-height: 32px;
-        margin: 0;
+        margin: auto;
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+        @media (max-width: $narrow-breakpoint){
+            left: 47%
+        }
+
     }
 
     button,
@@ -113,8 +120,8 @@
         .narrow-media {
             display: inline-block;
         }
-        .header-logo {
-            position: unset;
-        }
+        // .header-logo {
+        //     left: 48%;
+        // }
     }
 }

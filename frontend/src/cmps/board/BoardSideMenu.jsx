@@ -4,13 +4,15 @@ import { AboutBoard } from '../boardMenu/AboutBoard'
 import { ChangeBoardBackground } from '../boardMenu/ChangeBoardBackground'
 import { RemoveBoard } from '../boardMenu/RemoveBoard'
 import { ActivityBoard } from '../boardMenu/ActivityBoard'
+import { Dashboard } from '../dashboard/Dashboard'
 
 class _BoardSideMenu extends Component {
     state = {
         isAboutBoardShown: false,
         isChangeBackgroundShown: false,
         isBoardAnalysisShown: false,
-        isDeleteBoardShown: false
+        isDeleteBoardShown: false,
+        isDashboardShown: false
     }
 
     async componentDidMount() {
@@ -28,12 +30,14 @@ class _BoardSideMenu extends Component {
     }
     toggleDeleteBoard = () => {
         this.setState({ isDeleteBoardShown: !this.state.isDeleteBoardShown })
-
+    }
+    toggleDashboard = () => {
+        this.setState({ isDashboardShown: !this.state.isDashboardShown })
     }
 
 
     render() {
-        const { isAboutBoardShown } = this.state
+        const { isAboutBoardShown, isDashboardShown } = this.state
         const { isChangeBackgroundShown } = this.state
         const { isBoardAnalysisShown } = this.state
         const { isDeleteBoardShown } = this.state
@@ -49,13 +53,14 @@ class _BoardSideMenu extends Component {
                 {/* <div className="hr"></div> */}
 
                 <div className="menu-container">
-                    {(!isAboutBoardShown) ? <div className="menu-item about-board" onClick={this.toggleAboutBoard}> <span className="" ></span><h5>  About this board</h5></div> : <AboutBoard toggleAboutBoard={this.toggleAboutBoard} board={selectedBoard} />}
-                    {(!isChangeBackgroundShown) ? <p className="change-board-background" onClick={this.toggleChangeBackground}> Change Background</p> : <ChangeBoardBackground toggleChangeBackground={this.toggleChangeBackground} />}
-                    {(isBoardAnalysisShown) && <p className="board-analysis" onClick={this.isBoardAnalysisShown}>Board Analysis</p>}
+                    {(!isAboutBoardShown) ? <div className="menu-item" onClick={this.toggleAboutBoard}> <p className="menu-about"> About this board</p></div> : <AboutBoard toggleAboutBoard={this.toggleAboutBoard} board={selectedBoard} />}
+                    {(!isChangeBackgroundShown) ? <p className="menu-item menu-background" onClick={this.toggleChangeBackground}> Change Background</p> : <ChangeBoardBackground toggleChangeBackground={this.toggleChangeBackground} />}
+                    {/* {(isBoardAnalysisShown) && <p className="board-analysis" onClick={this.isBoardAnalysisShown}>Board Analysis</p>} */}
+                    {(!isDashboardShown) ? <p className="menu-dashboard menu-item" onClick={this.toggleDashboard}>Board Analysis</p> : <Dashboard toggleDashboard={this.toggleDashboard} />}
                     {/* {(!isDeleteBoardShown) ? <p className="delete-board" onClick={this.toggleDeleteBoard}> Delete Board</p> : <RemoveBoard toggleDeleteBoard={this.toggleDeleteBoard} board={selectedBoard} />} */}
-                   { selectedBoard.activities && <ActivityBoard activities={selectedBoard.activities}/>}
+                    <hr />
+                    {selectedBoard.activities && <ActivityBoard activities={selectedBoard.activities} />}
                 </div>
-
 
             </section>
 

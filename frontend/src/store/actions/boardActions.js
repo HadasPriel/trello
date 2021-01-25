@@ -64,24 +64,6 @@ export function addGroup(title, boardToChange) {
   }
 }
 
-export function removeGroup(groupId, boardToChange) {
-  return async dispatch => {
-    try {
-
-      let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
-      const updatedGroups = boardToUpdate.groups.filter(group => group.id !== groupId)
-      boardToUpdate.groups = updatedGroups
-      const board = await boardService.updateBoard(boardToUpdate)
-
-      dispatch({ type: 'SET_BOARD', board })
-
-
-    } catch (err) {
-      console.log('BoardActions: err in removeGroup', err)
-    }
-  }
-}
-
 
 export function updateGroup(groupTitleToUpdate, groupId, boardToChange) {
   return async dispatch => {
@@ -217,6 +199,25 @@ export function updateBoardAfterSocket(changedBoard) {
 //       socketService.emit('update board', board)
 //     } catch (err) {
 //       console.log('BoardActions: err in addCard', err)
+//     }
+//   }
+// }
+
+
+// export function removeGroup(groupId, boardToChange) {
+//   return async dispatch => {
+//     try {
+
+//       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
+//       const updatedGroups = boardToUpdate.groups.filter(group => group.id !== groupId)
+//       boardToUpdate.groups = updatedGroups
+//       const board = await boardService.updateBoard(boardToUpdate)
+
+//       socketService.emit('update board', board)
+
+
+//     } catch (err) {
+//       console.log('BoardActions: err in removeGroup', err)
 //     }
 //   }
 // }
