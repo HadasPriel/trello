@@ -68,7 +68,7 @@ function makeGroup(groupTitle) {
       checklists: [],
       members: [],
       labels: [],
-      createdAt: '',
+      createdAt: Date.now(),
       dueDate: '',
       byMember: {},
       style: { coverType: 'top' }
@@ -90,7 +90,7 @@ function makeCard(cardTitle) {
     checklists: [],
     members: [],
     labels: [],
-    createdAt: '',
+    createdAt: Date.now(),
     dueDate: '',
     byMember: {},
     style: { coverType: 'top' }

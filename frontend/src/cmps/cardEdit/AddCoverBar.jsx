@@ -14,7 +14,7 @@ class _AddCoverBar extends Component {
     handleStyle = async (ev) => {
         const cardToSave = { ...this.props.card }
         cardToSave.style = (cardToSave.style) ? { ...cardToSave.style, [ev.target.name]: ev.target.value } : { [ev.target.name]: ev.target.value }
-        await this.props.updateCard(cardToSave,)
+        await this.props.updateCard(cardToSave)
     }
 
     removeCover = async (ev) => {
@@ -29,7 +29,7 @@ class _AddCoverBar extends Component {
     render() {
 
         return (
-            <form className="add-cover-bar edit-bar">
+            <div className="add-cover-bar edit-bar">
                 <header className="seconde">
                     <h3>cover</h3>
                     <button onClick={this.props.toggleCoverBar}>x</button>
@@ -93,7 +93,7 @@ class _AddCoverBar extends Component {
                         </label>
                     </nav>
                 </main>
-            </form>
+            </div>
 
         )
     }

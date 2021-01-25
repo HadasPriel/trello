@@ -23,7 +23,7 @@ export class _ChangeBoardBackground extends Component {
     onSubmit = async () => {
         let boardToUpdate = JSON.parse(JSON.stringify(this.props.selectedBoard))
         boardToUpdate.style.bgurl = this.state.bgurl
-       await this.props.updateBoard(boardToUpdate, 'changed background')
+        await this.props.updateBoard(boardToUpdate, 'changed background')
     }
 
     onCancelAdd = (ev) => {
@@ -89,19 +89,23 @@ export class _ChangeBoardBackground extends Component {
 
         ]
         return (
-            <section className="add-board-backgrounds" onClick={this.stopPropagation}>
-                <h3>Choose background</h3>
-            
-                {backgroundImages.map(background => {
-                    return (
-                        <div className="backgrounds-tumbs" key={background.id}
-                            style={{ backgroundImage: `url(${background.bgurl})` }}
-                            onClick={() => this.onChooseBackground(background.bgurl)}>
-                            <div className="plus">+</div>
-                        </div>
-                    )
-                })}
-                <button className="cancel-btn" onClick={() => { this.props.toggleChangeBackground() }}>X Cancel</button> 
+            <section className="side-menu-sub-item " onClick={this.stopPropagation}>
+                <header>
+                    <h3>Choose background</h3>
+                    <button className="close-menu" onClick={this.props.toggleChangeBackground}>x</button>
+                </header>
+                <main className="add-board-backgrounds">
+                    {backgroundImages.map(background => {
+                        return (
+                            <div className="backgrounds-tumbs" key={background.id}
+                                style={{ backgroundImage: `url(${background.bgurl})` }}
+                                onClick={() => this.onChooseBackground(background.bgurl)}>
+                                <div className="plus">+</div>
+                            </div>
+                        )
+                    })}
+                </main>
+
             </section>
 
         )

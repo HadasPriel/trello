@@ -29,8 +29,8 @@
     }
 
     .header-logo {
-        position: absolute;
-        right: 150px;
+        position: fixed;
+        right: 50%;
         transform: translate(50%);
         display: inline-block;
         font-family: "TechMono", monospace;

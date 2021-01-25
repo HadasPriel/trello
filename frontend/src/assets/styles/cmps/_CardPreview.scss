@@ -1,6 +1,6 @@
 .card-preview {
     position: relative;
-    width: 250px;
+    // width: 250px;
     min-height: 40px;
     background-color: #fff;
     margin-bottom: 8px;
@@ -15,7 +15,7 @@
     }
 
     &.top::before {
-        padding: 5px 125px;
+        padding: 5px 128px;
         border-radius: 3px 3px 0 0;
         position: relative;
         left: -5px;
@@ -134,7 +134,7 @@
     }
 
     nav {
-        font-size: 10px;
+        font-size: 12px;
         color: #5e6c84;
 
         .checklistSign::before {
@@ -145,7 +145,7 @@
 
     .duetime-fa-min {
         display: inline-block;
-        font-size: 10px;
+        // font-size: 10px;
         color: #5e6c84;
         margin: 0;
         // color: red;
