@@ -5,12 +5,14 @@ import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
 import { socketService } from '../services/socketService'
 import { loadBoard, updateBoard, updateBoardAfterSocket } from '../store/actions/boardActions.js'
 import { AppHeader } from '../cmps/AppHeader'
+import { Dashboard } from '../cmps/dashboard/Dashboard'
 
 
 class _Board extends Component {
     state = {
         board: {},
         isBoardMenuShown: false,
+        isDashboardShown: false,
         filterBy: {
             title: ''
         }
@@ -83,11 +85,14 @@ class _Board extends Component {
     toggleSideMenu = () => {
         this.setState({ isBoardMenuShown: !this.state.isBoardMenuShown })
     }
+    toggleDashboard = () => {
+        this.setState({ isDashboardShown: !this.state.isDashboardShown })
+    }
 
 
     render() {
         const { selectedBoard } = this.props
-        const { isBoardMenuShown } = this.state
+        const { isBoardMenuShown, isDashboardShown } = this.state
 
         if (!selectedBoard) return <div>Loading...</div>
         // console.log('BBB', selectedBoard.style.bgurl)
@@ -102,7 +107,7 @@ class _Board extends Component {
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat"
                 }}>
-                <AppHeader toggleSideMenu={this.toggleSideMenu} />
+                <AppHeader toggleSideMenu={this.toggleSideMenu} toggleDashboard={this.toggleDashboard} />
                 {/* <BoardHeader board={selectedBoard} toggleSideMenu={this.toggleSideMenu} /> */}
                 {/* <div className="board-title"> {selectedBoard.title}</div> */}
                 <nav>
@@ -111,6 +116,7 @@ class _Board extends Component {
                 </nav>
                 <BoardSideMenu classname={isBoardMenuShown} toggleSideMenu={this.toggleSideMenu} />
                 {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
+                {(isDashboardShown) && <Dashboard toggleDashboard={this.toggleDashboard} />}
 
             </section>
         )

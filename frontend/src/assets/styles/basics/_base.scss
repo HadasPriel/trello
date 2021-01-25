@@ -8,6 +8,7 @@ html {
     line-height: 1.6;
     color: $clr2;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,11 +38,11 @@ img {
     width: 100%;
 }
 
-p {
-    // margin: 0 0 1em;
-    // max-width: 40ch;
-    // font-size: 1rem;
-}
+// p {
+//     // margin: 0 0 1em;
+//     // max-width: 40ch;
+//     // font-size: 1rem;
+// }
 
 a {
     text-decoration: none;
@@ -52,14 +53,17 @@ a:hover {
 
 input {
     border: 0px;
+    outline: none;
 }
 
 button {
     cursor: pointer;
+    outline: none;
 }
 
 textarea {
     resize: none;
+    outline: none;
 }
 
 .main-app {
@@ -75,6 +79,7 @@ textarea {
 ::-webkit-scrollbar {
     height: 8px;
     width: 8px;
+    outline: none;
 }
 /* Track */
 ::-webkit-scrollbar-track-piece {

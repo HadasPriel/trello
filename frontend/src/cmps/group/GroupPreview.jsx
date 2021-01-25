@@ -62,7 +62,7 @@ export class _GroupPreview extends Component {
                                         <button className="menu-group" onClick={() => this.toggleEditGroupNav(group.id)}></button>
                                         {isEditGroupNavShow && <EditGroupNav group={group} onRemoveGroup={this.onRemoveGroup} />}
                                     </header>
-                                    <main style={{ maxHeight: `${this.state.groupHeight - 250}px` }}>
+                                    <main style={{ maxHeight: `${this.state.groupHeight - 200}px` }}>
                                         <div className="main-group-wraper">
                                             {group.cards && <CardList groupId={group.id} cards={group.cards} />}
                                         </div>

@@ -68,7 +68,7 @@ class _AddMembersBar extends Component {
                             return <option className={alreadyMember} key={user._id} value={user.fullname}> </option>
                         })}
                     </datalist> */}
-                    <button className="add-btn">Add</button>
+                    {/* <button className="add-btn">Add</button> */}
                 </main>
             </div>
         )

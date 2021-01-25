@@ -12,7 +12,6 @@ class _BoardSideMenu extends Component {
         isChangeBackgroundShown: false,
         isBoardAnalysisShown: false,
         isDeleteBoardShown: false,
-        isDashboardShown: false
     }
 
     async componentDidMount() {
@@ -31,13 +30,11 @@ class _BoardSideMenu extends Component {
     toggleDeleteBoard = () => {
         this.setState({ isDeleteBoardShown: !this.state.isDeleteBoardShown })
     }
-    toggleDashboard = () => {
-        this.setState({ isDashboardShown: !this.state.isDashboardShown })
-    }
+
 
 
     render() {
-        const { isAboutBoardShown, isDashboardShown } = this.state
+        const { isAboutBoardShown } = this.state
         const { isChangeBackgroundShown } = this.state
         const { isBoardAnalysisShown } = this.state
         const { isDeleteBoardShown } = this.state
@@ -56,7 +53,7 @@ class _BoardSideMenu extends Component {
                     {(!isAboutBoardShown) ? <div className="menu-item" onClick={this.toggleAboutBoard}> <p className="menu-about"> About this board</p></div> : <AboutBoard toggleAboutBoard={this.toggleAboutBoard} board={selectedBoard} />}
                     {(!isChangeBackgroundShown) ? <p className="menu-item menu-background" onClick={this.toggleChangeBackground}> Change Background</p> : <ChangeBoardBackground toggleChangeBackground={this.toggleChangeBackground} />}
                     {/* {(isBoardAnalysisShown) && <p className="board-analysis" onClick={this.isBoardAnalysisShown}>Board Analysis</p>} */}
-                    {(!isDashboardShown) ? <p className="menu-dashboard menu-item" onClick={this.toggleDashboard}>Board Analysis</p> : <Dashboard toggleDashboard={this.toggleDashboard} />}
+                    {/* {(!isDashboardShown) ? <p className="menu-dashboard menu-item" onClick={this.toggleDashboard}>Board Analysis</p> : <Dashboard toggleDashboard={this.toggleDashboard} />} */}
                     {/* {(!isDeleteBoardShown) ? <p className="delete-board" onClick={this.toggleDeleteBoard}> Delete Board</p> : <RemoveBoard toggleDeleteBoard={this.toggleDeleteBoard} board={selectedBoard} />} */}
                     <hr />
                     {selectedBoard.activities && <ActivityBoard activities={selectedBoard.activities} />}

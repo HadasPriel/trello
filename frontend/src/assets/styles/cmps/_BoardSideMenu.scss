@@ -49,6 +49,7 @@
     .add-board-backgrounds {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     h3 {
         width: 100%;
@@ -58,8 +59,10 @@
         width: 70px;
         height: 70px;
         border-radius: 3px;
-        margin: 5px;
+        margin: 10px;
         background-size: cover;
+        margin-bottom: 10px;
+        cursor: pointer;
     }
     .plus {
         display: none;
@@ -79,6 +82,7 @@
         div,
         p {
             margin: 0;
+            margin-bottom: 10px;
         }
 
         .menu-item {

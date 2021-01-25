@@ -36,7 +36,7 @@ class _BoardFilter extends Component {
             <input type="text" name="title"
                 value={this.state.filterBy.title}
                 // placeholder="Search in development"
-                autoComplete="off"
+                autoComplete="off" placeholder ='Find cards by name...'
                 onChange={this.handleChange} className="header-filter" />
 
         )

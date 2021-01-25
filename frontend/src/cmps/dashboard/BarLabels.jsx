@@ -1,49 +1,35 @@
-import { HorizontalBar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
-export function BarBoard(props) {
-
-    const groupCardMap = props.board.groups.reduce((cardsMapAcc, group) => {
-        cardsMapAcc[group.title] = group.cards.length
-        return cardsMapAcc
-    }, {})
-
+export function BarLabels(props) {
+    const labelsTitle = []
+    const labelsTotal = []
+    props.board.groups.forEach((group) => {
+        group.cards?.forEach(card => {
+            card.labels?.forEach(label => {
+                if (labelsTotal[label.id]) labelsTotal[label.id]++
+                else labelsTotal[label.id] = 1
+                labelsTitle[label.id] = label.title
+            })
+        })
+    })
 
     const myData = {
-        labels: Object.keys(groupCardMap),
+        labels: Object.values(labelsTitle),
         datasets: [{
             label: 'tasks',
-            data: Object.values(groupCardMap),
-            backgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-            ],
-            hoverBackgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-            ]
+            data: Object.values(labelsTotal),
+            backgroundColor: Object.keys(labelsTitle),
+            hoverBackgroundColor: Object.keys(labelsTitle)
 
         }]
     }
 
     return (
         <section style={{ width: '40%' }}>
-            <HorizontalBar data={myData}
+            <Bar
+                data={myData}
                 options={{
-                    title: { display: true, text: 'Total cards per group', fontColor: '#ffff' },
+                    title: { display: true, text: 'Labels use', fontColor: '#ffff' },
                     legend: { display: false },
                     ticks: { precision: 0 },
                     scales: {
