@@ -12,11 +12,12 @@ function emit({ type, data }) {
 
 
 function connectSockets(http, session) {
+    const allowedOrigins = (process.env.NODE_ENV === 'production') ? true : ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://127.0.0.1:3000', 'http://localhost:3000']
     gIo = require("socket.io")(http, {
         cors: {
-            origin: 'http://localhost:3000',
-            methods: ["GET", "POST"],
-            allowedHeaders: ["my-custom-header"],
+            origin: allowedOrigins,
+            methods: ['GET', 'POST', 'PUT', 'DELETE'],
+            // allowedHeaders: ["my-custom-header"],
             credentials: true
         }
     })
@@ -43,10 +44,10 @@ function connectSockets(http, session) {
             logger.debug('Session ID is', socket.handshake.sessionID)
             socket.myBoardId = boardId
         }),
-        socket.on('update board', board => {
-            gIo.to(socket.myBoardId).emit('update board', board)
-            console.log(board)
-        })
+            socket.on('update board', board => {
+                gIo.to(socket.myBoardId).emit('update board', board)
+                console.log(board)
+            })
 
     })
 }

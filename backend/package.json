@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "production ready server",
     "main": "server.js",
+    "engines":{
+        "node": "14.x"
+    },
     "scripts": {
         "start": "set NODE_ENV=development && nodemon server.js",
         "server:dev": "set NODE_ENV=development && nodemon server.js",
