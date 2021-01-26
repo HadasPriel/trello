@@ -40,7 +40,7 @@ class _Home extends Component {
   }
 
   scrollToBottom = () => {
-    window.scrollTo(0,document.body.scrollHeight)
+    window.scrollTo(0, document.body.scrollHeight)
 
   }
 
@@ -73,51 +73,50 @@ class _Home extends Component {
 
 
         <div className="welcome-container">
-          <Link to="/board" >
-            <article className="welcome1">
-              <div className="left-side">
-                <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582111/tasx1_t6jc82.png" alt="" />
-              </div>
-              <div className="right-side">
-                <h2>Hit your deadlines</h2>
-                <h3>Follow your your team’s progress and keep work moving across teams  — all from one place.</h3>
-              </div>
+
+          <article className="welcome1">
+            <div className="left-side">
+              <img className="img1" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582111/tasx1_t6jc82.png" alt="" />
+            </div>
+            <div className="right-side">
+              <h2>Hit your deadlines</h2>
+              <h3>Follow your your team’s progress and keep work moving across teams  — all from one place.</h3>
+            </div>
 
 
 
-            </article>
-          </Link>
+          </article>
 
-          <Link to="/board" >
 
-            <article className="welcome2">
-              <div className="right-side">
-                <h2>Collaborate and build</h2>
-                <h3>Share ideas and more so teammates can tap into the same pool of knowledge whenever they need. </h3>
-              </div>
 
-              <div className="left-side">
-                <img className="img2" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582232/tasx2_rjorq4.png" alt="" />
-              </div>
 
-            </article>
-          </Link>
+          <article className="welcome2">
+            <div className="right-side">
+              <h2>Collaborate and build</h2>
+              <h3>Share ideas and more so teammates can tap into the same pool of knowledge whenever they need. </h3>
+            </div>
 
-          <Link to="/board" >
-            <article className="welcome3">
-              <div className="right-side">
-                <img className="img3" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582362/tasx3_wrsped.png" alt="" />
-              </div>
-              <div className="left-side">
-                <h2>Keep everyone looped in</h2>
-                <h3>Easily assign and prioritize tasks, and see who's doing what anywhere, anytime.</h3>
-              </div>
-            </article>
-          </Link>
+            <div className="left-side">
+              <img className="img2" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582232/tasx2_rjorq4.png" alt="" />
+            </div>
+
+          </article>
+
+
+
+          <article className="welcome3">
+            <div className="right-side">
+              <img className="img3" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582362/tasx3_wrsped.png" alt="" />
+            </div>
+            <div className="left-side">
+              <h2>Keep everyone looped in</h2>
+              <h3>Easily assign and prioritize tasks, and see who's doing what anywhere, anytime.</h3>
+            </div>
+          </article>
+
         </div>
         <div className="boards-container">
-          {/* <BoardList boards={this.props.boards} />
-          <Uploader /> */}
+
         </div>
         <div className="footer">
           <h4>&copy; Cofferights 2021</h4>
