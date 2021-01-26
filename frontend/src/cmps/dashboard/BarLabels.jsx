@@ -29,7 +29,7 @@ export function BarLabels(props) {
             <Bar
                 data={myData}
                 options={{
-                    title: { display: true, text: 'Labels use', fontColor: '#ffff' },
+                    title: { display: true, text: 'Labels Usage', fontColor: '#ffff', fontSize: '14' },
                     legend: { display: false },
                     ticks: { precision: 0 },
                     scales: {

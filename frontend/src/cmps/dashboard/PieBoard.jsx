@@ -18,16 +18,8 @@ export function PieBoard(props) {
         labels: Object.keys(membersTaskMap),
         datasets: [{
             data: Object.values(membersTaskMap),
-            backgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-            ],
-            hoverBackgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-            ],
+            backgroundColor: ['#61BD4F', '#F2D600', '#FF9F1A', '#EB5A46', '#C377E0', '#0079BF'],
+            hoverBackgroundColor: ['#61BD4F', '#F2D600', '#FF9F1A', '#EB5A46', '#C377E0', '#0079BF'],
             fontColor: '#ffff'
         }]
     }
@@ -35,7 +27,7 @@ export function PieBoard(props) {
     return (
         <section style={{ width: '40%' }}>
             <Pie data={data} options={{
-                title: { display: true, text: 'Total card per member', fontColor: '#ffff' },
+                title: { display: true, text: 'Total Cards Per Member', fontColor: '#ffff', fontSize: '14' },
                 legend: { display: false },
                 ticks: { precision: 0 },
                 scales: {

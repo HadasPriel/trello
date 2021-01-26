@@ -45,14 +45,14 @@
         background-color: #3078a8;
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
         padding: 10px;
-        background-position: 49% -49%;
+        background-position: 49% -640%;
         background-size: 1190px 1236px;
         // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/styles/imgs/homebg-removebg.png");
         background-image: url("/assets/styles/imgs/homebg-removebg.png");
 
         animation: gradient 14s ease infinite;
-        
-        .scroll-down{
+
+        .scroll-down {
             position: absolute;
             top: 80vh;
             left: 50%;
@@ -63,43 +63,33 @@
 
             &::after {
                 content: "\f13a";
-                font-family: "fa";            
+                font-family: "fa";
                 font-size: 5rem;
                 color: white;
             }
-
-
         }
-
-
-
 
         @keyframes gradient {
             0% {
-                background-position: 47% -30%;
+                background-position: 49% -500%;
             }
-
             50% {
-                background-position: 47% -90%;
+                background-position: 49% -640%;
             }
-
             100% {
-                background-position: 47% -50%;
+                background-position: 49% -500%;
             }
         }
-        @media (max-height: 969px){
+        @media (max-height: 969px) {
             background-size: 952px 988px;
-
         }
 
-        @media (max-height: 923px){
+        @media (max-height: 923px) {
             background-size: 952px 988px;
-
         }
 
-        @media (max-height: 577px){
+        @media (max-height: 577px) {
             background-size: 761px 790px;
-
         }
 
         @media (max-width: $mobile-breakpoint) {
@@ -119,7 +109,7 @@
                     background-position: 49% 70%;
                 }
             }
-            .scroll-down{
+            .scroll-down {
                 position: absolute;
                 top: 75vh;
             }
@@ -167,14 +157,12 @@
                 background-color: #7f2c3f;
             }
 
-
-            a:visited{
+            a:visited {
                 text-decoration: none;
             }
-    
-            a:hover{
+
+            a:hover {
                 text-decoration: none;
-    
             }
 
             .get-started {
@@ -196,76 +184,66 @@
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
-        
 
         article {
             transition: width 2s;
-            
+
             border: 10px black;
         }
 
         .welcome1 {
-            box-shadow: 0 1px 0 rgba(56, 65, 80, 0.25), ;
+            box-shadow: 0 1px 0 rgba(56, 65, 80, 0.25);
             border-radius: 10px;
             padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-          
+
             margin-bottom: 20px;
             margin-right: 10px;
             margin-left: 10px;
             border-radius: 10px;
             // transition: 00.2s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
-               flex-direction: column;
+                flex-direction: column;
             }
 
-            
-
-            h2{
+            h2 {
                 font-family: "Share Tech Mono", monospace;
                 letter-spacing: -2px;
                 font-size: 2.2rem;
                 @media (max-width: $mobile-breakpoint) {
                     font-size: 2rem;
-                 }
+                }
             }
 
-            h3{
+            h3 {
                 font-size: 1.4rem;
                 @media (max-width: $mobile-breakpoint) {
                     font-size: 1.2rem;
-                 }
-                
+                }
             }
-
         }
 
-        .welcome1:hover{
-                
+        .welcome1:hover {
             background: #000;
-            h2{
-                color:white;
+            h2 {
+                color: white;
                 text-decoration: none;
             }
-            h3{
-                color:white;
+            h3 {
+                color: white;
                 text-decoration: none;
             }
-
-
         }
 
-        a:visited{
+        a:visited {
             text-decoration: none;
         }
 
-        a:hover{
+        a:hover {
             text-decoration: none;
-
         }
-        
 
         .right-side {
             width: 50%;
@@ -277,7 +255,7 @@
         .left-side {
             width: 50%;
             @media (max-width: $mobile-breakpoint) {
-                width:100%;
+                width: 100%;
             }
         }
 
@@ -295,45 +273,41 @@
             // transition: 00.4s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
                 flex-direction: column;
-             }
+            }
 
-             h2{
+            h2 {
                 font-family: "Share Tech Mono", monospace;
                 letter-spacing: -2px;
                 font-size: 2.2rem;
                 @media (max-width: $mobile-breakpoint) {
                     font-size: 2rem;
-                 }
+                }
             }
 
-            h3{
+            h3 {
                 font-size: 1.4rem;
                 @media (max-width: $mobile-breakpoint) {
                     font-size: 1.2rem;
-                 }
-                
+                }
             }
 
-            &.welcome2:hover{
-                
+            &.welcome2:hover {
                 background: #000;
-                h2{
-                    color:white;
+                h2 {
+                    color: white;
                 }
-                h3{
-                    color:white;
+                h3 {
+                    color: white;
                 }
             }
 
-            a:visited{
+            a:visited {
                 text-decoration: none;
             }
-    
-            a:hover{
+
+            a:hover {
                 text-decoration: none;
-    
             }
-            
         }
         .welcome3 {
             box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
@@ -348,45 +322,41 @@
             // transition: 00.4s ease-in-out;
             @media (max-width: $mobile-breakpoint) {
                 flex-direction: column;
-             }
+            }
 
-             h2{
+            h2 {
                 font-family: "Share Tech Mono", monospace;
                 letter-spacing: -2px;
                 font-size: 2.2rem;
                 @media (max-width: $mobile-breakpoint) {
                     font-size: 2rem;
-                 }
+                }
             }
 
-            h3{
+            h3 {
                 font-size: 1.4rem;
                 @media (max-width: $mobile-breakpoint) {
                     font-size: 1.2rem;
-                 }
-                
+                }
             }
 
-            &.welcome3:hover{
-                
+            &.welcome3:hover {
                 background: #000;
-                h2{
-                    color:white;
+                h2 {
+                    color: white;
                 }
-                h3{
-                    color:white;
+                h3 {
+                    color: white;
                 }
             }
 
-            a:visited{
+            a:visited {
                 text-decoration: none;
             }
-    
-            a:hover{
+
+            a:hover {
                 text-decoration: none;
-    
             }
-            
         }
 
         .img1 {
@@ -411,16 +381,15 @@
             text-transform: uppercase;
             padding: 10px;
             margin: 2px 0 0em;
-            text-align:center;
-
+            text-align: center;
         }
 
         h3 {
             // width: 50%;
             color: #3d3d3d;
             font-family: "Roboto", sans-serif;
-        
-            text-align:center;
+
+            text-align: center;
             font-size: 1.5rem;
             padding: 10px;
             margin-bottom: 0px;
@@ -437,7 +406,6 @@
     }
 }
 
-
 .footer {
     // width: 100vw;
     height: 50px;
@@ -450,27 +418,22 @@
     display: flex;
     justify-content: center;
 
-    h4{
+    h4 {
         margin-top: 17px;
         font-size: 1rem;
-        color:#ADADAD;
+        color: #adadad;
         font-weight: 100;
         text-align: center;
         margin-right: 20px;
         text-transform: uppercase;
-
-        
-       
     }
-
-
 
     // h4::after {
     //     margin-left:10px;
     //     cursor: pointer;
     //     font-family: "fa";
     //     content: "\f0e0";
-   
+
     // }
 
     // h4::after {
