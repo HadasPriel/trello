@@ -27,16 +27,8 @@ export function LineBoard(props) {
         labels: Object.keys(groupTimeMap),
         datasets: [{
             data: Object.values(groupTimeMap),
-            backgroundColor: [
-                // '#FF6384',
-                // '#36A2EB',
-                '#FFCE56'
-            ],
-            hoverBackgroundColor: [
-                // '#FF6384',
-                // '#36A2EB',
-                '#FFCE56'
-            ],
+            backgroundColor: ['#0079BF'],
+            hoverBackgroundColor: ['#0079BF'],
 
         }]
     }
@@ -46,7 +38,7 @@ export function LineBoard(props) {
             <Line
                 data={myData}
                 options={{
-                    title: { display: true, text: 'Average life time of cards per group in days', fontColor: '#ffff' },
+                    title: { display: true, text: 'Average Lifetime Of Cards Per List In Days', fontColor: '#ffff', fontSize: '14' },
                     legend: { display: false },
                     ticks: { precision: 0 },
                     scales: {

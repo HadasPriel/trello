@@ -13,28 +13,8 @@ export function BarBoard(props) {
         datasets: [{
             label: 'tasks',
             data: Object.values(groupCardMap),
-            backgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-            ],
-            hoverBackgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-            ]
+            backgroundColor: ['#61BD4F', '#F2D600', '#FF9F1A', '#EB5A46', '#C377E0', '#0079BF'],
+            hoverBackgroundColor: ['#61BD4F', '#F2D600', '#FF9F1A', '#EB5A46', '#C377E0', '#0079BF']
 
         }]
     }
@@ -43,27 +23,28 @@ export function BarBoard(props) {
         <section style={{ width: '40%' }}>
             <HorizontalBar data={myData}
                 options={{
-                    title: { display: true, text: 'Total cards per group', fontColor: '#ffff' },
+                    title: { display: true, text: 'Total Cards Per List', fontColor: '#ffff', fontSize: '14' },
                     legend: { display: false },
                     ticks: { precision: 0 },
                     scales: {
                         yAxes: [{
                             ticks: {
                                 fontColor: '#ffff',
-                                beginAtZero: true,
-                                userCallback: function (label, index, labels) {
-                                    // when the floored value is the same as the value we have a whole number
-                                    if (Math.floor(label) === label) {
-                                        return label;
-                                    }
 
-                                }
+                                // beginAtZero: true,
+                                // userCallback: function (label, index, labels) {
+                                //     // when the floored value is the same as the value we have a whole number
+                                //     if (Math.floor(label) === label) {
+                                //         return label;
+                                //     }
+
+                                // }
                             }
                         }],
                         xAxes: [{
                             ticks: {
-                                fontColor: '#ffff'
-
+                                fontColor: '#ffff',
+                                beginAtZero: true
                             }
                         }]
                     }
