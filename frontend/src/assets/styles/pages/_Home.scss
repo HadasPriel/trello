@@ -45,7 +45,7 @@
         background-color: #3078a8;
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
         padding: 10px;
-        background-position: 49% -49%;
+        background-position: 49% -640%;
         background-size: 1190px 1236px;
         // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/styles/imgs/homebg-removebg.png");
         background-image: url("/assets/styles/imgs/homebg-removebg.png");
@@ -76,19 +76,20 @@
 
         @keyframes gradient {
             0% {
-                background-position: 47% -30%;
+                background-position: 49% -500%;
             }
 
             50% {
-                background-position: 47% -90%;
+                background-position: 49% -640%;
             }
 
             100% {
-                background-position: 47% -50%;
+                background-position: 49% -500%;
             }
         }
         @media (max-height: 969px){
             background-size: 952px 988px;
+          
 
         }
 
